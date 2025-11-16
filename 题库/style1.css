@@ -1,0 +1,140 @@
+/* ---------- 全局 ---------- */
+body {
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+  background: #ffffff;  /* 白色背景 */
+  color: #000000;       /* 黑色字体 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+/* ---------- 容器 ---------- */
+.container {
+  background: #f7f7f7;  /* 浅灰容器背景 */
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  padding: 40px;
+  text-align: center;
+  width: 90%;
+  max-width: 800px;
+}
+
+/* ---------- 标题 ---------- */
+h1, h2 {
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+/* ---------- 首页科目选择框 ---------- */
+#subjectSelect {
+  font-size: 18px;        /* 字体稍大 */
+  padding: 12px 8px;      /* 内边距放大 */
+  margin-bottom: 20px;
+  width: 60%;             /* 宽度适中 */
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+/* ---------- 进度条 ---------- */
+#progressContainer {
+  width: 100%;
+  background: #e0e0e0;  /* 灰色背景 */
+  border-radius: 12px;
+  height: 20px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: #808080;  /* 深灰进度条 */
+  border-radius: 12px;
+  transition: width 0.3s ease;
+}
+
+#progressText {
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #000000;
+}
+
+/* ---------- 题目区域 ---------- */
+#questionContainer {
+  text-align: left;
+  background: #f0f0f0;  /* 浅灰题目背景 */
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  white-space: pre-wrap;  /* 保留换行 */
+  word-break: break-word; /* 自动换行 */
+  color: #000000;
+}
+
+/* ---------- 答案输入框 ---------- */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #000;
+  background: #fff;
+}
+
+/* ---------- 按钮 ---------- */
+button {
+  background: #cccccc;  /* 灰色按钮 */
+  border: none;
+  padding: 10px 18px;
+  margin: 5px;
+  border-radius: 10px;
+  color: #000000;       /* 黑色文字 */
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #aaaaaa;  /* 浅灰悬停 */
+}
+
+/* ---------- 结果反馈 ---------- */
+#result {
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  color: #000000;
+}
+
+/* ---------- 控制按钮 ---------- */
+.controls {
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ---------- 响应式 ---------- */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  button {
+    width: 100%;
+    margin: 6px 0;
+  }
+
+  #subjectSelect {
+    width: 100%;
+  }
+}
