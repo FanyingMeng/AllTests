@@ -3241,5 +3241,305 @@ Nov14ProgrammingQuiz:[
   ],
   "answer": "3 2 1 "
 }
+],
+Nov15WebdesignTableQuiz:[
+{
+  "type": "mcq",
+  "question": "Which HTML tag is used to define a table?",
+  "options": [
+    "<tbody>",
+    "<table>",
+    "<tab>",
+    "<tgroup>"
+  ],
+  "answer": "<table>"
+},
+{
+  "type": "mcq",
+  "question": "Which tag is used to define a table row in HTML?",
+  "options": [
+    "<row>",
+    "<td>",
+    "<tr>",
+    "<th>"
+  ],
+  "answer": "<tr>"
+},
+{
+  "type": "mcq",
+  "question": "What does the <th> element represent in an HTML table?",
+  "options": [
+    "A table heading cell",
+    "A table caption",
+    "A standard data cell",
+    "A table border"
+  ],
+  "answer": "A table heading cell"
+},
+{
+  "type": "mcq",
+  "question": "Which tag is used to group table rows that contain the main body content?",
+  "options": [
+    "<tfoot>",
+    "<thead>",
+    "<tbody>",
+    "<section>"
+  ],
+  "answer": "<tbody>"
+},
+{
+  "type": "mcq",
+  "question": "What is the purpose of the <caption> tag in an HTML table?",
+  "options": [
+    "To display a summary of the table",
+    "To define column headers",
+    "To add spacing between cells",
+    "To create rows automatically"
+  ],
+  "answer": "To display a summary of the table"
+},
+{
+  "type": "mcq",
+  "question": "Which attribute is used to merge table cells horizontally?",
+  "options": [
+    "cellpadding",
+    "rowspan",
+    "colspan",
+    "border"
+  ],
+  "answer": "colspan"
+},
+{
+  "type": "mcq",
+  "question": "Which HTML element is used to group header content in a table?",
+  "options": [
+    "<thead>",
+    "<tbody>",
+    "<header>",
+    "<th-group>"
+  ],
+  "answer": "<thead>"
+},
+{
+  "type": "mcq",
+  "question": "What is the default alignment of text inside a <th> element?",
+  "options": [
+    "Left-aligned",
+    "Right-aligned",
+    "Center-aligned",
+    "Justified"
+  ],
+  "answer": "Center-aligned"
+},
+{
+  "type": "mcq",
+  "question": "Which attribute controls the space between the cell border and content inside a table?",
+  "options": [
+    "cellpadding",
+    "cellspacing",
+    "border",
+    "padding-left"
+  ],
+  "answer": "cellpadding"
+},
+{
+  "type": "mcq",
+  "question": "What is the purpose of the <tfoot> element in an HTML table?",
+  "options": [
+    "To display column titles",
+    "To group footer rows",
+    "To create cell spacing",
+    "To control table responsiveness"
+  ],
+  "answer": "To group footer rows"
+},
+{
+  "type": "mcq",
+  "question": "Which CSS property is commonly used to collapse the borders of a table into a single border?",
+  "options": [
+    "border-collapse",
+    "table-border",
+    "collapse-border",
+    "border-style"
+  ],
+  "answer": "border-collapse"
+},
+{
+  "type": "mcq",
+  "question": "What does the HTML 'width' attribute on a <table> element control?",
+  "options": [
+    "The width of individual cells only",
+    "The total width of the entire table",
+    "The width of the table header only",
+    "The width of each column automatically"
+  ],
+  "answer": "The total width of the entire table"
+},
+{
+  "type": "mcq",
+  "question": "Which attribute allows a cell to span multiple rows?",
+  "options": [
+    "rowspan",
+    "rows",
+    "colspan",
+    "spanrow"
+  ],
+  "answer": "rowspan"
+},
+{
+  "type": "mcq",
+  "question": "What is the function of the table header created using <th>?",
+  "options": [
+    "To define a data cell",
+    "To create clickable sorting",
+    "To label columns or rows",
+    "To style captions automatically"
+  ],
+  "answer": "To label columns or rows"
+},
+{
+  "type": "mcq",
+  "question": "Which CSS property changes the spacing *between* table cells?",
+  "options": [
+    "padding",
+    "border-width",
+    "border-spacing",
+    "margin"
+  ],
+  "answer": "border-spacing"
+},
+{
+  "type": "mcq",
+  "question": "What does the 'colspan' attribute do in an HTML table?",
+  "options": [
+    "Allows a column to span across multiple rows",
+    "Allows a cell to span across multiple columns",
+    "Increases the width of all columns",
+    "Combines table borders into one"
+  ],
+  "answer": "Allows a cell to span across multiple columns"
+},
+{
+  "type": "mcq",
+  "question": "Which CSS property is commonly used to change the background color of a table header?",
+  "options": [
+    "background-color",
+    "header-color",
+    "color",
+    "th-background"
+  ],
+  "answer": "background-color"
+},
+{
+  "type": "mcq",
+  "question": "If you want to add a border to every cell in a table, which CSS selector is typically used?",
+  "options": [
+    "table td, table th",
+    "table-only",
+    "table-header",
+    "td-all"
+  ],
+  "answer": "table td, table th"
+},
+{
+  "type": "mcq",
+  "question": "Which HTML attribute can be used to set the height of a table?",
+  "options": [
+    "size",
+    "length",
+    "table-height",
+    "height"
+  ],
+  "answer": "height"
+},
+{
+  "type": "mcq",
+  "question": "Which HTML code correctly merges two columns in a table row?",
+  "options": [
+    "<td colspan='2'>Merged</td>",
+    "<td rowspan='2'>Merged</td>",
+    "<th colspan='3'>Merged</th>",
+    "<td merge='2'>Merged</td>"
+  ],
+  "answer": "<td colspan='2'>Merged</td>"
+},
+{
+  "type": "mcq",
+  "question": "Which code sets padding inside table cells using CSS?",
+  "options": [
+    "td { padding: 10px; }",
+    "table { padding: 10px; }",
+    "tr { cell-padding: 10px; }",
+    "td { margin: 10px; }"
+  ],
+  "answer": "td { padding: 10px; }"
+},
+{
+  "type": "mcq",
+  "question": "How do you collapse borders in a table using CSS?",
+  "options": [
+    "table { border-collapse: collapse; }",
+    "table { border-style: collapse; }",
+    "table { collapse-border: true; }",
+    "td, th { border-collapse: collapse; }"
+  ],
+  "answer": "table { border-collapse: collapse; }"
+},
+{
+  "type": "mcq",
+  "question": "Which code correctly adds a table header with 3 columns?",
+  "options": [
+    "<tr>\n <th>Name</th>\n <th>Age</th>\n <th>City</th>\n</tr>",
+    "<thead>\n <td>Name</td>\n <td>Age</td>\n <td>City</td>\n</thead>",
+    "<table>\n <th>Name</th>\n <th>Age</th>\n <th>City</th>\n</table>",
+    "<header>\n <th>Name</th>\n <th>Age</th>\n <th>City</th>\n</header>"
+  ],
+  "answer": "<tr>\n <th>Name</th>\n <th>Age</th>\n <th>City</th>\n</tr>"
+},
+{
+  "type": "mcq",
+  "question": "How do you set a table width of 80% using HTML attribute?",
+  "options": [
+    "<table width='80%'>",
+    "<table size='80%'>",
+    "<table style='width: 80%'>",
+    "<table column='80%'>"
+  ],
+  "answer": "<table width='80%'>"
+},
+{
+  "type": "mcq",
+  "question": "Which CSS code changes the background color of table headers?",
+  "options": [
+    "th { background-color: #f2f2f2; }",
+    "td { background-color: #f2f2f2; }",
+    "table { header-color: #f2f2f2; }",
+    "tr { bg-color: #f2f2f2; }"
+  ],
+  "answer": "th { background-color: #f2f2f2; }"
+},
+{
+  "type": "mcq",
+  "question": "Which code correctly adds spacing between table cells?",
+  "options": [
+    "table { border-spacing: 5px; }",
+    "td { padding: 5px; }",
+    "table { cell-padding: 5px; }",
+    "table { margin-spacing: 5px; }"
+  ],
+  "answer": "table { border-spacing: 5px; }"
+},
+{
+  "type": "mcq",
+  "question": "Which snippet correctly applies a 1px solid border to all table cells?",
+  "options": [
+    "td, th { border: 1px solid black; }",
+    "table { border: 1px solid black; }",
+    "td { border-width: 1px; }",
+    "tr { border: solid 1px black; }"
+  ],
+  "answer": "td, th { border: 1px solid black; }"
+}
+
 ]
 }
