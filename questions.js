@@ -3541,5 +3541,587 @@ Nov15WebdesignTableQuiz:[
   "answer": "td, th { border: 1px solid black; }"
 }
 
+],
+Nov25DatabaseQuiz:[
+
+  // --- Topic 1: Using DISTINCT (5 MCQ, 5 Code, 5 Short Answer) ---
+  {
+    "type": "mcq",
+    "question": "What happens when the DISTINCT keyword is applied to a SELECT statement with multiple columns?",
+    "options": ["It filters out rows where the values in the first column are repeated.", "It ensures that the **combination of values** across all specified columns is unique.", "It treats each selected column independently for uniqueness.", "It can only be used if there is no WHERE clause in the query."],
+    "answer": "It ensures that the **combination of values** across all specified columns is unique."
+  },
+  {
+    "type": "mcq",
+    "question": "If a column contains multiple NULL values, how does the standard DISTINCT keyword handle them?",
+    "options": ["It ignores all NULL values from the result.", "It treats the NULL values as unique entries.", "It treats all NULL values as duplicates and keeps only one NULL row in the final result set.", "It converts all NULL values to zero before checking for uniqueness."],
+    "answer": "It treats all NULL values as duplicates and keeps only one NULL row in the final result set."
+  },
+  {
+    "type": "mcq",
+    "question": "The primary logical function of the DISTINCT keyword in SQL is:",
+    "options": ["To sort the result set based on the first selected column.", "To apply a filter that returns only the rows with unique values in the selected column(s).", "To aggregate data into groups for calculating summaries.", "To limit the total number of rows returned by the query."],
+    "answer": "To apply a filter that returns only the rows with unique values in the selected column(s)."
+  },
+  {
+    "type": "mcq",
+    "question": "Which statement correctly describes the placement of the DISTINCT keyword in a standard SELECT query?",
+    "options": ["The DISTINCT keyword must immediately precede the FROM clause.", "The DISTINCT keyword is placed immediately after the SELECT keyword and before the column list.", "The DISTINCT keyword can be placed anywhere within the column list.", "The DISTINCT keyword is placed after the WHERE clause."],
+    "answer": "The DISTINCT keyword is placed immediately after the SELECT keyword and before the column list."
+  },
+  {
+    "type": "mcq",
+    "question": "Which of the following scenarios is a practical use case for `COUNT(DISTINCT column_name)`?",
+    "options": ["Finding the total number of products sold.", "Counting the number of records with a non-NULL value in a column.", "Determining the number of unique product categories available.", "Calculating the average salary across all employees."],
+    "answer": "Determining the number of unique product categories available."
+  },
+  {
+    "type": "code",
+    "question": "Write the SQL query to find the unique `Country` names from the `Suppliers` table.",
+    "answer": "SELECT DISTINCT Country FROM Suppliers;"
+  },
+  {
+    "type": "code",
+    "question": "Complete the SQL statement to count the number of different `ProductID` values in the `OrderDetails` table: SELECT COUNT(______ ProductID) FROM OrderDetails;",
+    "answer": "DISTINCT"
+  },
+  {
+    "type": "code",
+    "question": "Write the SQL query to select all unique rows (where all columns' values combined are unique) from a table named `AuditLog`.",
+    "answer": "SELECT DISTINCT * FROM AuditLog;"
+  },
+  {
+    "type": "code",
+    "question": "Write the SQL statement to find unique combinations of `DepartmentID` and `LocationID` from the `EmployeeLocations` table.",
+    "answer": "SELECT DISTINCT DepartmentID, LocationID FROM EmployeeLocations;"
+  },
+  {
+    "type": "code",
+    "question": "If a query selects `CustomerName` and `City`, complete the statement to ensure the result set shows each city only once: SELECT ______ City, CustomerName FROM Customers;",
+    "answer": "DISTINCT"
+  },
+  {
+    "type": "short_answer",
+    "question": "Explain the performance trade-off associated with using the `DISTINCT` keyword.",
+    "answer": "The trade-off is often between data clarity (returning only unique rows) and performance speed. Using `DISTINCT` requires the database engine to perform an extra, resource-intensive operation (like sorting or hashing) on the result set to compare and eliminate duplicates, which consumes more CPU and time than a standard SELECT."
+  },
+  {
+    "type": "short_answer",
+    "question": "Why is `SELECT DISTINCT CustomerID, OrderID` likely to return the same number of rows as `SELECT CustomerID, OrderID` if `OrderID` is the Primary Key of the table?",
+    "answer": "If `OrderID` is the Primary Key, it is guaranteed to be unique for every row. Since `DISTINCT` applies to the combination of `CustomerID` and `OrderID`, and the `OrderID` component is already unique, the combined value is automatically unique for every row, making the use of `DISTINCT` redundant and unlikely to filter any rows."
+  },
+  {
+    "type": "short_answer",
+    "question": "If a user wants to find the unique cities where customers live, which is the most appropriate and efficient clause to use: `DISTINCT` or `GROUP BY`?",
+    "answer": "`DISTINCT` is the most appropriate and often most efficient clause. While `GROUP BY City` would yield the same result, the primary purpose of `DISTINCT` is simple de-duplication, which aligns perfectly with the goal of finding unique values without requiring aggregation."
+  },
+  {
+    "type": "short_answer",
+    "question": "Describe the main difference in the output when comparing `SELECT DISTINCT City` and `SELECT City` from a table where the `City` column contains duplicates.",
+    "answer": "`SELECT DISTINCT City` returns a list where each city name appears only once. `SELECT City` returns all city names, including every instance of duplicates, resulting in a potentially much longer list."
+  },
+  {
+    "type": "short_answer",
+    "question": "What is the logical prerequisite for a row to be eliminated when using `SELECT DISTINCT ColA, ColB`?",
+    "answer": "A row is eliminated only if there is another row in the result set where the value of `ColA` is exactly the same AND the value of `ColB` is exactly the same. Both columns must match for the row to be considered a duplicate."
+  },
+
+  // --- Topic 2: The TOP Clause (5 MCQ, 5 Code, 5 Short Answer) ---
+  {
+    "type": "mcq",
+    "question": "When using `TOP N`, what is the outcome if the `ORDER BY` clause is omitted?",
+    "options": ["The database engine automatically sorts the data by the Primary Key.", "The query fails because `TOP` requires `ORDER BY` for execution.", "The result set is arbitrary, returning the first N rows encountered by the database, with no guaranteed logical order.", "The result set is automatically sorted by the first column selected."],
+    "answer": "The result set is arbitrary, returning the first N rows encountered by the database, with no guaranteed logical order."
+  },
+  {
+    "type": "mcq",
+    "question": "The purpose of using `TOP N PERCENT` is to:",
+    "options": ["Select a fixed N number of records.", "Ensure that only N percent of records are returned regardless of the total count.", "Return a number of records equal to N percent of the total result set size.", "Return the first N records that exceed a certain percentage threshold."],
+    "answer": "Return a number of records equal to N percent of the total result set size."
+  },
+  {
+    "type": "mcq",
+    "question": "If you execute `SELECT TOP 5 WITH TIES * FROM Products ORDER BY Price DESC`, and the 5th highest-priced product is tied with two other products, how many rows will be returned?",
+    "options": ["Exactly 5 rows will be returned.", "6 rows will be returned, as the ties are ignored.", "7 rows will be returned, including the 5 top products and the two tied products.", "Only 3 rows (the three tied products) will be returned."],
+    "answer": "7 rows will be returned, including the 5 top products and the two tied products."
+  },
+  {
+    "type": "mcq",
+    "question": "In the context of `TOP`, the `WITH TIES` clause ensures that:",
+    "options": ["Only rows with unique values are returned.", "Only rows that match the value of the final row in the limited set are included, even if this exceeds the TOP N count.", "The N value is adjusted if there are too many ties.", "The query sorts the data after limiting the rows."],
+    "answer": "Only rows that match the value of the final row in the limited set are included, even if this exceeds the TOP N count."
+  },
+  {
+    "type": "mcq",
+    "question": "Which of the following SQL clauses provides similar functionality to the `TOP` clause in SQL dialects like MySQL and PostgreSQL?",
+    "options": ["ROWNUM", "LIMIT", "FIRST", "SKIP"],
+    "answer": "LIMIT"
+  },
+  {
+    "type": "code",
+    "question": "Write the SQL statement to select the top 20 most recent employees from the `Personnel` table, sorted by `HireDate`.",
+    "answer": "SELECT TOP 20 * FROM Personnel ORDER BY HireDate DESC;"
+  },
+  {
+    "type": "code",
+    "question": "Complete the SQL statement to find the 10 lowest test scores from the `StudentScores` table: SELECT TOP 10 * FROM StudentScores ORDER BY Score ______;",
+    "answer": "ASC"
+  },
+  {
+    "type": "code",
+    "question": "Write the SQL statement to retrieve the highest `Salary` from the `Employees` table, including all employees tied at that maximum salary.",
+    "answer": "SELECT TOP 1 WITH TIES * FROM Employees ORDER BY Salary DESC;"
+  },
+  {
+    "type": "code",
+    "question": "Complete the SQL statement to find the top 5 percent of customers based on their `TotalOrders`: SELECT TOP 5 ______ * FROM Customers ORDER BY TotalOrders DESC;",
+    "answer": "PERCENT"
+  },
+  {
+    "type": "code",
+    "question": "Write the SQL query to select the single product with the highest `Cost` from the `Inventory` table.",
+    "answer": "SELECT TOP 1 * FROM Inventory ORDER BY Cost DESC;"
+  },
+  {
+    "type": "short_answer",
+    "question": "What is the key difference between using `TOP N` and the `WHERE` clause to filter data?",
+    "answer": "`TOP N` limits the total number of rows returned based on position after sorting (or arbitrary physical order if no sort is present). The `WHERE` clause filters rows based on explicit conditions that apply to the data's values (e.g., `Salary > 50000`) and does not limit the total row count unless the condition results in fewer than N rows."
+  },
+  {
+    "type": "short_answer",
+    "question": "Explain the main reason why `TOP` and `ORDER BY` are considered mandatory companions for meaningful results.",
+    "answer": "The `TOP` clause selects the 'best' or 'first' records. Without `ORDER BY`, the database does not know how to define 'best' or 'first' logically, leading to the selection of physically arbitrary rows, which rarely meets the user's intent."
+  },
+  {
+    "type": "short_answer",
+    "question": "Describe a scenario where using `TOP N PERCENT` would be more useful than using a fixed `TOP N` number.",
+    "answer": "A scenario where the size of the underlying data set changes frequently, but the goal is to always select a consistent proportion of the data. For example, if you always want to review the top 10% of sales transactions, regardless of whether there are 1,000 or 10,000 total transactions this week."
+  },
+  {
+    "type": "short_answer",
+    "question": "When using `TOP 10`, what determines which records are returned if multiple records share the same value for the `ORDER BY` column (i.e., they are tied)?",
+    "answer": "If `WITH TIES` is NOT used, the database arbitrarily chooses which of the tied rows to include to meet the exact count of 10. The selection among tied rows is not deterministic."
+  },
+  {
+    "type": "short_answer",
+    "question": "How does SQL Server's `TOP` clause differ logically from the use of `ROW_NUMBER()` or `RANK()` window functions?",
+    "answer": "`TOP` is a filtering clause that limits the result set *after* sorting. `ROW_NUMBER()` and `RANK()` are functions that *assign a numeric value* to each row based on a partition and order. While both can select top rows, window functions provide a rank number that can be queried and are generally more flexible for complex ranking/partitioning scenarios, whereas `TOP` is a simple set limiter."
+  },
+
+  // --- Topic 3: The ORDER BY Clause (5 MCQ, 5 Code, 5 Short Answer) ---
+  {
+    "type": "mcq",
+    "question": "If no keyword is explicitly used with a column in the `ORDER BY` clause, what is the default sort behavior?",
+    "options": ["The data is sorted in Descending order (DESC).", "The data is sorted in Ascending order (ASC).", "The sort order is determined by the server's locale settings.", "The data is sorted randomly."],
+    "answer": "The data is sorted in Ascending order (ASC)."
+  },
+  {
+    "type": "mcq",
+    "question": "Which of the following methods for referencing a column in the `ORDER BY` clause is generally discouraged in production code due to potential fragility?",
+    "options": ["Using the column's explicit name.", "Using a column alias defined in the SELECT list.", "Using the column's ordinal position (number) in the SELECT list.", "Using the column name qualified with the table name."],
+    "answer": "Using the column's ordinal position (number) in the SELECT list."
+  },
+  {
+    "type": "mcq",
+    "question": "When sorting by multiple columns (e.g., `ORDER BY ColA, ColB DESC`), how is the priority applied?",
+    "options": ["All columns are sorted by the last specified order (DESC).", "The sort is applied simultaneously to both columns.", "The results are first sorted by `ColA`, and then within each `ColA` group, they are sorted by `ColB`.", "Only the first column (`ColA`) is sorted; `ColB` is ignored."],
+    "answer": "The results are first sorted by `ColA`, and then within each `ColA` group, they are sorted by `ColB`."
+  },
+  {
+    "type": "mcq",
+    "question": "In the logical query processing order, when is the `ORDER BY` clause executed?",
+    "options": ["It is the first clause executed, right after the FROM clause.", "It is executed immediately before the WHERE clause.", "It is executed after the SELECT clause, making it the last logical step in the query.", "It is executed simultaneously with the GROUP BY clause."],
+    "answer": "It is executed after the SELECT clause, making it the last logical step in the query."
+  },
+  {
+    "type": "mcq",
+    "question": "Which SQL statement correctly sorts the `Sales` table first by `Region` in descending order, and then within each region, by `SalesAmount` in ascending order?",
+    "options": ["SELECT * FROM Sales ORDER BY SalesAmount ASC, Region DESC", "SELECT * FROM Sales ORDER BY Region ASC, SalesAmount DESC", "SELECT * FROM Sales ORDER BY SalesAmount DESC, Region ASC", "SELECT * FROM Sales ORDER BY Region DESC, SalesAmount ASC"],
+    "answer": "SELECT * FROM Sales ORDER BY Region DESC, SalesAmount ASC"
+  },
+  {
+    "type": "code",
+    "question": "Write the SQL statement to retrieve all records from the `Clients` table and sort them by `ZipCode` in descending order.",
+    "answer": "SELECT * FROM Clients ORDER BY ZipCode DESC;"
+  },
+  {
+    "type": "code",
+    "question": "Complete the SQL statement to sort the `Products` table by `Name` using its column alias `Product_Name`: SELECT Name AS Product_Name, Price FROM Products ORDER BY ______ ASC;",
+    "answer": "Product_Name"
+  },
+  {
+    "type": "code",
+    "question": "Write the SQL statement to sort the `Transactions` table by `Amount` (descending) and then by `TransactionDate` (ascending).",
+    "answer": "SELECT * FROM Transactions ORDER BY Amount DESC, TransactionDate ASC;"
+  },
+  {
+    "type": "code",
+    "question": "If you are sorting the `Employees` table by `LastName`, complete the statement to explicitly use the ascending sort modifier: SELECT * FROM Employees ORDER BY LastName ______;",
+    "answer": "ASC"
+  },
+  {
+    "type": "code",
+    "question": "Write the SQL query to select `FirstName` and `LastName` from the `Users` table and sort the result using the ordinal position of `FirstName` in the SELECT list.",
+    "answer": "SELECT FirstName, LastName FROM Users ORDER BY 1;"
+  },
+  {
+    "type": "short_answer",
+    "question": "What is the consequence of omitting the `ORDER BY` clause in a SELECT query?",
+    "answer": "The consequence is that the resulting set of rows will be returned in an arbitrary and non-deterministic order. The order is not guaranteed to be consistent between different executions of the same query, as it is determined by the internal mechanics of the database engine."
+  },
+  {
+    "type": "short_answer",
+    "question": "In most SQL dialects, where do NULL values typically appear when a column is sorted in ASCENDING order?",
+    "answer": "NULL values typically appear either at the very beginning of the result set or at the very end of the result set in ASCENDING order, depending on the specific database system (e.g., Oracle puts them last, while SQL Server/PostgreSQL typically treat them as the lowest value, putting them first)."
+  },
+  {
+    "type": "short_answer",
+    "question": "Explain how the concept of 'stability' relates to the `ORDER BY` clause when sorting by multiple columns.",
+    "answer": "Stability means that when rows have the same value for the first sort column, their relative order is maintained according to the next sort column, and so on. If the tie-breaking columns (subsequent columns in `ORDER BY`) do not resolve the order, the relative order of the tied rows will be arbitrary (unless a full set of columns that guarantees uniqueness is used)."
+  },
+  {
+    "type": "short_answer",
+    "question": "Why is sorting a large result set often a performance bottleneck, and what is the primary mitigation technique?",
+    "answer": "Sorting is a bottleneck because it is a memory- and CPU-intensive operation that may require the database to write temporary data to disk (spooling) if the result set is too large for memory. The primary mitigation is to ensure that the columns used in the `ORDER BY` clause are indexed, allowing the database to retrieve the data in the required order more efficiently."
+  },
+  {
+    "type": "short_answer",
+    "question": "Can the `ORDER BY` clause reference a calculated expression or a derived column that is not explicitly named with an alias in the SELECT list? Provide a brief explanation.",
+    "answer": "Yes, it can. Since the `ORDER BY` clause is executed after the `SELECT` clause, it has access to the calculated expressions in the SELECT list. For example: `SELECT Price * Quantity FROM Sales ORDER BY Price * Quantity DESC;`"
+  },
+  
+  // --- Topic 1: Comparison Operators (4 MCQ, 3 Code, 3 Short Answer) ---
+  {
+    "type": "mcq",
+    "question": "Which comparison operator is used in standard SQL to mean 'not equal to'?",
+    "options": ["=", ">=", "!=", "<>"],
+    "answer": "<>"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the logical result of comparing two strings 'apple' and 'Apple' using the `=` operator in a case-sensitive database system?",
+    "options": ["TRUE (because they are the same length)", "FALSE (due to case difference)", "TRUE (case is ignored by default)", "Error (string comparison is not supported)"],
+    "answer": "FALSE (due to case difference)"
+  },
+  {
+    "type": "mcq",
+    "question": "The `>=` comparison operator tests for which condition?",
+    "options": ["Whether the value on the left is less than the value on the right.", "Whether the value on the left is greater than or equal to the value on the right.", "Whether the value on the left is exactly greater than the value on the right.", "Whether the value on the left is only equal to the value on the right."],
+    "answer": "Whether the value on the left is greater than or equal to the value on the right."
+  },
+  {
+    "type": "mcq",
+    "question": "Which of the following statements correctly uses the less than operator to find employees whose salary is strictly below $50,000?",
+    "options": ["SELECT * FROM Employees WHERE Salary <= 50000;", "SELECT * FROM Employees WHERE Salary =< 50000;", "SELECT * FROM Employees WHERE Salary < 50000;", "SELECT * FROM Employees WHERE Salary IS LESS THAN 50000;"],
+    "answer": "SELECT * FROM Employees WHERE Salary < 50000;"
+  },
+  {
+    "type": "code",
+    "question": "Complete the query to find all orders with an amount exactly $100: SELECT * FROM Orders WHERE Amount ___ 100;",
+    "answer": "="
+  },
+  {
+    "type": "code",
+    "question": "Write a query to find products whose stock quantity is not equal to 0, using the standard SQL 'not equal' operator.",
+    "answer": "SELECT * FROM Products WHERE Stock <> 0;"
+  },
+  {
+    "type": "code",
+    "question": "Complete the query to find all customers whose `RegistrationDate` is after '2025-01-01': SELECT * FROM Customers WHERE RegistrationDate ___ '2025-01-01';",
+    "answer": ">"
+  },
+  {
+    "type": "short_answer",
+    "question": "Name the six standard SQL comparison operators.",
+    "answer": "The six standard operators are: `=`, `>`, `<`, `>=`, `<=`, and `<>` (or `!=`)."
+  },
+  {
+    "type": "short_answer",
+    "question": "Explain the difference in purpose between the standard comparison operator `=` and the `LIKE` operator.",
+    "answer": "The `=` operator is used to test for exact equality between two values (numbers, strings, or dates). The `LIKE` operator is used to check if a string value matches a specified pattern using wildcard characters (like `%` and `_`)."
+  },
+  {
+    "type": "short_answer",
+    "question": "If you compare a numeric column to a string literal (e.g., `WHERE ID = '50'`), will the query usually execute successfully? Briefly explain the underlying mechanism.",
+    "answer": "Yes, it usually executes successfully. Most SQL databases perform implicit type conversion (coercion), converting the string literal to the number type of the column before performing the comparison, which is a process known as type coercion."
+  },
+
+  // --- Topic 2: Logical Operators (4 MCQ, 3 Code, 3 Short Answer) ---
+  {
+    "type": "mcq",
+    "question": "Which logical operator has the highest precedence in SQL, meaning it is evaluated first?",
+    "options": ["AND", "OR", "XOR", "NOT"],
+    "answer": "NOT"
+  },
+  {
+    "type": "mcq",
+    "question": "If a condition is determined to be TRUE AND NULL (UNKNOWN), what is the resulting truth value of the entire expression?",
+    "options": ["TRUE", "FALSE", "UNKNOWN (NULL)", "Error"],
+    "answer": "UNKNOWN (NULL)"
+  },
+  {
+    "type": "mcq",
+    "question": "Which logical operator returns TRUE if at least one of the separate conditions it connects is TRUE?",
+    "options": ["AND", "NOT", "OR", "EXISTS"],
+    "answer": "OR"
+  },
+  {
+    "type": "mcq",
+    "question": "In the complex condition `A OR (B AND C)`, which sub-expression will the database evaluate first?",
+    "options": ["B AND C", "A OR B", "The expression is evaluated strictly left to right.", "A OR (B AND C) is invalid syntax."],
+    "answer": "B AND C"
+  },
+  {
+    "type": "code",
+    "question": "Write a query to find employees who work in the 'HR' department OR have a salary greater than 80000.",
+    "answer": "SELECT * FROM Employees WHERE Department = 'HR' OR Salary > 80000;"
+  },
+  {
+    "type": "code",
+    "question": "Complete the condition to select products that are in the 'Electronics' category AND cost less than 500: WHERE Category = 'Electronics' ___ Price < 500;",
+    "answer": "AND"
+  },
+  {
+    "type": "code",
+    "question": "Write a query to find all orders that were NOT placed in the year 2025.",
+    "answer": "SELECT * FROM Orders WHERE NOT (OrderDate BETWEEN '2025-01-01' AND '2025-12-31');"
+  },
+  {
+    "type": "short_answer",
+    "question": "Explain the importance of using parentheses when combining the `AND` and `OR` logical operators in a single `WHERE` clause.",
+    "answer": "Parentheses explicitly override the default operator precedence (`AND` before `OR`), allowing you to force a specific order of evaluation. This ensures the conditions are grouped as intended, preventing logic errors and unexpected results."
+  },
+  {
+    "type": "short_answer",
+    "question": "If an expression evaluates to `NOT (TRUE AND FALSE)`, what is the final truth value of the entire expression?",
+    "answer": "`TRUE AND FALSE` evaluates to `FALSE`. Therefore, `NOT (FALSE)` evaluates to `TRUE`. The final truth value is `TRUE`."
+  },
+  {
+    "type": "short_answer",
+    "question": "In a `WHERE` clause, when does the `OR` operator return a result of unknown (`NULL`)?",
+    "answer": "The `OR` operator returns UNKNOWN (`NULL`) only when both conditions are UNKNOWN (`NULL OR NULL` results in `NULL`). If one condition is TRUE, the result is always TRUE, and if one is FALSE, the result is UNKNOWN."
+  },
+
+  // --- Topic 3: IN Operator (3 MCQ, 4 Code, 3 Short Answer) ---
+  {
+    "type": "mcq",
+    "question": "The `IN` operator is a shorthand equivalent for a series of which repeated logical/comparison combination?",
+    "options": ["Equality comparisons combined with the AND operator.", "Range checks combined with the BETWEEN operator.", "Equality comparisons combined with the OR operator.", "Pattern matching combined with the LIKE operator."],
+    "answer": "Equality comparisons combined with the OR operator."
+  },
+  {
+    "type": "mcq",
+    "question": "Which clause is the correct way to select products whose `SupplierID` is not 10, 20, or 30?",
+    "options": ["WHERE SupplierID != (10, 20, 30)", "WHERE SupplierID NOT IN (10, 20, 30)", "WHERE SupplierID NOT = 10 OR 20 OR 30", "WHERE SupplierID IS NOT IN (10, 20, 30)"],
+    "answer": "WHERE SupplierID NOT IN (10, 20, 30)"
+  },
+  {
+    "type": "mcq",
+    "question": "What is a major advantage of using the `IN` operator over manually listing multiple equivalent `OR` conditions?",
+    "options": ["It allows for pattern matching with wildcards.", "It is only used for subqueries, not static lists.", "It improves query readability and is often more efficiently optimized by the database engine.", "It can only check against a maximum of three values."],
+    "answer": "It improves query readability and is often more efficiently optimized by the database engine."
+  },
+  {
+    "type": "code",
+    "question": "Write a query to find all products that are NOT in the categories 'Electronics', 'Apparel', or 'Home Goods'.",
+    "answer": "SELECT * FROM Products WHERE Category NOT IN ('Electronics', 'Apparel', 'Home Goods');"
+  },
+  {
+    "type": "code",
+    "question": "Write the equivalent condition for `WHERE Country IN ('USA', 'Canada', 'Mexico')` using only the `=` and `OR` operators.",
+    "answer": "WHERE Country = 'USA' OR Country = 'Canada' OR Country = 'Mexico';"
+  },
+  {
+    "type": "code",
+    "question": "Complete the query to find employees whose `JobTitle` is one of the three specified titles: WHERE JobTitle ___ ('Manager', 'Analyst', 'Engineer');",
+    "answer": "IN"
+  },
+  {
+    "type": "code",
+    "question": "Complete the condition to select records where the `PriorityLevel` is 1, 2, or 3: WHERE PriorityLevel IN ______;",
+    "answer": "(1, 2, 3)"
+  },
+  {
+    "type": "short_answer",
+    "question": "What happens if the list of values used with the `IN` operator is provided by a subquery (inner query)?",
+    "answer": "The inner query is executed first, and the single column of values it returns is used as the complete list against which the main query's column is checked for a match."
+  },
+  {
+    "type": "short_answer",
+    "question": "If the column being checked with `IN` contains a `NULL` value, what is the result of the `IN` operation?",
+    "answer": "The result is UNKNOWN (`NULL`). Since `NULL` is not a value, it cannot be said to be 'in' or 'not in' the list, and SQL returns UNKNOWN rather than TRUE or FALSE."
+  },
+  {
+    "type": "short_answer",
+    "question": "Can the `IN` operator be used with date data types? Provide a brief example.",
+    "answer": "Yes. The `IN` operator works with all comparable data types. Example: `WHERE OrderDate IN ('2025-07-04', '2025-12-25')`."
+  },
+
+  // --- Topic 4: BETWEEN Operator (3 MCQ, 4 Code, 3 Short Answer) ---
+  {
+    "type": "mcq",
+    "question": "What is the correct logical equivalence for `WHERE Age BETWEEN 20 AND 30`?",
+    "options": ["WHERE Age >= 20 OR Age <= 30", "WHERE Age > 20 AND Age < 30", "WHERE Age >= 20 AND Age <= 30", "WHERE Age < 20 AND Age > 30"],
+    "answer": "WHERE Age >= 20 AND Age <= 30"
+  },
+  {
+    "type": "mcq",
+    "question": "The `NOT BETWEEN` operator is used to filter values that fall into which area?",
+    "options": ["Only inside the specified range (exclusive of boundaries).", "Only on the lower boundary value.", "Outside the specified range (i.e., less than the lower bound or greater than the upper bound).", "Only on the upper boundary value."],
+    "answer": "Outside the specified range (i.e., less than the lower bound or greater than the upper bound)."
+  },
+  {
+    "type": "mcq",
+    "question": "What is the key characteristic of the `BETWEEN` operator regarding the range boundaries?",
+    "options": ["It is exclusive of both the starting and ending values.", "It includes only the starting value but excludes the ending value.", "It is inclusive, meaning it includes both the starting and ending values of the range.", "It only works with integer data types."],
+    "answer": "It is inclusive, meaning it includes both the starting and ending values of the range."
+  },
+  {
+    "type": "code",
+    "question": "Complete the query to find orders placed between the two specified dates (inclusive): WHERE OrderDate ______ '2025-06-01' AND '2025-06-30';",
+    "answer": "BETWEEN"
+  },
+  {
+    "type": "code",
+    "question": "Write a query using `BETWEEN` to find all employees with a `YearsOfService` value from 5 to 10, inclusive.",
+    "answer": "SELECT * FROM Employees WHERE YearsOfService BETWEEN 5 AND 10;"
+  },
+  {
+    "type": "code",
+    "question": "Write the condition using comparison operators that is equivalent to `WHERE Quantity NOT BETWEEN 100 AND 200`.",
+    "answer": "WHERE Quantity < 100 OR Quantity > 200"
+  },
+  {
+    "type": "code",
+    "question": "Complete the `BETWEEN` query to find temperatures from 0 to 32, inclusive: WHERE Temperature BETWEEN 0 ______ 32;",
+    "answer": "AND"
+  },
+  {
+    "type": "short_answer",
+    "question": "If you use `BETWEEN` with string values (e.g., names), how does the range comparison work?",
+    "answer": "The range is determined alphabetically. For example, `BETWEEN 'A' AND 'C'` includes all names starting with 'A' and 'B', and names starting with 'C' up to the specified character length."
+  },
+  {
+    "type": "short_answer",
+    "question": "When using `BETWEEN` with a column that contains a time component (e.g., `OrderDate`), why can the upper boundary be problematic, and how is it usually solved?",
+    "answer": "The upper boundary date (e.g., '2025-01-31') is usually interpreted as the beginning of that day (00:00:00). Records with a later time on that day will be excluded. The issue is solved by using the next day as the upper boundary with a `<` operator instead of `BETWEEN`."
+  },
+  {
+    "type": "short_answer",
+    "question": "What happens if the lower value is specified to be greater than the upper value in a `BETWEEN` condition (e.g., `BETWEEN 100 AND 10`)?",
+    "answer": "The condition will always evaluate to FALSE for all rows. Since `BETWEEN` is equivalent to `Value >= Lower AND Value <= Upper`, the impossible condition `Value >= 100 AND Value <= 10` can never be true, resulting in an empty set."
+  },
+
+  // --- Topic 5: LIKE Operator (4 MCQ, 3 Code, 3 Short Answer) ---
+  {
+    "type": "mcq",
+    "question": "In the `LIKE` operator, the `_` (underscore) wildcard character is used to represent:",
+    "options": ["A space character only.", "Zero or more characters.", "Any single character.", "Any single number."],
+    "answer": "Any single character."
+  },
+  {
+    "type": "mcq",
+    "question": "Which of the following patterns will successfully find names that have the letter 's' as the **third** character (e.g., 'Jason', 'Cesar')?",
+    "options": ["%s%", "__s%", "%s__", "_s%"],
+    "answer": "__s%"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the function of the `%` wildcard character in the `LIKE` operator?",
+    "options": ["It represents exactly one character.", "It represents zero, one, or multiple characters.", "It represents a list of possible characters.", "It indicates that the match must be case-insensitive."],
+    "answer": "It represents zero, one, or multiple characters."
+  },
+  {
+    "type": "mcq",
+    "question": "Which SQL statement correctly finds all product names that have 'box' anywhere in the name?",
+    "options": ["SELECT * FROM Products WHERE ProductName LIKE 'box_';", "SELECT * FROM Products WHERE ProductName LIKE '%box%';", "SELECT * FROM Products WHERE ProductName LIKE 'box%';", "SELECT * FROM Products WHERE ProductName LIKE '_box_';"],
+    "answer": "SELECT * FROM Products WHERE ProductName LIKE '%box%';"
+  },
+  {
+    "type": "code",
+    "question": "Write a query using `LIKE` to find all customers whose `LastName` starts with the letter 'M'.",
+    "answer": "SELECT * FROM Customers WHERE LastName LIKE 'M%';"
+  },
+  {
+    "type": "code",
+    "question": "Complete the query to find all cities that have exactly 6 characters in their name: WHERE City LIKE ______;",
+    "answer": "'______'"
+  },
+  {
+    "type": "code",
+    "question": "Write a query to find all file names in the `Documents` table that end with the file extension '.pdf'.",
+    "answer": "SELECT * FROM Documents WHERE FileName LIKE '%.pdf';"
+  },
+  {
+    "type": "short_answer",
+    "question": "What is the result of using the `LIKE` operator with no wildcards (e.g., `WHERE Name LIKE 'John'`)?",
+    "answer": "When used without wildcards, the `LIKE` operator behaves exactly the same as the equality operator (`=`), searching only for an exact match of the string 'John'."
+  },
+  {
+    "type": "short_answer",
+    "question": "Explain how the `ESCAPE` clause is used with the `LIKE` operator.",
+    "answer": "The `ESCAPE` clause is used to specify a character that tells the database to treat the following wildcard character (`%` or `_`) as a literal character rather than a pattern-matching symbol."
+  },
+  {
+    "type": "short_answer",
+    "question": "Why is the `LIKE` operator necessary for string comparisons, instead of always using the `=` operator?",
+    "answer": "The `=` operator only checks for exact string matches. The `LIKE` operator is necessary for flexible pattern matching, allowing partial searches and finding values where only part of the string is known or matches a certain structure."
+  },
+
+  // --- Topic 6: IS Operator (4 MCQ, 3 Code, 3 Short Answer) ---
+  {
+    "type": "mcq",
+    "question": "The `IS` operator in SQL is used for testing which specific state or value?",
+    "options": ["Numerical range checks.", "String pattern matching.", "The absence of a value (NULL).", "Case sensitivity of strings."],
+    "answer": "The absence of a value (NULL)."
+  },
+  {
+    "type": "mcq",
+    "question": "Which condition is the only correct way to check if the `Commission` column is missing a value?",
+    "options": ["WHERE Commission = NULL", "WHERE Commission == NULL", "WHERE Commission IS NULL", "WHERE Commission IS EMPTY"],
+    "answer": "WHERE Commission IS NULL"
+  },
+  {
+    "type": "mcq",
+    "question": "Which statement correctly finds all records where the `ShipDate` column contains a valid, non-NULL value?",
+    "options": ["WHERE ShipDate IS NOT NULL", "WHERE ShipDate != NULL", "WHERE NOT ShipDate = NULL", "WHERE ShipDate IS NOT EMPTY"],
+    "answer": "WHERE ShipDate IS NOT NULL"
+  },
+  {
+    "type": "mcq",
+    "question": "Why does the expression `Value = NULL` always evaluate to UNKNOWN (or NULL) instead of TRUE or FALSE?",
+    "options": ["The `=` operator is reserved for numeric comparisons only.", "NULL is not a data type, so comparison is impossible.", "NULL represents an unknown or missing value, and an unknown value cannot be logically equal to another unknown value.", "The expression should be written as `Value == NULL`."],
+    "answer": "NULL represents an unknown or missing value, and an unknown value cannot be logically equal to another unknown value."
+  },
+  {
+    "type": "code",
+    "question": "Complete the query to find all employees whose `ManagerID` has not been assigned a value: WHERE ManagerID ______ NULL;",
+    "answer": "IS"
+  },
+  {
+    "type": "code",
+    "question": "Write a query to select all records from the `Returns` table where the `Reason` column has no value recorded.",
+    "answer": "SELECT * FROM Returns WHERE Reason IS NULL;"
+  },
+  {
+    "type": "code",
+    "question": "Complete the condition to find products that have a non-NULL `ExpirationDate`: WHERE ExpirationDate ______ NULL;",
+    "answer": "IS NOT"
+  },
+  {
+    "type": "short_answer",
+    "question": "Explain the fundamental difference between a `NULL` value and an empty string (`''`) in SQL.",
+    "answer": "`NULL` signifies an unknown or missing value, representing the absence of data. An empty string (`''`) is an actual value that represents a zero-length character string. They are distinct concepts and treated differently by the database."
+  },
+  {
+    "type": "short_answer",
+    "question": "If a column is defined with a `NOT NULL` constraint, what is the expected result of applying the `WHERE ColumnA IS NULL` operator to that column?",
+    "answer": "The result will always be FALSE for every row, as the `NOT NULL` constraint guarantees that every record in that column must contain a value, making it impossible for `IS NULL` to find a match."
+  },
+  {
+    "type": "short_answer",
+    "question": "What is the result of the logical expression `NOT (Value IS NULL)` and what is its purpose?",
+    "answer": "The result is TRUE if `Value` contains any non-NULL value, and FALSE if `Value` is `NULL`. Its purpose is to filter out any records where the specified column is missing data."
+  }
 ]
 }
