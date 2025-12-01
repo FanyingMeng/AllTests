@@ -3966,5 +3966,361 @@ Nov25DatabaseQuiz:[
     "answer": "IS NOT"
   }
   
+],
+Dec2DatabaseQuiz:[
+  {
+  "type": "mcq",
+  "question": "Which condition must already be satisfied before a table can be in Second Normal Form (2NF)?",
+  "options": [
+    "The table must be in Third Normal Form (3NF).",
+    "The table must have only numeric data types.",
+    "The table must already be in First Normal Form (1NF).",
+    "The table must not contain any foreign keys."
+  ],
+  "answer": "The table must already be in First Normal Form (1NF)."
+},
+{
+  "type": "mcq",
+  "question": "What is a partial dependency in the context of database normalization?",
+  "options": [
+    "When a non-key attribute depends on another non-key attribute.",
+    "When a non-key attribute depends on part of a composite primary key.",
+    "When multiple primary keys have the same values.",
+    "When a table has more than one foreign key."
+  ],
+  "answer": "When a non-key attribute depends on part of a composite primary key."
+},
+{
+  "type": "mcq",
+  "question": "For a table to be in Second Normal Form (2NF), what must be true about all non-key attributes?",
+  "options": [
+    "They must depend only on the first column of the primary key.",
+    "They must depend on at least one foreign key.",
+    "They must depend on the entire primary key.",
+    "They must not contain NULL values."
+  ],
+  "answer": "They must depend on the entire primary key."
+},
+{
+  "type": "mcq",
+  "question": "Why should attributes that are partially dependent on a composite key be removed from the table?",
+  "options": [
+    "Because they violate First Normal Form.",
+    "Because they describe a different entity that should be in its own table.",
+    "Because they slow down SELECT queries.",
+    "Because they cannot be indexed."
+  ],
+  "answer": "Because they describe a different entity that should be in its own table."
+},
+{
+  "type": "mcq",
+  "question": "One of the main benefits of converting a table to Second Normal Form (2NF) is:",
+  "options": [
+    "Avoiding data redundancy and preventing update anomalies",
+    "Increasing the size of the database",
+    "Eliminating the need for primary keys",
+    "Allowing duplicate data for faster access"
+  ],
+  "answer": "Avoiding data redundancy and preventing update anomalies"
+},
+{
+  "type": "mcq",
+  "question": "Which condition must a table satisfy before it can be in Third Normal Form (3NF)?",
+  "options": [
+    "The table must already be in Second Normal Form (2NF).",
+    "The table must have no foreign keys.",
+    "The table must contain only numeric columns.",
+    "The table must have multiple primary keys."
+  ],
+  "answer": "The table must already be in Second Normal Form (2NF)."
+},
+{
+  "type": "mcq",
+  "question": "What type of dependency is NOT allowed in a table that follows Third Normal Form (3NF)?",
+  "options": [
+    "Functional dependency",
+    "Partial dependency",
+    "Transitive dependency",
+    "Composite dependency"
+  ],
+  "answer": "Transitive dependency"
+},
+{
+  "type": "mcq",
+  "question": "What is a transitive dependency in the context of database normalization?",
+  "options": [
+    "When a non-key attribute depends on the primary key.",
+    "When a primary key depends on a foreign key.",
+    "When a non-key attribute depends on another non-key attribute.",
+    "When two tables share the same column name."
+  ],
+  "answer": "When a non-key attribute depends on another non-key attribute."
+},
+{
+  "type": "mcq",
+  "question": "In Third Normal Form (3NF), all non-key attributes must:",
+  "options": [
+    "Depend only on foreign keys.",
+    "Be part of a composite primary key.",
+    "Contain unique values.",
+     "Depend directly on the primary key and nothing else."
+  ],
+  "answer": "Depend directly on the primary key and nothing else."
+},
+{
+  "type": "mcq",
+  "question": "What is one main benefit of converting a table to Third Normal Form (3NF)?",
+  "options": [
+    "Increasing the number of rows in the table",
+    "Allowing faster data input",
+    "Reducing data redundancy and improving data integrity",
+    "Eliminating the need for relationships between tables"
+  ],
+  "answer": "Reducing data redundancy and improving data integrity"
+},
+{
+  "type": "mcq",
+  "question": "What does referential integrity primarily ensure in a database?",
+  "options": [
+    "Foreign key values always reference valid primary key values",
+    "All columns contain numeric data",
+    "Data is stored in alphabetical order",
+    "No duplicate rows exist in a table"
+  ],
+  "answer": "Foreign key values always reference valid primary key values"
+},
+{
+  "type": "mcq",
+  "question": "Referential integrity is a subset of which broader concept?",
+  "options": [
+    "Normalization",
+    "Data integrity",
+    "Index optimization",
+    "Transaction control"
+  ],
+  "answer": "Data integrity"
+},
+{
+  "type": "mcq",
+  "question": "Referential integrity is a subset of which broader concept?",
+  "options": [
+    "Data integrity",
+    "Normalization",
+    "Index optimization",
+    "Transaction control"
+  ],
+  "answer": "Data integrity"
+},
+{
+  "type": "mcq",
+  "question": "What is the role of a foreign key in maintaining referential integrity?",
+  "options": [
+    "It allows duplicate values in a column",
+    "It references a primary key in another (parent) table",
+    "It creates a new primary key in the child table",
+    "It automatically deletes data"
+  ],
+  "answer": "It references a primary key in another (parent) table"
+},
+{
+  "type": "mcq",
+  "question": "Why are constraints described as \"proactive\"?",
+  "options": [
+    "They run after data is updated",
+    "They only run when a trigger executes",
+    "They enforce rules before a change operation occurs",
+    "They only work on SELECT statements"
+  ],
+  "answer": "They enforce rules before a change operation occurs"
+},
+{
+  "type": "mcq",
+  "question": "Why are triggers considered \"reactive\" mechanisms?",
+  "options": [
+    "They operate before INSERT operations",
+    "They execute only when the DBA runs them",
+    "They occur after a change operation happens",
+    "They only work on SELECT statements"
+  ],
+  "answer": "They occur after a change operation happens"
+},
+{
+  "type": "mcq",
+  "question": "Which constraint ensures that a column cannot contain NULL values?",
+  "options": [
+    "UNIQUE",
+    "PRIMARY KEY",
+    "NOT NULL",
+    "CHECK"
+  ],
+  "answer": "NOT NULL"
+},
+{
+  "type": "mcq",
+  "question": "Which constraint guarantees that all values in a column are different?",
+  "options": [
+    "UNIQUE",
+    "CHECK",
+    "DEFAULT",
+    "FOREIGN KEY"
+  ],
+  "answer": "UNIQUE"
+},
+{
+  "type": "mcq",
+  "question": "A PRIMARY KEY is best described as:",
+  "options": [
+    "A column that allows duplicates",
+    "A combination of NOT NULL and UNIQUE",
+    "A column used only for sorting data",
+    "Another name for FOREIGN KEY"
+  ],
+  "answer": "A combination of NOT NULL and UNIQUE"
+},
+{
+  "type": "mcq",
+  "question": "Which constraint ensures that values in a column meet a specific condition?",
+  "options": [
+    "DEFAULT",
+    "NOT NULL",
+    "CHECK",
+    "INDEX"
+  ],
+  "answer": "CHECK"
+},
+{
+  "type": "mcq",
+  "question": "Which database object is mainly used to improve data retrieval speed?",
+  "options": [
+    "TRIGGER",
+    "INDEX",
+    "CHECK",
+    "FOREIGN KEY"
+  ],
+  "answer": "INDEX"
+},
+{
+  "type": "mcq",
+  "question": "What is the main purpose of a Logical Data Model (LDM)?",
+  "options": [
+    "Define physical storage details like data types and indexes",
+    "Describe business entities, attributes and relationships without DBMS-specific details",
+    "Optimize query performance and disk storage",
+    "Automatically generate SQL code for a database"
+  ],
+  "answer": "Describe business entities, attributes and relationships without DBMS-specific details"
+},
+{
+  "type": "mcq",
+  "question": "Which of the following is typically included in a Physical Data Model (PDM) but NOT in a Logical Data Model (LDM)?",
+  "options": [
+    "Entity relationships",
+    "Business-level entity names",
+    "Column data types, indexes, and storage details",
+    "Primary key definitions"
+  ],
+  "answer": "Column data types, indexes, and storage details"
+},
+{
+  "type": "mcq",
+  "question": "What is the main purpose of a Conceptual Data Model?",
+  "options": [
+    "To define database-specific column data types",
+    "To establish entities, their attributes, and their relationships at a business level",
+    "To build indexes and optimize performance",
+    "To generate SQL scripts automatically"
+  ],
+  "answer": "To establish entities, their attributes, and their relationships at a business level"
+},
+{
+  "type": "mcq",
+  "question": "Which model focuses on defining the structure of data elements and their relationships, but is still DBMS-independent?",
+  "options": [
+    "Physical Data Model",
+    "Conceptual Data Model",
+    "Logical Data Model",
+    "Network Data Model"
+  ],
+  "answer": "Logical Data Model"
+},
+{
+  "type": "mcq",
+  "question": "Which statement best describes a Physical Data Model?",
+  "options": [
+    "It shows general business objects only",
+    "It represents the detailed, database-specific implementation of the data model",
+    "It ignores data types and constraints",
+    "It is used only by business users"
+  ],
+  "answer": "It represents the detailed, database-specific implementation of the data model"
+},
+{
+  "type": "mcq",
+  "question": "In a Conceptual ERD, many-to-many relationships are usually shown as:",
+  "options": [
+    "Separate associative tables",
+    "Unrelated entities",
+    "Relationships without resolving tables or cardinality details",
+    "Foreign key constraints with indexes"
+  ],
+  "answer": "Relationships without resolving tables or cardinality details"
+},
+{
+  "type": "mcq",
+  "question": "Which type of model supports generalization (\"is-a\" relationship), such as Triangle being a kind of Shape?",
+  "options": [
+    "Logical Data Model only",
+    "Physical Data Model only",
+    "All data models equally",
+    "Conceptual Data Model only"
+  ],
+  "answer": "Conceptual Data Model only"
+},
+{
+  "type": "mcq",
+  "question": "What is added in the Logical Data Model that is not fully defined in the Conceptual Model?",
+  "options": [
+    "Business rules only",
+    "Entity color and layout",
+    "Columns/attributes for each entity and operational entities",
+    "DBMS storage paths"
+  ],
+  "answer": "Columns/attributes for each entity and operational entities"
+},
+{
+  "type": "mcq",
+  "question": "Which of the following is typically specified only in the Physical Data Model?",
+  "options": [
+    "Entity names",
+    "Business relationships",
+    "Column type, length, and nullable properties",
+    "High-level system overview"
+  ],
+  "answer": "Column type, length, and nullable properties"
+},
+{
+  "type": "mcq",
+  "question": "Why must the Physical Data Model consider the specific DBMS being used?",
+  "options": [
+    "Because it uses natural language",
+    "Because it must ensure supported data types and avoid reserved words",
+    "Because it removes all relationships",
+    "Because it is created by business users"
+  ],
+  "answer": "Because it must ensure supported data types and avoid reserved words"
+},
+{
+  "type": "mcq",
+  "question": "What is the main goal of designing data models?",
+  "options": [
+    "To reduce the number of tables used",
+    "To make sure the system runs faster than competitors",
+    "To represent business data objects accurately",
+    "To remove relationships between entities"
+  ],
+  "answer": "To represent business data objects accurately"
+}
+
+
 ]
 }
