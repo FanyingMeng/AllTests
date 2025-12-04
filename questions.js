@@ -4322,5 +4322,534 @@ Dec2DatabaseQuiz:[
 }
 
 
+],
+Dec4ProgrammingQuiz:[
+{
+  "type": "mcq",
+  "question": "What does the statement 'int[] scores = new int[3]' do in C#?",
+  "options": [
+    "Creates three separate integer variables on the stack",
+    "Creates a variable on the stack holding a reference to a heap array of 3 ints",
+    "Creates three integer variables on the heap directly",
+    "Allocates memory for integers without creating a reference"
+  ],
+  "answer": "Creates a variable on the stack holding a reference to a heap array of 3 ints"
+},
+{
+  "type": "mcq",
+  "question": "Which index does the first element of a C# array have?",
+  "options": ["1", "0", "-1", "It depends on the array type"],
+  "answer": "0"
+},
+{
+  "type": "mcq",
+  "question": "How can you access a specific element in a multi-dimensional array?",
+  "options": [
+    "By referring to a single index", 
+    "By using a foreach loop only",
+    "By referring to row and column indices",
+    "By using GetHashCode()"
+  ],
+  "answer": "By referring to row and column indices"
+},
+{
+  "type": "mcq",
+  "question": "What does a jagged array in C# consist of?",
+  "options": [
+    "An array of arrays where each sub-array can have different lengths",
+    "A single contiguous block of memory",
+    "A multi-dimensional rectangular array",
+    "A linked list of arrays"
+  ],
+  "answer": "An array of arrays where each sub-array can have different lengths"
+},
+{
+  "type": "mcq",
+  "question": "Which method can be used to get the length of a specific dimension in a multi-dimensional array?",
+  "options": ["Length()", "GetSize()", "GetLength()", "Count()"],
+  "answer": "GetLength()"
+},
+{
+  "type": "mcq",
+  "question": "If you create an array but don’t initialize its elements, what will be their default value for reference types?",
+  "options": ["0", "NULL", "false", "undefined"],
+  "answer": "NULL"
+},
+{
+  "type": "mcq",
+  "question": "Why might you choose a jagged array over a rectangular multi-dimensional array?",
+  "options": [
+    "Jagged arrays are always faster",
+    "Jagged arrays are automatically sorted",
+    "Rectangular arrays cannot store integers",
+    "Jagged arrays allow each row to have a different length, saving space"
+  ],
+  "answer": "Jagged arrays allow each row to have a different length, saving space"
+},
+{
+  "type": "mcq",
+  "question": "How does C# store arrays in memory?",
+  "options": [
+    "Arrays are stored only on the stack",
+    "Arrays are always stored in contiguous memory on the heap",
+    "Arrays are stored as linked lists in the heap",
+    "Arrays are stored in registers"
+  ],
+  "answer": "Arrays are always stored in contiguous memory on the heap"
+},
+{
+  "type": "mcq",
+  "question": "Which loop is typically used when you need to perform operations based on an array index?",
+  "options": ["foreach", "while", "for", "do-while"],
+  "answer": "for"
+},
+{
+  "type": "mcq",
+  "question": "In C# 12 and later, how can arrays or collections be initialized with known values at creation?",
+  "options": [
+    "Using a Collection expression",
+    "Using a default constructor only",
+    "Using a foreach loop",
+    "Using pointer arithmetic"
+  ],
+  "answer": "Using a Collection expression"
+},
+{
+  "type": "mcq",
+  "question": "What will be the output of the following code?\n\nint[] arr = new int[3];\nConsole.WriteLine(arr[0]);",
+  "options": ["0", "1", "null", "Error"],
+  "answer": "0"
+},
+{
+  "type": "mcq",
+  "question": "Which of the following correctly declares a two-dimensional array in C#?",
+  "options": [
+    "int[,] matrix = new int[2,3];",
+    "int[][] matrix = new int[2,3];",
+    "int[2,3] matrix = new int[2,3];",
+    "int[] matrix = new int[2,3];"
+  ],
+  "answer": "int[,] matrix = new int[2,3];"
+},
+{
+  "type": "mcq",
+  "question": "What is the correct way to access the third element of an array named 'scores'?",
+  "options": [ "scores[3]", "scores(2)", "scores.get(2)","scores[2]"],
+  "answer": "scores[2]"
+},
+{
+  "type": "mcq",
+  "question": "How do you declare a jagged array of integers with 3 rows?",
+  "options": [
+    "int[][] jagged = new int[3][];",
+    "int[,] jagged = new int[3][];",
+    "int[][] jagged = new int[3,3];",
+    "int[] jagged = new int[3][];"
+  ],
+  "answer": "int[][] jagged = new int[3][];"
+},
+{
+  "type": "mcq",
+  "question": "Given int[,] matrix = new int[2,3]; what does matrix.GetLength(1) return?",
+  "options": ["2", "3", "6", "1"],
+  "answer": "3"
+},
+{
+  "type": "mcq",
+  "question": "Which of the following loops is typically used to iterate through all elements of a jagged array?",
+  "options": [
+    "Nested for loops",
+    "Single for loop",
+    "foreach loop only",
+    "while loop only"
+  ],
+  "answer": "Nested for loops"
+},
+{
+  "type": "mcq",
+  "question": "What will be the output of the following code?\n\nint[][] jagged = new int[2][];\njagged[0] = new int[2];\nConsole.WriteLine(jagged[1] == null);",
+  "options": ["True", "False", "Error", "0"],
+  "answer": "True"
+},
+{
+  "type": "mcq",
+  "question": "Which statement correctly initializes an array with values 1, 2, 3?",
+  "options": [
+    "int[] arr = {1,2,3};",
+    "int[] arr = new int[3]{1,2,3};",
+    "int arr[] = new int[]{1,2,3};",
+    "All of the above"
+  ],
+  "answer": "All of the above"
+},
+{
+  "type": "mcq",
+  "question": "What will be the output of the following code?\n\nbool[] flags = new bool[3];\nConsole.WriteLine(flags[0]);",
+  "options": ["false", "true", "0", "null"],
+  "answer": "false"
+},
+{
+  "type": "mcq",
+  "question": "Which of the following correctly loops through a two-dimensional array 'matrix' of size 2x3?",
+  "options": [
+    "for(int i=0;i<2;i++)\n{\nfor(int j=0;j<3;j++)\n{\nConsole.Write(matrix[i,j])\n}\n};",
+    "for(int i=0;i<3;i++)\n{\nfor(int j=0;j<2;j++)\n{\nConsole.Write(matrix[i,j])\n}\n};",
+    "foreach(var val in matrix)\n{\nConsole.Write(val)\n};",
+    "for(int i=0;i<2;i++)\n{\nConsole.Write(matrix[i])\n};"
+  ],
+  "answer": "for(int i=0;i<2;i++) \n{\nfor(int j=0;j<3;j++)\n{\nConsole.Write(matrix[i,j])\n}\n};"
+},
+{
+  "type": "mcq",
+  "question": "Which property of a string gives the number of characters in it?",
+  "options": ["Count", "Length", "Size", "Capacity"],
+  "answer": "Length"
+},
+{
+  "type": "mcq",
+  "question": "Which C# class should you use if you need a mutable string for repeated modifications?",
+  "options": ["StringBuilder", "string", "char[]", "StringWriter"],
+  "answer": "StringBuilder"
+},
+{
+  "type": "mcq",
+  "question": "What does the string method ToUpper() do?",
+  "options": [
+    "Converts all characters in the string to uppercase",
+    "Converts all characters in the string to lowercase",
+    "Checks if the string contains a substring",
+    "Replaces all occurrences of a character"
+  ],
+  "answer": "Converts all characters in the string to uppercase"
+},
+{
+  "type": "mcq",
+  "question": "Are C# strings mutable or immutable?",
+  "options": ["Mutable", "Immutable", "Depends on context", "Only for ASCII strings"],
+  "answer": "Immutable"
+},
+{
+  "type": "mcq",
+  "question": "Which method checks if a string contains a specific substring?",
+  "options": ["Substring()", "Contains()", "IndexOf()", "StartsWith()"],
+  "answer": "Contains()"
+},
+{
+  "type": "mcq",
+  "question": "What is the output of the following code?\n\nstring s = \"Hello World\";\nConsole.WriteLine(s.ToLower());",
+  "options": ["HELLO WORLD", "hello world", "Hello World", "Error"],
+  "answer": "hello world"
+},
+{
+  "type": "mcq",
+  "question": "Which line of code replaces all 'a' characters with 'b' in the string myString?",
+  "options": [
+    "myString.Replace('a', 'b');",
+    "myString.SubString('a', 'b');",
+    "myString.ToUpper('a','b');",
+    "myString.Contains('a','b');"
+  ],
+  "answer": "myString.Replace('a', 'b');"
+},
+{
+  "type": "mcq",
+  "question": "How do you extract the substring starting at index 1 with length 3 from myString?",
+  "options": [
+    "myString.Substring(1,3);",
+    "myString.SubString(3,1);",
+    "myString.Slice(1,3);",
+    "myString.GetRange(1,3);"
+  ],
+  "answer": "myString.Substring(1,3);"
+},
+{
+  "type": "mcq",
+  "question": "Which code correctly checks if myString contains the substring 'Hello'?",
+  "options": [
+    "myString.Check(\"Hello\");",
+    "myString.IndexOf(\"Hello\") == -1;",
+    "myString.Find(\"Hello\");",
+    "myString.Contains(\"Hello\");"
+  ],
+  "answer": "myString.Contains(\"Hello\");"
+},
+{
+  "type": "mcq",
+  "question": "Which statement converts myString to all uppercase letters?",
+  "options": [
+    "string upper = myString.ToUpper();",
+    "string upper = myString.ToLower();",
+    "string upper = myString.Upper();",
+    "string upper = myString.Capitalize();"
+  ],
+  "answer": "string upper = myString.ToUpper();"
+},
+{
+  "type": "mcq",
+  "question": "What is the main advantage of using StringBuilder over string?",
+  "options": [
+    "Efficient for multiple concatenations",
+    "Strings are mutable by default",
+    "Allows access to private string memory",
+    "Prevents null reference exceptions"
+  ],
+  "answer": "Efficient for multiple concatenations"
+},
+{
+  "type": "mcq",
+  "question": "What does the following code print?\n\nstring s = \"abc\";\nConsole.WriteLine(s.Length);",
+  "options": ["2", "3", "4", "Error"],
+  "answer": "3"
+},
+{
+  "type": "mcq",
+  "question": "Why is file I/O important for software applications?",
+  "options": [
+    "It allows programs to permanently store and retrieve data",
+    "It makes programs run faster in memory",
+    "It prevents syntax errors",
+    "It automatically generates user interfaces"
+  ],
+  "answer": "It allows programs to permanently store and retrieve data"
+},
+{
+  "type": "mcq",
+  "question": "Which namespace contains the File class in C#?",
+  "options": ["System.IO", "System.File", "System.Text", "System.Data"],
+  "answer": "System.IO"
+},
+{
+  "type": "mcq",
+  "question": "Which File class method reads the entire content of a file as a single string?",
+  "options": [
+    "File.ReadAllLines(filePath)",
+    "File.ReadAllText(filePath)",
+    "File.WriteAllText(filePath, content)",
+    "File.AppendAllText(filePath, content)"
+  ],
+  "answer": "File.ReadAllText(filePath)"
+},
+{
+  "type": "mcq",
+  "question": "When should you prefer StreamReader and StreamWriter over File.ReadAllText or File.WriteAllText?",
+  "options": [
+    "When reading a single small file",
+    "When writing to the console",
+    "When working with database connections",
+    "When handling larger files or needing buffered reading/writing"
+  ],
+  "answer": "When handling larger files or needing buffered reading/writing"
+},
+{
+  "type": "mcq",
+  "question": "Which File class method appends content to an existing file?",
+  "options": [
+    "File.AppendAllText(filePath, content)",
+    "File.WriteAllText(filePath, content)",
+    "File.ReadAllText(filePath)",
+    "File.ReadAllLines(filePath)"
+  ],
+  "answer": "File.AppendAllText(filePath, content)"
+},
+{
+  "type": "mcq",
+  "question": "Which namespace contains the List<T> class in C#?",
+  "options": ["System.Collections.Generic", "System.IO", "System.Text", "System.Data"],
+  "answer": "System.Collections.Generic"
+},
+{
+  "type": "mcq",
+  "question": "What is the difference between a List<T> and an array?",
+  "options": [
+    "Arrays are mutable, List<T> is immutable",
+    "List<T> cannot store integers, arrays can",
+    "List<T> is dynamically resizable while arrays have fixed size",
+    "Arrays automatically resize, List<T> does not"
+  ],
+  "answer": "List<T> is dynamically resizable while arrays have fixed size"
+},
+{
+  "type": "mcq",
+  "question": "What does the Count property of a List<T> return?",
+  "options": [
+    "The number of elements currently in the list",
+    "The maximum capacity of the list",
+    "The size of the internal array",
+    "The index of the last element"
+  ],
+  "answer": "The number of elements currently in the list"
+},
+{
+  "type": "mcq",
+  "question": "What happens internally when a List<T> exceeds its current capacity?",
+  "options": [
+    "The list throws an exception",
+    "A new larger array is created and elements are copied over",
+    "The list automatically deletes elements at the end",
+    "Nothing, it stops accepting new elements"
+  ],
+  "answer": "A new larger array is created and elements are copied over"
+},
+{
+  "type": "mcq",
+  "question": "Which List<T> method removes all elements from the list?",
+  "options": ["Clear()", "Remove()", "RemoveAt()", "Delete()"],
+  "answer": "Clear()"
+},
+{
+  "type": "mcq",
+  "question": "How do you add an item '5' to a List<int> named numbers?",
+  "options": [
+    "numbers.Add(5);",
+    "numbers.Insert(5);",
+    "numbers.Push(5);",
+    "numbers.Append(5);"
+  ],
+  "answer": "numbers.Add(5);"
+},
+{
+  "type": "mcq",
+  "question": "Which code checks if the list contains the value 10?",
+  "options": [
+    "numbers.Has(10);",
+    "numbers.Exists(10);",
+    "numbers.Find(10);",
+    "numbers.Contains(10);"
+  ],
+  "answer": "numbers.Contains(10);"
+},
+{
+  "type": "mcq",
+  "question": "How do you insert '7' at index 2 in the list 'numbers'?",
+  "options": [
+    "numbers.Add(2, 7);",
+    "numbers[2] = 7;",
+    "numbers.Insert(2, 7);",
+    "numbers.Push(2,7);"
+  ],
+  "answer": "numbers.Insert(2, 7);"
+},
+{
+  "type": "mcq",
+  "question": "Which method removes the element at index 3 from a list named numbers?",
+  "options": [ "numbers.Remove(3);","numbers.RemoveAt(3);", "numbers.Delete(3);", "numbers.Clear(3);"],
+  "answer": "numbers.RemoveAt(3);"
+},
+{
+  "type": "mcq",
+  "question": "What will be the output of the following code?\n\nList<string> names = new List<string>();\nnames.Add(\"Alice\");\nnames.Add(\"Bob\");\nConsole.WriteLine(names.Count);",
+  "options": ["1", "2", "0", "Error"],
+  "answer": "2"
+},
+{
+  "type": "mcq",
+  "question": "What is stored in a Dictionary in C#?",
+  "options": [
+    "Key-value pairs",
+    "Only values",
+    "Only keys",
+    "Indexed elements"
+  ],
+  "answer": "Key-value pairs"
+},
+{
+  "type": "mcq",
+  "question": "Which requirement must a key in a Dictionary satisfy?",
+  "options": [
+    "Duplicate keys allowed",
+    "Mutable and hashable",
+    "Unique, immutable, and hashable",
+    "Only integer type"
+  ],
+  "answer": "Unique, immutable, and hashable"
+},
+{
+  "type": "mcq",
+  "question": "Which Dictionary feature ensures fast retrieval of values?",
+  "options": [
+    "Uses a hash table internally",
+    "Automatically sorts keys",
+    "Stores elements sequentially",
+    "Uses a linked list internally"
+  ],
+  "answer": "Uses a hash table internally"
+},
+{
+  "type": "mcq",
+  "question": "Which method checks if a Dictionary contains a specific key?",
+  "options": [
+    "ContainsValue()",
+    "HasKey()",
+    "HasValue()",
+    "ContainsKey()"
+  ],
+  "answer": "ContainsKey()"
+},
+{
+  "type": "mcq",
+  "question": "What happens if you try to access a key that does not exist using indexing ([])?",
+  "options": [
+    "Throws a KeyNotFoundException",
+    "Returns null",
+    "Creates a new key with default value",
+    "Returns 0"
+  ],
+  "answer": "Throws a KeyNotFoundException"
+},
+{
+  "type": "mcq",
+  "question": "How do you add a key-value pair '1' -> 'Apple' to a Dictionary<int,string> named dict?",
+  "options": [
+    "dict.Add(1, \"Apple\");",
+    "dict.Insert(1, \"Apple\");",
+    "dict[1] = \"Apple\";",
+    "Both A and C"
+  ],
+  "answer": "Both A and C"
+},
+{
+  "type": "mcq",
+  "question": "How do you retrieve the value associated with key 5 in a Dictionary<int,string> named dict safely?",
+  "options": [
+    "dict.TryGetValue(5, out string value);",
+    "dict.ContainsKey(5);",
+    "dict[5];",
+    "dict.GetValue(5);"
+  ],
+  "answer": "dict.TryGetValue(5, out string value);"
+},
+{
+  "type": "mcq",
+  "question": "Which method removes the key 3 from a dictionary named dict?",
+  "options": [
+    "dict.Delete(3);",
+    "dict.Remove(3);",
+    "dict.Clear(3);",
+    "dict.Pop(3);"
+  ],
+  "answer": "dict.Remove(3);"
+},
+{
+  "type": "mcq",
+  "question": "Which method checks if a dictionary contains the value \"Orange\"?",
+  "options": [
+    "dict.ContainsKey(\"Orange\");",
+    "dict.HasValue(\"Orange\");",
+    "dict.ContainsValue(\"Orange\");",
+    "dict.HasKey(\"Orange\");"
+  ],
+  "answer": "dict.ContainsValue(\"Orange\");"
+},
+{
+  "type": "mcq",
+  "question": "What happens if you assign a value to an existing key using indexing?",
+  "options": [
+    "The value is updated",
+    "A new key is added",
+    "Throws an exception",
+    "Removes the key"
+  ],
+  "answer": "The value is updated"
+}
 ]
 }
