@@ -4851,5 +4851,290 @@ Dec4ProgrammingQuiz:[
   ],
   "answer": "The value is updated"
 }
+],
+Dec8Databasequiz:[
+  {
+  "type": "mcq",
+  "question": "Which statement best describes an INNER JOIN?",
+  "options": [
+    "It returns all rows from both tables regardless of matching values.",
+    "It returns only the rows where matching values exist in both tables.",
+    "It returns rows only from the left table.",
+    "It returns rows only from the right table."
+  ],
+  "answer": "It returns only the rows where matching values exist in both tables."
+},
+{
+  "type": "mcq",
+  "question": "What will happen if the ON clause is missing in an INNER JOIN?",
+  "options": [
+    "SQL automatically creates a join condition.",
+    "SQL returns an error.",
+    "SQL performs a Cartesian product.",
+    "SQL returns only unmatched rows."
+  ],
+  "answer": "SQL performs a Cartesian product."
+},
+{
+  "type": "mcq",
+  "question": "Why are table aliases recommended when using INNER JOIN?",
+  "options": [
+    "They improve readability and avoid ambiguity.",
+    "They increase query execution speed.",
+    "They automatically generate join conditions.",
+    "They prevent NULLs from appearing in results."
+  ],
+  "answer": "They improve readability and avoid ambiguity."
+},
+{
+  "type": "mcq",
+  "question": "When two tables have the same column name, what must be done?",
+  "options": [
+    "Rename the column in one table.",
+    "Prefix the column name with the table or alias.",
+    "Use WHERE instead of ON.",
+    "Write the join without specifying the column."
+  ],
+  "answer": "Prefix the column name with the table or alias."
+},
+{
+  "type": "mcq",
+  "question": "Which clause should always be used to define the join relationship in an INNER JOIN?",
+  "options": ["WHERE", "GROUP BY", "ON", "HAVING"],
+  "answer": "ON"
+},
+{
+  "type": "tf",
+  "question": "INNER JOIN excludes rows that do not satisfy the join condition.",
+  "answer": true
+},
+{
+  "type": "tf",
+  "question": "A JOIN B gives the same result as B JOIN A if the join condition is correct.",
+  "answer": true
+},
+{
+  "type": "tf",
+  "question": "When joining 3 or more tables, only one ON clause is required.",
+  "answer": false
+},
+{
+  "type": "mcq",
+  "question": "What is the main purpose of a SQL JOIN?",
+  "options": [
+    "To delete duplicate rows",
+    "To combine data from two or more tables",
+    "To change the data type of a column",
+    "To create a new database"
+  ],
+  "answer": "To combine data from two or more tables"
+},
+{
+  "type": "mcq",
+  "question": "Which JOIN returns only the rows where matching values exist in both tables?",
+  "options": ["LEFT JOIN", "RIGHT JOIN", "FULL JOIN", "INNER JOIN"],
+  "answer": "INNER JOIN"
+},
+{
+  "type": "mcq",
+  "question": "Which JOIN returns all rows from the left table, even if there's no match?",
+  "options": ["INNER JOIN", "LEFT JOIN", "RIGHT JOIN", "FULL JOIN"],
+  "answer": "LEFT JOIN"
+},
+{
+  "type": "mcq",
+  "question": "Which JOIN returns all rows from both tables, matched or not?",
+  "options": ["INNER JOIN", "LEFT JOIN", "RIGHT JOIN", "FULL JOIN"],
+  "answer": "FULL JOIN"
+},
+{
+  "type": "mcq",
+  "question": "Why do relational databases need JOIN operations?",
+  "options": [
+    "Because data is stored across multiple tables",
+    "Because SQL cannot store large tables",
+    "Because JOINs increase database speed",
+    "Because JOINs automatically remove NULLs"
+  ],
+  "answer": "Because data is stored across multiple tables"
+},
+{
+  "type": "tf",
+  "question": "INNER JOIN returns only the rows where matching data exists in both tables.",
+  "answer": true
+},
+{
+  "type": "tf",
+  "question": "LEFT JOIN returns all rows from the right table.",
+  "answer": false
+},
+{
+  "type": "tf",
+  "question": "RIGHT JOIN returns all rows from the right table, even if no match exists in the left table.",
+  "answer": true
+},
+{
+  "type": "tf",
+  "question": "FULL JOIN returns only the matched rows from both tables.",
+  "answer": false
+},
+{
+  "type": "tf",
+  "question": "A JOIN uses a matching column to link rows between tables.",
+  "answer": true
+},
+{
+  "type": "mcq",
+  "question": "What is a self JOIN primarily used for?",
+  "options": [
+    "Joining two unrelated databases",
+    "Comparing rows within the same table",
+    "Creating duplicate rows",
+    "Removing NULL values from a table"
+  ],
+  "answer": "Comparing rows within the same table"
+},
+{
+  "type": "mcq",
+  "question": "What does a LEFT JOIN return?",
+  "options": [
+    "Only matched rows from both tables",
+    "All rows from both tables",
+    "All rows from the left table and matched rows from the right table",
+    "All rows from the right table and matched rows from the left table"
+  ],
+  "answer": "All rows from the left table and matched rows from the right table"
+},
+{
+  "type": "mcq",
+  "question": "Which JOIN returns all rows when there is a match in either table?",
+  "options": ["LEFT JOIN", "RIGHT JOIN", "FULL OUTER JOIN", "CROSS JOIN"],
+  "answer": "FULL OUTER JOIN"
+},
+{
+  "type": "mcq",
+  "question": "What is a key characteristic of a CROSS JOIN?",
+  "options": [
+    "Returns only matched rows",
+    "Returns one random row from each table",
+    "Creates all combinations of rows from both tables",
+    "Returns only rows where keys match"
+  ],
+  "answer": "Creates all combinations of rows from both tables"
+},
+{
+  "type": "mcq",
+  "question": "If table A has 100 rows and table B has 200 rows, how many rows will a CROSS JOIN produce?",
+  "options": ["100", "200", "300", "20000"],
+  "answer": "20000"
+},
+{
+  "type": "mcq",
+  "question": "What is the UNION operator used for?",
+  "options": [
+    "To join tables side by side",
+    "To combine result sets into new rows",
+    "To compare data types",
+    "To remove NULL values"
+  ],
+  "answer": "To combine result sets into new rows"
+},
+{
+  "type": "mcq",
+  "question": "Which of the following is a requirement for UNION?",
+  "options": [
+    "Tables must have primary keys",
+    "Both SELECTs must have the same number of columns",
+    "Columns must have identical names",
+    "Tables must be joined before unioning"
+  ],
+  "answer": "Both SELECTs must have the same number of columns"
+},
+{
+  "type": "mcq",
+  "question": "What is the key difference between JOIN and UNION?",
+  "options": [
+    "JOIN combines columns; UNION combines rows",
+    "JOIN removes duplicates; UNION does not",
+    "JOIN requires identical data types; UNION does not",
+    "JOIN is slower than UNION"
+  ],
+  "answer": "JOIN combines columns; UNION combines rows"
+},
+{
+  "type": "mcq",
+  "question": "What does EXCEPT return?",
+  "options": [
+    "Rows that appear in both input queries",
+    "Rows that appear only in the right query",
+    "Distinct rows from the left query not present in the right query",
+    "All rows from both queries"
+  ],
+  "answer": "Distinct rows from the left query not present in the right query"
+},
+{
+  "type": "mcq",
+  "question": "Which operator returns distinct rows that appear in both results?",
+  "options": ["UNION", "EXCEPT", "INTERSECT", "CROSS JOIN"],
+  "answer": "INTERSECT"
+},
+{
+  "type": "tf",
+  "question": "A self JOIN is simply a table joined with itself.",
+  "answer": true
+},
+{
+  "type": "tf",
+  "question": "FULL OUTER JOIN returns only the matched rows between two tables.",
+  "answer": false
+},
+{
+  "type": "tf",
+  "question": "CROSS JOIN can create very large result sets because it produces all combinations of rows.",
+  "answer": true
+},
+{
+  "type": "tf",
+  "question": "UNION requires all SELECT statements to have the same number of columns.",
+  "answer": true
+},
+{
+  "type": "tf",
+  "question": "INTERSECT returns all rows from the left query even if they do not appear in the right query.",
+  "answer": false
+},
+{
+  "type": "mcq",
+  "question": "What does a NATURAL JOIN automatically use to match rows between two tables?",
+  "options": [
+    "Primary keys only",
+    "Columns with the same name in both tables",
+    "Foreign key constraints",
+    "All numeric columns"
+  ],
+  "answer": "Columns with the same name in both tables"
+},
+{
+  "type": "mcq",
+  "question": "Which statement is TRUE about NATURAL JOIN?",
+  "options": [
+    "It requires an explicit ON clause.",
+    "It automatically eliminates duplicate column names in the output.",
+    "It returns unmatched rows from both tables.",
+    "It always performs faster than INNER JOIN."
+  ],
+  "answer": "It automatically eliminates duplicate column names in the output."
+},
+{
+  "type": "mcq",
+  "question": "What is a potential risk of using NATURAL JOIN?",
+  "options": [
+    "It never returns NULL values",
+    "It may unintentionally join tables using columns that simply share the same name",
+    "It requires manual column mapping",
+    "It cannot be used with more than two tables"
+  ],
+  "answer": "It may unintentionally join tables using columns that simply share the same name"
+}
 ]
 }
