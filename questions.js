@@ -5136,5 +5136,331 @@ Dec8Databasequiz:[
   ],
   "answer": "It may unintentionally join tables using columns that simply share the same name"
 }
+],
+Webdesignfinal:[
+  {
+    "type": "code",
+    "question": "Hexcode for black:",
+    "answer": "#000000"
+  },
+  {
+    "type": "code",
+    "question": "Hexcode for white:",
+    "answer": "#FFFFFF"
+  },
+  {
+    "type": "code",
+    "question": "Hexcode for red:",
+    "answer": "#FF0000"
+  },
+  {
+    "type": "code",
+    "question": "Hexcode for green:",
+    "answer": "#00FF00"
+  },
+  {
+    "type": "code",
+    "question": "Hexcode for blue:",
+    "answer": "#0000FF"
+  },
+  {
+    "type": "code",
+    "question": "写在head里的字符设置怎么写?",
+    "answer": "<meta charset=\"uft-8\">"
+  },
+  {
+    "type": "code",
+    "question": "head里responsive怎么写?",
+    "answer": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
+  },
+  {
+    "type": "code",
+    "question": "head里css链接怎么写?",
+    "answer": "<link rel=\"stylesheet\" href=\"raceworld.css\">"
+  },
+  {
+    "type": "code",
+    "question": "responsive图片怎么写?（记得从大到小）",
+    "answer": "<picture>\n<source srcset=\"images/RaceworldLarge.png\" media=\"(min-width:64em)\">\n<source srcset=\"images/RaceworldMed.png\" media=\"(min-width:48em)\">\n<img src=\"images/RaceworldSm.png\" alt=\"Raceworldlogo\">\n</picture>"
+  },
+  {
+    "type": "code",
+    "question": "超链接怎么写？",
+    "answer": "<a href=\"#\">News</a>"
+  },
+  {
+    "type": "code",
+    "question": "超链接在CSS中怎么写？（4个按顺序）",
+    "answer": "a:linke{} a:visited{} a:hover{} a:active{}"
+  },
+  {
+    "type": "code",
+    "question": "超链接不加横线怎么写？",
+    "answer": "text-decoration:none;"
+  },
+  {
+    "type": "code",
+    "question": "表格跨行合并怎么写？",
+    "answer": "<td colspan=\"2\"></td>"
+  },
+  {
+    "type": "code",
+    "question": "form要收集信息怎么写？URL：https://jkorpela.fi/cgi-bin/echo.cgi",
+    "answer": "<form action=\"https://jkorpela.fi/cgi-bin/echo.cgi\" method=\"POST\">"
+  },
+  {
+    "type": "code",
+    "question": "form里文本输入框怎么写？",
+    "answer": "<textarea name=\"message\" id=\"message\"></textarea>"
+  },
+  {
+    "type": "code",
+    "question": "responsive的CSS怎么写",
+    "answer": "@media only screen and (max-width:48em) @media only screen and (min-width:48em) and (max-width:64em) @media only screen and (min-width:64em)"
+  }
+],
+DEC10webdesignQuiz:[
+
+  {
+    "type": "mcq",
+    "question": "What does a flex container consist of?",
+    "options": ["Tables", "Flex items", "Block elements", "Inline elements"],
+    "answer": "Flex items"
+  },
+  {
+    "type": "mcq",
+    "question": "How do you declare a flex container?",
+    "options": ["display: grid", "display: inline", "display: flex or display: inline-flex", "display: block"],
+    "answer": "display: flex or display: inline-flex"
+  },
+  {
+    "type": "mcq",
+    "question": "Inside a flex container, the elements that are positioned along a flex line are called?",
+    "options": ["Inline items", "Flex items", "Block items", "Grid items"],
+    "answer": "Flex items"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the default number of flex lines in a flex container?",
+    "options": ["Depends on the number of items", "Three", "Two", "One"],
+    "answer": "One"
+  },
+  {
+    "type": "mcq",
+    "question": "Which property specifies the direction of the flexible items inside a flex container?",
+    "options": ["flex-wrap", "flex-direction", "align-items", "justify-content"],
+    "answer": "flex-direction"
+  },
+  {
+    "type": "mcq",
+    "question": "Which property horizontally aligns the flex items when there is extra space on the main-axis?",
+    "options": ["align-items", "align-content", "justify-content", "flex-wrap"],
+    "answer": "justify-content"
+  },
+  {
+    "type": "mcq",
+    "question": "Which property vertically aligns the flex items on the cross-axis?",
+    "options": ["align-items", "align-self", "flex-direction", "justify-content"],
+    "answer": "align-items"
+  },
+  {
+    "type": "mcq",
+    "question": "Which property specifies whether flex items should wrap onto multiple lines?",
+    "options": ["flex-flow", "order", "flex-wrap", "align-content"],
+    "answer": "flex-wrap"
+  },
+  {
+    "type": "mcq",
+    "question": "Which property is a shorthand for flex-direction and flex-wrap?",
+    "options": ["align-self", "flex-flow", "flex", "align-content"],
+    "answer": "flex-flow"
+  },
+  {
+    "type": "mcq",
+    "question": "Which property overrides the container's align-items property for a specific flex item?",
+    "options": ["align-self", "flex-grow", "order", "justify-content"],
+    "answer": "align-self"
+  },
+  {
+    "type": "mcq",
+    "question": "What are the possible values of flex-wrap?",
+    "options": ["nowrap, wrap, wrap-reverse", "flex-start, flex-end, center, space-between, space-around", "row, column, row-reverse", "stretch, center, baseline"],
+    "answer": "nowrap, wrap, wrap-reverse"
+  },
+  {
+    "type": "mcq",
+    "question": "What are the possible values of justify-content?",
+    "options": ["flex-start, flex-end, center, space-between, space-around", "row, column, row-reverse", "nowrap, wrap, wrap-reverse", "stretch, center, baseline"],
+    "answer": "flex-start, flex-end, center, space-between, space-around"
+  },
+  {
+    "type": "mcq",
+    "question": "Which property allows setting a proportion among all flex items in a container?",
+    "options": ["align-self", "order", "flex-grow", "align-items"],
+    "answer": "flex-grow"
+  },
+  {
+    "type": "mcq",
+    "question": "Which property specifies the order of a flex item relative to others?",
+    "options": ["order", "flex-flow", "align-self", "flex-grow"],
+    "answer": "order"
+  },
+  {
+    "type": "mcq",
+    "question": "Everything outside a flex container and inside a flex item is rendered how?",
+    "options": ["Hidden", "As a flex container", "As usual", "Ignored"],
+    "answer": "As usual"
+  },
+  {
+    "type": "mcq",
+    "question": "What does the column-gap property specify?",
+    "options": ["The width of grid tracks", "The gap between the columns", "The number of columns", "The column alignment"],
+    "answer": "The gap between the columns"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the gap property a shorthand for?",
+    "options": ["grid-auto-columns and grid-auto-rows", "row-gap and column-gap", "grid-row and grid-column", "grid-template-rows and grid-template-columns"],
+    "answer": "row-gap and column-gap"
+  },
+  {
+    "type": "mcq",
+    "question": "Which property is a shorthand for multiple grid layout definitions including template rows, template columns, and auto-flow?",
+    "options": ["grid-area", "grid-auto-flow", "grid", "grid-column"],
+    "answer": "grid"
+  },
+  {
+    "type": "mcq",
+    "question": "The grid-area property can be used to name a grid item or as a shorthand for which set of properties?",
+    "options": ["grid-template-rows and grid-template-columns", "grid-column-start and grid-column-end only", "grid-row-start, grid-column-start, grid-row-end, grid-column-end", "grid-auto-columns and grid-auto-rows"],
+    "answer": "grid-row-start, grid-column-start, grid-row-end, grid-column-end"
+  },
+  {
+    "type": "mcq",
+    "question": "Which property specifies a default size for grid columns created automatically?",
+    "options": ["grid-auto-columns", "grid-column", "grid", "column-gap"],
+    "answer": "grid-auto-columns"
+  },
+  {
+    "type": "mcq",
+    "question": "Which property defines how auto-placed items are inserted into the grid?",
+    "options": ["grid-column", "grid-auto-flow", "gap", "grid-template-areas"],
+    "answer": "grid-auto-flow"
+  },
+  {
+    "type": "mcq",
+    "question": "Which CSS Grid property specifies a default size for automatically created rows?",
+    "options": ["grid-row", "grid-auto-rows", "row-gap", "grid"],
+    "answer": "grid-auto-rows"
+  },
+  {
+    "type": "mcq",
+    "question": "What does the grid-column property act as a shorthand for?",
+    "options": ["grid-template-columns and grid-template-rows", "grid-column-start and grid-column-end", "grid-auto-columns and grid-auto-rows", "grid-column-gap and grid-row-gap"],
+    "answer": "grid-column-start and grid-column-end"
+  },
+  {
+    "type": "mcq",
+    "question": "Which property allows you to assign a name to a grid item?",
+    "options": ["grid-area", "grid-row", "grid-auto-flow", "gap"],
+    "answer": "grid-area"
+  },
+  {
+    "type": "mcq",
+    "question": "Which property can define both row-gap and column-gap at once?",
+    "options": ["grid-gap", "gap", "grid-auto-gap", "grid-spacing"],
+    "answer": "gap"
+  },
+  {
+    "type": "mcq",
+    "question": "Which property determines whether items are placed by row or by column when auto-placed?",
+    "options": ["grid-auto-flow", "grid-template-columns", "grid-area", "grid-row"],
+    "answer": "grid-auto-flow"
+  },
+  {
+    "type": "mcq",
+    "question": "Which grid property is a shorthand for defining the start and end lines of a grid item’s row placement?",
+    "options": ["grid-row", "grid", "grid-area", "grid-column"],
+    "answer": "grid-row"
+  },
+  {
+    "type": "mcq",
+    "question": "Which property determines the default size of newly created implicit rows?",
+    "options": ["grid-auto-columns", "grid-auto-rows", "grid-gap", "grid-flow"],
+    "answer": "grid-auto-rows"
+  },
+  {
+    "type": "mcq",
+    "question": "Which property can include auto-rows, auto-columns, and auto-flow all in one declaration?",
+    "options": ["grid-area", "grid-auto-flow", "grid", "grid-template"],
+    "answer": "grid"
+  },
+  {
+    "type": "mcq",
+    "question": "Which property can specify the row start, column start, row end, and column end in one line?",
+    "options": ["grid-line", "grid-auto-flow", "grid-area", "grid-gap"],
+    "answer": "grid-area"
+  },
+{
+    "type": "mcq",
+    "question": "What does the grid-column-end property specify?",
+    "options": ["Where to start the grid item", "How many columns the grid has", "Where to end the grid item", "The size of the grid columns"],
+    "answer": "Where to end the grid item"
+  },
+  {
+    "type": "mcq",
+    "question": "What does the grid-column-start property specify?",
+    "options": ["Where to end the grid item", "Where to start the grid item", "The size of the grid rows", "The row gap of the grid"],
+    "answer": "Where to start the grid item"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the grid-row property a shorthand for?",
+    "options": ["grid-template-columns and grid-template-rows", "grid-row-start and grid-row-end", "grid-start and grid-end", "grid-column-start and grid-column-end"],
+    "answer": "grid-row-start and grid-row-end"
+  },
+  {
+    "type": "mcq",
+    "question": "What does the grid-row-end property specify?",
+    "options": ["Where to end the grid item", "The size of grid rows", "The number of rows", "Where to start the grid item"],
+    "answer": "Where to end the grid item"
+  },
+  {
+    "type": "mcq",
+    "question": "What does the grid-row-start property specify?",
+    "options": ["Where to start the grid item", "Where to end the grid item", "How many rows the grid has", "The default row size"],
+    "answer": "Where to start the grid item"
+  },
+  {
+    "type": "mcq",
+    "question": "What does the grid-template shorthand property define?",
+    "options": ["grid-template-rows, grid-template-columns, and grid-areas", "grid-row and grid-column", "grid-gap and row-gap", "grid-auto-flow and grid-auto-rows"],
+    "answer": "grid-template-rows, grid-template-columns, and grid-areas"
+  },
+  {
+    "type": "mcq",
+    "question": "Which property specifies how to display rows and columns using named grid items?",
+    "options": ["grid-template-areas", "grid-template", "grid-row", "row-gap"],
+    "answer": "grid-template-areas"
+  },
+  {
+    "type": "mcq",
+    "question": "Which property specifies the size and number of columns in a grid layout?",
+    "options": ["grid-template-columns", "grid-template-rows", "grid-column-start", "grid-area"],
+    "answer": "grid-template-columns"
+  },
+  {
+    "type": "mcq",
+    "question": "Which property specifies the size of rows in a grid layout?",
+    "options": ["grid-template-rows", "grid-row-end", "grid-template-areas", "grid-auto-rows"],
+    "answer": "grid-template-rows"
+  },
+  {
+    "type": "mcq",
+    "question": "What does the row-gap property specify?",
+    "options": ["The gap between grid rows", "Where the grid item starts", "The number of rows", "The size of the columns"],
+    "answer": "The gap between grid rows"
+  }
+
 ]
 }
