@@ -9,16 +9,19 @@
   <div class="container">
     <h1>本地题库系统</h1>
     <h2>请选择科目</h2>
+
     <select id="subjectSelect"></select>
+
     <button onclick="startQuiz()">开始复习</button>
     <button onclick="resetProgress()">重置进度</button>
+
     <p id="progressTip" style="color:#555; margin-top:10px;"></p>
   </div>
 
   <script src="questions.js"></script>
   <script>
-    // 自动生成科目下拉列表
     const select = document.getElementById("subjectSelect");
+
     Object.keys(questionBank).forEach(subject => {
       const option = document.createElement("option");
       option.value = subject;
@@ -26,44 +29,35 @@
       select.appendChild(option);
     });
 
-    // 记住上次选择科目
     const lastSubject = localStorage.getItem("lastSubject");
-    if(lastSubject && questionBank[lastSubject]) select.value = lastSubject;
+    if (lastSubject && questionBank[lastSubject]) {
+      select.value = lastSubject;
+    }
 
-    // 更新进度提示
     function updateProgressTip() {
       const subject = select.value;
       const index = localStorage.getItem(`currentIndex_${subject}`);
       const tip = document.getElementById("progressTip");
-      if(index) {
-        tip.innerText = `你上次做到了第 ${parseInt(index)+1} 题`;
-      } else {
-        tip.innerText = "";
-      }
+      tip.innerText = index ? `你上次做到了第 ${parseInt(index) + 1} 题` : "";
     }
 
-    // 初始化提示
     updateProgressTip();
-
-    // 每次选择科目更新提示
     select.addEventListener("change", updateProgressTip);
 
-    // 开始复习
     function startQuiz() {
       const subject = select.value;
-      localStorage.setItem('currentSubject', subject);
-      localStorage.setItem('lastSubject', subject);
-      window.location.href = 'quiz.html';
+      localStorage.setItem("currentSubject", subject);
+      localStorage.setItem("lastSubject", subject);
+      window.location.href = "quiz.html";
     }
 
-    // 重置进度
     function resetProgress() {
       const subject = select.value;
-      if (confirm(`确定要重置 "${subject}" 的做题进度吗？`)) {
+      if (confirm(`确定要重置 "${subject}" 的进度吗？`)) {
         localStorage.removeItem(`currentIndex_${subject}`);
         localStorage.removeItem(`wrongQuestions_${subject}`);
         updateProgressTip();
-        alert(`"${subject}" 的做题进度已重置，将从第一题开始。`);
+        alert("进度已重置");
       }
     }
   </script>
