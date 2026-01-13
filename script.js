@@ -1,5 +1,6 @@
 let currentSubject = localStorage.getItem("currentSubject");
 let questions = questionBank[currentSubject];
+let originalQuestions = questions.slice(); // 保存原始题库
 let wrongQuestions = JSON.parse(localStorage.getItem(`wrongQuestions_${currentSubject}`)) || [];
 
 let savedIndex = localStorage.getItem(`currentIndex_${currentSubject}`);
@@ -38,13 +39,25 @@ function renderQuestion() {
   document.getElementById("progressText").innerText =
     `题目 ${currentIndex + 1} / ${questions.length}`;
 
+  // --- 跳转题号控件放在题目标签后 ---
+  const jumpHtml = `
+    <span style="margin-left: 10px;">
+      <input type="number" id="jumpInput" placeholder="题号" min="1" style="width:60px; height:24px; font-size:14px; text-align:center; border-radius:4px; border:1px solid #ccc;">
+      <button onclick="jumpToQuestion()" style="height:28px; padding:0 8px; font-size:14px; border-radius:4px; border:none; background-color:#ccc; color:black; cursor:pointer;">跳转</button>
+    </span>
+  `;
+  document.getElementById("progressText").innerHTML += jumpHtml;
+  document.getElementById("jumpInput").value = currentIndex + 1;
+
   // 转义题干并保留换行
   let html = `<p><b>题目 ${currentIndex + 1}：</b><br>${escapeHtml(q.question).replace(/\n/g,"<br>")}</p>`;
 
   if (q.type === "mcq") {
-    // 随机打乱选项
-    const shuffledOptions = shuffleArray(q.options);
-    shuffledOptions.forEach(opt => {
+    // 随机打乱选项一次
+    if (!q._shuffledOptions) {
+      q._shuffledOptions = shuffleArray(q.options);
+    }
+    q._shuffledOptions.forEach(opt => {
       html += `<label><input type="radio" name="answer" value="${escapeHtml(opt)}"> ${escapeHtml(opt)}</label><br>`;
     });
   } else if (q.type === "tf") {
@@ -64,6 +77,7 @@ function renderQuestion() {
   }
 
   html += `<br><button onclick="checkAnswer()">提交答案</button>`;
+
   container.innerHTML = html;
 }
 
@@ -158,6 +172,33 @@ function clearWrong() {
 function backHome() {
   window.location.href = "index.html";
 }
+
+// 跳转题号
+function jumpToQuestion() {
+  const input = document.getElementById("jumpInput");
+  const target = parseInt(input.value, 10);
+
+  if (isNaN(target)) {
+    alert("请输入题号");
+    return;
+  }
+
+  if (target < 1 || target > questions.length) {
+    alert(`题号范围是 1 到 ${questions.length}`);
+    return;
+  }
+
+  currentIndex = target - 1;
+  localStorage.setItem(`currentIndex_${currentSubject}`, currentIndex);
+  renderQuestion();
+}
+
+// 支持回车跳转
+document.addEventListener("keydown", e => {
+  if (e.key === "Enter" && document.activeElement.id === "jumpInput") {
+    jumpToQuestion();
+  }
+});
 
 // 初始化
 renderQuestion();
