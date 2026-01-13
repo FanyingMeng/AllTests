@@ -58,7 +58,7 @@ function renderQuestion() {
     html += `
       <textarea id="shortAnswer" rows="5"
         placeholder="Write your answer here..."
-        style="width:100%; padding:10px; font-size:16px;
+        style="width:100%; padding:10px; font-size:20px;
         border-radius:8px; border:1px solid #ccc;"></textarea>
     `;
   }
