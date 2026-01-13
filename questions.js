@@ -2597,5 +2597,1041 @@ const questionBank = {
     "answer": "Computes a hash code using all fields used in Equals"
   }
 
-  ]
+  ],
+  OOP_quiz01补充:[
+  {
+    "type": "mcq",
+    "question": "What is virtual memory?",
+    "options": [
+      "Memory physically installed on the motherboard",
+      "Memory allocated by the operating system to each process",
+      "Memory used only by the CPU cache",
+      "Memory shared directly between all processes"
+    ],
+    "answer": "Memory allocated by the operating system to each process"
+  },
+  {
+    "type": "mcq",
+    "question": "Which statement about virtual memory is correct?",
+    "options": [
+      "All processes share the same virtual memory",
+      "Each process has its own separate virtual memory space",
+      "Virtual memory is the same as physical RAM",
+      "Virtual memory is managed by the application"
+    ],
+    "answer": "Each process has its own separate virtual memory space"
+  },
+  {
+    "type": "mcq",
+    "question": "How much data is stored at each virtual memory address?",
+    "options": [
+      "1 bit",
+      "1 byte",
+      "4 bytes",
+      "8 bytes"
+    ],
+    "answer": "1 byte"
+  },
+  {
+    "type": "mcq",
+    "question": "On a 64-bit architecture, the virtual address space typically ranges from:",
+    "options": [
+      "0 to 2^32",
+      "0 to 2^16",
+      "0 to 2^64",
+      "0 to 2^128"
+    ],
+    "answer": "0 to 2^64"
+  },
+  {
+    "type": "mcq",
+    "question": "Which component is responsible for managing real memory resources?",
+    "options": [
+      "The compiler",
+      "The application",
+      "The operating system",
+      "The CPU registers"
+    ],
+    "answer": "The operating system"
+  },
+  {
+    "type": "mcq",
+    "question": "What illusion does virtual memory give to running applications?",
+    "options": [
+      "They can directly access hardware",
+      "They are the only application running",
+      "They run without an operating system",
+      "They share memory safely without isolation"
+    ],
+    "answer": "They are the only application running"
+  },
+  {
+    "type": "mcq",
+    "question": "Which OS feature allows multiple programs to run seemingly at the same time?",
+    "options": [
+      "Manual scheduling",
+      "Virtual compilation",
+      "Pre-emptive multitasking",
+      "Static linking"
+    ],
+    "answer": "Pre-emptive multitasking"
+  },
+  {
+    "type": "mcq",
+    "question": "What does a program directly interact with?",
+    "options": [
+      "Physical memory",
+      "Virtual memory",
+      "CPU cache",
+      "Disk storage"
+    ],
+    "answer": "Virtual memory"
+  },
+  {
+    "type": "mcq",
+    "question": "Which region of memory stores local variables?",
+    "options": [
+      "Heap",
+      "Text segment",
+      "Stack",
+      "BSS"
+    ],
+    "answer": "Stack"
+  },
+  {
+    "type": "mcq",
+    "question": "Which memory region is used for dynamic memory allocation?",
+    "options": [
+      "Stack",
+      "Heap",
+      "Text",
+      "BSS"
+    ],
+    "answer": "Heap"
+  },
+  {
+    "type": "mcq",
+    "question": "Which memory region contains machine instructions?",
+    "options": [
+      "Heap",
+      "Stack",
+      "Text & BSS",
+      "CPU registers"
+    ],
+    "answer": "Text & BSS"
+  },
+  {
+    "type": "mcq",
+    "question": "Which type of variables are stored in the Text & BSS region?",
+    "options": [
+      "Local variables",
+      "Dynamic variables",
+      "Static and constant variables",
+      "Temporary variables"
+    ],
+    "answer": "Static and constant variables"
+  },
+  {
+    "type": "mcq",
+    "question": "When are variables in the Text & BSS region determined?",
+    "options": [
+      "At runtime",
+      "At compile time",
+      "At program load time",
+      "At method return time"
+    ],
+    "answer": "At program load time"
+  },
+  {
+    "type": "mcq",
+    "question": "What information does the stack store for function calls?",
+    "options": [
+      "Garbage collection metadata",
+      "Return addresses",
+      "Object headers",
+      "Machine instructions"
+    ],
+    "answer": "Return addresses"
+  },
+  {
+    "type": "mcq",
+    "question": "Which of the following is stored on the stack?",
+    "options": [
+      "Objects created with new",
+      "Global variables",
+      "Local variables and parameters",
+      "Static class fields"
+    ],
+    "answer": "Local variables and parameters"
+  },
+  {
+    "type": "mcq",
+    "question": "What is a major advantage of stack memory?",
+    "options": [
+      "It supports unlimited memory allocation",
+      "It is automatically cleaned up",
+      "It requires garbage collection",
+      "It can grow dynamically at runtime"
+    ],
+    "answer": "It is automatically cleaned up"
+  },
+  {
+    "type": "mcq",
+    "question": "Why is stack memory considered fast?",
+    "options": [
+      "It uses disk storage",
+      "It uses complex allocation algorithms",
+      "It follows a simple LIFO structure",
+      "It requires garbage collection"
+    ],
+    "answer": "It follows a simple LIFO structure"
+  },
+  {
+    "type": "mcq",
+    "question": "Which data structure best describes the stack?",
+    "options": [
+      "Queue (FIFO)",
+      "Tree",
+      "Graph",
+      "Stack (LIFO)"
+    ],
+    "answer": "Stack (LIFO)"
+  },
+  {
+    "type": "mcq",
+    "question": "Which analogy is commonly used to describe stack behavior?",
+    "options": [
+      "A line of people waiting",
+      "A neat pile of plates",
+      "A random box of items",
+      "A filing cabinet"
+    ],
+    "answer": "A neat pile of plates"
+  },
+  {
+    "type": "mcq",
+    "question": "What is a limitation of stack memory?",
+    "options": [
+      "It is slow to access",
+      "It requires garbage collection",
+      "Its size must be known at compile time",
+      "It cannot store primitive data"
+    ],
+    "answer": "Its size must be known at compile time"
+  },
+  {
+    "type": "mcq",
+    "question": "Which memory region typically requires garbage collection?",
+    "options": [
+      "Stack",
+      "Text",
+      "Heap",
+      "CPU registers"
+    ],
+    "answer": "Heap"
+  },
+  {
+    "type": "mcq",
+    "question": "What happens to stack memory when a method returns?",
+    "options": [
+      "It must be manually freed",
+      "It is garbage collected later",
+      "It is automatically released",
+      "It moves to the heap"
+    ],
+    "answer": "It is automatically released"
+  },
+  {
+    "type": "mcq",
+    "question": "Which memory region grows and shrinks with function calls?",
+    "options": [
+      "Heap",
+      "Stack",
+      "Text",
+      "BSS"
+    ],
+    "answer": "Stack"
+  },
+  {
+    "type": "mcq",
+    "question": "Which memory region is shared between different function calls?",
+    "options": [
+      "Stack",
+      "Heap",
+      "CPU cache",
+      "Registers"
+    ],
+    "answer": "Heap"
+  },
+  {
+    "type": "mcq",
+    "question": "Which statement best describes the heap?",
+    "options": [
+      "It stores return addresses",
+      "It stores local variables only",
+      "It stores dynamically allocated memory",
+      "It stores machine instructions"
+    ],
+    "answer": "It stores dynamically allocated memory"
+  },
+  {
+    "type": "mcq",
+    "question": "Which memory region does NOT require knowing object size at compile time?",
+    "options": [
+      "Stack",
+      "Text",
+      "Heap",
+      "BSS"
+    ],
+    "answer": "Heap"
+  },
+  {
+    "type": "mcq",
+    "question": "Who is responsible for scheduling threads of execution?",
+    "options": [
+      "The compiler",
+      "The runtime library",
+      "The operating system",
+      "The application code"
+    ],
+    "answer": "The operating system"
+  },
+  {
+    "type": "mcq",
+    "question": "Why can applications safely run without interfering with each other’s memory?",
+    "options": [
+      "They use the same heap",
+      "They use virtual memory isolation",
+      "They use shared stacks",
+      "They run on different CPUs"
+    ],
+    "answer": "They use virtual memory isolation"
+  },
+  {
+    "type": "mcq",
+    "question": "Which concept allows each process to believe it owns all available memory?",
+    "options": [
+      "Static linking",
+      "Manual memory management",
+      "Virtual memory",
+      "Multithreading"
+    ],
+    "answer": "Virtual memory"
+  },
+  {
+    "type": "mcq",
+    "question": "Where does a variable of a reference type live?",
+    "options": [
+      "On the heap only",
+      "On the stack only",
+      "In CPU registers",
+      "In virtual memory pages only"
+    ],
+    "answer": "On the stack only"
+  },
+  {
+    "type": "mcq",
+    "question": "Where is the actual object of a reference type constructed?",
+    "options": [
+      "On the stack",
+      "On the heap",
+      "In CPU registers",
+      "In the text segment"
+    ],
+    "answer": "On the heap"
+  },
+  {
+    "type": "mcq",
+    "question": "What does a reference type variable store?",
+    "options": [
+      "The full object data",
+      "A copy of the object",
+      "A pointer to the object on the heap",
+      "The object’s methods only"
+    ],
+    "answer": "A pointer to the object on the heap"
+  },
+  {
+    "type": "mcq",
+    "question": "Why are all reference type variables the same size?",
+    "options": [
+      "They store the entire object",
+      "They are optimized by the compiler",
+      "They store a memory address",
+      "They are stored in CPU registers"
+    ],
+    "answer": "They store a memory address"
+  },
+  {
+    "type": "mcq",
+    "question": "On most modern 64-bit systems, how large is a reference type variable?",
+    "options": [
+      "4 bytes",
+      "8 bytes",
+      "16 bytes",
+      "Depends on the object size"
+    ],
+    "answer": "8 bytes"
+  },
+  {
+    "type": "mcq",
+    "question": "Where does a value type variable live?",
+    "options": [
+      "On the heap",
+      "On the stack",
+      "In the text segment",
+      "In shared memory"
+    ],
+    "answer": "On the stack"
+  },
+  {
+    "type": "mcq",
+    "question": "How is a value type variable stored?",
+    "options": [
+      "As a pointer to heap memory",
+      "As a reference to another variable",
+      "Directly containing the object data",
+      "As an indirect memory handle"
+    ],
+    "answer": "Directly containing the object data"
+  },
+  {
+    "type": "mcq",
+    "question": "What determines the size of a value type variable?",
+    "options": [
+      "The size of a memory address",
+      "The size of the object it stores",
+      "The operating system",
+      "The garbage collector"
+    ],
+    "answer": "The size of the object it stores"
+  },
+  {
+    "type": "mcq",
+    "question": "Which statement correctly compares reference types and value types?",
+    "options": [
+      "Both store the object directly on the stack",
+      "Reference types store objects directly, value types store pointers",
+      "Reference types store pointers, value types store the object itself",
+      "Both always store objects on the heap"
+    ],
+    "answer": "Reference types store pointers, value types store the object itself"
+  },
+  {
+    "type": "mcq",
+    "question": "Which feature is unique to reference types?",
+    "options": [
+      "Variable size depends on object",
+      "Object is stored directly in the variable",
+      "Variable holds a pointer to heap memory",
+      "Variable cannot be copied"
+    ],
+    "answer": "Variable holds a pointer to heap memory"
+  },
+  {
+    "type": "mcq",
+    "question": "Why is a program's memory divided into different regions?",
+    "options": [
+      "To reduce compilation time",
+      "To organize memory with different characteristics and purposes",
+      "To make programs portable across CPUs",
+      "To allow direct hardware access"
+    ],
+    "answer": "To organize memory with different characteristics and purposes"
+  },
+  {
+    "type": "mcq",
+    "question": "Which memory region is most heavily used during program execution?",
+    "options": [
+      "Heap",
+      "Text",
+      "BSS",
+      "Stack"
+    ],
+    "answer": "Stack"
+  },
+  {
+    "type": "mcq",
+    "question": "What happens at the beginning of every function call?",
+    "options": [
+      "Heap memory is allocated",
+      "A stack frame is allocated",
+      "Static variables are initialized",
+      "Text memory is reloaded"
+    ],
+    "answer": "A stack frame is allocated"
+  },
+  {
+    "type": "mcq",
+    "question": "What is a stack frame?",
+    "options": [
+      "A CPU register used for function calls",
+      "A block of heap memory for objects",
+      "A chunk of contiguous memory on the stack for a function call",
+      "A section of memory for static variables"
+    ],
+    "answer": "A chunk of contiguous memory on the stack for a function call"
+  },
+  {
+    "type": "mcq",
+    "question": "Which information is stored inside a function's stack frame?",
+    "options": [
+      "Machine instructions",
+      "Return address and local variables",
+      "Global variables",
+      "Heap allocation metadata"
+    ],
+    "answer": "Return address and local variables"
+  },
+  {
+    "type": "mcq",
+    "question": "Where do variables declared inside a function live?",
+    "options": [
+      "On the heap",
+      "In the text section",
+      "In the BSS section",
+      "On the stack"
+    ],
+    "answer": "On the stack"
+  },
+  {
+    "type": "mcq",
+    "question": "What best describes the heap?",
+    "options": [
+      "A small, fixed-size memory region for function calls",
+      "A region used only for static variables",
+      "A large area of unallocated memory for dynamic allocation",
+      "A read-only memory region"
+    ],
+    "answer": "A large area of unallocated memory for dynamic allocation"
+  },
+  {
+    "type": "mcq",
+    "question": "Where are dynamically allocated objects created?",
+    "options": [
+      "On the stack",
+      "On the heap",
+      "In the text section",
+      "In CPU registers"
+    ],
+    "answer": "On the heap"
+  },
+  {
+    "type": "mcq",
+    "question": "For reference types, what do stack variables contain?",
+    "options": [
+      "The full object data",
+      "A copy of the object",
+      "A pointer to the object on the heap",
+      "The object’s methods"
+    ],
+    "answer": "A pointer to the object on the heap"
+  },
+  {
+    "type": "mcq",
+    "question": "What is stored in the Text and BSS memory regions?",
+    "options": [
+      "Local variables and parameters",
+      "Dynamically allocated objects",
+      "Program instructions and static or global variables",
+      "Return addresses and stack frames"
+    ],
+    "answer": "Program instructions and static or global variables"
+  },
+  {
+    "type": "mcq",
+    "question": "What best defines an object in Object-Oriented Programming?",
+    "options": [
+      "A function that performs calculations",
+      "A self-contained unit with state and behaviour",
+      "A block of memory with no structure",
+      "A collection of static methods"
+    ],
+    "answer": "A self-contained unit with state and behaviour"
+  },
+  {
+    "type": "mcq",
+    "question": "What represents the state of an object?",
+    "options": [
+      "Its instance methods",
+      "Its member variables",
+      "Its constructors",
+      "Its return values"
+    ],
+    "answer": "Its member variables"
+  },
+  {
+    "type": "mcq",
+    "question": "How is the behaviour of an object expressed?",
+    "options": [
+      "Through member variables",
+      "Through static fields",
+      "Through member functions (instance methods)",
+      "Through constructors only"
+    ],
+    "answer": "Through member functions (instance methods)"
+  },
+  {
+    "type": "mcq",
+    "question": "What is a class?",
+    "options": [
+      "An actual object in memory",
+      "A description of how to construct objects",
+      "A variable that stores an object",
+      "A runtime instance of an object"
+    ],
+    "answer": "A description of how to construct objects"
+  },
+  {
+    "type": "mcq",
+    "question": "What do we call an object created from a class?",
+    "options": [
+      "A variable",
+      "A method",
+      "An instance",
+      "A member"
+    ],
+    "answer": "An instance"
+  },
+  {
+    "type": "mcq",
+    "question": "What is instantiation?",
+    "options": [
+      "Defining a new class",
+      "Copying a variable",
+      "Creating an object from a class",
+      "Assigning one object to another"
+    ],
+    "answer": "Creating an object from a class"
+  },
+  {
+    "type": "mcq",
+    "question": "Which statement about types in C# is correct?",
+    "options": [
+      "Only classes are based on object",
+      "Only reference types are based on object",
+      "All types in C# are based on a basic object type",
+      "Only value types are based on object"
+    ],
+    "answer": "All types in C# are based on a basic object type"
+  },
+  {
+    "type": "mcq",
+    "question": "In C#, what is a variable?",
+    "options": [
+      "A function that returns data",
+      "A named memory location that stores an object or a pointer to an object",
+      "A class definition",
+      "A runtime process"
+    ],
+    "answer": "A named memory location that stores an object or a pointer to an object"
+  },
+  {
+    "type": "mcq",
+    "question": "When a variable stores an object directly, what kind of type is it?",
+    "options": [
+      "Reference type",
+      "Dynamic type",
+      "Static type",
+      "Value type"
+    ],
+    "answer": "Value type"
+  },
+  {
+    "type": "mcq",
+    "question": "What does it mean that C# is a strongly typed language?",
+    "options": [
+      "Variables can store any type of object",
+      "Types are determined only at runtime",
+      "Variables can only hold objects of their declared type",
+      "Only classes have types"
+    ],
+    "answer": "Variables can only hold objects of their declared type"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the core difference between value types and reference types in C#?",
+    "options": [
+      "Value types are slower than reference types",
+      "Value types hold the actual data, reference types hold a reference to the data",
+      "Reference types are stored on the stack",
+      "Value types must be manually destroyed"
+    ],
+    "answer": "Value types hold the actual data, reference types hold a reference to the data"
+  },
+  {
+    "type": "mcq",
+    "question": "What does a value type variable store?",
+    "options": [
+      "A pointer to an object on the heap",
+      "A reference to another variable",
+      "The actual data itself",
+      "Only metadata about the object"
+    ],
+    "answer": "The actual data itself"
+  },
+  {
+    "type": "mcq",
+    "question": "What does a reference type variable store?",
+    "options": [
+      "The full object data",
+      "A copy of the object",
+      "The object’s methods",
+      "A reference to where the object is stored"
+    ],
+    "answer": "A reference to where the object is stored"
+  },
+  {
+    "type": "mcq",
+    "question": "What happens when a value type is copied?",
+    "options": [
+      "Only the reference is copied",
+      "A new independent copy of the data is created",
+      "Both variables point to the same data",
+      "The original value is deleted"
+    ],
+    "answer": "A new independent copy of the data is created"
+  },
+  {
+    "type": "mcq",
+    "question": "What happens when a reference type is copied?",
+    "options": [
+      "The object itself is duplicated",
+      "A new object is created on the stack",
+      "Only the reference is copied",
+      "The original reference becomes invalid"
+    ],
+    "answer": "Only the reference is copied"
+  },
+  {
+    "type": "mcq",
+    "question": "Where are reference type objects allocated?",
+    "options": [
+      "On the stack",
+      "In CPU registers",
+      "On the heap",
+      "In the text section"
+    ],
+    "answer": "On the heap"
+  },
+  {
+    "type": "mcq",
+    "question": "Which of the following is a reference type in C#?",
+    "options": [
+      "struct",
+      "enum",
+      "class",
+      "record struct"
+    ],
+    "answer": "class"
+  },
+  {
+    "type": "mcq",
+    "question": "Which of the following is NOT a reference type?",
+    "options": [
+      "class",
+      "interface",
+      "delegate",
+      "struct"
+    ],
+    "answer": "struct"
+  },
+  {
+    "type": "mcq",
+    "question": "Where are value types most often stored?",
+    "options": [
+      "On the heap",
+      "On the stack",
+      "In shared memory",
+      "In the text section"
+    ],
+    "answer": "On the stack"
+  },
+  {
+    "type": "mcq",
+    "question": "Which of the following constructs a value type?",
+    "options": [
+      "class",
+      "record",
+      "delegate",
+      "enum"
+    ],
+    "answer": "enum"
+  },
+  {
+    "type": "mcq",
+    "question": "Which statement about inheritance in C# is correct?",
+    "options": [
+      "Only reference types inherit from Object",
+      "Only classes inherit from Object",
+      "All types, both value and reference types, inherit from Object",
+      "Only user-defined types inherit from Object"
+    ],
+    "answer": "All types, both value and reference types, inherit from Object"
+  },
+  {
+    "type": "mcq",
+    "question": "What does it mean when we say a class extends Object?",
+    "options": [
+      "The class replaces Object",
+      "The class copies Object’s code",
+      "The class builds on Object through inheritance",
+      "The class can no longer use Object methods"
+    ],
+    "answer": "The class builds on Object through inheritance"
+  },
+  {
+    "type": "mcq",
+    "question": "If an object is typed as MyClass and MyClass defines its own ToString() method, which method is called?",
+    "options": [
+      "The Object version of ToString()",
+      "The MyClass version of ToString()",
+      "Both versions are called",
+      "The call results in a compile-time error"
+    ],
+    "answer": "The MyClass version of ToString()"
+  },
+  {
+    "type": "mcq",
+    "question": "If an object is typed as object but is actually an instance of MyClass, when is the MyClass ToString() method called?",
+    "options": [
+      "Always, regardless of how it is declared",
+      "Only if ToString() is declared as override in MyClass",
+      "Only if the object is cast back to MyClass",
+      "Never, Object.ToString() is always called"
+    ],
+    "answer": "Only if ToString() is declared as override in MyClass"
+  },
+  {
+    "type": "mcq",
+    "question": "Which concept determines which version of a method is called at runtime?",
+    "options": [
+      "Encapsulation",
+      "Inheritance",
+      "Compilation",
+      "Polymorphism"
+    ],
+    "answer": "Polymorphism"
+  },
+  {
+    "type": "mcq",
+    "question": "What is garbage collection (GC) in C#?",
+    "options": [
+      "A manual process where programmers delete objects",
+      "An automatic process that frees memory no longer in use",
+      "A compiler optimization technique",
+      "A way to store objects on disk"
+    ],
+    "answer": "An automatic process that frees memory no longer in use"
+  },
+  {
+    "type": "mcq",
+    "question": "Which runtime component is responsible for garbage collection?",
+    "options": [
+      "The compiler",
+      "The operating system",
+      "The .NET runtime",
+      "The CPU"
+    ],
+    "answer": "The .NET runtime"
+  },
+  {
+    "type": "mcq",
+    "question": "Which types of objects are managed by the garbage collector?",
+    "options": [
+      "Value-type objects on the stack",
+      "Reference-type objects on the heap",
+      "CPU registers",
+      "Static code in the text section"
+    ],
+    "answer": "Reference-type objects on the heap"
+  },
+  {
+    "type": "mcq",
+    "question": "Do you need to explicitly delete heap objects in C#?",
+    "options": [
+      "Yes, using delete",
+      "Yes, using free",
+      "No, the GC handles it automatically",
+      "Only for large objects"
+    ],
+    "answer": "No, the GC handles it automatically"
+  },
+  {
+    "type": "mcq",
+    "question": "When does the garbage collector reclaim memory?",
+    "options": [
+      "When objects are no longer reachable",
+      "When a method returns",
+      "At the end of every program",
+      "Immediately after allocation"
+    ],
+    "answer": "When objects are no longer reachable"
+  },
+  {
+    "type": "mcq",
+    "question": "Which references keep an object alive and prevent GC?",
+    "options": [
+      "Unreachable local variables",
+      "CPU registers",
+      "Program variables or static fields",
+      "Method parameters only"
+    ],
+    "answer": "Program variables or static fields"
+  },
+  {
+    "type": "mcq",
+    "question": "Is the exact timing of garbage collection deterministic?",
+    "options": [
+      "Yes, it runs after every allocation",
+      "Yes, it runs at fixed time intervals",
+      "No, the timing is non-deterministic",
+      "Only in debug mode"
+    ],
+    "answer": "No, the timing is non-deterministic"
+  },
+  {
+    "type": "mcq",
+    "question": "What happens to your program when the GC runs?",
+    "options": [
+      "It continues running normally",
+      "It speeds up execution",
+      "It is temporarily paused",
+      "It terminates"
+    ],
+    "answer": "It is temporarily paused"
+  },
+  {
+    "type": "mcq",
+    "question": "Why are garbage-collected languages often avoided for real-time systems?",
+    "options": [
+      "They cannot allocate memory",
+      "GC pauses are unpredictable",
+      "They do not support multithreading",
+      "They cannot access hardware"
+    ],
+    "answer": "GC pauses are unpredictable"
+  },
+  {
+    "type": "mcq",
+    "question": "When is the garbage collector typically triggered?",
+    "options": [
+      "At every function call",
+      "When memory thresholds are reached or resources are low",
+      "Only when manually invoked",
+      "At compile time"
+    ],
+    "answer": "When memory thresholds are reached or resources are low"
+  },
+  {
+    "type": "mcq",
+    "question": "Can a programmer manually trigger garbage collection?",
+    "options": [
+      "No, it is impossible",
+      "Yes, and it is recommended",
+      "Yes, but it is not recommended",
+      "Only in unmanaged code"
+    ],
+    "answer": "Yes, but it is not recommended"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the purpose of the class keyword in C#?",
+    "options": [
+      "To allocate memory on the heap",
+      "To define a user-defined type",
+      "To call garbage collection",
+      "To declare variables"
+    ],
+    "answer": "To define a user-defined type"
+  },
+  {
+    "type": "mcq",
+    "question": "What role does a class play in object creation?",
+    "options": [
+      "It stores objects directly",
+      "It acts as a blueprint for creating objects",
+      "It manages memory deallocation",
+      "It executes program logic"
+    ],
+    "answer": "It acts as a blueprint for creating objects"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the default access level of class members in C#?",
+    "options": [
+      "Public",
+      "Protected",
+      "Internal",
+      "Private"
+    ],
+    "answer": "Private"
+  },
+  {
+    "type": "mcq",
+    "question": "How must a member be declared to allow access from outside the class?",
+    "options": [
+      "protected",
+      "internal",
+      "public",
+      "private"
+    ],
+    "answer": "public"
+  },
+  {
+    "type": "mcq",
+    "question": "What do access modifiers control?",
+    "options": [
+      "Memory allocation strategy",
+      "Object lifetime",
+      "Who can access classes and members",
+      "Garbage collection behavior"
+    ],
+    "answer": "Who can access classes and members"
+  },
+  {
+    "type": "mcq",
+    "question": "Which access modifier restricts access to within the same class only?",
+    "options": [
+      "public",
+      "protected",
+      "private",
+      "internal"
+    ],
+    "answer": "private"
+  },
+  {
+    "type": "mcq",
+    "question": "Which access modifier allows access from derived classes?",
+    "options": [
+      "private",
+      "public",
+      "protected",
+      "static"
+    ],
+    "answer": "protected"
+  },
+  {
+    "type": "mcq",
+    "question": "If a base class member is private, can it be accessed in a derived class?",
+    "options": [
+      "Yes, always",
+      "Yes, if inherited",
+      "No, it is not accessible",
+      "Only through casting"
+    ],
+    "answer": "No, it is not accessible"
+  },
+  {
+    "type": "mcq",
+    "question": "Which statement about protected members is correct?",
+    "options": [
+      "They are accessible only inside the same class",
+      "They are accessible like public members everywhere",
+      "They are accessible inside derived classes",
+      "They are accessible only in the same file"
+    ],
+    "answer": "They are accessible inside derived classes"
+  }
+]
 };
