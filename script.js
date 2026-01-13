@@ -15,6 +15,16 @@ function escapeHtml(text) {
              .replace(/>/g, "&gt;");
 }
 
+// Fisher-Yates 随机打乱数组
+function shuffleArray(arr) {
+  const a = arr.slice(); // 复制数组
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
 // 渲染题目
 function renderQuestion() {
   const q = questions[currentIndex];
@@ -32,7 +42,9 @@ function renderQuestion() {
   let html = `<p><b>题目 ${currentIndex + 1}：</b><br>${escapeHtml(q.question).replace(/\n/g,"<br>")}</p>`;
 
   if (q.type === "mcq") {
-    q.options.forEach(opt => {
+    // 随机打乱选项
+    const shuffledOptions = shuffleArray(q.options);
+    shuffledOptions.forEach(opt => {
       html += `<label><input type="radio" name="answer" value="${escapeHtml(opt)}"> ${escapeHtml(opt)}</label><br>`;
     });
   } else if (q.type === "tf") {
@@ -41,7 +53,7 @@ function renderQuestion() {
       <label><input type="radio" name="answer" value="false"> 错误</label><br>
     `;
   } else if (q.type === "fib") {
-    html += `<input type="text" id="fibAnswer" placeholder="Fill in the blank...">`;
+    html += `<input type="text" id="fibAnswer" placeholder="Fill in the blank..." style="width: 300px; height: 40px; font-size: 20px;">`;
   } else if (q.type === "short") {
     html += `
       <textarea id="shortAnswer" rows="5"
@@ -90,7 +102,6 @@ function checkAnswer() {
       }
     }
   } else {
-    // 其他题型原逻辑
     if (isCorrect) {
       result.innerText = "✅ 正确！";
     } else {
