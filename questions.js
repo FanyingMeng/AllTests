@@ -2920,17 +2920,6 @@ const questionBank = {
   },
   {
     "type": "mcq",
-    "question": "Where does a variable of a reference type live?",
-    "options": [
-      "On the heap only",
-      "On the stack only",
-      "In CPU registers",
-      "In virtual memory pages only"
-    ],
-    "answer": "On the stack only"
-  },
-  {
-    "type": "mcq",
     "question": "Where is the actual object of a reference type constructed?",
     "options": [
       "On the stack",
