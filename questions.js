@@ -3622,5 +3622,398 @@ const questionBank = {
     ],
     "answer": "They are accessible inside derived classes"
   }
-]
+  ],
+  BASH_quiz01:[
+  
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to represent your home directory: ___",
+    "answer": "~"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command option to show option switches: ___",
+    "answer": "-"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to reference a file path: ___",
+    "answer": "/"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to display the manual page of a command: ___",
+    "answer": "man"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to quickly count lines, words, and bytes of a file: ___",
+    "answer": "wc"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to determine the type of a file (file.txt): ___ ",
+    "answer": "file file.txt"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to list the contents of a directory: ___",
+    "answer": "ls"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux option to display files in long format with more details: ___",
+    "answer": "ls -l"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to list all files ending with .txt in long format: ___",
+    "answer": "ls -l *.txt"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to list all files containing a dot in their names: ___ ",
+    "answer": "ls -l *.*"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to include hidden files in the listing: ___ ",
+    "answer": "ls -a"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to list only hidden files in long format: ___ ",
+    "answer": "ls -l .*"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux option to reverse the order of the listing: ___",
+    "answer": "ls -r"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux option to recursively list all files in current and subdirectories: ___",
+    "answer": "ls -R"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux option to show the inode number of files: ___",
+    "answer": "ls -i"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to change the current directory: ___",
+    "answer": "cd"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to switch to the root directory: ___ ",
+    "answer": "cd /"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to move to the current directory: ___ ",
+    "answer": "cd ."
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to enter a folder in the current directory: ___ ",
+    "answer": "cd ./folder"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to move to the parent directory of the current directory.: ___..",
+    "answer": "cd .."
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to move to home directory using its absolute path: ___ ",
+    "answer": "cd /home"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to display the current working directory: ___",
+    "answer": "pwd"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to copy a file, optionally giving the copy a new name: ___",
+    "answer": "cp"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to copy a file (f1.txt) to a destination directory (d2), keeping its original name: ___ ",
+    "answer": "cp f1.txt d2"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to copy a file (f1.txt) and explicitly specify the destination path (d2) and filename (f1.txt): ___ ",
+    "answer": "cp f1.txt d2/f1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to copy a file (f1.txt) to a destination directory(d2) and rename it (f2.txt): ___",
+    "answer": "cp f1.txt d2/f2.txt"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to create a backup copy (f2.txt) of a file (f1.txt) in the current folder: ___ ",
+    "answer": "cp f1.txt f2.txt"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to create a new file (f1.txt): ___",
+    "answer": "touch f1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command option to modify only the access time of a file (f1.txt): ___ ",
+    "answer": "touch -a f1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command option to modify only the modification time of a file (f1.txt): ___ ",
+    "answer": "touch -m f1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command option to update the access time and modification time of a file (f1.txt), not creating a new file if it doesn't exist: ___",
+    "answer": "touch -c f1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to move a file or rename it: ___",
+    "answer": "mv"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to move sample.txt to the directory (demo): ___ ",
+    "answer": "mv sample.txt /demo"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to move sample.txt to the directory (demo) and rename it f1.txt: ___ ",
+    "answer": "mv sample.txt /demo/f1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to rename sample.txt to demo.txt in the current directory: ___ ",
+    "answer": "mv sample.txt demo.txt"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to remove an empty directory (d2): ___",
+    "answer": "rmdir d2"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to remove an empty directory named 'd2': ___ ",
+    "answer": "rm -d d2"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to remove a directory (d2) and its contents recursively: ___ ",
+    "answer": "rm -r d2"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to create a new directory or folder: ___",
+    "answer": "mkdir"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to create a directory named demo in the current directory: ___ ",
+    "answer": "mkdir demo"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to create a subdirectory named d2 inside demo: ___ ",
+    "answer": "mkdir demo/d2"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to create a directory named demo in the parent directory: ___ ",
+    "answer": "mkdir ../demo"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to display the full contents of a text file(f1.txt): ___",
+    "answer": "cat f1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to display the first 10 lines of a file: ___ filename.txt",
+    "answer": "head"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to display the last 10 lines of a file: ___ filename.txt",
+    "answer": "tail"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to display the contents of a file one page at a time: ___ filename.txt",
+    "answer": "more"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to display current user identity information: ___",
+    "answer": "id"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to display the groups the current user belongs to: ___",
+    "answer": "groups"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to display the groups a specific user (user1) belongs to: ___",
+    "answer": "groups user1"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to show who is currently logged in: ___",
+    "answer": "who"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to display the username of the current user: ___",
+    "answer": "whoami"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to display system information: ___",
+    "answer": "uname"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to display current date and time: ___",
+    "answer": "date"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to write content to a file, creating it if it doesn't exist: ___ \"content\" > filename",
+    "answer": "echo"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to display content directly in the terminal: ___ \"content\"",
+    "answer": "echo"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to change permissions for others to read only: ___ o=r filename",
+    "answer": "chmod"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to change permissions of file.txt for user to read, write, execute with verbose feedback: ___ ",
+    "answer": "chmod -v u=wrx file.txt"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to remove read permission of directory (d2) for others with verbose feedback: ___ ",
+    "answer": "chmod -v o-r d2"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to set read permission of directory (d2) for user, group, others: ___ ",
+    "answer": "chmod ugo=r d2"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to remove all permissions of directory (d2) for others: ___ ",
+    "answer": "chmod o= d2"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to add read permission of directory (d2) for others and remove execute permission from user and group: ___ ",
+    "answer": "chmod o+r,ug-x d2"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to change the group (g2) ownership of a file (f1.txt): ___ ",
+    "answer": "chgrp g2 f1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "judsonmurray@NBCC-PF50B5S7: /home$ chmod -verbose o= judsonmurray\nmode of 'judsonmurray' changed from 0755 (rwxr-r-x) to 0750 (rwxr-x---)\n0755 represent____",
+    "answer": "Octal representation of Linux file permissions"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to add a new system user: ___",
+    "answer": "adduser"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to create a new user with admin privileges: ___ username",
+    "answer": "sudo adduser"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to switch to another user: ___ username",
+    "answer": "su"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to change your own password (requires current password): ___",
+    "answer": "passwd"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to set a new password for a specific user without needing the old one: ___ username",
+    "answer": "sudo passwd"
+  },
+  {
+    "type": "fib",
+    "question": "Fill in the missing Linux command to edit a text file using vi or vim: ___ txtfile",
+    "answer": "vi/vim"
+  },
+  {
+    "type": "fib",
+    "question": "In vi/vim, which key should you press to return to command mode from insert mode? ___",
+    "answer": "Esc"
+  },
+  {
+    "type": "fib",
+    "question": "In vi/vim, which command saves the file and exits the editor? ___",
+    "answer": ":wq"
+  },
+  {
+    "type": "fib",
+    "question": "In vi/vim, which keys move the cursor up and down? ___ and ___",
+    "answer": "K, J"
+  },
+  {
+    "type": "fib",
+    "question": "In vi/vim, which keys move the cursor left and right? ___ and ___",
+    "answer": "H, L"
+  },
+  {
+    "type": "fib",
+    "question": "In vi/vim, which key enters insert mode for editing text? ___",
+    "answer": "i"
+  },
+  {
+    "type": "fib",
+    "question": "In vi/vim, which command exits without saving changes? ___",
+    "answer": ":q!"
+  },
+  {
+    "type": "fib",
+    "question": "In vi/vim, which command saves the current file without exiting? ___",
+    "answer": ":w"
+  },
+  {
+    "type": "fib",
+    "question": "In vi/vim, which command saves the file as a new file with a different name? ___ filename",
+    "answer": ":w"
+  },
+  {
+    "type": "fib",
+    "question": "In vi/vim, which command deletes a character under the cursor? ___",
+    "answer": "x"
+  }
+  ]
 };
