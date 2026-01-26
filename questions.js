@@ -3788,12 +3788,12 @@ const questionBank = {
   {
     "type": "fib",
     "question": "Fill in the missing Linux command to move sample.txt to the directory (demo): ___ ",
-    "answer": "mv sample.txt /demo"
+    "answer": "mv sample.txt demo"
   },
   {
     "type": "fib",
     "question": "Fill in the missing Linux command to move sample.txt to the directory (demo) and rename it f1.txt: ___ ",
-    "answer": "mv sample.txt /demo/f1.txt"
+    "answer": "mv sample.txt demo/f1.txt"
   },
   {
     "type": "fib",
