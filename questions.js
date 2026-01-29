@@ -4015,5 +4015,82 @@ const questionBank = {
     "question": "In vi/vim, which command deletes a character under the cursor? ___",
     "answer": "x"
   }
+  ],
+  SQL_quiz02:[
+  {
+    "type": "fib",
+    "question": "the order of clause :1.____ 2.____3.____4.____5.____6.____ 用空格隔开",
+    "answer": "FROM WHERE GROUP BY HAVING SELECT ORDER BY "
+  },
+  {
+    "type": "fib",
+    "question": "FROM 什么作用？",
+    "answer": "specify the table source"
+  },
+  {
+    "type": "fib",
+    "question": "WHERE 什么作用？",
+    "answer": "record-based filtering"
+  },
+  {
+    "type": "fib",
+    "question": "GROUP BY 什么作用？",
+    "answer": "user-defined grouping criteria (for AGGREGATES)"
+  },
+  {
+    "type": "fib",
+    "question": "HAVING 什么作用？",
+    "answer": "group-based filtering"
+  },
+  {
+    "type": "fib",
+    "question": "SELECT 什么作用？",
+    "answer": "specify columns"
+  },
+  {
+    "type": "fib",
+    "question": "ORDER BY 什么作用？",
+    "answer": "user-provided sorting criteria"
+  },
+  {
+    "type": "fib",
+    "question": "6 aggregate functions: 空格隔开",
+    "answer": "COUNT(*) COUNT(ALL | DISTINCT col) SUM(col) MIN(col) MAX(col) AVG(col)"
+  },
+  {
+    "type": "fib",
+    "question": "5 supported JOINs types",
+    "answer": "CROSS JOIN INNER JOIN LEFT JOIN RIGHT JOIN FULL OUTER JOIN"
+  },
+  {
+    "type": "fib",
+    "question": "what was specified in the ON clause.",
+    "answer": "matching columns"
+  },
+  {
+    "type": "fib",
+    "question": "The ways that sub-query can return information",
+    "answer": "a single value a single column one or more columns"
+  },
+  {
+    "type": "fib",
+    "question": "Subqueries can be used in these clauses：",
+    "answer": "WHERE HAVING FROM SELECT"
+  },
+  {
+    "type": "fib",
+    "question": "SOME, ANY, and ALL are logical operators used to:",
+    "answer": "compare a single value against a set of values returned by a subquery"
+  },
+  {
+    "type": "fib",
+    "question": "what is Non-correlated Subqueries",
+    "answer": "The subquery is completely independent. It does not rely on any data from the outer query to execute. Runs once for the entire query"
+  },
+  {
+    "type": "fib",
+    "question": "what is correlated Subqueries",
+    "answer": "The subquery references one or more columns from the outer query. "
+  },
   ]
 };
