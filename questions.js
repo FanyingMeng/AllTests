@@ -4092,5 +4092,613 @@ const questionBank = {
     "question": "what is correlated Subqueries",
     "answer": "The subquery references one or more columns from the outer query. "
   },
+  ],
+  Javascript_quiz01:[
+
+  {
+    "type": "mcq",
+    "question": "What type of language is JavaScript?",
+    "options": [
+      "Compiled language",
+      "Interpreted (scripting) language",
+      "Assembly language",
+      "Machine language"
+    ],
+    "answer": "Interpreted (scripting) language"
+  },
+  {
+    "type": "mcq",
+    "question": "Who created JavaScript?",
+    "options": [
+      "James Gosling",
+      "Brendan Eich",
+      "Guido van Rossum",
+      "Dennis Ritchie"
+    ],
+    "answer": "Brendan Eich"
+  },
+  {
+    "type": "mcq",
+    "question": "Which of the following is true about JavaScript variables?",
+    "options": [
+      "JavaScript is strongly typed, so variable types must be declared",
+      "Variable names can start with a number",
+      "Variable names are case sensitive",
+      "Variable names can include spaces"
+    ],
+    "answer": "Variable names are case sensitive"
+  },
+  {
+    "type": "mcq",
+    "question": "Which naming convention is commonly used for JavaScript classes?",
+    "options": [
+      "camelCase",
+      "snake_case",
+      "PascalCase",
+      "kebab-case"
+    ],
+    "answer": "PascalCase"
+  },
+  {
+    "type": "mcq",
+    "question": "What is a scripting host in the context of JavaScript?",
+    "options": [
+      "A web server that stores databases",
+      "A browser containing a scripting engine",
+      "A compiled language runtime",
+      "An operating system service for scripts"
+    ],
+    "answer": "A browser containing a scripting engine"
+  },
+  {
+    "type": "mcq",
+    "question": "JavaScript is described as loosely typed. What does this mean?",
+    "options": [
+      "Variables must always have a data type declared",
+      "Data types are automatically determined and do not need to be declared",
+      "Variables cannot store different types of values",
+      "Variables can only store numbers"
+    ],
+    "answer": "Data types are automatically determined and do not need to be declared"
+  },
+  {
+    "type": "mcq",
+    "question": "Which of the following characters are allowed at the start of a JavaScript variable name?",
+    "options": [
+      "Numbers only",
+      "Letters, underscore (_), or dollar sign ($)",
+      "Hyphen (-) or space",
+      "Any symbol"
+    ],
+    "answer": "Letters, underscore (_), or dollar sign ($)"
+  },
+  {
+    "type": "mcq",
+    "question": "In a website, which component is responsible for storing and persisting data between requests?",
+    "options": [
+      "Web browser",
+      "Web server",
+      "Database server",
+      "Client machine"
+    ],
+    "answer": "Database server"
+  },
+  {
+    "type": "mcq",
+    "question": "Which of the following is true about a website's client?",
+    "options": [
+      "It stores data permanently for all users",
+      "It executes JavaScript received from the server",
+      "It generates dynamic HTML for the server",
+      "It hosts static HTML and CSS files"
+    ],
+    "answer": "It executes JavaScript received from the server"
+  },
+  {
+    "type": "mcq",
+    "question": "Which of these naming conventions is recommended for JavaScript variables and methods?",
+    "options": [
+      "PascalCase",
+      "camelCase",
+      "snake_case",
+      "kebab-case"
+    ],
+    "answer": "camelCase"
+  },
+  {
+    "type": "mcq",
+    "question": "Which operator can be used to concatenate strings in JavaScript?",
+    "options": [
+      "+",
+      "-",
+      "*",
+      "&"
+    ],
+    "answer": "+"
+  },
+  {
+    "type": "mcq",
+    "question": "What will be the output of the following code?\nlet number = 4;\nlet hockeyJerseyNumber = 'My hockey jersey number is ' + number;",
+    "options": [
+      "My hockey jersey number is number",
+      "My hockey jersey number is 4",
+      "My hockey jersey number is ${number}",
+      "Error"
+    ],
+    "answer": "My hockey jersey number is 4"
+  },
+  {
+    "type": "mcq",
+    "question": "Which operator is used to append to an existing string in JavaScript?",
+    "options": [
+      "+=",
+      "-=",
+      "*=",
+      "/="
+    ],
+    "answer": "+="
+  },
+  {
+    "type": "mcq",
+    "question": "What is the correct way to include a variable inside a string using template literals?",
+    "options": [
+      "My number is $number",
+      "My number is ${number}",
+      "My number is +number+",
+      "My number is #number#"
+    ],
+    "answer": "My number is ${number}"
+  },
+  {
+    "type": "mcq",
+    "question": "Which escape character allows you to include double quotes inside a double-quoted string?",
+    "options": [
+      "\\\"",
+      "\\'",
+      "\\n",
+      "\\t"
+    ],
+    "answer": "\\\""
+  },
+  {
+    "type": "mcq",
+    "question": "What will be the output of the following code?\nlet e = \"It's right over there.\";\nconsole.log(e);",
+    "options": [
+      "It\\'s right over there.",
+      "It's right over there.",
+      "It\\\"s right over there.",
+      "Syntax Error"
+    ],
+    "answer": "It's right over there."
+  },
+  {
+    "type": "mcq",
+    "question": "Which property gives the length of a string in JavaScript?",
+    "options": [
+      ".length",
+      ".size",
+      ".count",
+      ".total"
+    ],
+    "answer": ".length"
+  },
+  {
+    "type": "mcq",
+    "question": "What does the substring() method do?",
+    "options": [
+      "Replaces part of a string",
+      "Returns a portion of the string from start index to end index",
+      "Converts the string to uppercase",
+      "Removes spaces from the string"
+    ],
+    "answer": "Returns a portion of the string from start index to end index"
+  },
+  {
+    "type": "mcq",
+    "question": "The substr() method is considered deprecated. What does it do?",
+    "options": [
+      "Returns a substring using start index and length",
+      "Returns a substring using start and end index",
+      "Converts a string to lowercase",
+      "Removes trailing spaces"
+    ],
+    "answer": "Returns a substring using start index and length"
+  },
+  {
+    "type": "mcq",
+    "question": "What will 'Hello'.indexOf('l') return?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "-1"
+    ],
+    "answer": "2"
+  },
+  {
+    "type": "mcq",
+    "question": "What will 'Hello'.indexOf('l', 2) return?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "-1"
+    ],
+    "answer": "2"
+  },
+  {
+    "type": "mcq",
+    "question": "Which method converts a string to uppercase in JavaScript?",
+    "options": [
+      ".toUpper()",
+      ".toUpperCase()",
+      ".uppercase()",
+      ".upperCase()"
+    ],
+    "answer": ".toUpperCase()"
+  },
+  {
+    "type": "mcq",
+    "question": "Which method converts a string to lowercase in JavaScript?",
+    "options": [
+      ".toLowerCase()",
+      ".lowerCase()",
+      ".toLower()",
+      ".lowercase()"
+    ],
+    "answer": ".toLowerCase()"
+  },
+  {
+    "type": "mcq",
+    "question": "Which method removes spaces from both ends of a string?",
+    "options": [
+      ".trim()",
+      ".strip()",
+      ".cut()",
+      ".slice()"
+    ],
+    "answer": ".trim()"
+  },
+  {
+    "type": "mcq",
+    "question": "Which of the following is the correct way to combine substrings from a string?\nlet d = 'aaaabcdefff';\nlet e = d.substring(0,1) + d.substring(4,9);",
+    "options": [
+      "abcdef",
+      "aaaabcde",
+      "abcdefff",
+      "Error"
+    ],
+    "answer": "abcdef"
+  },
+  {
+    "type": "mcq",
+    "question": "How do you create a new Date object with the current date and time?",
+    "options": [
+      "new Date()",
+      "Date.now()",
+      "Date.create()",
+      "new DateTime()"
+    ],
+    "answer": "new Date()"
+  },
+  {
+    "type": "mcq",
+    "question": "Which method returns the year of a Date object as a four-digit number?",
+    "options": [
+      ".getYear()",
+      ".getFullYear()",
+      ".getUTCYear()",
+      ".year()"
+    ],
+    "answer": ".getFullYear()"
+  },
+  {
+    "type": "mcq",
+    "question": "In JavaScript, what is the range of values returned by getMonth()?",
+    "options": [
+      "1-12",
+      "0-11",
+      "0-12",
+      "1-11"
+    ],
+    "answer": "0-11"
+  },
+  {
+    "type": "mcq",
+    "question": "Which method returns the day of the month (1-31)?",
+    "options": [
+      ".getDate()",
+      ".getDay()",
+      ".getMonth()",
+      ".getTime()"
+    ],
+    "answer": ".getDate()"
+  },
+  {
+    "type": "mcq",
+    "question": "What does getDay() return for Sunday?",
+    "options": [
+      "0",
+      "1",
+      "6",
+      "7"
+    ],
+    "answer": "0"
+  },
+  {
+    "type": "mcq",
+    "question": "Which method returns the number of milliseconds since January 1, 1970?",
+    "options": [
+      ".getMilliseconds()",
+      ".getTime()",
+      ".valueOf()",
+      ".getUTCMilliseconds()"
+    ],
+    "answer": ".getTime()"
+  },
+  {
+    "type": "mcq",
+    "question": "Which method returns a human-readable date string without time?",
+    "options": [
+      ".toDateString()",
+      ".toTimeString()",
+      ".toISOString()",
+      ".toString()"
+    ],
+    "answer": ".toDateString()"
+  },
+  {
+    "type": "mcq",
+    "question": "Which method returns a human-readable time string including local timezone?",
+    "options": [
+      ".toTimeString()",
+      ".toDateString()",
+      ".toISOString()",
+      ".toString()"
+    ],
+    "answer": ".toTimeString()"
+  },
+  {
+    "type": "mcq",
+    "question": "What does date.toISOString() return?",
+    "options": [
+      "Local time string",
+      "UTC time string in ISO 8601 format",
+      "Date only without time",
+      "Milliseconds since 1970"
+    ],
+    "answer": "UTC time string in ISO 8601 format"
+  },
+  {
+    "type": "mcq",
+    "question": "Which of the following constructors creates a Date object for June 19, 2019 at 15:00:00?",
+    "options": [
+      "new Date('June 19, 2019 15:00:00')",
+      "new Date(2019, 5, 19, 15, 0, 0)",
+      "new Date(1560975600000)",
+      "All of the above"
+    ],
+    "answer": "All of the above"
+  },
+  {
+    "type": "mcq",
+    "question": "What is a correct way to compare two Date objects to see which is earlier?",
+    "options": [
+      "Using > or < operators",
+      "Using == operator",
+      "Using === operator",
+      "Using .equals() method"
+    ],
+    "answer": "Using > or < operators"
+  },
+  {
+    "type": "mcq",
+    "question": "Why does date1 == date2 return false even if the two dates are identical?",
+    "options": [
+      "Because Date objects cannot be compared",
+      "Because == compares object references, not values",
+      "Because == only works for numbers",
+      "Because dates must use .compare()"
+    ],
+    "answer": "Because == compares object references, not values"
+  },
+  {
+    "type": "mcq",
+    "question": "Which method is used to set or modify the day of a Date object?",
+    "options": [
+      ".setDay()",
+      ".setDate()",
+      ".setMonth()",
+      ".setTime()"
+    ],
+    "answer": ".setDate()"
+  },
+  {
+    "type": "mcq",
+    "question": "What happens if you set the date beyond the number of days in a month using setDate()?",
+    "options": [
+      "It causes an error",
+      "It automatically adjusts to the next month",
+      "It ignores the extra days",
+      "It resets to the first day of the month"
+    ],
+    "answer": "It automatically adjusts to the next month"
+  },
+  {
+    "type": "mcq",
+    "question": "If you create a Date object with new Date(), where does the time come from?",
+    "options": [
+      "Server time",
+      "Client machine time",
+      "UTC time by default",
+      "Always set to midnight"
+    ],
+    "answer": "Client machine time"
+  },
+  {
+    "type": "mcq",
+    "question": "Which of the following is a correct way to embed JavaScript directly in an HTML page?",
+    "options": [
+      "<script> let x = 10; </script>",
+      "<js> let x = 10; </js>",
+      "<javascript> let x = 10; </javascript>",
+      "<style> let x = 10; </style>"
+    ],
+    "answer": "<script> let x = 10; </script>"
+  },
+  {
+    "type": "mcq",
+    "question": "How do you include an external JavaScript file in HTML?",
+    "options": [
+      "<script src='app.js'></script>",
+      "<script href='app.js'></script>",
+      "<js src='app.js'></js>",
+      "<script file='app.js'></script>"
+    ],
+    "answer": "<script src='app.js'></script>"
+  },
+  {
+    "type": "mcq",
+    "question": "Which method displays a dialog box asking the user to input data?",
+    "options": [
+      "alert()",
+      "confirm()",
+      "prompt()",
+      "window()"
+    ],
+    "answer": "prompt()"
+  },
+  {
+    "type": "mcq",
+    "question": "What does the alert() method do?",
+    "options": [
+      "Displays a message and waits for user input",
+      "Displays a message with an OK button",
+      "Redirects the user to another page",
+      "Writes content to the console"
+    ],
+    "answer": "Displays a message with an OK button"
+  },
+  {
+    "type": "mcq",
+    "question": "Which property can be used to redirect a user to another webpage?",
+    "options": [
+      "window.navigate",
+      "window.redirect",
+      "window.location",
+      "document.redirect"
+    ],
+    "answer": "window.location"
+  },
+  {
+    "type": "mcq",
+    "question": "Which function converts a string to an integer in JavaScript?",
+    "options": [
+      "parseInt()",
+      "parseFloat()",
+      "Number()",
+      "toInteger()"
+    ],
+    "answer": "parseInt()"
+  },
+  {
+    "type": "mcq",
+    "question": "Which function converts a string to a floating-point number?",
+    "options": [
+      "parseInt()",
+      "parseFloat()",
+      "Number.parse()",
+      "toFloat()"
+    ],
+    "answer": "parseFloat()"
+  },
+  {
+    "type": "mcq",
+    "question": "What does isNaN('123') return?",
+    "options": [
+      "true",
+      "false",
+      "NaN",
+      "undefined"
+    ],
+    "answer": "false"
+  },
+  {
+    "type": "mcq",
+    "question": "What does isNaN('abc') return?",
+    "options": [
+      "true",
+      "false",
+      "NaN",
+      "undefined"
+    ],
+    "answer": "true"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the purpose of a try...catch block in JavaScript?",
+    "options": [
+      "To loop through arrays",
+      "To handle errors and exceptions",
+      "To declare variables",
+      "To redirect users"
+    ],
+    "answer": "To handle errors and exceptions"
+  },
+  {
+    "type": "mcq",
+    "question": "In the try...catch example, what happens when throw new Error() is executed?",
+    "options": [
+      "The code continues executing after throw",
+      "The code immediately jumps to the catch block",
+      "Nothing happens",
+      "The program stops completely"
+    ],
+    "answer": "The code immediately jumps to the catch block"
+  },
+  {
+    "type": "mcq",
+    "question": "Which object represents the entire HTML document in the DOM?",
+    "options": [
+      "window",
+      "document",
+      "body",
+      "html"
+    ],
+    "answer": "document"
+  },
+  {
+    "type": "mcq",
+    "question": "Which method writes HTML or text directly into the document at the script’s location?",
+    "options": [
+      "document.append()",
+      "document.write()",
+      "document.output()",
+      "document.show()"
+    ],
+    "answer": "document.write()"
+  },
+  {
+    "type": "mcq",
+    "question": "Can JavaScript code in an external .js file use the <script> tag inside the file?",
+    "options": [
+      "Yes, always",
+      "No, it should not use <script> tags",
+      "Only if placed in the head",
+      "Only if placed in the body"
+    ],
+    "answer": "No, it should not use <script> tags"
+  },
+  {
+    "type": "mcq",
+    "question": "When using prompt(), what type is the returned user input?",
+    "options": [
+      "String",
+      "Number",
+      "Boolean",
+      "Object"
+    ],
+    "answer": "String"
+  }
   ]
 };
