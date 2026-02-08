@@ -4700,5 +4700,267 @@ const questionBank = {
     ],
     "answer": "String"
   }
+  ],
+  BASH_quiz02:[
+  {
+    "type": "fib",
+    "question": "编辑文件 _____ file.txt",
+    "answer": "vim"
+  },
+  {
+    "type": "fib",
+    "question": "保存文件并退出_____",
+    "answer": ":wq"
+  },
+  {
+    "type": "fib",
+    "question": "退出编辑文件 _____ ",
+    "answer": ":q"
+  },
+  {
+    "type": "fib",
+    "question": "退出编辑文件不保存 _____ ",
+    "answer": ":q!"
+  },
+  {
+    "type": "fib",
+    "question": "保存新文件/另存为新文件 _____ file.txt ",
+    "answer": ":w"
+  },
+  {
+    "type": "fib",
+    "question": "插入file.txt里面的内容 _____ file.txt",
+    "answer": ":r"
+  },
+  {
+    "type": "fib",
+    "question": "编辑文件 _____ file.txt ",
+    "answer": ":e"
+  },
+  {
+    "type": "fib",
+    "question":" 剪切当前行 _____ ",
+    "answer": "dd"
+  },
+  {
+    "type": "fib",
+    "question":" 粘贴 _____ ",
+    "answer": "P"
+  },
+  {
+    "type": "fib",
+    "question":" 回到文件的第一个字符 _____ ",
+    "answer": "gg"
+  },
+  {
+    "type": "fib",
+    "question":" 撤回 _____ ",
+    "answer": "u"
+  },
+  {
+    "type": "fib",
+    "question":" 删除 _____ ",
+    "answer": "x"
+  },
+  {
+    "type": "fib",
+    "question":" comment_____ ",
+    "answer": "#"
+  },
+  {
+    "type": "fib",
+    "question":" 显示行数 _____ ",
+    "answer": ":set number"
+  },
+  {
+    "type": "fib",
+    "question":" 显示正在编辑的文件 _____ ",
+    "answer": "control G"
+  },
+  {
+    "type": "fib",
+    "question":" 写script的第一行，这告诉系统：请使用解释器来运行这个文件 _____ ",
+    "answer": "#!/bin/bash"
+  },
+  {
+    "type": "fib",
+    "question":" 程序暂时切出去（不是退出）临时退出 Vim 去查看某个目录，又不想关闭文件时非常有用 _____ ",
+    "answer": "control Z"
+  },
+  {
+    "type": "fib",
+    "question":" 在终端切换回第3个脚本_____ ",
+    "answer": "fg 3"
+  },
+  {
+    "type": "fib",
+    "question":" 查看后台任务，看看后台到底有多少个程序在排队____ ",
+    "answer": "jobs"
+  },
+  {
+    "type": "fib",
+    "question":" 判断字符串长度是否为 0  if [ __ “$1” ]\nthen\necho “Your argument is not empty”\nfi\n记住方括号要有空格 ",
+    "answer": "-z"
+  },
+  {
+    "type": "fib",
+    "question":" if [ __ “$1” ]\nthen\necho “This file exists”\nfi\n记住方括号要有空格 ",
+    "answer": "-e"
+  },
+  {
+    "type": "fib",
+    "question":" if [ __ “$1” ]\nthen\necho “This is a file object”\nfi\n记住方括号要有空格 ",
+    "answer": "-f"
+  },
+   {
+    "type": "fib",
+    "question":" if [ __ “$1” ]\nthen\necho “This is a directory object”\nfi\n记住方括号要有空格 ",
+    "answer": "-d"
+  },
+  {
+    "type": "fib",
+    "question":"判断当前用户对该文件是否有读权限___",
+    "answer": "-r"
+  },
+  {
+    "type": "fib",
+    "question":"判断当前用户对该文件是否有写权限___",
+    "answer": "-w"
+  },
+  {
+    "type": "fib",
+    "question":"判断当前用户对该文件是否有执行权限___",
+    "answer": "-x"
+  },
+  {
+    "type": "fib",
+    "question":"判断该文件是否是符号链接___",
+    "answer": "-h -L"
+  },
+  {
+    "type": "fib",
+    "question":"判断文件是否存在且长度大于 0 (Size > 0)，即文件不是空的___",
+    "answer": "-s"
+  },
+  {
+    "type": "fib",
+    "question":"字符串是否不为空___",
+    "answer": "-n"
+  },
+  {
+    "type": "fib",
+    "question":"numeric test中的等于___",
+    "answer": "-eq"
+  },
+  {
+    "type": "fib",
+    "question":"numeric test中的不等于___",
+    "answer": "-nq"
+  },
+  {
+    "type": "fib",
+    "question":"numeric test中的大于___",
+    "answer": "-gt"
+  },
+  {
+    "type": "fib",
+    "question":"numeric test中的小于___",
+    "answer": "-lt"
+  },
+  {
+    "type": "fib",
+    "question":"numeric test中的大于等于___",
+    "answer": "-ge"
+  },
+  {
+    "type": "fib",
+    "question":"numeric test中的小于等于___",
+    "answer": "-le"
+  },
+  {
+    "type": "fib",
+    "question":"在 [ ] 内部使用时,AND 逻辑，所有条件都必须满足___",
+    "answer": "-a"
+  },
+  {
+    "type": "fib",
+    "question":"连接两个 [ ] 括号，AND 逻辑，所有条件都必须满足___",
+    "answer": "&&"
+  },
+  {
+    "type": "fib",
+    "question":"在 [ ] 内部使用时,OR 逻辑，满足任意一个即可___",
+    "answer": "-o"
+  },
+  {
+    "type": "fib",
+    "question":"连接两个 [ ] 括号，OR 逻辑，满足任意一个即可___",
+    "answer": "||"
+  },
+  {
+    "type": "fib",
+    "question":"参数的个数___",
+    "answer": "$#"
+  },
+  {
+    "type": "fib",
+    "question":"显示所有参数___",
+    "answer": "$* / $@"
+  },
+  {
+    "type": "fib",
+    "question":"上一条命令的退出状态码。成功返回 0，失败返回非零值____",
+    "answer": "$?"
+  },
+  {
+    "type": "fib",
+    "question":"当前 Shell 的 Process ID (PID)____",
+    "answer": "$$"
+  },
+  {
+    "type": "fib",
+    "question":"最近运行的后台进程的 PID____",
+    "answer": "$!"
+  },
+  {
+    "type": "fib",
+    "question":" _____存储了一系列目录的路径，这些目录之间用冒号（:）隔开。当你输入一个命令（如 ls 或 who）时，系统会按照 $PATH 中列出的顺序，去这些文件夹里寻找对应的可执行文件 ",
+    "answer": "$PATH"
+  },
+  {
+    "type": "fib",
+    "question":" 运行文件file.txt的三个方式（用,隔开）_____ ",
+    "answer": "bash file.txt, file.txt, . file.txt"
+  },
+  {
+    "type": "fib",
+    "question":" xtrace 模式，核心作用是：在执行每一条命令之前，先将其打印到终端。_____ ",
+    "answer": "bash -x file.txt"
+  },
+  {
+    "type": "fib",
+    "question":"哪条命令输出结果通常包含：Login: 用户名,Name: 用户的全名（在 /etc/passwd 中定义的）。Tty: 终端设备名称。Idle: 空闲时间（该用户多久没动键盘了）。Login Time: 登录日期和时间。Office: 办公地点或电话（如果有记录）_____ ",
+    "answer": "finger"
+  },
+  {
+    "type": "fib",
+    "question":"_____ 显示当前登录账户的详细信息",
+    "answer": "finger $USER"
+  },
+  {
+    "type": "fib",
+    "question":"_____ 在一堆文字中，找到匹配你要求的行，并把它显示出来（Globally search for a Regular Expression and Print）",
+    "answer": "grep"
+  },
+  {
+    "type": "fib",
+    "question":"当你执行______，你会看到一串由冒号（:）隔开的路径。例如：/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin \n这代表了搜索的先后顺序：\n先看 /usr/local/bin\n没找到？再看 /usr/bin\n还没找到？看 /bin……以此类推。",
+    "answer": "echo $PATH"
+  },
+  {
+    "type": "fib",
+    "question":"Bash 中的三种主要测试类型,（小写逗号隔开）",
+    "answer": "file test, string test, numeric test"
+  },
   ]
 };
