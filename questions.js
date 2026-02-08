@@ -4847,7 +4847,7 @@ const questionBank = {
     "question":"字符串是否不为空___",
     "answer": "-n"
   },
-  {
+  { 
     "type": "fib",
     "question":"numeric test中的等于___",
     "answer": "-eq"
@@ -4855,7 +4855,7 @@ const questionBank = {
   {
     "type": "fib",
     "question":"numeric test中的不等于___",
-    "answer": "-nq"
+    "answer": "-ne"
   },
   {
     "type": "fib",
