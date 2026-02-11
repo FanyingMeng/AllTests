@@ -4962,5 +4962,232 @@ const questionBank = {
     "question":"Bash 中的三种主要测试类型,（小写逗号隔开）",
     "answer": "file test, string test, numeric test"
   },
+  ],
+  SQL_quiz03:[
+  {
+    "type": "fib",
+    "question": "What is a VIEW?",
+    "answer": "A virtual table based on the result set of a SELECT query."
+  },
+  {
+    "type": "fib",
+    "question": "What is a base table?",
+    "answer": "A table that physically stores data."
+  },
+  {
+    "type": "fib",
+    "question": "Who can use view?",
+    "answer": "Any user with the appropriate permissions."
+  },
+  {
+    "type": "fib",
+    "question": "What is WITH ENCRYPTION?",
+    "answer": "A clause that specifies the view should be encrypted so that its definition is not visible."
+  },
+  {
+    "type": "fib",
+    "question": "What is WITH SCHEMABINDING?",
+    "answer": "A clause that prevents the underlying table from being modified while the view is in use."
+  },
+  {
+    "type": "fib",
+    "question": "What is WITH CHECK OPTION?",
+    "answer": "A clause that ensures all data modifications through the view adhere to the view's WHERE clause."
+  },
+  {
+    "type": "fib",
+    "question": "What clause can not be used with views?",
+    "answer": "SELECT ... INTO and The ORDER BY clause."
+  },
+  {
+    "type": "fib",
+    "question": "What are the requirements for creating a view?",
+    "answer": "The SELECT clause cannot include a DISTINCT or TOP clause, aggregate function, calculated value, GROUP BY or HAVING clause, UNION operator. It must satisfy the requirements of the Columns(s) for the underlying Table(s)"
+  },
+  {
+    "type": "fib",
+    "question": "What is an updated view?",
+    "answer": "A view that that can be used in an INSERT, UPDATE, or DELETE statement to modify the contents of a base table that the view refers to."
+  },
+  {
+    "type": "fib",
+    "question": "If you delete a table, what you should do with the views?",
+    "answer": "You should drop the views that depend on the deleted table."
+  },
+  {
+    "type": "fib",
+    "question": "What is a script?",
+    "answer": "A script is a .SQL file containing a series of SQL statements that are executed in sequence to perform a task."
+  },
+  {
+    "type": "fib",
+    "question": "What does the GO command signal?",
+    "answer": "The end of a batch of T-SQL statements."
+  },
+  {
+    "type": "fib",
+    "question": "5 statements that must be in their own batch?",
+    "answer": "1. CREATE VIEW 2. CREATE TRIGGER 3. CREATE PROCEDURE 4. CREATE FUNCTION 5. CREATE SCHEMA"
+  },
+  {
+    "type": "fib",
+    "question": "What does IF...ELSE do?",
+    "answer": "It controls the flow of execution based on a condition."
+  },
+  {
+    "type": "fib",
+    "question": "What does BEGIN...END do?",
+    "answer": "It defines a statement block."
+  },
+  {
+    "type": "fib",
+    "question": "What does TRY...CATCH do?",
+    "answer": "It controls the flow of execution when an error occurs."
+  },
+  {
+    "type": "fib",
+    "question": "What does WHILE do?",
+    "answer": "It creates a loop that executes as long as a condition is true."
+  },
+  {
+    "type": "fib",
+    "question": "What does BREAK do?",
+    "answer": "It exits innermost while loop."
+  },
+  {
+    "type": "fib",
+    "question": "What does CONTINUE do?",
+    "answer": "It returns to the beginning of the while loop."
+  },
+  {
+    "type": "fib",
+    "question": "What does RETURN do?",
+    "answer": "It exits a function and optionally returns a value."
+  },
+  {
+    "type": "fib",
+    "question": "What does PRINT do?",
+    "answer": "It displays a message to the client."
+  },
+  {
+    "type": "fib",
+    "question": "What does SET do?",
+    "answer": "It assigns a value to a variable."
+  },
+  {
+    "type": "fib",
+    "question": "What does DECLARE do?",
+    "answer": "It defines a local variable."
+  },
+  {
+    "type": "fib",
+    "question": "What does EXECUTE do?",
+    "answer": "It executes a stored procedure or a string of T-SQL code."
+  },
+  {
+    "type": "fib",
+    "question": "What is a scalar variable?",
+    "answer": "It holds a single value."
+  },
+  {
+    "type": "fib",
+    "question": "What is a table variable?",
+    "answer": "It holds a set of results."
+  },
+  {
+    "type": "fib",
+    "question": "What is a temporary table?",
+    "answer": "It stores a result set temporarily and is automatically dropped when closing the session."
+  },
+  {
+    "type": "fib",
+    "question": "Where does temporary table data reside?",
+    "answer": "It resides in the tempdb system database."
+  },
+  {
+    "type": "fib",
+    "question": "What is local temporary table?",
+    "answer": "It is a temporary table that is visible only to the current session."
+  },
+  {
+    "type": "fib",
+    "question": "What is global temporary table?",
+    "answer": "It is a temporary table that is visible to all sessions."
+  },
+  {
+    "type": "fib",
+    "question": "What are 5 types of T-SQL table objects?",
+    "answer": "1. Standard Tables 2. Views 3. Table Variables 4. Temporary Tables 5. Derived Tables"
+  },
+  {
+    "type": "fib",
+    "question": "What does @@IDENTITY do?",
+    "answer": "It returns the last identity value generated for any table in the current session and the current scope."
+  },
+  {
+    "type": "fib",
+    "question": "What does BEGIN TRY...END TRY contain?",
+    "answer": "It contains the code that may throw an error."
+  },
+  {
+    "type": "fib",
+    "question": "What does BEGIN CATCH...END CATCH contain?",
+    "answer": "It contains the code that handles an error."
+  },
+  {
+    "type": "fib",
+    "question": "What does ERROR_NUMBER() do?",
+    "answer": "It returns the error number for the last Transact-SQL statement executed."
+  },
+  {
+    "type": "fib",
+    "question": "What does ERROR_MESSAGE() do?",
+    "answer": "It returns the error message for the last Transact-SQL statement executed."
+  },
+  {
+    "type": "fib",
+    "question": "What does ERROR_SEVERITY() do?",
+    "answer": "It returns the error severity for the last Transact-SQL statement executed."
+  },
+  {
+    "type": "fib",
+    "question": "What does ERROR_STATE() do?",
+    "answer": "It returns the state number for the last Transact-SQL statement executed."
+  },
+  {
+    "type": "fib",
+    "question": "What does @@ERROR do?",
+    "answer": "It returns the error number for the last Transact-SQL statement executed."
+  },
+  {
+    "type": "fib",
+    "question": "What does @@IDENTITY do?",
+    "answer": "It returns the last identity value generated for any table in the current session and the current scope."
+  },
+  {
+    "type": "fib",
+    "question": "What does @@ROWCOUNT do?",
+    "answer": "It returns the number of rows affected by the last statement."
+  },
+  {
+    "type": "fib",
+    "question": "What does IDENT_CURRENT(<table_name>) do?",
+    "answer": "It returns the last identity value generated for a specific table in any session and any scope."
+  },
+  {
+    "type": "fib",
+    "question": "What does @@SERVERNAME do?",
+    "answer": "It returns the name of the SQL Server instance."
+  },
+  {
+    "type": "fib",
+    "question": "What does HOST_NAME() do?",
+    "answer": "It returns the name of the workstation running the current instance of SQL Server."
+  },
+  {
+    "type": "fib",
+    "question": "What does SYSTEM_USER do?",
+    "answer": "It returns the name of the user connected to the SQL Server instance."
+  }
   ]
 };
