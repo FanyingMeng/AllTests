@@ -11,6 +11,7 @@ document.getElementById("subjectTitle").innerText =
 
 // 转义 HTML 特殊字符
 function escapeHtml(text) {
+  if (typeof text !== 'string') return text;
   return text.replace(/&/g, "&amp;")
              .replace(/</g, "&lt;")
              .replace(/>/g, "&gt;");
@@ -39,7 +40,7 @@ function renderQuestion() {
   document.getElementById("progressText").innerText =
     `题目 ${currentIndex + 1} / ${questions.length}`;
 
-  // --- 跳转题号控件放在题目标签后 ---
+  // --- 跳转题号控件 ---
   const jumpHtml = `
     <span style="margin-left: 10px;">
       <input type="number" id="jumpInput" placeholder="题号" min="1" style="width:60px; height:24px; font-size:14px; text-align:center; border-radius:4px; border:1px solid #ccc;">
@@ -50,80 +51,99 @@ function renderQuestion() {
   document.getElementById("jumpInput").value = currentIndex + 1;
 
   // 转义题干并保留换行
-  let html = `<p><b>题目 ${currentIndex + 1}：</b><br>${escapeHtml(q.question).replace(/\n/g,"<br>")}</p>`;
+  let html = `<p><b>题目 ${currentIndex + 1}：</b> [${q.type.toUpperCase()}]<br>${escapeHtml(q.question).replace(/\n/g,"<br>")}</p>`;
 
+  // 渲染逻辑
   if (q.type === "mcq") {
-    // 随机打乱选项一次
-    if (!q._shuffledOptions) {
-      q._shuffledOptions = shuffleArray(q.options);
-    }
+    // 单选题：使用 radio
+    if (!q._shuffledOptions) q._shuffledOptions = shuffleArray(q.options);
     q._shuffledOptions.forEach(opt => {
       html += `<label><input type="radio" name="answer" value="${escapeHtml(opt)}"> ${escapeHtml(opt)}</label><br>`;
     });
+  } else if (q.type === "mrq") {
+    // 多选题：使用 checkbox
+    if (!q._shuffledOptions) q._shuffledOptions = shuffleArray(q.options);
+    html += `<p style="color: #666; font-size: 0.9em;">(请选择所有正确选项)</p>`;
+    q._shuffledOptions.forEach(opt => {
+      html += `<label><input type="checkbox" name="answer" value="${escapeHtml(opt)}"> ${escapeHtml(opt)}</label><br>`;
+    });
   } else if (q.type === "tf") {
+    // 判断题
     html += `
       <label><input type="radio" name="answer" value="true"> 正确</label><br>
       <label><input type="radio" name="answer" value="false"> 错误</label><br>
     `;
   } else if (q.type === "fib") {
-    html += `<input type="text" id="fibAnswer" placeholder="Fill in the blank..." style="width: 300px; height: 40px; font-size: 20px;">`;
+    // 填空题
+    html += `<input type="text" id="fibAnswer" placeholder="请填写答案..." style="width: 300px; height: 40px; font-size: 20px;">`;
   } else if (q.type === "short") {
+    // 简答题
     html += `
       <textarea id="shortAnswer" rows="5"
-        placeholder="Write your answer here..."
+        placeholder="在这里输入你的回答..."
         style="width:100%; padding:10px; font-size:20px;
         border-radius:8px; border:1px solid #ccc;"></textarea>
     `;
   }
 
   html += `<br><button onclick="checkAnswer()">提交答案</button>`;
-
   container.innerHTML = html;
 }
 
 // 检查答案
 function checkAnswer() {
   const q = questions[currentIndex];
-  let userAnswer = "";
   const result = document.getElementById("result");
+  let isCorrect = false;
+  let userAnswer = "";
 
+  // 1. 获取用户输入
   if (q.type === "mcq" || q.type === "tf") {
     const selected = document.querySelector('input[name="answer"]:checked');
     if (!selected) return alert("请选择一个答案！");
-    userAnswer = q.type === "tf" ? selected.value === "true" : selected.value;
-  } else if (q.type === "fib") {
-    userAnswer = document.getElementById("fibAnswer").value.trim().toLowerCase();
-  } else if (q.type === "short") {
-    userAnswer = document.getElementById("shortAnswer").value.trim().toLowerCase();
+    userAnswer = q.type === "tf" ? (selected.value === "true") : selected.value;
+  } 
+  else if (q.type === "mrq") {
+    const selectedNodes = document.querySelectorAll('input[name="answer"]:checked');
+    if (selectedNodes.length === 0) return alert("请选择至少一个答案！");
+    userAnswer = Array.from(selectedNodes).map(n => n.value);
+  } 
+  else if (q.type === "fib") {
+    userAnswer = document.getElementById("fibAnswer").value.trim();
+  } 
+  else if (q.type === "short") {
+    userAnswer = document.getElementById("shortAnswer").value.trim();
   }
 
-  let isCorrect = false;
-
-  if (Array.isArray(q.answer)) {
-    isCorrect = q.answer.some(a => userAnswer.includes(a.toLowerCase()));
-  } else {
-    isCorrect = String(userAnswer).toLowerCase() === String(q.answer).toLowerCase();
+  // 2. 校验逻辑
+  if (q.type === "mrq") {
+    // 多选对比：排序后转字符串对比
+    const userSorted = userAnswer.map(v => String(v).toLowerCase()).sort();
+    const correctSorted = (Array.isArray(q.answer) ? q.answer : [q.answer]).map(v => String(v).toLowerCase()).sort();
+    isCorrect = JSON.stringify(userSorted) === JSON.stringify(correctSorted);
+  } 
+  else if (q.type === "short") {
+    // 简答题：关键词匹配
+    const answers = Array.isArray(q.answer) ? q.answer : [q.answer];
+    isCorrect = answers.some(a => String(userAnswer).toLowerCase().includes(String(a).toLowerCase()));
+  } 
+  else {
+    // 单选、判断、填空：直接对比
+    const answers = Array.isArray(q.answer) ? q.answer : [q.answer];
+    isCorrect = answers.some(a => String(userAnswer).toLowerCase() === String(a).toLowerCase());
   }
 
-  if (q.type === "short") {
-    if (isCorrect) {
-      result.innerText = `✅ 提交完成！参考答案：${Array.isArray(q.answer) ? q.answer.join(" / ") : q.answer}`;
-    } else {
-      result.innerText = `❌ 错误，参考答案：${Array.isArray(q.answer) ? q.answer.join(" / ") : q.answer}`;
-      if (!wrongQuestions.some(w => w.question === q.question)) {
-        wrongQuestions.push(q);
-        localStorage.setItem(`wrongQuestions_${currentSubject}`, JSON.stringify(wrongQuestions));
-      }
-    }
+  // 3. 显示结果与记录错题
+  const displayAnswer = Array.isArray(q.answer) ? q.answer.join(" | ") : q.answer;
+  
+  if (isCorrect) {
+    result.innerHTML = `<span style="color: green;">✅ 正确！</span>`;
   } else {
-    if (isCorrect) {
-      result.innerText = "✅ 正确！";
-    } else {
-      result.innerText = `❌ 错误，参考答案：${Array.isArray(q.answer) ? q.answer.join(" / ") : q.answer}`;
-      if (!wrongQuestions.some(w => w.question === q.question)) {
-        wrongQuestions.push(q);
-        localStorage.setItem(`wrongQuestions_${currentSubject}`, JSON.stringify(wrongQuestions));
-      }
+    result.innerHTML = `<span style="color: red;">❌ 错误。</span> 参考答案：${displayAnswer}`;
+    // 记录错题
+    if (!wrongQuestions.some(w => w.question === q.question)) {
+      wrongQuestions.push(q);
+      localStorage.setItem(`wrongQuestions_${currentSubject}`, JSON.stringify(wrongQuestions));
     }
   }
 }
@@ -177,23 +197,16 @@ function backHome() {
 function jumpToQuestion() {
   const input = document.getElementById("jumpInput");
   const target = parseInt(input.value, 10);
-
-  if (isNaN(target)) {
-    alert("请输入题号");
+  if (isNaN(target) || target < 1 || target > questions.length) {
+    alert(`请输入 1 到 ${questions.length} 之间的题号`);
     return;
   }
-
-  if (target < 1 || target > questions.length) {
-    alert(`题号范围是 1 到 ${questions.length}`);
-    return;
-  }
-
   currentIndex = target - 1;
   localStorage.setItem(`currentIndex_${currentSubject}`, currentIndex);
   renderQuestion();
 }
 
-// 支持回车跳转
+// 键盘事件
 document.addEventListener("keydown", e => {
   if (e.key === "Enter" && document.activeElement.id === "jumpInput") {
     jumpToQuestion();

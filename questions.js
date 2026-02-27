@@ -1,1324 +1,4 @@
 const questionBank = {
-  SQL_quiz01: [
-    {
-    "type": "mcq",
-    "question": "What do summary queries in SQL contain?",
-    "options": [
-      "One or more aggregate functions",
-      "Only scalar functions",
-      "Only SELECT statements",
-      "JOIN clauses only"
-    ],
-    "answer": "One or more aggregate functions"
-  },
-  {
-    "type": "mcq",
-    "question": "Which of the following returns a single value based on a series of values in a column?",
-    "options": [
-      "Scalar functions",
-      "Aggregate functions",
-      "JOIN functions",
-      "WHERE clause"
-    ],
-    "answer": "Aggregate functions"
-  },
-  {
-    "type": "mcq",
-    "question": "Which function counts all rows that match a specified criteria?",
-    "options": [
-      "COUNT()",
-      "SUM()",
-      "AVG()",
-      "MIN()"
-    ],
-    "answer": "COUNT()"
-  },
-  {
-    "type": "mcq",
-    "question": "What does the AVG() function return?",
-    "options": [
-      "The total sum of a numeric column",
-      "The smallest value of a column",
-      "The average value of a numeric column",
-      "The largest value of a column"
-    ],
-    "answer": "The average value of a numeric column"
-  },
-  {
-    "type": "mcq",
-    "question": "How can COUNT() be used to count only unique non-null values?",
-    "options": [
-      "COUNT(DISTINCT column_name)",
-      "COUNT(*)",
-      "COUNT(column_name)",
-      "COUNT(ALL column_name)"
-    ],
-    "answer": "COUNT(DISTINCT column_name)"
-  },
-  {
-    "type": "mcq",
-    "question": "What is the difference between COUNT(*) and COUNT(column_name)?",
-    "options": [
-      "COUNT(column_name) counts all rows including NULLs, COUNT(*) ignores NULLs",
-      "COUNT(*) only counts distinct values",
-      "COUNT(column_name) counts all rows including duplicates",
-      "COUNT(*) counts all rows including NULLs, COUNT(column_name) ignores NULLs"
-    ],
-    "answer": "COUNT(*) counts all rows including NULLs, COUNT(column_name) ignores NULLs"
-  },
-  {
-    "type": "mcq",
-    "question": "Which function returns the smallest value of a column?",
-    "options": [
-      "MIN()",
-      "MAX()",
-      "SUM()",
-      "AVG()"
-    ],
-    "answer": "MIN()"
-  },
-  {
-    "type": "mcq",
-    "question": "Which function returns the largest value of a column?",
-    "options": [
-      "MIN()",
-      "SUM()",
-      "MAX()",
-      "AVG()"
-    ],
-    "answer": "MAX()"
-  },
-  {
-    "type": "mcq",
-    "question": "What is the correct order of SQL statement evaluation?",
-    "options": [
-      "SELECT, FROM, WHERE, GROUP BY, ORDER BY, HAVING",
-      "FROM-JOIN, WHERE, GROUP BY, HAVING, SELECT, ORDER BY",
-      "FROM, SELECT, WHERE, ORDER BY, GROUP BY, HAVING",
-      "WHERE, SELECT, FROM, GROUP BY, HAVING, ORDER BY"
-    ],
-    "answer": "FROM-JOIN, WHERE, GROUP BY, HAVING, SELECT, ORDER BY"
-  },
-  {
-    "type": "mcq",
-    "question": "Why can't table aliases be used in the WHERE clause?",
-    "options": [
-      "Because aliases are not allowed in SQL",
-      "Because WHERE only works with JOINs",
-      "Because aliases can only be used in ORDER BY",
-      "Because WHERE is evaluated before SELECT"
-    ],
-    "answer": "Because WHERE is evaluated before SELECT"
-  },
-  {
-    "type": "mcq",
-    "question": "What does the GROUP BY clause do?",
-    "options": [
-      "Filters individual records before aggregation",
-      "Calculates the average of a column",
-      "Groups rows with the same values to produce summary reports",
-      "Orders the result set"
-    ],
-    "answer": "Groups rows with the same values to produce summary reports"
-  },
-  {
-    "type": "mcq",
-    "question": "Which clause is used to filter grouped results after aggregation?",
-    "options": [
-      "HAVING",
-      "WHERE",
-      "ORDER BY",
-      "SELECT"
-    ],
-    "answer": "HAVING"
-  },
-  {
-    "type": "mcq",
-    "question": "Which of the following can be included in a SELECT clause when using GROUP BY?",
-    "options": [
-      "Aggregate functions, grouping columns, and constant expressions",
-      "Only aggregate functions",
-      "Only columns used for grouping",
-      "Only expressions"
-    ],
-    "answer": "Aggregate functions, grouping columns, and constant expressions"
-  },
-  {
-    "type": "mcq",
-    "question": "What is the position of the GROUP BY clause in a SELECT statement?",
-    "options": [
-      "After WHERE and before ORDER BY",
-      "After ORDER BY",
-      "Before WHERE",
-      "After SELECT only"
-    ],
-    "answer": "After WHERE and before ORDER BY"
-  },
-  {
-    "type": "mcq",
-    "question": "Why was the HAVING clause added to SQL?",
-    "options": [
-      "Because WHERE cannot be used with aggregate functions",
-      "Because GROUP BY was not supported",
-      "To sort the results",
-      "To join multiple tables"
-    ],
-    "answer": "Because WHERE cannot be used with aggregate functions"
-  },
-  {
-    "type": "mcq",
-    "question": "Can WHERE and HAVING be used in the same query?",
-    "options": [
-      "Yes, WHERE filters individual records and HAVING filters grouped results",
-      "No, only one can be used",
-      "Yes, but HAVING must come before WHERE",
-      "No, HAVING replaces WHERE"
-    ],
-    "answer": "Yes, WHERE filters individual records and HAVING filters grouped results"
-  },
-  {
-    "type": "mcq",
-    "question": "Which SQL clause limits the number of records returned?",
-    "options": [
-      "SELECT TOP or LIMIT or ROWNUM",
-      "GROUP BY",
-      "HAVING",
-      "ORDER BY"
-    ],
-    "answer": "SELECT TOP or LIMIT or ROWNUM"
-  },
-  {
-    "type": "mcq",
-    "question": "Which database system uses LIMIT to restrict rows returned?",
-    "options": [
-      "MySQL",
-      "Oracle",
-      "SQL Server",
-      "PostgreSQL"
-    ],
-    "answer": "MySQL"
-  },
-  {
-    "type": "mcq",
-    "question": "Which database system uses ROWNUM to limit the number of rows returned?",
-    "options": [
-      "Oracle",
-      "MySQL",
-      "SQL Server",
-      "SQLite"
-    ],
-    "answer": "Oracle"
-  },
-  {
-    "type": "mcq",
-    "question": "What is another name for aggregate functions in SQL?",
-    "options": [
-      "Column functions",
-      "Scalar functions",
-      "Row functions",
-      "Table functions"
-    ],
-    "answer": "Column functions"
-  },
-  {
-    "type": "mcq",
-    "question": "Which SQL function returns the total sum of a numeric column?",
-    "options": [
-      "SUM()",
-      "AVG()",
-      "COUNT()",
-      "MIN()"
-    ],
-    "answer": "SUM()"
-  },
-  {
-    "type": "mcq",
-    "question": "Scalar functions return what kind of value?",
-    "options": [
-      "A single value",
-      "Multiple rows",
-      "A summary of a column",
-      "A grouped result"
-    ],
-    "answer": "A single value"
-  },
-  {
-    "type": "mcq",
-    "question": "Which of the following is an example of a scalar function?",
-    "options": [
-      "SUM(UnitPrice)",
-      "COUNT(*)",
-      "GETDATE()",
-      "MAX(Salary)"
-    ],
-    "answer": "GETDATE()"
-  },
-  {
-    "type": "mcq",
-    "question": "What type of queries return a single row for every grouped item?",
-    "options": [
-      "Simple SELECT queries",
-      "Grouped queries using GROUP BY",
-      "Subqueries",
-      "JOIN queries"
-    ],
-    "answer": "Grouped queries using GROUP BY"
-  },
-  {
-    "type": "mcq",
-    "question": "Which clause performs record-based filtering before aggregation?",
-    "options": [
-      "HAVING",
-      "GROUP BY",
-      "ORDER BY",
-      "WHERE"
-    ],
-    "answer": "WHERE"
-  },
-  {
-    "type": "mcq",
-    "question": "Which SQL clause orders the result set?",
-    "options": [
-      "ORDER BY",
-      "GROUP BY",
-      "HAVING",
-      "WHERE"
-    ],
-    "answer": "ORDER BY"
-  },
-  {
-    "type": "mcq",
-    "question": "Which clause can follow GROUP BY to filter summarized results?",
-    "options": [
-      "WHERE",
-      "HAVING",
-      "ORDER BY",
-      "SELECT"
-    ],
-    "answer": "HAVING"
-  },
-  {
-    "type": "mcq",
-    "question": "What is returned when you use COUNT(*) on a table?",
-    "options": [
-      "Total number of unique values in a column",
-      "Average value of a column",
-      "Total number of rows, including rows with NULL values",
-      "Maximum value of a column"
-    ],
-    "answer": "Total number of rows, including rows with NULL values"
-  },
-  {
-    "type": "mcq",
-    "question": "Which SQL function would you use to get the maximum salary from the Employees table?",
-    "options": [
-      "MIN(Salary)",
-      "MAX(Salary)",
-      "SUM(Salary)",
-      "AVG(Salary)"
-    ],
-    "answer": "MAX(Salary)"
-  },
-  {
-    "type": "mcq",
-    "question": "Which SQL clause is used to group results before applying aggregate functions?",
-    "options": [
-      "GROUP BY",
-      "WHERE",
-      "HAVING",
-      "ORDER BY"
-    ],
-    "answer": "GROUP BY"
-  },
-  {
-    "type": "mcq",
-    "question": "What will the following query return?\n\nSELECT COUNT(*) FROM Products WHERE UnitPrice IS NOT NULL;",
-    "options": [
-      "The number of rows where UnitPrice is not NULL",
-      "The total number of rows including NULLs",
-      "The average UnitPrice",
-      "The sum of UnitPrice"
-    ],
-    "answer": "The number of rows where UnitPrice is not NULL"
-  },
-  {
-    "type": "mcq",
-    "question": "What is the result of this query?\n\nSELECT SUM(UnitPrice) FROM Products WHERE CategoryID = 1;",
-    "options": [
-      "Average UnitPrice for CategoryID = 1",
-      "Count of rows for CategoryID = 1",
-      "Total UnitPrice for CategoryID = 1",
-      "Maximum UnitPrice for CategoryID = 1"
-    ],
-    "answer": "Total UnitPrice for CategoryID = 1"
-  },
-  {
-    "type": "mcq",
-    "question": "Which of the following queries correctly counts distinct UnitPrice values?\n\nA: SELECT COUNT(UnitPrice) FROM Products;\nB: SELECT COUNT(DISTINCT UnitPrice) FROM Products;",
-    "options": [
-      "A only",
-      "B only",
-      "Both A and B",
-      "Neither A nor B"
-    ],
-    "answer": "B only"
-  },
-  {
-    "type": "mcq",
-    "question": "Given the query:\nSELECT CategoryID, AVG(UnitPrice) FROM Products GROUP BY CategoryID;\nWhich of the following is true?",
-    "options": [
-      "Returns a single average for all rows",
-      "Counts rows for each CategoryID",
-      "Returns the average UnitPrice for each CategoryID",
-      "Filters rows with AVG(UnitPrice) > 50"
-    ],
-    "answer": "Returns the average UnitPrice for each CategoryID"
-  },
-  {
-    "type": "mcq",
-    "question": "What will this query return?\n\nSELECT MAX(UnitPrice) FROM Products WHERE CategoryID = 2;",
-    "options": [
-      "Highest UnitPrice in CategoryID = 2",
-      "Lowest UnitPrice in CategoryID = 2",
-      "Count of rows in CategoryID = 2",
-      "Sum of UnitPrice in CategoryID = 2"
-    ],
-    "answer": "Highest UnitPrice in CategoryID = 2"
-  },
-  {
-    "type": "mcq",
-    "question": "Why would the following query fail?\n\nSELECT AliasName FROM Products WHERE AliasName = 'ABC';\n-- AliasName is defined in SELECT as UnitPrice * 1.2 AS AliasName",
-    "options": [
-      "Because the column does not exist",
-      "Because aliases cannot be numeric",
-      "Because WHERE is evaluated before SELECT aliases",
-      "Because SELECT must follow GROUP BY"
-    ],
-    "answer": "Because WHERE is evaluated before SELECT aliases"
-  },
-  {
-    "type": "mcq",
-    "question": "Which query correctly filters grouped results with HAVING?\n\nA: SELECT CategoryID, SUM(UnitPrice) FROM Products HAVING SUM(UnitPrice) > 1000 GROUP BY CategoryID;\nB: SELECT CategoryID, SUM(UnitPrice) FROM Products GROUP BY CategoryID HAVING SUM(UnitPrice) > 1000;",
-    "options": [
-      "B only",
-      "A only",
-      "Both A and B",
-      "Neither A nor B"
-    ],
-    "answer": "B only"
-  },
-  {
-    "type": "mcq",
-    "question": "What is the difference between WHERE and HAVING in SQL?",
-    "options": [
-      "WHERE filters after aggregation, HAVING filters before aggregation",
-      "Both filter rows before aggregation",
-      "Both filter after aggregation",
-      "WHERE filters rows before aggregation, HAVING filters after aggregation"
-    ],
-    "answer": "WHERE filters rows before aggregation, HAVING filters after aggregation"
-  },
-  {
-    "type": "mcq",
-    "question": "Which columns can appear in a SELECT clause with GROUP BY?\n\nSELECT CategoryID, COUNT(*) FROM Products GROUP BY CategoryID;",
-    "options": [
-      "Any columns",
-      "Only aggregate functions",
-      "Only columns not in GROUP BY",
-      "Columns in GROUP BY and aggregate functions",
-    ],
-    "answer": "Columns in GROUP BY and aggregate functions"
-  },
-  {
-    "type": "mcq",
-    "question": "What will the query return?\n\nSELECT TOP 3 * FROM Products ORDER BY UnitPrice DESC;",
-    "options": [
-      "The 3 products with the highest UnitPrice",
-      "The 3 products with the lowest UnitPrice",
-      "All products",
-      "The total sum of UnitPrice"
-    ],
-    "answer": "The 3 products with the highest UnitPrice"
-  },
-  {
-    "type": "mcq",
-    "question": "How does COUNT(column_name) behave with NULL values?",
-    "options": [
-      "It counts all rows including NULLs",
-      "It ignores rows where column_name is NULL",
-      "It returns NULL if any row is NULL",
-      "It counts only distinct values"
-    ],
-    "answer": "It ignores rows where column_name is NULL"
-  },
-  {
-    "type": "mcq",
-    "question": "Which SQL function calculates the average value of a column?",
-    "options": [
-      "SUM()",
-      "COUNT()",
-      "AVG()",
-      "MIN()"
-    ],
-    "answer": "AVG()"
-  },
-  {
-    "type": "mcq",
-    "question": "What does the query return?\n\nSELECT CategoryID, MIN(UnitPrice) FROM Products GROUP BY CategoryID;",
-    "options": [
-      "Maximum UnitPrice per CategoryID",
-      "Average UnitPrice per CategoryID",
-      "Minimum UnitPrice per CategoryID",
-      "Sum of UnitPrice per CategoryID"
-    ],
-    "answer": "Minimum UnitPrice per CategoryID"
-  },
-  {
-    "type": "mcq",
-    "question": "Which clause is evaluated first in a SELECT statement?",
-    "options": [
-      "WHERE",
-      "GROUP BY",
-      "FROM",
-      "SELECT"
-    ],
-    "answer": "FROM"
-  },
-  {
-    "type": "mcq",
-    "question": "Which of the following queries is valid to get total sales per category but only for categories with total > 1000?\n\nA: SELECT CategoryID, SUM(UnitPrice) FROM Products GROUP BY CategoryID HAVING SUM(UnitPrice) > 1000;\nB: SELECT CategoryID, SUM(UnitPrice) FROM Products HAVING SUM(UnitPrice) > 1000 GROUP BY CategoryID;",
-    "options": [
-      "A only",
-      "B only",
-      "Both A and B",
-      "Neither"
-    ],
-    "answer": "A only"
-  },
-  {
-    "type": "mcq",
-    "question": "If you want to count all rows in the Products table including NULLs, which query should you use?",
-    "options": [
-      "SELECT COUNT(UnitPrice) FROM Products;",
-      "SELECT COUNT(DISTINCT UnitPrice) FROM Products;",
-      "SELECT SUM(UnitPrice) FROM Products;",
-      "SELECT COUNT(*) FROM Products;"
-    ],
-    "answer": "SELECT COUNT(*) FROM Products;"
-  },
-  {
-    "type": "mcq",
-    "question": "Which SQL statement limits rows in Oracle?",
-    "options": [
-      "TOP",
-      "LIMIT",
-      "ROWNUM",
-      "FETCH FIRST"
-    ],
-    "answer": "ROWNUM"
-  },
-  {
-    "type": "mcq",
-    "question": "Which SQL statement limits rows in MySQL?",
-    "options": [
-      "LIMIT",
-      "TOP",
-      "ROWNUM",
-      "FETCH FIRST"
-    ],
-    "answer": "LIMIT"
-  },
-  {
-    "type": "mcq",
-    "question": "Given the query:\nSELECT CategoryID, SUM(UnitPrice) AS Total FROM Products GROUP BY CategoryID ORDER BY Total DESC;\nWhat does ORDER BY Total DESC do?",
-    "options": [
-      "Sorts by CategoryID ascending",
-      "Sorts the result from highest to lowest total per CategoryID",
-      "Filters rows with Total > 1000",
-      "Groups rows by Total"
-    ],
-    "answer": "Sorts the result from highest to lowest total per CategoryID"
-  },
-  {
-    "type": "mcq",
-    "question": "What type of function is ROUND() considered in SQL?",
-    "options": [
-      "Aggregate function",
-      "Column function",
-      "Scalar function",
-      "Grouping function"
-    ],
-    "answer": "Scalar function"
-  },
-  {
-    "type": "mcq",
-    "question": "Which SQL function returns the number of rows that match a condition, ignoring NULLs in a specific column?",
-    "options": [
-      "COUNT(column_name)",
-      "COUNT(*)",
-      "SUM(column_name)",
-      "AVG(column_name)"
-    ],
-    "answer": "COUNT(column_name)"
-  },
-  {
-    "type": "mcq",
-    "question": "Which query correctly returns the number of distinct UnitPrice values?",
-    "options": [
-      "SELECT COUNT(UnitPrice) FROM Products;",
-      "SELECT SUM(UnitPrice) FROM Products;",
-      "SELECT AVG(UnitPrice) FROM Products;",
-      "SELECT COUNT(DISTINCT UnitPrice) FROM Products;"
-    ],
-    "answer": "SELECT COUNT(DISTINCT UnitPrice) FROM Products;"
-  },
-  {
-    "type": "mcq",
-    "question": "If you want to filter rows where SUM(UnitPrice) > 5000 after grouping by CategoryID, which clause should you use?",
-    "options": [
-      "WHERE",
-      "ORDER BY",
-      "HAVING",
-      "GROUP BY"
-    ],
-    "answer": "HAVING"
-  },
-  {
-    "type": "mcq",
-    "question": "Which function returns the smallest numeric value from a column?",
-    "options": [
-      "MIN()",
-      "MAX()",
-      "AVG()",
-      "SUM()"
-    ],
-    "answer": "MIN()"
-  },
-  {
-    "type": "mcq",
-    "question": "Which function returns the largest numeric value from a column?",
-    "options": [
-      "MAX()",
-      "MIN()",
-      "COUNT()",
-      "SUM()"
-    ],
-    "answer": "MAX()"
-  },
-  {
-    "type": "mcq",
-    "question": "What happens if you use WHERE with an aggregate function without GROUP BY?",
-    "options": [
-      "It will correctly filter aggregated results",
-      "It will count rows",
-      "It will sum the values automatically",
-      "It will fail or give incorrect results"
-    ],
-    "answer": "It will fail or give incorrect results"
-  },
-  {
-    "type": "mcq",
-    "question": "Which of the following are considered aggregate functions in SQL?",
-    "options": [
-      "COUNT, SUM, AVG, MIN, MAX",
-      "ROUND, GETDATE, LEN",
-      "JOIN, UNION, INTERSECT",
-      "WHERE, HAVING, ORDER BY"
-    ],
-    "answer": "COUNT, SUM, AVG, MIN, MAX"
-  },
-  {
-    "type": "mcq",
-    "question": "Which SQL statements are part of Data Definition Language (DDL)?",
-    "options": [
-      "CREATE, ALTER, DROP",
-      "SELECT, INSERT, UPDATE",
-      "COMMIT, ROLLBACK",
-      "GRANT, REVOKE"
-    ],
-    "answer": "CREATE, ALTER, DROP"
-  },
-  {
-    "type": "mcq",
-    "question": "What files are created when you run CREATE DATABASE MyDatabase?",
-    "options": [
-      "MyDatabase.txt and MyDatabase_log.txt",
-      "MyDatabase.csv and MyDatabase_log.csv",
-      "MyDatabase.mdf and MyDatabase_log.ldf",
-      "Only MyDatabase.mdf"
-    ],
-    "answer": "MyDatabase.mdf and MyDatabase_log.ldf"
-  },
-  {
-    "type": "mcq",
-    "question": "Which of the following is a valid first character for a SQL identifier?",
-    "options": [
-      "A number",
-      "A letter",
-      "@ sign",
-      "$ sign"
-    ],
-    "answer": "A letter"
-  },
-  {
-    "type": "mcq",
-    "question": "Which of the following characters are allowed in SQL identifiers after the first character?",
-    "options": [
-      "Only letters",
-      "Letters and spaces",
-      "Letters and punctuation",
-      "Letters, numbers, @, $, #, _"
-    ],
-    "answer": "Letters, numbers, @, $, #, _"
-  },
-  {
-    "type": "mcq",
-    "question": "Which of the following is NOT allowed in a SQL identifier?",
-    "options": [
-      "Spaces",
-      "Underscore",
-      "#",
-      "$"
-    ],
-    "answer": "Spaces"
-  },
-  {
-    "type": "mcq",
-    "question": "Which column attribute automatically generates incremental numbers?",
-    "options": [
-      "DEFAULT",
-      "PRIMARY KEY",
-      "IDENTITY",
-      "UNIQUE"
-    ],
-    "answer": "IDENTITY"
-  },
-  {
-    "type": "mcq",
-    "question": "Which column attribute prevents NULL values?",
-    "options": [
-      "UNIQUE",
-      "DEFAULT",
-      "NOT NULL",
-      "CHECK"
-    ],
-    "answer": "NOT NULL"
-  },
-  {
-    "type": "mcq",
-    "question": "What does the DEFAULT column attribute do?",
-    "options": [
-      "Enforces uniqueness",
-      "Prevents NULL values",
-      "Creates a primary key",
-      "Specifies a value automatically assigned when no value is provided"
-    ],
-    "answer": "Specifies a value automatically assigned when no value is provided"
-  },
-  {
-    "type": "mcq",
-    "question": "Which column-level constraint ensures values in the column are unique?",
-    "options": [
-      "UNIQUE",
-      "PRIMARY KEY",
-      "CHECK",
-      "FOREIGN KEY"
-    ],
-    "answer": "UNIQUE"
-  },
-  {
-    "type": "mcq",
-    "question": "Which column-level constraint enforces referential integrity?",
-    "options": [
-      "FOREIGN KEY REFERENCES",
-      "PRIMARY KEY",
-      "UNIQUE",
-      "CHECK"
-    ],
-    "answer": "FOREIGN KEY REFERENCES"
-  },
-  {
-    "type": "mcq",
-    "question": "Which table-level constraint can enforce uniqueness across multiple columns?",
-    "options": [
-      "NOT NULL",
-      "CHECK",
-      "UNIQUE",
-      "DEFAULT"
-    ],
-    "answer": "UNIQUE"
-  },
-  {
-    "type": "mcq",
-    "question": "Which table-level constraint can enforce that values meet specific conditions across multiple columns?",
-    "options": [
-      "PRIMARY KEY",
-      "FOREIGN KEY",
-      "CHECK",
-      "UNIQUE"
-    ],
-    "answer": "CHECK"
-  },
-  {
-    "type": "mcq",
-    "question": "What is a foreign key used for?",
-    "options": [
-      "Enforcing a link between two tables",
-      "Automatically generating row numbers",
-      "Preventing NULL values in a column",
-      "Specifying default values"
-    ],
-    "answer": "Enforcing a link between two tables"
-  },
-  {
-    "type": "mcq",
-    "question": "Which of the following must a foreign key reference?",
-    "options": [
-      "Any column in another table",
-      "A unique constraint in the same table",
-      "A column with DEFAULT value",
-      "An existing primary key in the parent table",
-    ],
-    "answer": "An existing primary key in the parent table"
-  },
-  {
-    "type": "mcq",
-    "question": "Which concept ensures table relationships are consistent in a relational database?",
-    "options": [
-      "Referential integrity",
-      "Normalization",
-      "Data redundancy",
-      "Transaction isolation"
-    ],
-    "answer": "Referential integrity"
-  },
-  {
-    "type": "mcq",
-    "question": "How do you add a new column to an existing table?",
-    "options": [
-      "CREATE TABLE table_name ADD column_name datatype;",
-      "ALTER TABLE table_name ADD column_name datatype;",
-      "UPDATE TABLE table_name ADD column_name datatype;",
-      "INSERT INTO table_name ADD column_name datatype;"
-    ],
-    "answer": "ALTER TABLE table_name ADD column_name datatype;"
-  },
-  {
-    "type": "mcq",
-    "question": "How do you remove a column from a table?",
-    "options": [
-      "DROP TABLE table_name column_name;",
-      "DELETE COLUMN column_name FROM table_name;",
-      "ALTER TABLE table_name DROP COLUMN column_name;",
-      "REMOVE COLUMN column_name FROM table_name;"
-    ],
-    "answer": "ALTER TABLE table_name DROP COLUMN column_name;"
-  },
-  {
-    "type": "mcq",
-    "question": "Which statement adds a NOT NULL constraint on a new column named Price?",
-    "options": [
-      "ALTER TABLE Products ADD Price MONEY NOT NULL;",
-      "ALTER TABLE Products ADD Price MONEY;",
-      "ALTER TABLE Products MODIFY Price MONEY NOT NULL;",
-      "CREATE COLUMN Price MONEY NOT NULL;"
-    ],
-    "answer": "ALTER TABLE Products ADD Price MONEY NOT NULL;"
-  },
-  {
-    "type": "mcq",
-    "question": "Which constraint ensures each row in a table has a unique value for a column?",
-    "options": [
-      "FOREIGN KEY",
-      "CHECK",
-      "PRIMARY KEY",
-      "DEFAULT"
-    ],
-    "answer": "PRIMARY KEY"
-  },
-  {
-    "type": "mcq",
-    "question": "Which constraint allows a column to accept only certain values?",
-    "options": [
-      "CHECK",
-      "NOT NULL",
-      "UNIQUE",
-      "FOREIGN KEY"
-    ],
-    "answer": "CHECK"
-  },
-  {
-    "type": "mcq",
-    "question": "Which of the following is true about PRIMARY KEY constraints?",
-    "options": [
-      "It allows duplicate values",
-      "Each row must be unique and not NULL",
-      "It allows NULL values",
-      "It is only used for foreign keys"
-    ],
-    "answer": "Each row must be unique and not NULL"
-  },
-  {
-    "type": "mcq",
-    "question": "Which of the following is true about UNIQUE constraints?",
-    "options": [
-      "Automatically creates an index and primary key",
-      "Prevents NULL values always",
-      "Ensures values in the column or columns are unique",
-      "Enforces referential integrity"
-    ],
-    "answer": "Ensures values in the column or columns are unique"
-  },
-  {
-    "type": "mcq",
-    "question": "Which of the following is an example of a valid table-level FOREIGN KEY constraint?",
-    "options": [
-      "PRIMARY KEY (CustomerID)",
-      "CHECK (CustomerID > 0)",
-      "UNIQUE (CustomerID)",
-      "FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)"
-    ],
-    "answer": "FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)"
-  },
-  {
-    "type": "mcq",
-    "question": "Which statement would modify an existing column in a table?",
-    "options": [
-      "ALTER TABLE table_name ALTER COLUMN column_name datatype;",
-      "ALTER TABLE table_name ADD COLUMN column_name datatype;",
-      "UPDATE TABLE table_name MODIFY column_name datatype;",
-      "CREATE TABLE table_name MODIFY COLUMN column_name datatype;"
-    ],
-    "answer": "ALTER TABLE table_name ALTER COLUMN column_name datatype;"
-  },
-  {
-    "type": "mcq",
-    "question": "What is the effect of a FOREIGN KEY constraint?",
-    "options": [
-      "Prevents insertion of invalid references to a parent table",
-      "Automatically fills NULL values",
-      "Calculates sums and averages",
-      "Prevents duplicate primary keys"
-    ],
-    "answer": "Prevents insertion of invalid references to a parent table"
-  },
-  {
-    "type": "mcq",
-    "question": "Which constraint is used to prevent NULL values in a column?",
-    "options": [
-      "PRIMARY KEY",
-      "FOREIGN KEY",
-      "NOT NULL",
-      "CHECK"
-    ],
-    "answer": "NOT NULL"
-  },
-  {
-    "type": "mcq",
-    "question": "Which of the following is true about the ALTER TABLE statement?",
-    "options": [
-      "It can only add columns",
-      "It can only drop tables",
-      "It can only rename tables",
-      "It can add, drop, or modify columns or constraints"
-    ],
-    "answer": "It can add, drop, or modify columns or constraints"
-  },
-  {
-    "type": "mcq",
-    "question": "Which constraint type is necessary to enforce relationships between two tables?",
-    "options": [
-      "PRIMARY KEY",
-      "FOREIGN KEY",
-      "UNIQUE",
-      "CHECK"
-    ],
-    "answer": "FOREIGN KEY"
-  },
-  {
-    "type": "mcq",
-    "question": "Which of the following is NOT a column-level constraint?",
-    "options": [
-      "DROP COLUMN",
-      "NOT NULL",
-      "UNIQUE",
-      "CHECK"
-    ],
-    "answer": "DROP COLUMN"
-  },
-  {
-    "type": "mcq",
-    "question": "Which of the following constraints can be applied both at the column and table level?",
-    "options": [
-      "NOT NULL only",
-      "DEFAULT only",
-      "PRIMARY KEY, UNIQUE, CHECK, FOREIGN KEY",
-      "IDENTITY only"
-    ],
-    "answer": "PRIMARY KEY, UNIQUE, CHECK, FOREIGN KEY"
-  },
-  {
-    "type": "tf",
-    "question": "The COUNT(column_name) function in SQL counts all rows, including those with NULL values in the specified column.",
-    "answer": false
-  },
-  {
-    "type": "tf",
-    "question": "The HAVING clause is used to filter results after aggregation in a GROUP BY query.",
-    "answer": true
-  },
-  {
-    "type": "tf",
-    "question": "A PRIMARY KEY constraint allows NULL values in the column.",
-    "answer": false
-  },
-  {
-    "type": "tf",
-    "question": "The ALTER TABLE statement can be used to add or drop columns or constraints in an existing table.",
-    "answer": true
-  },
-  {
-    "type": "tf",
-    "question": "In SQL, a FOREIGN KEY constraint ensures that every value in the child table exists in the parent table’s primary key.",
-    "answer": true
-  },
-  {
-    "type": "fib",
-    "question": "Fill in the missing SQL keyword to group rows by a column:\nSELECT CategoryID, SUM(UnitPrice) FROM Products ___ CategoryID;",
-    "answer": "GROUP BY"
-  },
-  {
-    "type": "fib",
-    "question": "Fill in the correct SQL function to calculate the average value of a numeric column:\nSELECT ___(UnitPrice) FROM Products;",
-    "answer": "AVG"
-  },
-  {
-    "type": "fib",
-    "question": "Fill in the missing column-level constraint to prevent NULL values:\nALTER TABLE Products ADD Price MONEY ___;",
-    "answer": "NOT NULL"
-  },
-  {
-    "type": "fib",
-    "question": "Fill in the SQL clause used to filter aggregated results after GROUP BY:\nSELECT CategoryID, SUM(UnitPrice) FROM Products GROUP BY CategoryID ___ SUM(UnitPrice) > 1000;",
-    "answer": "HAVING"
-  },
-  {
-    "type": "fib",
-    "question": "Fill in the SQL statement to remove a column named Price from the Products table:\nALTER TABLE Products ___ COLUMN Price;",
-    "answer": "DROP"
-  },  
-   
-  {
-    "type": "short",
-    "question": "Name one purpose of aggregate functions in SQL.",
-    "answer": [
-      "summarize data",
-      "calculate totals",
-      "compute averages",
-      "find minimum or maximum values",
-      "produce summary values"
-    ]
-  },
-  {
-    "type": "short",
-    "question": "List one reason for using the GROUP BY clause.",
-    "answer": [
-      "group similar rows together",
-      "create summary reports",
-      "aggregate data by column",
-      "organize data for calculations",
-      "arrange identical values into groups"
-    ]
-  },
-  {
-    "type": "short",
-    "question": "Give one difference between WHERE and HAVING clauses.",
-    "answer": [
-      "WHERE filters individual rows",
-      "HAVING filters grouped results",
-      "WHERE applies before aggregation",
-      "HAVING applies after aggregation",
-      "WHERE cannot be used with aggregate functions"
-    ]
-  },
-  {
-    "type": "short",
-    "question": "Name one benefit of using primary key constraints.",
-    "answer": [
-      "ensure uniqueness",
-      "prevent NULL values",
-      "identify rows uniquely",
-      "maintain data integrity",
-      "enforce table-level uniqueness"
-    ]
-  },
-  {
-    "type": "short",
-    "question": "Give one purpose of foreign key constraints.",
-    "answer": [
-      "enforce referential integrity",
-      "link two tables",
-      "ensure valid references",
-      "maintain consistent relationships",
-      "prevent invalid data in child table"
-    ]
-  },
-  {
-    "type": "short",
-    "question": "List one type of column-level constraint.",
-    "answer": [
-      "NOT NULL",
-      "UNIQUE",
-      "PRIMARY KEY",
-      "CHECK",
-      "FOREIGN KEY"
-    ]
-  },
-  {
-    "type": "short",
-    "question": "Name one type of table-level constraint.",
-    "answer": [
-      "PRIMARY KEY",
-      "UNIQUE",
-      "CHECK",
-      "FOREIGN KEY",
-      "composite key constraint"
-    ]
-  },
-  {
-    "type": "short",
-    "question": "Give one rule for naming identifiers in SQL.",
-    "answer": [
-      "first character must be a letter",
-      "cannot use spaces",
-      "cannot use reserved words",
-      "subsequent characters can include letters, numbers, @, $, #, _",
-      "must start with a valid character"
-    ]
-  },
-  {
-    "type": "short",
-    "question": "Name one operation that can be done with the ALTER TABLE statement.",
-    "answer": [
-      "add a column",
-      "drop a column",
-      "modify a column",
-      "add a constraint",
-      "drop a constraint"
-    ]
-  },
-  {
-    "type": "short",
-    "question": "List one benefit of using the DISTINCT keyword in SQL.",
-    "answer": [
-      "return unique values",
-      "eliminate duplicates",
-      "avoid counting repeated data",
-      "summarize distinct entries",
-      "filter non-redundant data"
-    ]
-  },
-  {
-    "type": "short",
-    "question": "Name one way to create a new database in SQL.",
-    "answer": [
-      "CREATE DATABASE [DB name]",
-      "CREATE DATABASE 'DB name'",
-      "CREATE DATABASE \"DB name\"",
-      "CREATE DATABASE NewDatabase"
-    ]
-  },
-  {
-    "type": "short",
-    "question": "Which database should you use before dropping a database?",
-    "answer": [
-      "master",
-      "system",
-      "current database",
-      "target database"
-    ]
-  },
-  {
-    "type": "short",
-    "question": "What SQL statement is used to remove a database?",
-    "answer": [
-      "DROP DATABASE",
-      "DELETE DATABASE",
-      "REMOVE DATABASE",
-      "ALTER DATABASE"
-    ]
-  },
-  {
-    "type": "short",
-    "question": "Which SQL statement allows duplicating a table into a new table?",
-    "answer": [
-      "SELECT INTO",
-      "INSERT INTO",
-      "CREATE TABLE AS",
-      "COPY TABLE"
-    ]
-  },
-  {
-    "type": "short",
-    "question": "What is the purpose of the USE statement in SQL?",
-    "answer": [
-      "Specify the database to execute commands in",
-      "Create a new database",
-      "Delete a database",
-      "Change server instance"
-    ]
-  },
-  {
-    "type": "short",
-    "question": "What does SELECT * return from a table?",
-    "answer": [
-      "All columns and all rows",
-      "Only column names",
-      "Only distinct values",
-      "Row count"
-    ]
-  },
-  {
-    "type": "short",
-    "question": "How does SELECT DISTINCT differ from SELECT *?",
-    "answer": [
-      "Returns only unique values",
-      "Returns all rows",
-      "Returns row counts",
-      "Filters NULL values"
-    ]
-  },
-  {
-    "type": "short",
-    "question": "Name one use of the CONCAT function in SQL.",
-    "answer": [
-      "Combine two or more string columns",
-      "Calculate numeric sums",
-      "Count distinct values",
-      "Sort data"
-    ]
-  },
-  {
-    "type": "short",
-    "question": "Which clause is used to sort results in ascending or descending order?",
-    "answer": [
-      "ORDER BY",
-      "GROUP BY",
-      "WHERE",
-      "HAVING"
-    ]
-  },
-  {
-    "type": "short",
-    "question": "What happens when you use WHERE 1 = 0?",
-    "answer": [
-      "No rows are returned",
-      "All rows are returned",
-      "Only NULL rows are returned",
-      "Error occurs"
-    ]
-  },
-  {
-    "type": "short",
-    "question": "What happens when you use WHERE 1 > 0?",
-    "answer": [
-      "All rows are returned",
-      "No rows are returned",
-      "Only rows with NULLs are returned",
-      "Error occurs"
-    ]
-  },
-  {
-    "type": "short",
-    "question": "Which operator can be used to filter rows not equal to a value?",
-    "answer": [
-      "<>",
-      "!=",
-      "=",
-      "NOT"
-    ]
-  },
-  {
-    "type": "short",
-    "question": "Which SQL operator allows filtering rows between two values?",
-    "answer": [
-      "BETWEEN",
-      "IN",
-      "LIKE",
-      "MATCH"
-    ]
-  },
-  {
-    "type": "short",
-    "question": "If you write SELECT COUNT(*) FROM table, what does it return?",
-    "answer": [
-      "Total number of rows",
-      "Number of distinct values",
-      "Sum of numeric column",
-      "Maximum value"
-    ]
-  },
-  {
-    "type": "short",
-    "question": "If you write SELECT COUNT(column_name) FROM table, which rows are counted?",
-    "answer": [
-      "Rows where column_name is not NULL",
-      "All rows",
-      "Only duplicate rows",
-      "Only NULL rows"
-    ]
-  },
-  {
-    "type": "short",
-    "question": "Which SQL statement counts distinct values in a column?",
-    "answer": [
-      "COUNT(DISTINCT column_name)",
-      "COUNT(column_name)",
-      "COUNT(*)",
-      "SUM(column_name)"
-    ]
-  },
-  {
-    "type": "short",
-    "question": "What is the effect of using ORDER BY column ASC, column DESC?",
-    "answer": [
-      "Sorts first column ascending, second column descending",
-      "Sorts both columns ascending",
-      "Sorts both columns descending",
-      "Random order"
-    ]
-  },
-  {
-    "type": "short",
-    "question": "What is one reason to use SELECT INTO with another database?",
-    "answer": [
-      "Copy a table to a different database",
-      "Delete a table",
-      "Filter rows",
-      "Sort columns"
-    ]
-  },
-  {
-    "type": "short",
-    "question": "Which keyword specifies the target database when copying a table?",
-    "answer": [
-      "database_name.dbo.table_name",
-      "USE database_name",
-      "CREATE DATABASE",
-      "DROP DATABASE"
-    ]
-  },
-  {
-    "type": "short",
-    "question": "What does the WHERE clause do in a SELECT statement?",
-    "answer": [
-      "Filters rows based on a condition",
-      "Sorts the rows",
-      "Counts rows",
-      "Groups rows"
-    ]
-  }
-  ],
   OOP_quiz01:[
     {
     "type": "mcq",
@@ -4016,83 +2696,6 @@ const questionBank = {
     "answer": "x"
   }
   ],
-  SQL_quiz02:[
-  {
-    "type": "fib",
-    "question": "the order of clause :1.____ 2.____3.____4.____5.____6.____ 用空格隔开",
-    "answer": "FROM WHERE GROUP BY HAVING SELECT ORDER BY "
-  },
-  {
-    "type": "fib",
-    "question": "FROM 什么作用？",
-    "answer": "specify the table source"
-  },
-  {
-    "type": "fib",
-    "question": "WHERE 什么作用？",
-    "answer": "record-based filtering"
-  },
-  {
-    "type": "fib",
-    "question": "GROUP BY 什么作用？",
-    "answer": "user-defined grouping criteria (for AGGREGATES)"
-  },
-  {
-    "type": "fib",
-    "question": "HAVING 什么作用？",
-    "answer": "group-based filtering"
-  },
-  {
-    "type": "fib",
-    "question": "SELECT 什么作用？",
-    "answer": "specify columns"
-  },
-  {
-    "type": "fib",
-    "question": "ORDER BY 什么作用？",
-    "answer": "user-provided sorting criteria"
-  },
-  {
-    "type": "fib",
-    "question": "6 aggregate functions: 空格隔开",
-    "answer": "COUNT(*) COUNT(ALL | DISTINCT col) SUM(col) MIN(col) MAX(col) AVG(col)"
-  },
-  {
-    "type": "fib",
-    "question": "5 supported JOINs types",
-    "answer": "CROSS JOIN INNER JOIN LEFT JOIN RIGHT JOIN FULL OUTER JOIN"
-  },
-  {
-    "type": "fib",
-    "question": "what was specified in the ON clause.",
-    "answer": "matching columns"
-  },
-  {
-    "type": "fib",
-    "question": "The ways that sub-query can return information",
-    "answer": "a single value a single column one or more columns"
-  },
-  {
-    "type": "fib",
-    "question": "Subqueries can be used in these clauses：",
-    "answer": "WHERE HAVING FROM SELECT"
-  },
-  {
-    "type": "fib",
-    "question": "SOME, ANY, and ALL are logical operators used to:",
-    "answer": "compare a single value against a set of values returned by a subquery"
-  },
-  {
-    "type": "fib",
-    "question": "what is Non-correlated Subqueries",
-    "answer": "The subquery is completely independent. It does not rely on any data from the outer query to execute. Runs once for the entire query"
-  },
-  {
-    "type": "fib",
-    "question": "what is correlated Subqueries",
-    "answer": "The subquery references one or more columns from the outer query. "
-  },
-  ],
   Javascript_quiz01:[
 
   {
@@ -4963,231 +3566,2861 @@ const questionBank = {
     "answer": "file test, string test, numeric test"
   },
   ],
-  SQL_quiz03:[
+  SE_quiz01:[
+    {
+  "type": "mrq",
+  "question": "Which of the following are valid rules for naming variables in C#?",
+  "options": [
+    "A variable name must start with a letter or underscore (_).",
+    "A variable name can contain spaces.",
+    "A variable name can contain letters, digits, and underscores.",
+    "Variable names are case-sensitive.",
+    "A variable name can start with a digit."
+  ],
+  "answer": [
+    "A variable name must start with a letter or underscore (_).",
+    "A variable name can contain letters, digits, and underscores.",
+    "Variable names are case-sensitive."
+  ]
+},
+{
+  "type": "mrq",
+  "question": "Which statements about data conversions in C# are correct?",
+  "options": [
+    "Implicit conversion happens automatically when there is no risk of data loss.",
+    "Explicit conversion (casting) is required when there is a potential risk of data loss.",
+    "Non-compatible type conversions can use the Convert class or Parse methods.",
+    "Implicit conversion always requires manual casting.",
+    "Non-compatible conversions may throw format exceptions if conversion fails."
+  ],
+  "answer": [
+    "Implicit conversion happens automatically when there is no risk of data loss.",
+    "Explicit conversion (casting) is required when there is a potential risk of data loss.",
+    "Non-compatible type conversions can use the Convert class or Parse methods.",
+    "Non-compatible conversions may throw format exceptions if conversion fails."
+  ]
+},
+{
+  "type": "mrq",
+  "question": "What are the purposes of access modifiers in C#?",
+  "options": [
+    "They control who can access classes and their members.",
+    "They help implement encapsulation and information hiding.",
+    "They automatically improve program performance.",
+    "They protect internal data from accidental misuse.",
+    "They reduce bugs caused by unintended access."
+  ],
+  "answer": [
+    "They control who can access classes and their members.",
+    "They help implement encapsulation and information hiding.",
+    "They protect internal data from accidental misuse.",
+    "They reduce bugs caused by unintended access."
+  ]
+},
+{
+  "type": "mrq",
+  "question": "Which statements about access modifiers in C# are correct?",
+  "options": [
+    "Public members can be accessed from any other class, file, or project.",
+    "Private members are accessible only within the class in which they are declared.",
+    "Protected members are accessible within the class and its subclasses.",
+    "Internal members are accessible only within the same project.",
+    "Classes are private by default."
+  ],
+  "answer": [
+    "Public members can be accessed from any other class, file, or project.",
+    "Private members are accessible only within the class in which they are declared.",
+    "Protected members are accessible within the class and its subclasses.",
+    "Internal members are accessible only within the same project."
+  ]
+},
+{
+  "type": "mrq",
+  "question": "Which of the following are recommended practices when declaring variables in C#?",
+  "options": [
+    "Use meaningful variable names.",
+    "Prefer camelCase naming convention.",
+    "Initialize variables when they are created whenever possible.",
+    "Use single-letter names for all variables.",
+    "Ignore naming conventions to save time."
+  ],
+  "answer": [
+    "Use meaningful variable names.",
+    "Prefer camelCase naming convention.",
+    "Initialize variables when they are created whenever possible."
+  ]
+},
+
   {
-    "type": "fib",
-    "question": "What is a VIEW?",
-    "answer": "A virtual table based on the result set of a SELECT query."
+    "type": "mrq",
+    "question": "Which statements about stack and heap memory in C# are correct?",
+    "options": [
+      "The stack is thread-specific and stores local variables and method parameters.",
+      "The heap stores objects created with the new keyword.",
+      "Data in the stack remains until the garbage collector removes it.",
+      "The heap is managed by the garbage collector.",
+      "Value types are typically stored on the stack."
+    ],
+    "answer": [
+      "The stack is thread-specific and stores local variables and method parameters.",
+      "The heap stores objects created with the new keyword.",
+      "The heap is managed by the garbage collector.",
+      "Value types are typically stored on the stack."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What is a base table?",
-    "answer": "A table that physically stores data."
+    "type": "mrq",
+    "question": "Which statements about value types in C# are correct?",
+    "options": [
+      "Value types store the actual data.",
+      "Each value type variable has its own copy of the data.",
+      "Assigning a value type to another variable creates a copy.",
+      "Passing a value type to a method allows direct modification of the original by default.",
+      "Common examples of value types include int, double, bool, and char."
+    ],
+    "answer": [
+      "Value types store the actual data.",
+      "Each value type variable has its own copy of the data.",
+      "Assigning a value type to another variable creates a copy.",
+      "Common examples of value types include int, double, bool, and char."
+    ]
   },
   {
-    "type": "fib",
-    "question": "Who can use view?",
-    "answer": "Any user with the appropriate permissions."
+    "type": "mrq",
+    "question": "Which statements about reference types in C# are correct?",
+    "options": [
+      "Reference types store a reference (address) to data on the heap.",
+      "Multiple variables can reference the same object.",
+      "Assigning a reference type copies the object itself.",
+      "Changes made through one reference affect the same object.",
+      "Common reference types include objects, strings, and arrays."
+    ],
+    "answer": [
+      "Reference types store a reference (address) to data on the heap.",
+      "Multiple variables can reference the same object.",
+      "Changes made through one reference affect the same object.",
+      "Common reference types include objects, strings, and arrays."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What is WITH ENCRYPTION?",
-    "answer": "A clause that specifies the view should be encrypted so that its definition is not visible."
+    "type": "mrq",
+    "question": "Which statements about the new keyword and object creation in C# are correct?",
+    "options": [
+      "Using new allocates memory for the object on the heap.",
+      "A reference to the object is stored in a variable.",
+      "The reference variable is the actual object stored on the stack.",
+      "If the reference variable is local, the reference itself is stored on the stack.",
+      "Class-level reference fields are stored inside the object on the heap."
+    ],
+    "answer": [
+      "Using new allocates memory for the object on the heap.",
+      "A reference to the object is stored in a variable.",
+      "If the reference variable is local, the reference itself is stored on the stack.",
+      "Class-level reference fields are stored inside the object on the heap."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What is WITH SCHEMABINDING?",
-    "answer": "A clause that prevents the underlying table from being modified while the view is in use."
+    "type": "mrq",
+    "question": "Which statements about null references in C# are correct?",
+    "options": [
+      "Class-level reference fields are automatically initialized to null if not assigned.",
+      "Local reference variables are automatically initialized to null.",
+      "Null means the variable currently points to no object.",
+      "Accessing members through a null reference causes a NullReferenceException.",
+      "A reference variable must be assigned before being used inside a method."
+    ],
+    "answer": [
+      "Class-level reference fields are automatically initialized to null if not assigned.",
+      "Null means the variable currently points to no object.",
+      "Accessing members through a null reference causes a NullReferenceException.",
+      "A reference variable must be assigned before being used inside a method."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What is WITH CHECK OPTION?",
-    "answer": "A clause that ensures all data modifications through the view adhere to the view's WHERE clause."
+    "type": "mrq",
+    "question": "Which statements correctly compare Procedural Programming and Object-Oriented Programming (OOP)?",
+    "options": [
+      "Procedural programming organizes code as a sequence of steps and functions operating on data.",
+      "OOP organizes programs around objects that combine data and behavior.",
+      "Procedural programming is better suited for large, complex systems than OOP.",
+      "OOP supports modularity, reusability, and maintainability.",
+      "Procedural programming keeps data and behavior separate."
+    ],
+    "answer": [
+      "Procedural programming organizes code as a sequence of steps and functions operating on data.",
+      "OOP organizes programs around objects that combine data and behavior.",
+      "OOP supports modularity, reusability, and maintainability.",
+      "Procedural programming keeps data and behavior separate."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What clause can not be used with views?",
-    "answer": "SELECT ... INTO and The ORDER BY clause."
+    "type": "mrq",
+    "question": "Which statements about the static keyword in C# are correct?",
+    "options": [
+      "Static members belong to the class itself rather than to a specific object.",
+      "There is only one copy of a static member shared by all instances.",
+      "Static members require an object to be created before accessing them.",
+      "Static members can include fields, properties, and methods.",
+      "Static members are always private."
+    ],
+    "answer": [
+      "Static members belong to the class itself rather than to a specific object.",
+      "There is only one copy of a static member shared by all instances.",
+      "Static members can include fields, properties, and methods."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What are the requirements for creating a view?",
-    "answer": "The SELECT clause cannot include a DISTINCT or TOP clause, aggregate function, calculated value, GROUP BY or HAVING clause, UNION operator. It must satisfy the requirements of the Columns(s) for the underlying Table(s)"
+    "type": "mrq",
+    "question": "Which statements about static methods in C# are correct?",
+    "options": [
+      "Static methods can be called using the class name.",
+      "Static methods cannot directly access instance members.",
+      "Static methods can access other static members.",
+      "Static methods must return a value.",
+      "Instance objects can be passed as arguments to static methods."
+    ],
+    "answer": [
+      "Static methods can be called using the class name.",
+      "Static methods cannot directly access instance members.",
+      "Static methods can access other static members.",
+      "Instance objects can be passed as arguments to static methods."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What is an updated view?",
-    "answer": "A view that that can be used in an INSERT, UPDATE, or DELETE statement to modify the contents of a base table that the view refers to."
+    "type": "mrq",
+    "question": "Which statements correctly describe instance members in C#?",
+    "options": [
+      "Instance members belong to individual objects.",
+      "Each object has its own copy of instance fields.",
+      "Instance methods can access both static and non-static members.",
+      "Instance methods can be called without creating an object.",
+      "Instance members are always public."
+    ],
+    "answer": [
+      "Instance members belong to individual objects.",
+      "Each object has its own copy of instance fields.",
+      "Instance methods can access both static and non-static members."
+    ]
   },
   {
-    "type": "fib",
-    "question": "If you delete a table, what you should do with the views?",
-    "answer": "You should drop the views that depend on the deleted table."
+    "type": "mrq",
+    "question": "Which of the following are main elements of a class in C#?",
+    "options": [
+      "Attributes/fields",
+      "Constructors",
+      "Instance methods",
+      "Static methods",
+      "Loops"
+    ],
+    "answer": [
+      "Attributes/fields",
+      "Constructors",
+      "Instance methods",
+      "Static methods"
+    ]
   },
   {
-    "type": "fib",
-    "question": "What is a script?",
-    "answer": "A script is a .SQL file containing a series of SQL statements that are executed in sequence to perform a task."
+    "type": "mrq",
+    "question": "Which statements about instance fields (attributes) are correct?",
+    "options": [
+      "They store the state of an object.",
+      "Each object has its own copy unless the field is static.",
+      "They are usually declared private.",
+      "They must always be public.",
+      "They can be initialized inline when declared."
+    ],
+    "answer": [
+      "They store the state of an object.",
+      "Each object has its own copy unless the field is static.",
+      "They are usually declared private.",
+      "They can be initialized inline when declared."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What does the GO command signal?",
-    "answer": "The end of a batch of T-SQL statements."
+    "type": "mrq",
+    "question": "Which statements about static attributes (fields) are correct?",
+    "options": [
+      "They are stored once per class.",
+      "They are shared by all instances of the class.",
+      "They must be public.",
+      "They can be accessed using the class name if accessible.",
+      "They are commonly used for shared counters or settings."
+    ],
+    "answer": [
+      "They are stored once per class.",
+      "They are shared by all instances of the class.",
+      "They can be accessed using the class name if accessible.",
+      "They are commonly used for shared counters or settings."
+    ]
   },
   {
-    "type": "fib",
-    "question": "5 statements that must be in their own batch?",
-    "answer": "1. CREATE VIEW 2. CREATE TRIGGER 3. CREATE PROCEDURE 4. CREATE FUNCTION 5. CREATE SCHEMA"
+    "type": "mrq",
+    "question": "Which statements about constructors in C# are correct?",
+    "options": [
+      "Constructors run automatically when an object is created with new.",
+      "Constructors must have the same name as the class.",
+      "Constructors have no return type.",
+      "A class can have multiple constructors with different parameters.",
+      "Constructors must be marked static."
+    ],
+    "answer": [
+      "Constructors run automatically when an object is created with new.",
+      "Constructors must have the same name as the class.",
+      "Constructors have no return type.",
+      "A class can have multiple constructors with different parameters."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What does IF...ELSE do?",
-    "answer": "It controls the flow of execution based on a condition."
+    "type": "mrq",
+    "question": "Which statements about default constructors are correct?",
+    "options": [
+      "If no constructor is defined, C# provides a default parameterless constructor.",
+      "Once a custom constructor is defined, the default one is not automatically provided.",
+      "A default constructor must always be explicitly written.",
+      "Default constructors can initialize fields.",
+      "A class can never have a parameterless constructor."
+    ],
+    "answer": [
+      "If no constructor is defined, C# provides a default parameterless constructor.",
+      "Once a custom constructor is defined, the default one is not automatically provided."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What does BEGIN...END do?",
-    "answer": "It defines a statement block."
+    "type": "mrq",
+    "question": "Which statements about static constructors in C# are correct?",
+    "options": [
+      "A static constructor runs once per type.",
+      "A static constructor cannot have parameters.",
+      "A static constructor can have access modifiers.",
+      "A static constructor is typically used to initialize static members.",
+      "A static constructor is implicitly private."
+    ],
+    "answer": [
+      "A static constructor runs once per type.",
+      "A static constructor cannot have parameters.",
+      "A static constructor is typically used to initialize static members.",
+      "A static constructor is implicitly private."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What does TRY...CATCH do?",
-    "answer": "It controls the flow of execution when an error occurs."
+    "type": "mrq",
+    "question": "Which statements about the this keyword in C# are correct?",
+    "options": [
+      "this refers to the current object instance.",
+      "this can be used when constructor parameters have the same name as fields.",
+      "this can be used to call another constructor in the same class.",
+      "this can only be used in static methods.",
+      "this always refers to a static member."
+    ],
+    "answer": [
+      "this refers to the current object instance.",
+      "this can be used when constructor parameters have the same name as fields.",
+      "this can be used to call another constructor in the same class."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What does WHILE do?",
-    "answer": "It creates a loop that executes as long as a condition is true."
+    "type": "mrq",
+    "question": "Which statements about instance methods are correct?",
+    "options": [
+      "Instance methods operate on a specific object.",
+      "Instance methods can access both static and non-static members.",
+      "Instance methods require an object to be created before being called.",
+      "Instance methods must be private.",
+      "Instance methods can have parameters."
+    ],
+    "answer": [
+      "Instance methods operate on a specific object.",
+      "Instance methods can access both static and non-static members.",
+      "Instance methods require an object to be created before being called.",
+      "Instance methods can have parameters."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What does BREAK do?",
-    "answer": "It exits innermost while loop."
+    "type": "mrq",
+    "question": "Which statements about method declarations in C# are correct?",
+    "options": [
+      "A method declaration includes an access modifier.",
+      "A method must specify a return type or void.",
+      "The return type can be a custom class or an array.",
+      "Method names should use PascalCase by convention.",
+      "Methods cannot use the return keyword if the return type is void."
+    ],
+    "answer": [
+      "A method declaration includes an access modifier.",
+      "A method must specify a return type or void.",
+      "The return type can be a custom class or an array.",
+      "Method names should use PascalCase by convention."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What does CONTINUE do?",
-    "answer": "It returns to the beginning of the while loop."
+    "type": "mrq",
+    "question": "Which statements about static methods are correct?",
+    "options": [
+      "Static methods must be marked with the static keyword.",
+      "Static methods can only access static members directly.",
+      "Static methods cannot accept parameters.",
+      "Static methods are often used for utility functions.",
+      "Static methods can return custom types."
+    ],
+    "answer": [
+      "Static methods must be marked with the static keyword.",
+      "Static methods can only access static members directly.",
+      "Static methods are often used for utility functions.",
+      "Static methods can return custom types."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What does RETURN do?",
-    "answer": "It exits a function and optionally returns a value."
+    "type": "mrq",
+    "question": "Why are public fields generally avoided in C#?",
+    "options": [
+      "They allow uncontrolled modification from outside the class.",
+      "They reduce encapsulation.",
+      "They improve security automatically.",
+      "They bypass validation logic.",
+      "They are required for properties to work."
+    ],
+    "answer": [
+      "They allow uncontrolled modification from outside the class.",
+      "They reduce encapsulation.",
+      "They bypass validation logic."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What does PRINT do?",
-    "answer": "It displays a message to the client."
+    "type": "mrq",
+    "question": "Which statements about accessing static attributes are correct?",
+    "options": [
+      "They can be accessed using the class name if visible.",
+      "They require an object instance to access.",
+      "They are shared across all objects of the class.",
+      "Private static attributes are commonly accessed through static methods.",
+      "They are duplicated for every object created."
+    ],
+    "answer": [
+      "They can be accessed using the class name if visible.",
+      "They are shared across all objects of the class.",
+      "Private static attributes are commonly accessed through static methods."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What does SET do?",
-    "answer": "It assigns a value to a variable."
+    "type": "mrq",
+    "question": "Which statements about auto-implemented properties in C# are correct?",
+    "options": [
+      "They automatically create a hidden private backing field.",
+      "They allow controlled access to private data through get and set accessors.",
+      "Property names follow camelCase convention.",
+      "The set accessor assigns a value to the property using the value keyword.",
+      "They can be initialized inline when declared."
+    ],
+    "answer": [
+      "They automatically create a hidden private backing field.",
+      "They allow controlled access to private data through get and set accessors.",
+      "The set accessor assigns a value to the property using the value keyword.",
+      "They can be initialized inline when declared."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What does DECLARE do?",
-    "answer": "It defines a local variable."
+    "type": "mrq",
+    "question": "Which statements about access modifiers for auto-implemented properties are correct?",
+    "options": [
+      "They can be public, protected, or private.",
+      "Get and set accessors may have separate access modifiers.",
+      "Accessors cannot be more restrictive than the property itself.",
+      "A public auto-property can have both get and set marked private.",
+      "Private accessors allow reading or writing only inside the class."
+    ],
+    "answer": [
+      "They can be public, protected, or private.",
+      "Get and set accessors may have separate access modifiers.",
+      "Private accessors allow reading or writing only inside the class."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What does EXECUTE do?",
-    "answer": "It executes a stored procedure or a string of T-SQL code."
+    "type": "mrq",
+    "question": "Which statements about read-only auto-implemented properties are correct?",
+    "options": [
+      "Leaving out the set accessor makes the property read-only.",
+      "A read-only property can be assigned in the constructor or inline declaration.",
+      "A get accessor cannot have an access modifier if no set accessor is defined.",
+      "A read-only property can still be modified externally after object creation.",
+      "A read-only auto-property cannot have a get accessor."
+    ],
+    "answer": [
+      "Leaving out the set accessor makes the property read-only.",
+      "A read-only property can be assigned in the constructor or inline declaration.",
+      "A get accessor cannot have an access modifier if no set accessor is defined."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What is a scalar variable?",
-    "answer": "It holds a single value."
+    "type": "mrq",
+    "question": "Which statements about write-only auto-implemented properties are correct?",
+    "options": [
+      "Making the get accessor private makes the property write-only externally.",
+      "Write-only properties can have only a set accessor.",
+      "The private backing field can still be accessed inside the class.",
+      "A public auto-property can have both private get and private set.",
+      "True write-only behavior requires using a full property."
+    ],
+    "answer": [
+      "Making the get accessor private makes the property write-only externally.",
+      "The private backing field can still be accessed inside the class.",
+      "True write-only behavior requires using a full property."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What is a table variable?",
-    "answer": "It holds a set of results."
+    "type": "mrq",
+    "question": "Which statements about full properties in C# are correct?",
+    "options": [
+      "Full properties use a private backing field explicitly declared.",
+      "Custom logic can be added in the get and/or set accessors.",
+      "Full properties can be made read-only or write-only using access modifiers.",
+      "Full properties cannot be static.",
+      "Full properties require both get and set accessors."
+    ],
+    "answer": [
+      "Full properties use a private backing field explicitly declared.",
+      "Custom logic can be added in the get and/or set accessors.",
+      "Full properties can be made read-only or write-only using access modifiers."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What is a temporary table?",
-    "answer": "It stores a result set temporarily and is automatically dropped when closing the session."
+    "type": "mrq",
+    "question": "Which statements about static auto-implemented properties are correct?",
+    "options": [
+      "They belong to the class rather than any object instance.",
+      "They automatically create a static backing field.",
+      "They can be initialized inline when declared.",
+      "They can be public or private.",
+      "They can have only set accessor without get."
+    ],
+    "answer": [
+      "They belong to the class rather than any object instance.",
+      "They automatically create a static backing field.",
+      "They can be initialized inline when declared.",
+      "They can be public or private."
+    ]
   },
   {
-    "type": "fib",
-    "question": "Where does temporary table data reside?",
-    "answer": "It resides in the tempdb system database."
+    "type": "mrq",
+    "question": "Which statements about static full properties are correct?",
+    "options": [
+      "They belong to the class rather than any object.",
+      "They typically use a private static backing field.",
+      "Custom logic can be added in get and/or set accessors.",
+      "They cannot have private get or set accessors.",
+      "They can be made read-only by making set private."
+    ],
+    "answer": [
+      "They belong to the class rather than any object.",
+      "They typically use a private static backing field.",
+      "Custom logic can be added in get and/or set accessors.",
+      "They can be made read-only by making set private."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What is local temporary table?",
-    "answer": "It is a temporary table that is visible only to the current session."
+    "type": "mrq",
+    "question": "Which statements about initialization of properties are correct?",
+    "options": [
+      "Auto-implemented properties can be initialized inline.",
+      "Full properties require initialization via the backing field.",
+      "Static properties can be initialized in a static constructor.",
+      "Instance properties cannot be initialized inline.",
+      "Static auto-properties cannot be initialized inline."
+    ],
+    "answer": [
+      "Auto-implemented properties can be initialized inline.",
+      "Full properties require initialization via the backing field.",
+      "Static properties can be initialized in a static constructor."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What is global temporary table?",
-    "answer": "It is a temporary table that is visible to all sessions."
+    "type": "mrq",
+    "question": "Which statements about using the value keyword in set accessors are correct?",
+    "options": [
+      "Value represents the value being assigned to the property.",
+      "Value can be used to validate input before assignment.",
+      "Value is required in get accessors.",
+      "Value cannot be modified before assignment.",
+      "Value can be used in both auto and full properties."
+    ],
+    "answer": [
+      "Value represents the value being assigned to the property.",
+      "Value can be used to validate input before assignment.",
+      "Value can be used in both auto and full properties."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What are 5 types of T-SQL table objects?",
-    "answer": "1. Standard Tables 2. Views 3. Table Variables 4. Temporary Tables 5. Derived Tables"
+    "type": "mrq",
+    "question": "Which statements about access modifiers in properties are correct?",
+    "options": [
+      "Get and set can have separate access modifiers.",
+      "Accessors cannot be more restrictive than the property itself.",
+      "A property can have both get and set private while being public.",
+      "A property cannot have public get and private set.",
+      "A property can have private get and public set."
+    ],
+    "answer": [
+      "Get and set can have separate access modifiers.",
+      "Accessors cannot be more restrictive than the property itself.",
+      "A property cannot have public get and private set.",
+      "A property can have private get and public set."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What does @@IDENTITY do?",
-    "answer": "It returns the last identity value generated for any table in the current session and the current scope."
+    "type": "mrq",
+    "question": "Which statements about read-only properties are correct?",
+    "options": [
+      "Read-only properties omit the set accessor.",
+      "Read-only properties can be assigned only in constructor or inline declaration.",
+      "Read-only properties allow external code to modify the value.",
+      "Read-only properties can be static or non-static.",
+      "Read-only properties require a full property declaration."
+    ],
+    "answer": [
+      "Read-only properties omit the set accessor.",
+      "Read-only properties can be assigned only in constructor or inline declaration.",
+      "Read-only properties can be static or non-static."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What does BEGIN TRY...END TRY contain?",
-    "answer": "It contains the code that may throw an error."
+    "type": "mrq",
+    "question": "Which statements about write-only properties are correct?",
+    "options": [
+      "Write-only properties omit the get accessor.",
+      "Write-only properties can only exist as full properties.",
+      "Private backing field can still be accessed inside the class.",
+      "Auto-implemented properties can be write-only.",
+      "Write-only properties are commonly used."
+    ],
+    "answer": [
+      "Write-only properties omit the get accessor.",
+      "Write-only properties can only exist as full properties.",
+      "Private backing field can still be accessed inside the class."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What does BEGIN CATCH...END CATCH contain?",
-    "answer": "It contains the code that handles an error."
+    "type": "mrq",
+    "question": "Which statements about constants in C# are correct?",
+    "options": [
+      "Constants must be initialized when declared.",
+      "Constants are implicitly static.",
+      "Constants can be modified at runtime.",
+      "Constants cannot use the static keyword explicitly.",
+      "Constants are evaluated at compile time."
+    ],
+    "answer": [
+      "Constants must be initialized when declared.",
+      "Constants are implicitly static.",
+      "Constants cannot use the static keyword explicitly.",
+      "Constants are evaluated at compile time."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What does ERROR_NUMBER() do?",
-    "answer": "It returns the error number for the last Transact-SQL statement executed."
+    "type": "mrq",
+    "question": "Which statements about read-only fields in C# are correct?",
+    "options": [
+      "Read-only fields can be assigned inline at declaration.",
+      "Read-only fields can be assigned in a constructor.",
+      "Read-only fields can be modified anywhere in the class.",
+      "Static read-only fields belong to the class, not the object.",
+      "Read-only fields are evaluated at compile time."
+    ],
+    "answer": [
+      "Read-only fields can be assigned inline at declaration.",
+      "Read-only fields can be assigned in a constructor.",
+      "Static read-only fields belong to the class, not the object."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What does ERROR_MESSAGE() do?",
-    "answer": "It returns the error message for the last Transact-SQL statement executed."
+    "type": "mrq",
+    "question": "Which statements about differences between constants and read-only fields are correct?",
+    "options": [
+      "Constants are compile-time constants; read-only fields are runtime constants.",
+      "Constants are implicitly static; read-only fields can be instance-level.",
+      "Constants can be assigned in constructor; read-only fields cannot.",
+      "Read-only fields can be assigned inline or in constructor.",
+      "Constants are mutable after declaration."
+    ],
+    "answer": [
+      "Constants are compile-time constants; read-only fields are runtime constants.",
+      "Constants are implicitly static; read-only fields can be instance-level.",
+      "Read-only fields can be assigned inline or in constructor."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What does ERROR_SEVERITY() do?",
-    "answer": "It returns the error severity for the last Transact-SQL statement executed."
+    "type": "mrq",
+    "question": "Which statements about static read-only fields are correct?",
+    "options": [
+      "They belong to the class rather than the object.",
+      "They can be initialized inline at declaration.",
+      "They can be initialized in a static constructor.",
+      "They can be modified after class initialization.",
+      "They are shared across all instances of the class."
+    ],
+    "answer": [
+      "They belong to the class rather than the object.",
+      "They can be initialized inline at declaration.",
+      "They can be initialized in a static constructor.",
+      "They are shared across all instances of the class."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What does ERROR_STATE() do?",
-    "answer": "It returns the state number for the last Transact-SQL statement executed."
+    "type": "mrq",
+    "question": "Which statements about property naming conventions are correct?",
+    "options": [
+      "Properties use PascalCase.",
+      "Private fields use camelCase or start with an underscore.",
+      "Property names can be identical to private fields without distinction.",
+      "Property names help distinguish from private fields.",
+      "Property names should start with a lowercase letter."
+    ],
+    "answer": [
+      "Properties use PascalCase.",
+      "Private fields use camelCase or start with an underscore.",
+      "Property names help distinguish from private fields."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What does @@ERROR do?",
-    "answer": "It returns the error number for the last Transact-SQL statement executed."
+    "type": "mrq",
+    "question": "Which statements about initialization of static properties are correct?",
+    "options": [
+      "They can be initialized inline when declared.",
+      "They can be initialized in a static constructor.",
+      "They can be initialized anywhere inside instance methods.",
+      "Static auto-properties can be initialized inline.",
+      "Static full properties require a private static backing field for initialization."
+    ],
+    "answer": [
+      "They can be initialized inline when declared.",
+      "They can be initialized in a static constructor.",
+      "Static auto-properties can be initialized inline.",
+      "Static full properties require a private static backing field for initialization."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What does @@IDENTITY do?",
-    "answer": "It returns the last identity value generated for any table in the current session and the current scope."
+    "type": "mrq",
+    "question": "Which statements about property accessors in C# are correct?",
+    "options": [
+      "The get accessor returns the value of the property.",
+      "The set accessor assigns a value to the property using value keyword.",
+      "Access modifiers on accessors must be less restrictive than the property itself.",
+      "Private accessors restrict access only inside the class.",
+      "Both get and set accessors must always be public."
+    ],
+    "answer": [
+      "The get accessor returns the value of the property.",
+      "The set accessor assigns a value to the property using value keyword.",
+      "Private accessors restrict access only inside the class."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What does @@ROWCOUNT do?",
-    "answer": "It returns the number of rows affected by the last statement."
+    "type": "mrq",
+    "question": "Which statements about using full properties instead of auto-implemented properties are correct?",
+    "options": [
+      "Full properties are used when custom logic is required in get or set.",
+      "Full properties require explicitly declared backing fields.",
+      "Full properties cannot be read-only.",
+      "Full properties can be write-only.",
+      "Full properties allow validation or calculations in accessors."
+    ],
+    "answer": [
+      "Full properties are used when custom logic is required in get or set.",
+      "Full properties require explicitly declared backing fields.",
+      "Full properties can be write-only.",
+      "Full properties allow validation or calculations in accessors."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What does IDENT_CURRENT(<table_name>) do?",
-    "answer": "It returns the last identity value generated for a specific table in any session and any scope."
+    "type": "mrq",
+    "question": "Which statements about namespaces in C# are correct?",
+    "options": [
+      "Namespaces organize classes, structs, interfaces, and other types.",
+      "Namespaces help prevent naming conflicts.",
+      "If no namespace is specified, types belong to the global namespace.",
+      "The using directive allows access to types without writing the full path.",
+      "Namespaces cannot be nested."
+    ],
+    "answer": [
+      "Namespaces organize classes, structs, interfaces, and other types.",
+      "Namespaces help prevent naming conflicts.",
+      "If no namespace is specified, types belong to the global namespace.",
+      "The using directive allows access to types without writing the full path."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What does @@SERVERNAME do?",
-    "answer": "It returns the name of the SQL Server instance."
+    "type": "mrq",
+    "question": "Which statements about the Main method in C# are correct?",
+    "options": [
+      "Main is static so that the runtime can call it without creating an object.",
+      "Main can access instance members directly.",
+      "Main can be inside any class.",
+      "Main requires an object to be invoked.",
+      "Main serves as the program entry point."
+    ],
+    "answer": [
+      "Main is static so that the runtime can call it without creating an object.",
+      "Main can be inside any class.",
+      "Main serves as the program entry point."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What does HOST_NAME() do?",
-    "answer": "It returns the name of the workstation running the current instance of SQL Server."
+    "type": "mrq",
+    "question": "Which statements about method signatures in C# are correct?",
+    "options": [
+      "A method signature includes the method name and its parameter types.",
+      "Return type is part of the method signature.",
+      "Parameter order affects the method signature.",
+      "Method signature determines method overloading compatibility.",
+      "Access modifier is part of the method signature."
+    ],
+    "answer": [
+      "A method signature includes the method name and its parameter types.",
+      "Parameter order affects the method signature.",
+      "Method signature determines method overloading compatibility."
+    ]
   },
   {
-    "type": "fib",
-    "question": "What does SYSTEM_USER do?",
-    "answer": "It returns the name of the user connected to the SQL Server instance."
+    "type": "mrq",
+    "question": "Which statements about inheritance in C# are correct?",
+    "options": [
+      "Inheritance allows a derived class to reuse code from a base class.",
+      "Private members of the base class are inherited but not directly accessible.",
+      "Constructors are inherited by derived classes automatically.",
+      "Static members are inherited by derived classes.",
+      "Inheritance helps organize large systems and simplifies development."
+    ],
+    "answer": [
+      "Inheritance allows a derived class to reuse code from a base class.",
+      "Private members of the base class are inherited but not directly accessible.",
+      "Inheritance helps organize large systems and simplifies development."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about declaring a derived class in C# are correct?",
+    "options": [
+      "Inheritance is denoted using a colon ':' between derived and base class.",
+      "Public and protected members of the base class are directly accessible in derived class.",
+      "Private members of the base class are directly accessible in derived class.",
+      "Static members are accessible through inheritance.",
+      "Constructors are never inherited."
+    ],
+    "answer": [
+      "Inheritance is denoted using a colon ':' between derived and base class.",
+      "Public and protected members of the base class are directly accessible in derived class.",
+      "Constructors are never inherited."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about the base keyword in C# are correct?",
+    "options": [
+      "base refers to the direct parent class of the current class.",
+      "base can be used in a derived class constructor to call a parent constructor.",
+      "base can be used to call a method in the parent class.",
+      "base allows access to private members of the parent class directly.",
+      "Using base avoids duplicating code from the parent class."
+    ],
+    "answer": [
+      "base refers to the direct parent class of the current class.",
+      "base can be used in a derived class constructor to call a parent constructor.",
+      "base can be used to call a method in the parent class.",
+      "Using base avoids duplicating code from the parent class."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about polymorphism in C# are correct?",
+    "options": [
+      "Polymorphism allows a derived class method to be called at runtime even if reference is of base type.",
+      "Polymorphism is achieved through method overloading and overriding.",
+      "Only static methods can participate in polymorphism.",
+      "Virtual methods in the base class enable overriding in derived class.",
+      "Sealed methods can be overridden."
+    ],
+    "answer": [
+      "Polymorphism allows a derived class method to be called at runtime even if reference is of base type.",
+      "Polymorphism is achieved through method overloading and overriding.",
+      "Virtual methods in the base class enable overriding in derived class."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about virtual and override keywords in C# are correct?",
+    "options": [
+      "The virtual keyword allows a base class method to be overridden.",
+      "The override keyword is used in derived class to provide new functionality.",
+      "Static methods can be virtual and overridden.",
+      "Private and sealed methods cannot be overridden.",
+      "All virtual methods must be overridden in derived class."
+    ],
+    "answer": [
+      "The virtual keyword allows a base class method to be overridden.",
+      "The override keyword is used in derived class to provide new functionality.",
+      "Private and sealed methods cannot be overridden."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about variable assignment with inheritance are correct?",
+    "options": [
+      "You can declare a variable with the parent class type and assign a derived class instance.",
+      "ParentClass obj = new ChildClass() is valid syntax.",
+      "Derived class cannot be assigned to a parent class variable.",
+      "This allows polymorphic behavior at runtime.",
+      "Only static members can be accessed through the parent class variable."
+    ],
+    "answer": [
+      "You can declare a variable with the parent class type and assign a derived class instance.",
+      "ParentClass obj = new ChildClass() is valid syntax.",
+      "This allows polymorphic behavior at runtime."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about overriding properties in C# are correct?",
+    "options": [
+      "A public or protected virtual property can be overridden in derived classes.",
+      "Private get or set accessors in base class cannot be overridden.",
+      "Derived class must define its own backing field to override a property.",
+      "Override can reuse base class resources if access is allowed.",
+      "The property must maintain the same accessibility in override."
+    ],
+    "answer": [
+      "A public or protected virtual property can be overridden in derived classes.",
+      "Private get or set accessors in base class cannot be overridden.",
+      "Override can reuse base class resources if access is allowed.",
+      "The property must maintain the same accessibility in override."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about backing fields in overridden properties are correct?",
+    "options": [
+      "Derived class must always define a new backing field for overridden properties.",
+      "If base class provides public/protected methods, derived class can override without new backing field.",
+      "Overridden properties can be initialized in declaration or constructor if no backing field exists.",
+      "Backing fields are mandatory for all auto-properties.",
+      "Base class backing fields can be reused through base keyword."
+    ],
+    "answer": [
+      "If base class provides public/protected methods, derived class can override without new backing field.",
+      "Overridden properties can be initialized in declaration or constructor if no backing field exists.",
+      "Base class backing fields can be reused through base keyword."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about constructors in inheritance are correct?",
+    "options": [
+      "Constructors are never inherited by derived classes.",
+      "Derived class must call a base constructor if it has arguments.",
+      "Base constructors with no arguments are automatically called if not specified.",
+      "Constructors of base class are inherited like normal methods.",
+      "Derived class can override base constructor."
+    ],
+    "answer": [
+      "Constructors are never inherited by derived classes.",
+      "Derived class must call a base constructor if it has arguments.",
+      "Base constructors with no arguments are automatically called if not specified."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about access modifiers in inheritance are correct?",
+    "options": [
+      "Public and protected members of base class are directly accessible in derived class.",
+      "Private members are inherited but not directly accessible.",
+      "Protected members are only accessible inside the base class itself.",
+      "Private members can be accessed in derived class via base if provided by public/protected methods.",
+      "Static members are inherited as instance members."
+    ],
+    "answer": [
+      "Public and protected members of base class are directly accessible in derived class.",
+      "Private members are inherited but not directly accessible.",
+      "Private members can be accessed in derived class via base if provided by public/protected methods."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about static members in inheritance are correct?",
+    "options": [
+      "Static fields and methods are not inherited.",
+      "Static members can be accessed through class name directly.",
+      "Static members can be overridden using virtual/override.",
+      "Derived class cannot access static members of base class through inheritance.",
+      "Static methods cannot participate in polymorphism."
+    ],
+    "answer": [
+      "Static fields and methods are not inherited.",
+      "Static members can be accessed through class name directly.",
+      "Derived class cannot access static members of base class through inheritance.",
+      "Static methods cannot participate in polymorphism."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about method overriding in inheritance are correct?",
+    "options": [
+      "The base method must be declared virtual to allow overriding.",
+      "Derived class uses override keyword to override base method.",
+      "Overriding requires method signatures to match.",
+      "Static methods can be overridden.",
+      "Sealed methods cannot be overridden."
+    ],
+    "answer": [
+      "The base method must be declared virtual to allow overriding.",
+      "Derived class uses override keyword to override base method.",
+      "Overriding requires method signatures to match.",
+      "Sealed methods cannot be overridden."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about polymorphic behavior with base class references are correct?",
+    "options": [
+      "Base class reference can call overridden methods in derived class at runtime.",
+      "Polymorphism works only for virtual methods.",
+      "Base class reference cannot access derived-only members.",
+      "Non-virtual methods are resolved at runtime dynamically.",
+      "Polymorphism allows method overloading resolution at runtime."
+    ],
+    "answer": [
+      "Base class reference can call overridden methods in derived class at runtime.",
+      "Polymorphism works only for virtual methods.",
+      "Base class reference cannot access derived-only members."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about virtual properties are correct?",
+    "options": [
+      "A virtual property can have either or both get/set overridden.",
+      "Private get/set in base property cannot be overridden.",
+      "Derived class can define a new backing field or reuse base property.",
+      "All virtual properties must be overridden in derived class.",
+      "A virtual property with no set accessor cannot have set overridden."
+    ],
+    "answer": [
+      "A virtual property can have either or both get/set overridden.",
+      "Private get/set in base property cannot be overridden.",
+      "Derived class can define a new backing field or reuse base property.",
+      "A virtual property with no set accessor cannot have set overridden."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about using base in overridden properties are correct?",
+    "options": [
+      "Base keyword can access inherited resources inside overridden get/set.",
+      "Base keyword can call virtual property getter/setter from base.",
+      "Base keyword allows access to private backing fields in base class.",
+      "Base keyword is optional when overriding virtual property.",
+      "Base keyword can be used to initialize property value in derived class."
+    ],
+    "answer": [
+      "Base keyword can access inherited resources inside overridden get/set.",
+      "Base keyword can call virtual property getter/setter from base.",
+      "Base keyword is optional when overriding virtual property.",
+      "Base keyword can be used to initialize property value in derived class."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about method overloading vs overriding are correct?",
+    "options": [
+      "Method overloading uses same method name with different arguments.",
+      "Method overriding provides new functionality for inherited virtual method.",
+      "Overloading affects runtime polymorphism.",
+      "Overriding affects runtime polymorphism.",
+      "Static methods can be overridden."
+    ],
+    "answer": [
+      "Method overloading uses same method name with different arguments.",
+      "Method overriding provides new functionality for inherited virtual method.",
+      "Overriding affects runtime polymorphism."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about C# inheritance benefits are correct?",
+    "options": [
+      "Code reusability is a primary advantage.",
+      "Derived class automatically exposes private members publicly.",
+      "Inheritance simplifies development by reusing existing functionality.",
+      "Organizes large systems into logical groups.",
+      "Inheritance eliminates need for access modifiers."
+    ],
+    "answer": [
+      "Code reusability is a primary advantage.",
+      "Inheritance simplifies development by reusing existing functionality.",
+      "Organizes large systems into logical groups."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about assigning base class type to derived class instance are correct?",
+    "options": [
+      "Allows polymorphic behavior at runtime.",
+      "Only base class methods can be called through the reference unless overridden.",
+      "Derived class-only members are accessible through base class reference.",
+      "Syntax: BaseClass obj = new DerivedClass() is valid.",
+      "This approach requires casting to access derived-only members."
+    ],
+    "answer": [
+      "Allows polymorphic behavior at runtime.",
+      "Only base class methods can be called through the reference unless overridden.",
+      "Syntax: BaseClass obj = new DerivedClass() is valid.",
+      "This approach requires casting to access derived-only members."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about limitations in overriding are correct?",
+    "options": [
+      "Private members cannot be overridden.",
+      "Static methods cannot be overridden.",
+      "Sealed methods cannot be overridden.",
+      "Virtual methods without override in derived class cannot be called.",
+      "Derived class must override all virtual methods."
+    ],
+    "answer": [
+      "Private members cannot be overridden.",
+      "Static methods cannot be overridden.",
+      "Sealed methods cannot be overridden."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about overriding public or protected virtual full properties in C# are correct?",
+    "options": [
+      "Derived classes can override get and/or set accessors of a virtual full property.",
+      "Child class must always declare its own backing field to override a parent property.",
+      "Private get/set in the parent prevents overriding.",
+      "If the parent has no backing field, the child can still override the property.",
+      "Overriding rules require maintaining the same accessibility as the parent property."
+    ],
+    "answer": [
+      "Derived classes can override get and/or set accessors of a virtual full property.",
+      "Private get/set in the parent prevents overriding.",
+      "If the parent has no backing field, the child can still override the property.",
+      "Overriding rules require maintaining the same accessibility as the parent property."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about interfaces in C# are correct?",
+    "options": [
+      "Interfaces contain unimplemented members like methods and properties.",
+      "Interfaces can inherit from other interfaces.",
+      "A class implementing an interface must implement all its members.",
+      "Interfaces allow multiple inheritance of classes.",
+      "A class can partially implement an interface."
+    ],
+    "answer": [
+      "Interfaces contain unimplemented members like methods and properties.",
+      "Interfaces can inherit from other interfaces.",
+      "A class implementing an interface must implement all its members."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about method hiding in C# are correct?",
+    "options": [
+      "Method hiding uses the new keyword in derived classes.",
+      "Hiding a method overrides the base class method.",
+      "Accessing the method through a base class reference calls the base method.",
+      "Hiding affects runtime polymorphism like overriding.",
+      "The derived method is independent of the base method."
+    ],
+    "answer": [
+      "Method hiding uses the new keyword in derived classes.",
+      "Accessing the method through a base class reference calls the base method.",
+      "The derived method is independent of the base method."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about property hiding in C# are correct?",
+    "options": [
+      "Property hiding uses the new keyword to define an independent property in the child class.",
+      "Hiding a property overrides the parent property.",
+      "Child property can change accessibility or implement its own backing field.",
+      "base keyword can be used to access parent property in the hidden property.",
+      "Hiding affects runtime polymorphism like overriding."
+    ],
+    "answer": [
+      "Property hiding uses the new keyword to define an independent property in the child class.",
+      "Child property can change accessibility or implement its own backing field.",
+      "base keyword can be used to access parent property in the hidden property."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about sealed classes and methods in C# are correct?",
+    "options": [
+      "A sealed class cannot be inherited.",
+      "A sealed override method cannot be further overridden.",
+      "A sealed method can still be hidden using the new keyword.",
+      "Sealed methods cannot override virtual methods.",
+      "Sealed classes can be inherited by other classes."
+    ],
+    "answer": [
+      "A sealed class cannot be inherited.",
+      "A sealed override method cannot be further overridden.",
+      "A sealed method can still be hidden using the new keyword."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about upcasting and downcasting in C# are correct?",
+    "options": [
+      "Upcasting is automatic and safe.",
+      "Downcasting requires explicit cast and may throw InvalidCastException.",
+      "Downcasting can be safely handled using as keyword, which returns null if cast fails.",
+      "Downcasting can be safely handled using is keyword, which returns a bool indicating type compatibility.",
+      "Upcasting requires explicit cast."
+    ],
+    "answer": [
+      "Upcasting is automatic and safe.",
+      "Downcasting requires explicit cast and may throw InvalidCastException.",
+      "Downcasting can be safely handled using as keyword, which returns null if cast fails.",
+      "Downcasting can be safely handled using is keyword, which returns a bool indicating type compatibility."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about multiple inheritance in C# are correct?",
+    "options": [
+      "C# does not support multiple inheritance of classes.",
+      "A class can have multiple ancestors through a single inheritance chain.",
+      "Multiple inheritance of interfaces is allowed.",
+      "C# allows multiple inheritance of classes if base classes have no members.",
+      "Diamond problem can occur in C# class multiple inheritance."
+    ],
+    "answer": [
+      "C# does not support multiple inheritance of classes.",
+      "A class can have multiple ancestors through a single inheritance chain.",
+      "Multiple inheritance of interfaces is allowed."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about the object class in C# are correct?",
+    "options": [
+      "All classes inherit from object.",
+      "object provides methods like ToString, Equals, GetHashCode, and GetType.",
+      "Most object methods can be overridden except non-virtual GetType.",
+      "object.Equals checks value equality by default.",
+      "object.GetHashCode uses the object's memory location."
+    ],
+    "answer": [
+      "All classes inherit from object.",
+      "object provides methods like ToString, Equals, GetHashCode, and GetType.",
+      "Most object methods can be overridden except non-virtual GetType.",
+      "object.GetHashCode uses the object's memory location."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about object methods are correct?",
+    "options": [
+      "object.ToString() returns the name of the object's type.",
+      "object.Equals(object obj) checks reference equality by default.",
+      "object.GetHashCode() returns a unique identifier for the object instance.",
+      "object.GetType() returns runtime type information.",
+      "object.Equals(object obj) can check value equality for custom classes by default."
+    ],
+    "answer": [
+      "object.ToString() returns the name of the object's type.",
+      "object.Equals(object obj) checks reference equality by default.",
+      "object.GetType() returns runtime type information."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about child class overriding a full property without a backing field are correct?",
+    "options": [
+      "Child class can override if parent has public/protected access methods.",
+      "Property value must be initialized in constructor or at declaration.",
+      "Child cannot override if parent has no backing field.",
+      "Child class cannot use base keyword in overridden property.",
+      "Same accessibility rules apply as if backing field exists."
+    ],
+    "answer": [
+      "Child class can override if parent has public/protected access methods.",
+      "Property value must be initialized in constructor or at declaration.",
+      "Same accessibility rules apply as if backing field exists."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about interface inheritance in C# are correct?",
+    "options": [
+      "An interface can inherit from another interface.",
+      "A class implementing an interface must implement all inherited members.",
+      "Interfaces can implement other interfaces' methods directly.",
+      "Interface inheritance allows multiple levels of abstraction.",
+      "Interfaces can contain implemented methods."
+    ],
+    "answer": [
+      "An interface can inherit from another interface.",
+      "A class implementing an interface must implement all inherited members.",
+      "Interface inheritance allows multiple levels of abstraction."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about method hiding are correct?",
+    "options": [
+      "Method hiding uses new keyword.",
+      "Hidden method is independent of base method.",
+      "Accessing method via base class reference calls base method.",
+      "Hiding affects runtime polymorphism like override.",
+      "Hidden method can override base virtual method."
+    ],
+    "answer": [
+      "Method hiding uses new keyword.",
+      "Hidden method is independent of base method.",
+      "Accessing method via base class reference calls base method."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about property hiding are correct?",
+    "options": [
+      "Property hiding creates a new independent property in derived class.",
+      "Child property can redefine get/set accessibility.",
+      "Child property can optionally use base or its own backing field.",
+      "Property hiding affects runtime polymorphism like override.",
+      "Child property must use override keyword."
+    ],
+    "answer": [
+      "Property hiding creates a new independent property in derived class.",
+      "Child property can redefine get/set accessibility.",
+      "Child property can optionally use base or its own backing field."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about sealed override methods are correct?",
+    "options": [
+      "A sealed override method cannot be overridden further.",
+      "A sealed override method can still be hidden using new keyword.",
+      "Sealed method prevents derived class inheritance entirely.",
+      "Sealed methods can override virtual methods.",
+      "Sealed methods can be static."
+    ],
+    "answer": [
+      "A sealed override method cannot be overridden further.",
+      "A sealed override method can still be hidden using new keyword.",
+      "Sealed methods can override virtual methods."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about upcasting and downcasting are correct?",
+    "options": [
+      "Upcasting is automatic and safe.",
+      "Downcasting requires explicit cast or check.",
+      "Upcasting may throw InvalidCastException.",
+      "Downcasting can be safely done using as or is keywords.",
+      "Upcasting requires as keyword."
+    ],
+    "answer": [
+      "Upcasting is automatic and safe.",
+      "Downcasting requires explicit cast or check.",
+      "Downcasting can be safely done using as or is keywords."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about the object class in C# are correct?",
+    "options": [
+      "All classes inherit from object.",
+      "object provides ToString, Equals, GetHashCode, and GetType methods.",
+      "object.Equals(object obj) checks reference equality.",
+      "object.GetType() returns the runtime type information.",
+      "object.GetHashCode() returns a random number."
+    ],
+    "answer": [
+      "All classes inherit from object.",
+      "object provides ToString, Equals, GetHashCode, and GetType methods.",
+      "object.Equals(object obj) checks reference equality.",
+      "object.GetType() returns the runtime type information."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about abstraction in C# are correct?",
+    "options": [
+      "Abstraction hides internal complexity and exposes only necessary features.",
+      "Abstraction is achieved using abstract classes and interfaces.",
+      "Abstraction allows encapsulation of all class members.",
+      "Abstraction improves code reuse and maintainability.",
+      "Abstraction allows creating instances of abstract classes directly."
+    ],
+    "answer": [
+      "Abstraction hides internal complexity and exposes only necessary features.",
+      "Abstraction is achieved using abstract classes and interfaces.",
+      "Abstraction improves code reuse and maintainability."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about abstract classes in C# are correct?",
+    "options": [
+      "Abstract classes cannot be instantiated.",
+      "Abstract classes can define both abstract and concrete methods.",
+      "Derived classes must override all abstract members.",
+      "Abstract classes can have static members.",
+      "Abstract classes cannot have constructors."
+    ],
+    "answer": [
+      "Abstract classes cannot be instantiated.",
+      "Abstract classes can define both abstract and concrete methods.",
+      "Derived classes must override all abstract members.",
+      "Abstract classes can have static members."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about abstract methods are correct?",
+    "options": [
+      "Abstract methods define method signatures without implementation.",
+      "Abstract methods must be public or protected.",
+      "Abstract methods can be private.",
+      "Derived classes must implement abstract methods.",
+      "Abstract methods can have static keyword."
+    ],
+    "answer": [
+      "Abstract methods define method signatures without implementation.",
+      "Abstract methods must be public or protected.",
+      "Derived classes must implement abstract methods."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about concrete methods in abstract classes are correct?",
+    "options": [
+      "Concrete methods provide shared functionality.",
+      "Concrete methods' accessibility depends on their access modifier.",
+      "Concrete methods can override abstract methods.",
+      "Concrete methods can be private, protected, or public.",
+      "Concrete methods must be abstract themselves."
+    ],
+    "answer": [
+      "Concrete methods provide shared functionality.",
+      "Concrete methods' accessibility depends on their access modifier.",
+      "Concrete methods can be private, protected, or public."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about abstract properties are correct?",
+    "options": [
+      "Abstract properties must be public or protected.",
+      "Abstract properties cannot have backing fields.",
+      "Derived classes must override abstract properties.",
+      "Abstract properties can be static.",
+      "Abstract properties can be private."
+    ],
+    "answer": [
+      "Abstract properties must be public or protected.",
+      "Abstract properties cannot have backing fields.",
+      "Derived classes must override abstract properties."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about static members in abstract classes are correct?",
+    "options": [
+      "Static members exist at the class level.",
+      "Static members cannot be abstract.",
+      "Static members are inherited by derived classes.",
+      "Static members can be accessed using the abstract class name.",
+      "Static methods in abstract classes can be overridden."
+    ],
+    "answer": [
+      "Static members exist at the class level.",
+      "Static members cannot be abstract.",
+      "Static members can be accessed using the abstract class name."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about abstract class constructors are correct?",
+    "options": [
+      "Abstract class constructors can initialize common attributes.",
+      "Abstract class constructors can be used to instantiate the abstract class.",
+      "Constructors in abstract classes cannot be marked abstract.",
+      "Abstract class constructors are inherited by derived classes.",
+      "Constructors in abstract classes can call base constructors."
+    ],
+    "answer": [
+      "Abstract class constructors can initialize common attributes.",
+      "Constructors in abstract classes cannot be marked abstract."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about interfaces in C# are correct?",
+    "options": [
+      "A class can implement multiple interfaces.",
+      "Interface members are public by default.",
+      "Interfaces can have attributes or fields.",
+      "Interfaces can define method signatures without implementation.",
+      "Interfaces cannot contain properties."
+    ],
+    "answer": [
+      "A class can implement multiple interfaces.",
+      "Interface members are public by default.",
+      "Interfaces can define method signatures without implementation."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about modern C# interfaces (C# 8.0+) are correct?",
+    "options": [
+      "Interfaces can have default method implementations.",
+      "Interfaces can have static members and properties.",
+      "Interfaces can have private helper methods.",
+      "Interfaces can have instance fields.",
+      "Interfaces can contain constants."
+    ],
+    "answer": [
+      "Interfaces can have default method implementations.",
+      "Interfaces can have static members and properties.",
+      "Interfaces can have private helper methods.",
+      "Interfaces can contain constants."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about implementing static abstract interface members (C# 11+) are correct?",
+    "options": [
+      "Implementing class must provide a concrete static implementation.",
+      "Use static keyword, not override.",
+      "Static abstract members can be overridden with override keyword.",
+      "These members exist at class level, not instance level.",
+      "Implementing class can ignore static abstract members."
+    ],
+    "answer": [
+      "Implementing class must provide a concrete static implementation.",
+      "Use static keyword, not override.",
+      "These members exist at class level, not instance level."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about polymorphism in C# are correct?",
+    "options": [
+      "Compile-time polymorphism is determined by method arguments.",
+      "Runtime polymorphism is determined by the actual object type at runtime.",
+      "Polymorphism improves code flexibility and reusability.",
+      "Polymorphism requires abstract classes only.",
+      "Overriding is an example of compile-time polymorphism."
+    ],
+    "answer": [
+      "Compile-time polymorphism is determined by method arguments.",
+      "Runtime polymorphism is determined by the actual object type at runtime.",
+      "Polymorphism improves code flexibility and reusability."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about encapsulation in C# are correct?",
+    "options": [
+      "Encapsulation restricts direct access to object data.",
+      "Attributes/fields are usually private.",
+      "Access is provided through getters/setters or properties.",
+      "Encapsulation prevents invalid data and supports validation.",
+      "Encapsulation allows public fields to be modified freely."
+    ],
+    "answer": [
+      "Encapsulation restricts direct access to object data.",
+      "Attributes/fields are usually private.",
+      "Access is provided through getters/setters or properties.",
+      "Encapsulation prevents invalid data and supports validation."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about abstract class usage are correct?",
+    "options": [
+      "Abstract class cannot be instantiated.",
+      "Abstract class provides blueprint for derived classes.",
+      "Derived class must implement all abstract members.",
+      "Abstract class cannot contain concrete methods.",
+      "Abstract class supports runtime polymorphism."
+    ],
+    "answer": [
+      "Abstract class cannot be instantiated.",
+      "Abstract class provides blueprint for derived classes.",
+      "Derived class must implement all abstract members.",
+      "Abstract class supports runtime polymorphism."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about interfaces enabling polymorphism are correct?",
+    "options": [
+      "Interfaces allow code to work with any implementing class.",
+      "Interfaces restrict access to only members defined by the interface.",
+      "Interfaces enforce implementation of all members unless default implementations exist.",
+      "Using interface as type prevents runtime polymorphism.",
+      "Interfaces can contain implemented fields accessible to implementing classes."
+    ],
+    "answer": [
+      "Interfaces allow code to work with any implementing class.",
+      "Interfaces restrict access to only members defined by the interface.",
+      "Interfaces enforce implementation of all members unless default implementations exist."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about concrete and abstract methods are correct?",
+    "options": [
+      "Concrete methods provide optional shared functionality.",
+      "Abstract methods define required behavior for derived classes.",
+      "Concrete methods must be overridden in derived classes.",
+      "Abstract methods can be private.",
+      "Concrete methods can have access modifiers: private, protected, or public."
+    ],
+    "answer": [
+      "Concrete methods provide optional shared functionality.",
+      "Abstract methods define required behavior for derived classes.",
+      "Concrete methods can have access modifiers: private, protected, or public."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about abstract class members are correct?",
+    "options": [
+      "Attributes, fields, and properties can be inherited based on access modifiers.",
+      "Static attributes, properties, and methods cannot be abstract.",
+      "Abstract properties can be auto-properties or full properties in derived classes.",
+      "Abstract class cannot have static members.",
+      "Abstract class members cannot be concrete."
+    ],
+    "answer": [
+      "Attributes, fields, and properties can be inherited based on access modifiers.",
+      "Static attributes, properties, and methods cannot be abstract.",
+      "Abstract properties can be auto-properties or full properties in derived classes."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about interface members in C# are correct?",
+    "options": [
+      "Interface members are public by default.",
+      "Interfaces can contain constants.",
+      "Interfaces cannot have private helper methods.",
+      "Interface properties can be implemented as auto-properties or full properties.",
+      "Interfaces can contain instance fields."
+    ],
+    "answer": [
+      "Interface members are public by default.",
+      "Interfaces can contain constants.",
+      "Interface properties can be implemented as auto-properties or full properties."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about modern C# interface limitations are correct?",
+    "options": [
+      "Private interface members cannot be accessed outside the interface.",
+      "Static interface members in C# 11+ must be implemented in implementing classes.",
+      "Default interface methods cannot be re-implemented in the implementing class.",
+      "Static abstract interface members use override keyword.",
+      "Private helper methods in interfaces are strictly internal."
+    ],
+    "answer": [
+      "Private interface members cannot be accessed outside the interface.",
+      "Static interface members in C# 11+ must be implemented in implementing classes.",
+      "Private helper methods in interfaces are strictly internal."
+    ]
+  },
+    {
+    "type": "mrq",
+    "question": "Which statements about Object-Oriented Design (OOD) are correct?",
+    "options": [
+      "OOD structures a software system using objects that model real-world entities.",
+      "OOD combines data (attributes/properties) and behavior (methods) into objects.",
+      "OOD defines blueprints for objects using classes.",
+      "OOD encourages creating god classes to centralize behavior.",
+      "OOD is unrelated to class responsibilities and interactions."
+    ],
+    "answer": [
+      "OOD structures a software system using objects that model real-world entities.",
+      "OOD combines data (attributes/properties) and behavior (methods) into objects.",
+      "OOD defines blueprints for objects using classes."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which are key goals of Object-Oriented Design (OOD)?",
+    "options": [
+      "Manage complex systems by breaking them into modular, reusable classes.",
+      "Ensure high cohesion by giving each class a clear, focused purpose.",
+      "Minimize coupling so classes remain independent and loosely connected.",
+      "Avoid extensibility and flexibility to maintain strict control.",
+      "Map requirements clearly to their implementation."
+    ],
+    "answer": [
+      "Manage complex systems by breaking them into modular, reusable classes.",
+      "Ensure high cohesion by giving each class a clear, focused purpose.",
+      "Minimize coupling so classes remain independent and loosely connected.",
+      "Map requirements clearly to their implementation."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about OOD principles for maintainability and extensibility are correct?",
+    "options": [
+      "OOD reduces ripple effects of changing requirements.",
+      "OOD encourages extensibility without modifying existing code.",
+      "OOD distributes responsibilities to avoid god classes.",
+      "OOD promotes tight coupling for faster communication.",
+      "OOD ignores class interaction boundaries."
+    ],
+    "answer": [
+      "OOD reduces ripple effects of changing requirements.",
+      "OOD encourages extensibility without modifying existing code.",
+      "OOD distributes responsibilities to avoid god classes."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about OOD and system interactions are correct?",
+    "options": [
+      "OOD defines clear interaction boundaries between classes.",
+      "OOD reduces unnecessary dependencies between classes.",
+      "OOD helps prevent duplication and redundancy by following DRY principle.",
+      "OOD promotes arbitrary interactions to increase flexibility.",
+      "OOD requires every class to handle all dependencies directly."
+    ],
+    "answer": [
+      "OOD defines clear interaction boundaries between classes.",
+      "OOD reduces unnecessary dependencies between classes.",
+      "OOD helps prevent duplication and redundancy by following DRY principle."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about OOD and testing are correct?",
+    "options": [
+      "OOD allows classes to be tested in isolation through unit testing.",
+      "OOD supports mocking or faking dependencies for testing.",
+      "OOD eliminates the need for testing by design.",
+      "OOD makes testing more predictable and structured.",
+      "OOD requires integration testing only."
+    ],
+    "answer": [
+      "OOD allows classes to be tested in isolation through unit testing.",
+      "OOD supports mocking or faking dependencies for testing.",
+      "OOD makes testing more predictable and structured."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about OOD and understandability are correct?",
+    "options": [
+      "OOD improves understandability for other developers through clear class names.",
+      "OOD ensures each class has focused behavior.",
+      "OOD communicates intent clearly through design.",
+      "OOD makes code intentionally confusing to protect intellectual property.",
+      "OOD relies on unclear naming to increase abstraction."
+    ],
+    "answer": [
+      "OOD improves understandability for other developers through clear class names.",
+      "OOD ensures each class has focused behavior.",
+      "OOD communicates intent clearly through design."
+    ]
+  },
+    {
+    "type": "mrq",
+    "question": "Which statements correctly describe the Single Responsibility Principle (SRP)?",
+    "options": [
+      "A class should have only one reason to change.",
+      "A class should handle multiple unrelated responsibilities.",
+      "SRP prevents accidental breakage of unrelated functionality when modifying a class.",
+      "SRP encourages creating god classes to centralize functionality."
+    ],
+    "answer": [
+      "A class should have only one reason to change.",
+      "SRP prevents accidental breakage of unrelated functionality when modifying a class."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements correctly describe the Open/Closed Principle (OCP)?",
+    "options": [
+      "Software entities should be open for extension but closed for modification.",
+      "Existing code should be modified to implement new features.",
+      "OCP helps protect old code and reduces the risk of introducing new bugs.",
+      "OCP discourages inheritance and polymorphism."
+    ],
+    "answer": [
+      "Software entities should be open for extension but closed for modification.",
+      "OCP helps protect old code and reduces the risk of introducing new bugs."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements correctly describe the Liskov Substitution Principle (LSP)?",
+    "options": [
+      "Subtypes must be substitutable for their base types without altering program behavior.",
+      "Derived classes can break parent class contracts.",
+      "Methods accepting base class objects should also work with any subclass object.",
+      "LSP is unrelated to implementing the Open/Closed Principle."
+    ],
+    "answer": [
+      "Subtypes must be substitutable for their base types without altering program behavior.",
+      "Methods accepting base class objects should also work with any subclass object."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements correctly describe the Interface Segregation Principle (ISP)?",
+    "options": [
+      "Clients should not be forced to depend on methods they do not use.",
+      "Large, general-purpose interfaces are preferred.",
+      "It is better to have several small, focused interfaces.",
+      "ISP increases coupling and reduces flexibility."
+    ],
+    "answer": [
+      "Clients should not be forced to depend on methods they do not use.",
+      "It is better to have several small, focused interfaces."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements correctly describe the Dependency Inversion Principle (DIP)?",
+    "options": [
+      "High-level modules should not depend on low-level modules; both should depend on abstractions.",
+      "Abstractions should depend on details, not the other way around.",
+      "Details should depend on abstractions, not the other way around.",
+      "DIP encourages programming to interfaces, not concrete implementations."
+    ],
+    "answer": [
+      "High-level modules should not depend on low-level modules; both should depend on abstractions.",
+      "Details should depend on abstractions, not the other way around.",
+      "DIP encourages programming to interfaces, not concrete implementations."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which of the following are real-world examples or benefits of the SOLID principles?",
+    "options": [
+      "SRP reduces accidental breakage when changing unrelated functionality.",
+      "OCP allows extending functionality without modifying old code.",
+      "LSP ensures derived class objects can replace parent class objects safely.",
+      "ISP prefers large, all-in-one interfaces to reduce the number of interfaces.",
+      "DIP is like using standard plugs that work with any compatible device."
+    ],
+    "answer": [
+      "SRP reduces accidental breakage when changing unrelated functionality.",
+      "OCP allows extending functionality without modifying old code.",
+      "LSP ensures derived class objects can replace parent class objects safely.",
+      "DIP is like using standard plugs that work with any compatible device."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which of the following are common programming paradigms?",
+    "options": [
+      "Procedural programming",
+      "Functional programming",
+      "Object-oriented programming",
+      "Markup programming",
+      "Event-driven programming"
+    ],
+    "answer": [
+      "Procedural programming",
+      "Functional programming",
+      "Object-oriented programming"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which concepts are commonly used in Object-Oriented Software Engineering?",
+    "options": [
+      "Classes and objects",
+      "4 pillars of OOP",
+      "SOLID principles",
+      "Design patterns",
+      "Relational database schemas"
+    ],
+    "answer": [
+      "Classes and objects",
+      "4 pillars of OOP",
+      "SOLID principles",
+      "Design patterns"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which UML diagrams visually represent system objects, relationships, or behaviors?",
+    "options": [
+      "Use Case Diagrams",
+      "Activity Diagrams",
+      "Class Diagrams",
+      "Sequence Diagrams",
+      "State Diagrams",
+      "Entity-Relationship Diagrams"
+    ],
+    "answer": [
+      "Use Case Diagrams",
+      "Activity Diagrams",
+      "Class Diagrams",
+      "Sequence Diagrams",
+      "State Diagrams"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements correctly describe Use Case Diagrams in UML?",
+    "options": [
+      "They show which actors interact with the system and what they want to do.",
+      "They define system boundaries and user goals.",
+      "They describe object attributes and methods in detail.",
+      "They illustrate business process flows like a flowchart."
+    ],
+    "answer": [
+      "They show which actors interact with the system and what they want to do.",
+      "They define system boundaries and user goals."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements correctly describe Activity Diagrams in UML?",
+    "options": [
+      "They show how business logic flows in the system.",
+      "They are similar to flowcharts.",
+      "They define system classes and their methods.",
+      "They track object state changes over time."
+    ],
+    "answer": [
+      "They show how business logic flows in the system.",
+      "They are similar to flowcharts."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements correctly describe Class Diagrams in UML?",
+    "options": [
+      "They define the internal structure of the system.",
+      "They specify attributes and methods of classes.",
+      "They show actor interactions with the system.",
+      "They illustrate the runtime sequence of messages between objects."
+    ],
+    "answer": [
+      "They define the internal structure of the system.",
+      "They specify attributes and methods of classes."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements correctly describe Sequence Diagrams in UML?",
+    "options": [
+      "They show how objects communicate in time order.",
+      "They illustrate object interactions over time.",
+      "They define system internal attributes and methods.",
+      "They represent the flow of business logic like a flowchart."
+    ],
+    "answer": [
+      "They show how objects communicate in time order.",
+      "They illustrate object interactions over time."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements correctly describe State Diagrams in UML?",
+    "options": [
+      "They show how an object changes states under different conditions.",
+      "They are used for objects like orders changing from 'Pending' to 'Shipped'.",
+      "They define system-wide class attributes and methods.",
+      "They depict actor goals and system boundaries."
+    ],
+    "answer": [
+      "They show how an object changes states under different conditions.",
+      "They are used for objects like orders changing from 'Pending' to 'Shipped'."
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which stages are included in the Software Development Life Cycle (SDLC)?",
+    "options": [
+      "Requirements analysis",
+      "Design (OOAD)",
+      "Implementation",
+      "Testing",
+      "Maintenance",
+      "Deployment only"
+    ],
+    "answer": [
+      "Requirements analysis",
+      "Design (OOAD)",
+      "Implementation",
+      "Testing",
+      "Maintenance"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements correctly describe Object-Oriented Software Engineering (OOSE) and OOAD in SDLC?",
+    "options": [
+      "OOSE focuses heavily on the requirements analysis stage.",
+      "Use Cases and Use Case Diagrams are created during requirements analysis.",
+      "OOAD designs the system using UML diagrams.",
+      "Implementation turns designs into code.",
+      "Testing validates the system against requirements.",
+      "Maintenance is not part of SDLC."
+    ],
+    "answer": [
+      "OOSE focuses heavily on the requirements analysis stage.",
+      "Use Cases and Use Case Diagrams are created during requirements analysis.",
+      "OOAD designs the system using UML diagrams.",
+      "Implementation turns designs into code.",
+      "Testing validates the system against requirements."
+    ]
+  },
+
+  {
+    "type": "mrq",
+    "question": "Which roles are typically involved in requirements analysis and what are their responsibilities?",
+    "options": [
+      "Stakeholders: Describe needs, goals, and constraints",
+      "System Analysts: Elicit, clarify, and translate requirements into functional and non-functional specifications",
+      "Developers: Provide technical feasibility, identify implementation risks, prepare for OOAD and coding",
+      "Project Managers: Coordinate communication, manage scope, schedule, and changes",
+      "Testers: Directly write UML diagrams for design"
+    ],
+    "answer": [
+      "Stakeholders: Describe needs, goals, and constraints",
+      "System Analysts: Elicit, clarify, and translate requirements into functional and non-functional specifications",
+      "Developers: Provide technical feasibility, identify implementation risks, prepare for OOAD and coding",
+      "Project Managers: Coordinate communication, manage scope, schedule, and changes"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which activities are part of requirement analysis in software development?",
+    "options": [
+      "Gathering requirements",
+      "Analyzing and clarifying requirements",
+      "Documenting requirements for design and development",
+      "Directly coding system features",
+      "Writing deployment scripts"
+    ],
+    "answer": [
+      "Gathering requirements",
+      "Analyzing and clarifying requirements",
+      "Documenting requirements for design and development"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements correctly describe functional and non-functional requirements?",
+    "options": [
+      "Functional requirements define what the system must do, including features and interactions",
+      "Non-functional requirements define how the system performs, including performance, security, usability, reliability",
+      "Functional requirements describe system deployment environment",
+      "Non-functional requirements describe stakeholder identities"
+    ],
+    "answer": [
+      "Functional requirements define what the system must do, including features and interactions",
+      "Non-functional requirements define how the system performs, including performance, security, usability, reliability"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements correctly describe Requirements Elicitation?",
+    "options": [
+      "It actively discovers, extracts, and understands requirements from stakeholders",
+      "It simply receives a complete and accurate list of requirements",
+      "It involves stakeholders providing feedback and clarifying goals",
+      "It focuses only on technical feasibility"
+    ],
+    "answer": [
+      "It actively discovers, extracts, and understands requirements from stakeholders",
+      "It involves stakeholders providing feedback and clarifying goals"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which methods are examples of obtrusive (active) requirements elicitation?",
+    "options": [
+      "Interviews (open-ended, closed, bipolar, probes)",
+      "Questionnaires",
+      "Prototypes",
+      "Workshops / Joint Application Development sessions",
+      "Observation"
+    ],
+    "answer": [
+      "Interviews (open-ended, closed, bipolar, probes)",
+      "Questionnaires",
+      "Prototypes",
+      "Workshops / Joint Application Development sessions"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which methods are examples of unobtrusive (passive) requirements elicitation?",
+    "options": [
+      "Sampling",
+      "Investigation",
+      "Observation",
+      "Workshops",
+      "Interviews"
+    ],
+    "answer": [
+      "Sampling",
+      "Investigation",
+      "Observation"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which of the following are typical requirements artifacts produced from elicitation?",
+    "options": [
+      "Actors (external users or systems)",
+      "User Stories",
+      "Use Cases",
+      "Use Case Diagrams",
+      "Deployment scripts"
+    ],
+    "answer": [
+      "Actors (external users or systems)",
+      "User Stories",
+      "Use Cases",
+      "Use Case Diagrams"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "What is the correct chain of requirements artifacts from elicitation to design and code?",
+    "options": [
+      "Elicitation Methods → User Stories → Use Cases / Use Case Diagrams → UML Diagrams → Design & Code",
+      "User Stories → Elicitation Methods → UML Diagrams → Use Cases → Design & Code",
+      "Use Case Diagrams → UML Diagrams → Elicitation Methods → User Stories → Design & Code",
+      "Design & Code → UML Diagrams → Use Cases → User Stories → Elicitation Methods"
+    ],
+    "answer": [
+      "Elicitation Methods → User Stories → Use Cases / Use Case Diagrams → UML Diagrams → Design & Code"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which of the following are categories of non-functional requirements according to FURPS+?",
+    "options": [
+      "Functional",
+      "Usability",
+      "Reliability",
+      "Performance",
+      "Supportability",
+      "Constraints"
+    ],
+    "answer": [
+      "Functional",
+      "Usability",
+      "Reliability",
+      "Performance",
+      "Supportability",
+      "Constraints"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements correctly describe FURPS+ model?",
+    "options": [
+      "It is used to classify and organize non-functional requirements",
+      "Functional refers to system behavior, features, and capabilities",
+      "Usability refers to ease of use and human factors",
+      "Reliability refers to consistency and predictability",
+      "Performance refers to how well the system performs under conditions",
+      "Supportability refers to maintainability and configuration",
+      "Constraints refer to external limitations affecting the solution"
+    ],
+    "answer": [
+      "It is used to classify and organize non-functional requirements",
+      "Functional refers to system behavior, features, and capabilities",
+      "Usability refers to ease of use and human factors",
+      "Reliability refers to consistency and predictability",
+      "Performance refers to how well the system performs under conditions",
+      "Supportability refers to maintainability and configuration",
+      "Constraints refer to external limitations affecting the solution"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which of the following correctly describe Unified Modeling Language (UML)?",
+    "options": [
+      "It is a standardized visual language for modeling software systems",
+      "It visualizes system structure and behavior",
+      "It helps bridge communication between developers and stakeholders",
+      "It supports design before coding",
+      "It is a programming language for writing software"
+    ],
+    "answer": [
+      "It is a standardized visual language for modeling software systems",
+      "It visualizes system structure and behavior",
+      "It helps bridge communication between developers and stakeholders",
+      "It supports design before coding"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "UML diagrams are mainly divided into which categories?",
+    "options": [
+      "Structural diagrams – describe what the system is made of",
+      "Behavioral diagrams – describe how the system behaves",
+      "Logical diagrams – describe programming logic",
+      "Execution diagrams – describe machine instructions"
+    ],
+    "answer": [
+      "Structural diagrams – describe what the system is made of",
+      "Behavioral diagrams – describe how the system behaves"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which of the following are common behavioral UML diagrams?",
+    "options": [
+      "Use Case Diagram",
+      "Sequence Diagram",
+      "Activity Diagram",
+      "State Diagram",
+      "Class Diagram"
+    ],
+    "answer": [
+      "Use Case Diagram",
+      "Sequence Diagram",
+      "Activity Diagram",
+      "State Diagram"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "What is the purpose of a use case diagram?",
+    "options": [
+      "Provide a visual summary of behaviors and interactions described in textual use cases",
+      "Identify who interacts with the system and what the system does at a high level",
+      "Define the internal attributes and methods of classes",
+      "Visualize execution flow and time ordering in detail"
+    ],
+    "answer": [
+      "Provide a visual summary of behaviors and interactions described in textual use cases",
+      "Identify who interacts with the system and what the system does at a high level"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which of the following are elements of a basic use case diagram?",
+    "options": [
+      "Actor: Entity interacting with the system",
+      "Use Case: A goal or behavior performed by the system",
+      "System Boundary: Defines the scope of the system",
+      "Association: Solid line connecting actor to use case",
+      "Sequence: Shows time-ordered messages between objects"
+    ],
+    "answer": [
+      "Actor: Entity interacting with the system",
+      "Use Case: A goal or behavior performed by the system",
+      "System Boundary: Defines the scope of the system",
+      "Association: Solid line connecting actor to use case"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "In use case diagrams, what does <<include>> represent?",
+    "options": [
+      "A use case must include the behavior of another use case (shared behavior)",
+      "An optional behavior that happens only under certain conditions",
+      "A parent-child relationship between actors or use cases",
+      "A specialized version of a general element"
+    ],
+    "answer": [
+      "A use case must include the behavior of another use case (shared behavior)"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "In use case diagrams, what does <<extend>> represent?",
+    "options": [
+      "A use case extends another under certain conditions (optional behavior)",
+      "A required shared behavior between two use cases",
+      "The parent-child relationship of actors",
+      "The inheritance relationship of system classes"
+    ],
+    "answer": [
+      "A use case extends another under certain conditions (optional behavior)"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which of the following correctly describe generalizations and specializations in use case diagrams?",
+    "options": [
+      "<<Generalizations>: Parent-child relationship where parent contains common behavior and child inherits it",
+      "<<Specializations>: A specific version of a general element emphasizing distinct behavior or roles",
+      "Arrow direction: from parent → child",
+      "Arrow direction: from child → parent"
+    ],
+    "answer": [
+      "<<Generalizations>: Parent-child relationship where parent contains common behavior and child inherits it",
+      "<<Specializations>: A specific version of a general element emphasizing distinct behavior or roles",
+      "Arrow direction: from child → parent"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which of the following are true about actors in use case diagrams?",
+    "options": [
+      "Actors represent entities that interact with the system",
+      "Actors can be human users or other systems",
+      "Actors are always represented as rectangles",
+      "Actors are always inside the system boundary box"
+    ],
+    "answer": [
+      "Actors represent entities that interact with the system",
+      "Actors can be human users or other systems"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which of the following correctly describe associations in use case diagrams?",
+    "options": [
+      "Associations are solid lines connecting actors to use cases",
+      "They show participation between the actor and use case",
+      "They always indicate inheritance relationships",
+      "They are represented as dashed arrows for general interactions"
+    ],
+    "answer": [
+      "Associations are solid lines connecting actors to use cases",
+      "They show participation between the actor and use case"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which of the following best describe Object-Oriented Analysis and Design (OOAD)?",
+    "options": [
+      "A methodology for designing software systems using object-oriented principles",
+      "Turns requirements into a structured, implementation-ready design",
+      "Focuses on modeling a system as a collection of real-world objects and their interactions",
+      "Only concerned with writing code and implementation details",
+      "Encapsulates data and behavior in objects"
+    ],
+    "answer": [
+      "A methodology for designing software systems using object-oriented principles",
+      "Turns requirements into a structured, implementation-ready design",
+      "Focuses on modeling a system as a collection of real-world objects and their interactions",
+      "Encapsulates data and behavior in objects"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "What is the primary goal of OOAD?",
+    "options": [
+      "Produce a clear, structured system design traceable to requirements",
+      "Generate implementation code directly from requirements",
+      "Ensure maintainable, extensible, and testable system design",
+      "Eliminate the need for requirements analysis"
+    ],
+    "answer": [
+      "Produce a clear, structured system design traceable to requirements",
+      "Ensure maintainable, extensible, and testable system design"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements describe the purpose of OOAD?",
+    "options": [
+      "Translate requirements into a detailed system design",
+      "Organize system behavior into objects with responsibilities",
+      "Trace every class, method, and interaction back to requirements",
+      "Bypass requirements analysis to speed up design"
+    ],
+    "answer": [
+      "Translate requirements into a detailed system design",
+      "Organize system behavior into objects with responsibilities",
+      "Trace every class, method, and interaction back to requirements"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which stages belong to Object-Oriented Software Engineering (OOSE) and SDLC?",
+    "options": [
+      "Requirements Analysis (RA)",
+      "Object-Oriented Analysis and Design (OOAD)",
+      "Implementation",
+      "Testing",
+      "Maintenance",
+      "Deployment Planning"
+    ],
+    "answer": [
+      "Requirements Analysis (RA)",
+      "Object-Oriented Analysis and Design (OOAD)",
+      "Implementation",
+      "Testing",
+      "Maintenance"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which of the following does Requirements Analysis (RA) answer?",
+    "options": [
+      "What does the system need to do?",
+      "How should the system be structured?",
+      "Defines Functional and Non-Functional Requirements",
+      "Produces classes, objects, and design diagrams"
+    ],
+    "answer": [
+      "What does the system need to do?",
+      "Defines Functional and Non-Functional Requirements"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which of the following does OOAD answer?",
+    "options": [
+      "How should the system be structured to meet requirements?",
+      "Transforms analysis artifacts into system design",
+      "Generates code for immediate deployment",
+      "Identifies missing functional requirements"
+    ],
+    "answer": [
+      "How should the system be structured to meet requirements?",
+      "Transforms analysis artifacts into system design"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements correctly describe Object-Oriented Analysis (OOA)?",
+    "options": [
+      "Focuses on modeling the real-world problem domain",
+      "Identifies conceptual objects, responsibilities, and behaviors",
+      "Uses domain terminology and avoids technical design details",
+      "Primarily concerned with implementation classes and data types"
+    ],
+    "answer": [
+      "Focuses on modeling the real-world problem domain",
+      "Identifies conceptual objects, responsibilities, and behaviors",
+      "Uses domain terminology and avoids technical design details"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "What are the inputs to Object-Oriented Analysis (OOA)?",
+    "options": [
+      "Functional Requirements (FRs)",
+      "Non-functional Requirements (NFRs)",
+      "User Stories",
+      "Use Cases",
+      "Use Case Diagrams",
+      "Implementation code"
+    ],
+    "answer": [
+      "Functional Requirements (FRs)",
+      "Non-functional Requirements (NFRs)",
+      "User Stories",
+      "Use Cases",
+      "Use Case Diagrams"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "What are the outputs (artifacts) of OOA?",
+    "options": [
+      "Conceptual Class Diagram",
+      "Domain object list",
+      "Responsibilities",
+      "Associations",
+      "Final implementation code"
+    ],
+    "answer": [
+      "Conceptual Class Diagram",
+      "Domain object list",
+      "Responsibilities",
+      "Associations"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Why are assumptions documented during OOA?",
+    "options": [
+      "To maintain behavioral consistency when functional requirements are incomplete",
+      "To automatically create new functional requirements",
+      "To keep the conceptual model defensible, traceable, and reviewable",
+      "To replace stakeholder input"
+    ],
+    "answer": [
+      "To maintain behavioral consistency when functional requirements are incomplete",
+      "To keep the conceptual model defensible, traceable, and reviewable"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "When deriving conceptual responsibilities during OOA, which statements are true?",
+    "options": [
+      "Analysts identify gaps in functional requirements",
+      "Assumptions may become new user-visible functional requirements",
+      "Responsibilities are documented for internal logic only if they don't add new functionality",
+      "Responsibilities should be ignored if they are not explicitly in the FRs"
+    ],
+    "answer": [
+      "Analysts identify gaps in functional requirements",
+      "Assumptions may become new user-visible functional requirements",
+      "Responsibilities are documented for internal logic only if they don't add new functionality"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which steps correctly describe the OOA process?",
+    "options": [
+      "Identify Conceptual Objects",
+      "Identify Responsibilities",
+      "Identify Collaborators",
+      "Create Conceptual Class Diagram",
+      "Write implementation code"
+    ],
+    "answer": [
+      "Identify Conceptual Objects",
+      "Identify Responsibilities",
+      "Identify Collaborators",
+      "Create Conceptual Class Diagram"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which of the following are true about conceptual objects in OOA?",
+    "options": [
+      "They represent system-tracked entities in the problem domain",
+      "Each has defined responsibilities",
+      "They include implementation details like data types",
+      "They interact with collaborators to fulfill responsibilities"
+    ],
+    "answer": [
+      "They represent system-tracked entities in the problem domain",
+      "Each has defined responsibilities",
+      "They interact with collaborators to fulfill responsibilities"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "What is the role of collaborators in OOA?",
+    "options": [
+      "Provide information or services an object does not own itself",
+      "Act as external stakeholders",
+      "Define system boundaries",
+      "Ensure behavioral consistency among conceptual objects"
+    ],
+    "answer": [
+      "Provide information or services an object does not own itself",
+      "Ensure behavioral consistency among conceptual objects"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements describe Conceptual Class Diagrams?",
+    "options": [
+      "Visually represent conceptual objects, responsibilities, and associations",
+      "Only include implementation classes, methods, and data types",
+      "Do not include system behavior or high-level interactions",
+      "Focus only on concepts and associations, not technical details"
+    ],
+    "answer": [
+      "Visually represent conceptual objects, responsibilities, and associations",
+      "Focus only on concepts and associations, not technical details"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "During OOA, functional requirements are often incomplete. What should analysts do?",
+    "options": [
+      "Derive logically necessary responsibilities",
+      "Document assumptions",
+      "Ignore gaps until implementation",
+      "Review assumptions with stakeholders"
+    ],
+    "answer": [
+      "Derive logically necessary responsibilities",
+      "Document assumptions",
+      "Review assumptions with stakeholders"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which of the following is true about assumptions that are internal logic only?",
+    "options": [
+      "They are not automatically new functional requirements",
+      "They are documented to maintain model consistency",
+      "They can be ignored if not in the original requirements",
+      "They should always be converted to new FRs"
+    ],
+    "answer": [
+      "They are not automatically new functional requirements",
+      "They are documented to maintain model consistency"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "What is the relationship between OOA and OOAD?",
+    "options": [
+      "OOA identifies conceptual objects and responsibilities based on requirements",
+      "OOAD structures the system design for implementation",
+      "OOA produces code directly",
+      "OOAD ignores functional requirements"
+    ],
+    "answer": [
+      "OOA identifies conceptual objects and responsibilities based on requirements",
+      "OOAD structures the system design for implementation"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which of the following are true about traceability in OOAD?",
+    "options": [
+      "Every class, method, and interaction should trace back to requirements",
+      "Traceability ensures design decisions align with user goals",
+      "Traceability is only needed during implementation",
+      "It helps prepare the system for maintainable and testable implementation"
+    ],
+    "answer": [
+      "Every class, method, and interaction should trace back to requirements",
+      "Traceability ensures design decisions align with user goals",
+      "It helps prepare the system for maintainable and testable implementation"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Why is OOAD important when design follows requirements analysis?",
+    "options": [
+      "Prevents missing requirements",
+      "Avoids over-engineering",
+      "Reduces system fragility",
+      "Eliminates the need for testing"
+    ],
+    "answer": [
+      "Prevents missing requirements",
+      "Avoids over-engineering",
+      "Reduces system fragility"
+    ]
+  },
+
+  {
+    "type": "mrq",
+    "question": "Which statements correctly describe Object-Oriented Design (OOD)?",
+    "options": [
+      "Translates conceptual objects into concrete software structures",
+      "Defines classes, attributes, methods, and relationships",
+      "Prepares the system for implementation and testing",
+      "Focuses only on understanding the problem domain"
+    ],
+    "answer": [
+      "Translates conceptual objects into concrete software structures",
+      "Defines classes, attributes, methods, and relationships",
+      "Prepares the system for implementation and testing"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which artifacts are typically produced in OOD?",
+    "options": [
+      "UML Class Diagram",
+      "UML Sequence Diagram",
+      "UML State Diagram",
+      "Conceptual Class Diagram (CCD)"
+    ],
+    "answer": [
+      "UML Class Diagram",
+      "UML Sequence Diagram",
+      "UML State Diagram"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "What is the main difference between OOA and OOD artifacts?",
+    "options": [
+      "OOA artifacts describe the problem domain",
+      "OOD artifacts are implementation-ready and guide coding",
+      "OOA artifacts include fully typed classes and methods with visibility",
+      "OOD artifacts are derived from use cases and system scenarios"
+    ],
+    "answer": [
+      "OOA artifacts describe the problem domain",
+      "OOD artifacts are implementation-ready and guide coding",
+      "OOD artifacts are derived from use cases and system scenarios"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "How do conceptual objects influence OOD?",
+    "options": [
+      "They inform the design of software classes",
+      "They evolve into UML Class Diagrams with data members, types, methods, and visibility",
+      "They are discarded and do not influence design",
+      "They are used to create Sequence and State Diagrams"
+    ],
+    "answer": [
+      "They inform the design of software classes",
+      "They evolve into UML Class Diagrams with data members, types, methods, and visibility",
+      "They are used to create Sequence and State Diagrams"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which criteria determine candidate software classes from conceptual class diagram (CCD) classes?",
+    "options": [
+      "State (data to remember)",
+      "Behavior (responsibilities / logic)",
+      "Identity (tracked separately)",
+      "Color or font used in diagrams"
+    ],
+    "answer": [
+      "State (data to remember)",
+      "Behavior (responsibilities / logic)",
+      "Identity (tracked separately)"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "What actions are involved in refining CCD classes into OOD classes?",
+    "options": [
+      "Merge, Split, or Disappear classes",
+      "Add system classes like Controller or Service",
+      "Add typed Attributes",
+      "Add Method signatures with parameters and return types",
+      "Write final implementation code immediately"
+    ],
+    "answer": [
+      "Merge, Split, or Disappear classes",
+      "Add system classes like Controller or Service",
+      "Add typed Attributes",
+      "Add Method signatures with parameters and return types"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which relationships are refined during OOD?",
+    "options": [
+      "Association",
+      "Aggregation",
+      "Composition",
+      "Generalization",
+      "Realization",
+      "Inheritance from CCD"
+    ],
+    "answer": [
+      "Association",
+      "Aggregation",
+      "Composition",
+      "Generalization",
+      "Realization"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which principles are applied when completing UML Class Diagrams in OOD?",
+    "options": [
+      "4 pillars of OOP (Encapsulation, Inheritance, Polymorphism, Abstraction)",
+      "SOLID principles",
+      "Design patterns",
+      "Only functional requirements analysis"
+    ],
+    "answer": [
+      "4 pillars of OOP (Encapsulation, Inheritance, Polymorphism, Abstraction)",
+      "SOLID principles",
+      "Design patterns"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements about Sequence and State Diagrams are true in OOD?",
+    "options": [
+      "Sequence Diagrams show dynamic object interactions over time",
+      "State Diagrams show object lifecycle and state transitions",
+      "Both are derived from use cases and system scenarios",
+      "They are conceptual artifacts that do not guide implementation"
+    ],
+    "answer": [
+      "Sequence Diagrams show dynamic object interactions over time",
+      "State Diagrams show object lifecycle and state transitions",
+      "Both are derived from use cases and system scenarios"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements correctly describe the transition from OOA to OOD?",
+    "options": [
+      "Conceptual objects evolve into candidate software classes",
+      "System classes (Controller / Service) are added for coordination",
+      "Attributes and methods are typed and defined",
+      "Functional requirements are ignored after OOA"
+    ],
+    "answer": [
+      "Conceptual objects evolve into candidate software classes",
+      "System classes (Controller / Service) are added for coordination",
+      "Attributes and methods are typed and defined"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which of the following is true about Controllers and System classes in OOD?",
+    "options": [
+      "They coordinate domain objects and encapsulate system behavior",
+      "They contain logic that does not belong to domain objects",
+      "They are discarded after conceptual analysis",
+      "They are responsible for implementing all domain object behavior"
+    ],
+    "answer": [
+      "They coordinate domain objects and encapsulate system behavior",
+      "They contain logic that does not belong to domain objects"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "When adding methods in OOD, which elements are defined?",
+    "options": [
+      "Method signature",
+      "Parameters",
+      "Return types",
+      "Implementation code immediately"
+    ],
+    "answer": [
+      "Method signature",
+      "Parameters",
+      "Return types"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which is true about applying OO design principles in OOD?",
+    "options": [
+      "They guide class design, method design, and relationships",
+      "They include 4 pillars, SOLID, and design patterns",
+      "They focus on coding details only",
+      "They ensure maintainable and extensible software"
+    ],
+    "answer": [
+      "They guide class design, method design, and relationships",
+      "They include 4 pillars, SOLID, and design patterns",
+      "They ensure maintainable and extensible software"
+    ]
+  },
+  {
+    "type": "mrq",
+    "question": "Which statements correctly describe the process of creating UML Class Diagram in OOD?",
+    "options": [
+      "Start from conceptual objects and candidate classes",
+      "Add system classes and typed attributes",
+      "Define methods, refine relationships, and apply OO principles",
+      "Skip functional requirements and analysis artifacts"
+    ],
+    "answer": [
+      "Start from conceptual objects and candidate classes",
+      "Add system classes and typed attributes",
+      "Define methods, refine relationships, and apply OO principles"
+    ]
   }
   ]
 };
