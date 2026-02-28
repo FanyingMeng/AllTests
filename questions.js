@@ -4160,8 +4160,6 @@ const questionBank = {
     ],
     "answer": [
       "Get and set can have separate access modifiers.",
-      "Accessors cannot be more restrictive than the property itself.",
-      "A property cannot have public get and private set.",
       "A property can have private get and public set."
     ]
   },
