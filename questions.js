@@ -3644,8 +3644,18 @@ const questionBank = {
   },
   { 
     "type": "fib", 
-    "question": "查看进程： ",
+    "question": "查看当前进程： ",
     "answer": "ps"
+  },
+  {
+    "type": "fib", 
+    "question": "系统所有用户的所有进程： ",
+    "answer": "ps aux"
+  },
+  {
+    "type": "fib", 
+    "question": "系统所有进程（full format）： ",
+    "answer": "ps -ef"
   },
   { 
     "type": "fib", 
@@ -3679,8 +3689,18 @@ const questionBank = {
   },
   { 
     "type": "fib", 
-    "question": "怎么看系统在哪些目录下查找可执行命令： ",
+    "question": "怎么看系统在哪些目录下查找可执行命令（环境变量）： ",
     "answer": "echo $PATH"
+  },
+  { 
+    "type": "fib", 
+    "question": "实时监控系统进程： ",
+    "answer": "top"
+  },
+  {
+    "type": "fib", 
+    "question": "给环境变量，添加路径/home/user/bin： ",
+    "answer": "export PATH=$PATH:/home/user/bin"
   }
   ],
 
