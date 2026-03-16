@@ -3703,5 +3703,202 @@ const questionBank = {
     "answer": "export PATH=$PATH:/home/user/bin"
   }
   ],
+  BASH_mideterm:[
+  {
+    "type": "fib",
+    "question": "返回当前文件夹的上一级目录",
+    "answer": "cd .."
+  },
+  {
+    "type": "fib",
+    "question": "进入当前文件夹的子文件夹f1",
+    "answer": "cd ./f1"
+  },
+  {
+    "type": "fib",
+    "question": "列出所有txt结尾的文件",
+    "answer": "ls *.txt"
+  },
+  {
+    "type": "fib",
+    "question": "列出后缀l开头且后缀名是3位的文件",
+    "answer": "ls *.l??"
+  },
+  {
+    "type": "fib",
+    "question": "列出后缀是l开头的所有文件",
+    "answer": "ls *.l*"
+  },
+  {
+    "type": "fib",
+    "question": "列出逆序排列输出结果",
+    "answer": "ls -r"
+  },
+  {
+    "type": "fib",
+    "question": "列出递归显示结果",
+    "answer": "ls -R"
+  }, 
+  {
+    "type": "fib",
+    "question": "复制当前文件夹下的 f1.txt 到当前文件夹，重命名为f2.txt",
+    "answer": "cp f1.txt f2.txt"
+  }, 
+  {
+    "type": "fib",
+    "question": "复制d1文件夹下的 f1.txt 到 d2文件夹 重命名为f2.txt",
+    "answer": "cp d1/f1.txt d2/f2.txt"
+  }, 
+  {
+    "type": "fib",
+    "question": "在上一级文件夹中创建d1文件夹",
+    "answer": "mkdir ../d1"
+  }, 
+  {
+    "type": "fib",
+    "question": "创建一个f1.txt，并写入hello",
+    "answer": "echo \"hello\" >f1.txt"
+  }, 
+  {
+    "type": "fib",
+    "question": "删除d1文件夹及其子文件夹",
+    "answer": "rm -r d1"
+  }, 
+  {
+    "type": "fib",
+    "question": "删除空文件夹d1",
+    "answer": "rm -d d1"
+  }, 
+  {
+    "type": "fib",
+    "question": "移动d1文件夹下的 f1.txt 到 d2文件夹 重命名为f2.txt",
+    "answer": "mv d1/f1.txt d2/f2.txt"
+  }, 
+  {
+    "type": "fib",
+    "question": "整个f1.txt文件内容输出到终端",
+    "answer": "cat f1.txt"
+  }, 
+  {
+    "type": "fib",
+    "question": "显示f1.txt文件的前 10 行内容",
+    "answer": "head f1.txt"
+  }, 
+  {
+    "type": "fib",
+    "question": "显示f1.txt文件的后 10 行内容",
+    "answer": "tail f1.txt"
+  }, 
+  {
+    "type": "fib",
+    "question": "显示f1.txt文件,一页一页显示",
+    "answer": "more f1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "将 f1.txt 这个文件的所有者更改为用户 alice",
+    "answer": "chown alice f1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "查看当前登录用户所属的组",
+    "answer": "groups"
+  },
+  {
+    "type": "fib",
+    "question": "查看用户user1所属的组",
+    "answer": "groups user1"
+  },
+  {
+    "type": "fib",
+    "question": " 显示当前登录到这台机器的用户",
+    "answer": "who"
+  },
+  {
+    "type": "fib",
+    "question": "显示操作系统信息",
+    "answer": "uname"
+  },
+  {
+    "type": "fib",
+    "question": "用管理员权限创建新用户user1",
+    "answer": "sudo adduser user1"
+  },
+  {
+    "type": "fib",
+    "question": "切换到用户user1",
+    "answer": "su user1"
+  },
+  {
+    "type": "fib",
+    "question": "用管理员权限修改用户u1的密码，不需要旧密码",
+    "answer": "sudo passwd u1"
+  },
+  {
+    "type": "fib",
+    "question": "在vim中编辑完文件保存文件为f1.txt",
+    "answer": ":w f1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "在vim中编辑f1.txt",
+    "answer": ":e f1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "查看后台任务",
+    "answer": "jobs"
+  },
+  {
+    "type": "fib",
+    "question": "显示行数",
+    "answer": ":set number"
+  },
+  {
+    "type": "fib",
+    "question": "运行文件f1.sh",
+    "answer": "bash f1.sh"
+  },
+  {
+    "type": "fib",
+    "question": "查看系统用户u1的信息",
+    "answer": "finger u1"
+  },
+  {
+    "type": "fib",
+    "question": "显示当前登录账户的详细信息",
+    "answer": "finger u$USER"
+  },
+  {
+    "type": "fib",
+    "question": "搜索f1.txt中关键词apple或者cat",
+    "answer": "grep -E \"apple|cat\" f1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "搜索f1.txt中关键词hall,只要hall这一个完整单词",
+    "answer": "grep -w \"hall\" f1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "搜索f1.txt中关键词含有hall,加行数",
+    "answer": "grep -n \"hall\" f1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "搜索f1.txt中关键词不含有hall,加行数",
+    "answer": "grep -v \"hall\" f1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "搜索f1.txt中关键词含有hall,不显示内容，只显示总共有多少行匹配到了",
+    "answer": "grep -c \"hall\" f1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "搜索f1.txt中关键词含有hall,忽略大小写",
+    "answer": "grep -i \"hall\" f1.txt"
+  }
+  ]
 
 };
