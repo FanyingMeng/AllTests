@@ -3899,6 +3899,171 @@ const questionBank = {
     "question": "搜索f1.txt中关键词含有hall,忽略大小写",
     "answer": "grep -i \"hall\" f1.txt"
   }
+  ],
+  BASH_quiz04:[
+  {
+    "type": "fib",
+    "question": "在文件f1.txt中搜索包含hello的行，显示行号",
+    "answer": "grep -n \"hello\" f1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "在文件f1.txt中搜索包含hello或者cat的行，显示行号",
+    "answer": "grep -nE \"apple|cat\" f1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "Extended Regular Expressions两种写法",
+    "answer": "grep -E 或 egrep"
+  },
+  {
+    "type": "fib",
+    "question": "在文件f1.txt中搜索字符串“hello｜cat”的行",
+    "answer": "grep -F \"apple|cat\" f1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "search for string data, ignoring the special meaning of any 	characters两种写法",
+    "answer": "grep -F 或 fgrep"
+  },
+  {
+    "type": "fib",
+    "question": "在文件f1.txt中仅匹配完整的单词 hall，不会匹配 shallow 或 halls",
+    "answer": "grep -w hall f1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "在文件f1.txt中找出所有不包含 hall 的行,反向搜索",
+    "answer": "grep -v hall f1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "在文件f1.txt中 不显示内容，只显示总共有多少行匹配到了 hall",
+    "answer": "grep -c hall f1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "在文件f1.txt中 忽略大小写，匹配 hall、Hall、HALL 等各种形式",
+    "answer": "grep -i hall f1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "列出当前目录下所有以 .txt 结尾的文件",
+    "answer": "ls *.txt"
+  },
+  {
+    "type": "fib",
+    "question": "列出当前目录下所有以 file(_).txt 结尾的文件,(_)表示一个空位",
+    "answer": "ls file?.txt"
+  },
+  {
+    "type": "fib",
+    "question": "列出当前目录下file1.txt 和 file2.txt",
+    "answer": "ls file[12].txt"
+  },
+  {
+    "type": "fib",
+    "question": "列出当前目录下 file + 一个小写字母 + .txt",
+    "answer": "ls file[a-z].txt"
+  },
+  {
+    "type": "fib",
+    "question": "列出当前目录下 f1.log 以及所有以 f2 开头的 .log 文件。",
+    "answer": "ls {f1,f2*}.log"
+  },
+  {
+    "type": "fib",
+    "question": "列出当前目录下 递归匹配所有子目录里的 .txt 文件",
+    "answer": "ls **/*.txt"
+  },
+  {
+    "type": "fib",
+    "question": "当前目录所有 .log 文件中,查找 以 ERROR 开头的行",
+    "answer": "grep \"^ERROR\" *.log"
+  },
+  {
+    "type": "fib",
+    "question": "当前目录所有 .log 文件中,查找 以 home 结尾的行",
+    "answer": "grep \"home$\" *.log"
+  },
+  {
+    "type": "fib",
+    "question": "f1.txt文件中,包含非数字字符的行",
+    "answer": "grep [^0-9] f1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "在当前目录的 d1 目录中，查找文件名包含 re 的文件",
+    "answer": "find d1 -type f -name \"*re*\""
+  },
+  {
+    "type": "fib",
+    "question": "在当前目录的 d1 目录中，查找大于 100k 的文件",
+    "answer": "find d1 -type f -size +100k"
+  },
+  {
+    "type": "fib",
+    "question": "在当前目录的 d1 目录中，查找小于 100 字节的文件,统计文件内容（行数、单词数、字节数）",
+    "answer": "find d1 -size -100c -exec wc {} \\;"
+  },
+  {
+    "type": "fib",
+    "question": "在当前目录及其子目录中,查找 最近 1 天内被访问过的文件或目录,并打印出来",
+    "answer": "find . -atime -1 -print"
+  },
+  {
+    "type": "fib",
+    "question": "在你的家目录中,查找空文件或空目录,并逐个询问是否删除",
+    "answer": "find ~ -empty -ok rm {} \\;"
+  },
+  {
+    "type": "fib",
+    "question": "标准输入，默认连接到键盘",
+    "answer": " (stdin, 0)"
+  },
+  {
+    "type": "fib",
+    "question": "标准输出,默认连接到终端屏幕（显示器）",
+    "answer": "(stdout, 1)"
+  },
+  {
+    "type": "fib",
+    "question": "标准错误,默认连接到终端屏幕（显示器）",
+    "answer": "(stderr, 2)"
+  },
+  {
+    "type": "fib",
+    "question": "把 ls 的输出结果,写入到文件 f1.txt 中",
+    "answer": "ls > f1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "把文本 line 1 追加 到文件 f1.txt 的末尾",
+    "answer": "echo \"line 1\" >> f1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "列出 /home 和 /ect 目录内容,错误信息写入文件 errorfile",
+    "answer": "ls /home /ect 2> errorfile"
+  },
+  {
+    "type": "fib",
+    "question": "列出 /home 和 /ect 目录内容,正常输出和错误信息写入文件 errorfile",
+    "answer": "ls /home /ect > errorfile 2>&1"
+  },
+  {
+    "type": "fib",
+    "question": "列出 /home 和 /ect 目录内容,错误信息丢弃",
+    "answer": "ls /home /ect 2> /dev/null"
+  },
+  {
+    "type": "fib",
+    "question": "列出当前目录文件和目录，把标准输出写入文件f1.txt,同时传递到管道的下一个命令,统计行数（即文件/目录数量）",
+    "answer": "ls | tee f1.txt | wc -l"
+  }
+
+
+
   ]
 
 };
