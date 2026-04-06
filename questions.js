@@ -4064,6 +4064,264 @@ const questionBank = {
 
 
 
-  ]
+  ],
+  BASH_quiz05:[
+  {
+    "type": "fib",
+    "question": "创建 user1 并创建 home directory",
+    "answer": "useradd -m user1"
+  },
+  {
+    "type": "fib",
+    "question": "创建 user1 但不创建 home directory",
+    "answer": "useradd -M user1"
+  },
+  {
+    "type": "fib",
+    "question": "创建 user1 并且指定 home directory在 data文件夹下",
+    "answer": "useradd -d /data/user1 user1"
+  },
+  {
+    "type": "fib",
+    "question": "创建 user1 并且指定用户的登录 Shell",
+    "answer": "useradd -s /bin/bash user1"
+  },
+  {
+    "type": "fib",
+    "question": "创建 user1 并且禁止用户的登录 Shell",
+    "answer": "useradd -s /sbin/nologin user1"
+  },
+  {
+    "type": "fib",
+    "question": "创建 user1 并且指定primary group为g1",
+    "answer": "useradd -g g1 user1"
+  },
+  {
+    "type": "fib",
+    "question": "创建 user1 并且指定secondary group为g1 和 g2",
+    "answer": "useradd -G g1,g2 user1"
+  },
+  {
+    "type": "fib",
+    "question": "创建 user1 并且指定primary group为g1, 指定secondary group为 g2, g3和 g4",
+    "answer": "useradd -g g1 -G g2,g3,g4 user1"
+  },
+  {
+    "type": "fib",
+    "question": "创建 user1 并且指定指定用户的 UID 1500",
+    "answer": "useradd -u 1500 user1"
+  },
+  {
+    "type": "fib",
+    "question": "创建 user1 并且添加用户备注信息 \"admin\"",
+    "answer": "useradd -c \"Admin\" user1"
+  },
+  {
+    "type": "fib",
+    "question": "创建 系统账户 nginx",
+    "answer": "useradd -r nginx"
+  },
+  {
+    "type": "fib",
+    "question": "创建一个名为 zhangsan 的用户，自动创建主目录，并指定 bash 为默认 shell",
+    "answer": "sudo useradd -m -s /bin/bash zhangsan"
+  },
+  {
+    "type": "fib",
+    "question": "创建一个名为 redis 的系统用户，不创建主目录，且禁止通过 SSH 登录系统",
+    "answer": "sudo useradd -r -M -s /sbin/nologin redis"
+  },
+  {
+    "type": "fib",
+    "question": "创建一个名为 dev1 的开发人员，自动创建主目录, 主组设为 dev_group，同时加入 docker 附加组，并添加备注Backend",
+    "answer": "sudo useradd -m -g dev_group -G docker -c \"Backend\" dev1"
+  },
+  {
+    "type": "fib",
+    "question": "仅删除 user1 账号信息",
+    "answer": "userdel user1"
+  },
+  {
+    "type": "fib",
+    "question": "删除 user1 账号信息，同时删除用户主目录及本地邮箱",
+    "answer": "userdel -r user1"
+  },
+  {
+    "type": "fib",
+    "question": "强制删除正在登录或有进程运行的用户 user1 及其目录",
+    "answer": "userdel -f -r username"
+  },
+  {
+    "type": "fib",
+    "question": "用deluser: 等同于 userdel -r user1",
+    "answer": "deluser --remove-home user1"
+  },
+  {
+    "type": "fib",
+    "question": "用deluser: 在全系统搜寻并删除 user1 的所有文件",
+    "answer": "deluser --remove-all-files user1"
+  },
+  {
+    "type": "fib",
+    "question": "将用户 u1 的登录名修改为 u2",
+    "answer": "usermod -l u1 u2"
+  },
+  {
+    "type": "fib",
+    "question": "修改用户 bob 的主目录为 /new/home/bob",
+    "answer": "usermod -d /new/home/bob bob"
+  },
+  {
+    "type": "fib",
+    "question": "修改用户 bob 的主目录为 /new/home/bob，并移动原目录内容",
+    "answer": "usermod -m -d /new/home/bob bob"
+  },
+  {
+    "type": "fib",
+    "question": "将用户 a1 的登录 Shell 修改为 /bin/zsh",
+    "answer": "usermod -s /bin/zsh a1"
+  },
+  {
+    "type": "fib",
+    "question": "将用户 z1 的主组修改为 op",
+    "answer": "usermod -g op z1"
+  },
+  {
+    "type": "fib",
+    "question": "将用户 a1 的附加组修改为 docker（覆盖原有附加组）",
+    "answer": "usermod -G docker a1"
+  },
+  {
+    "type": "fib",
+    "question": "安全地将用户 a1 添加到 docker 附加组（不移除原有组）",
+    "answer": "usermod -aG docker a1"
+  },
+  {
+    "type": "fib",
+    "question": "锁定用户 b1 的账号（禁止密码登录）",
+    "answer": "usermod -L b1"
+  },
+  {
+    "type": "fib",
+    "question": "解锁用户 b1 的账号",
+    "answer": "usermod -U b1"
+  },
+  {
+  "type": "fib",
+  "question": "将用户 lisi 添加到 sudo 组中",
+  "answer": "sudo addgroup lisi sudo"
+  },
+  {
+  "type": "fib",
+  "question": "将用户 marie 从 docker 组中移除，但不删除用户，也不删除组",
+  "answer": "sudo delgroup marie docker"
+  },
+  {
+    "type": "fib",
+    "question": "给用户 lisi 添加对 file.txt 的读和执行权限",
+    "answer": "setfacl -m u:lisi:rx file.txt"
+  },
+  {
+    "type": "fib",
+    "question": "删除用户 lisi 对 file.txt 的 ACL 权限",
+    "answer": "setfacl -x u:lisi file.txt"
+  },
+  {
+    "type": "fib",
+    "question": "清空 file.txt 上的所有 ACL 权限，恢复为传统权限",
+    "answer": "setfacl -b file.txt"
+  },
+  {
+    "type": "fib",
+    "question": "递归给目录 /data/ 下的用户 bob 分配读写执行权限",
+    "answer": "setfacl -R -m u:bob:rwx /data/"
+  },
+  {
+    "type": "fib",
+    "question": "设置 /project/ 目录下新建文件默认 ACL 权限，给予用户 alice 读写权限",
+    "answer": "setfacl -d -m u:alice:rw /project/"
+  },
+  {
+    "type": "fib",
+    "question": "在终端查看变量 VAR1",
+    "answer": "echo $VAR1"
+  },
+  {
+    "type": "fib",
+    "question": "列出当前 Shell 中的所有变量（包括 Shell 变量、环境变量和函数）",
+    "answer": "set"
+  },
+  {
+    "type": "fib",
+    "question": "列出当前用户的所有环境变量（不显示 Shell 函数）",
+    "answer": "env"
+  },
+  {
+    "type": "fib",
+    "question": "另一种列出当前用户环境变量的命令（功能等同 env）",
+    "answer": "printenv"
+  },
+  {
+    "type": "fib",
+    "question": "从内存中删除变量 VAR_NAME",
+    "answer": "unset VAR_NAME"
+  },
+
+  {
+    "type": "fib",
+    "question": "将文件 f1.txt 的 other 权限改为只读",
+    "answer": "chmod o=r f1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "显示修改反馈，把文件 f1.txt 的 user 权限改为写读执行",
+    "answer": "chmod u=wrx f1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "删除目录 d1 的 other 用户 read 权限",
+    "answer": "chmod o-r d1"
+  },
+  {
+    "type": "fib",
+    "question": "把目录 d1 的 user、group、other 全部权限改为只读",
+    "answer": "chmod ugo=r d1"
+  },
+  {
+    "type": "fib",
+    "question": "把目录 d1 的 other 权限清空",
+    "answer": "chmod o= d1"
+  },
+  {
+    "type": "fib",
+    "question": "给目录 d1 的 other 用户加上 read 权限，同时 user 和 group 去掉执行权限",
+    "answer": "chmod o+r,ug-x d1"
+  },
+  {
+    "type": "fib",
+    "question": "将文件 t1.txt 的所属组改为 devs（属主不变）",
+    "answer": "chgrp devs t1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "把文件 t1.txt 的属主改为 a1，所属组保持不变",
+    "answer": "chown a1 t1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "把文件 t1.txt 的属主改为 a1，同时所属组改为 devs",
+    "answer": "chown a1:devs t1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "把文件 t1.txt 的所属组改为 devs，属主保持不变",
+    "answer": "chown :devs t1.txt"
+  },
+  {
+    "type": "fib",
+    "question": "把文件 t1.txt 的属主改为 lisi，同时所属组改为 lisi 用户的默认主组",
+    "answer": "chown lisi: t1.txt"
+  }
+]
 
 };
