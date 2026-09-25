@@ -208,8 +208,14 @@ function jumpToQuestion() {
 
 // 键盘事件
 document.addEventListener("keydown", e => {
-  if (e.key === "Enter" && document.activeElement.id === "jumpInput") {
+  if (e.key !== "Enter") return;
+
+  const activeId = document.activeElement.id;
+
+  if (activeId === "jumpInput") {
     jumpToQuestion();
+  } else if (activeId === "fibAnswer") {
+    checkAnswer();
   }
 });
 
