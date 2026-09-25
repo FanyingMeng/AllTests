@@ -98,6 +98,13 @@ function renderQuestion() {
 
   html += `<br><button onclick="checkAnswer()">提交答案</button>`;
   container.innerHTML = html;
+
+  // 自动聚焦输入框，免去鼠标点击
+  if (q.type === "fib") {
+    document.getElementById("fibAnswer").focus();
+  } else if (q.type === "short") {
+    document.getElementById("shortAnswer").focus();
+  }
 }
 
 // 检查答案
