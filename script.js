@@ -6,6 +6,15 @@ let wrongQuestions = JSON.parse(localStorage.getItem(`wrongQuestions_${currentSu
 let savedIndex = localStorage.getItem(`currentIndex_${currentSubject}`);
 let currentIndex = savedIndex ? parseInt(savedIndex) : 0;
 
+// 自动跳题计时器
+let autoAdvanceTimer = null;
+function clearAutoAdvance() {
+  if (autoAdvanceTimer) {
+    clearTimeout(autoAdvanceTimer);
+    autoAdvanceTimer = null;
+  }
+}
+
 document.getElementById("subjectTitle").innerText =
   "科目：" + currentSubject.toUpperCase();
 
@@ -29,6 +38,7 @@ function shuffleArray(arr) {
 
 // 渲染题目
 function renderQuestion() {
+  clearAutoAdvance();
   const q = questions[currentIndex];
   const container = document.getElementById("questionContainer");
   const result = document.getElementById("result");
@@ -146,10 +156,21 @@ function checkAnswer() {
       localStorage.setItem(`wrongQuestions_${currentSubject}`, JSON.stringify(wrongQuestions));
     }
   }
+
+  // 4. 自动跳转下一题（答对 2 秒 / 答错 3 秒），最后一题则不自动跳转
+  clearAutoAdvance();
+  if (currentIndex < questions.length - 1) {
+    const delay = isCorrect ? 2000 : 3000;
+    autoAdvanceTimer = setTimeout(() => {
+      autoAdvanceTimer = null;
+      nextQuestion();
+    }, delay);
+  }
 }
 
 // 下一题
 function nextQuestion() {
+  clearAutoAdvance();
   if (currentIndex < questions.length - 1) {
     currentIndex++;
     localStorage.setItem(`currentIndex_${currentSubject}`, currentIndex);
@@ -161,6 +182,7 @@ function nextQuestion() {
 
 // 上一题
 function prevQuestion() {
+  clearAutoAdvance();
   if (currentIndex > 0) {
     currentIndex--;
     localStorage.setItem(`currentIndex_${currentSubject}`, currentIndex);
@@ -195,6 +217,7 @@ function backHome() {
 
 // 跳转题号
 function jumpToQuestion() {
+  clearAutoAdvance();
   const input = document.getElementById("jumpInput");
   const target = parseInt(input.value, 10);
   if (isNaN(target) || target < 1 || target > questions.length) {
