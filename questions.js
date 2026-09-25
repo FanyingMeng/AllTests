@@ -1564,22 +1564,47 @@ const questionBank = {
   {
     "type": "fib",
     "question": "The ASP.NET MVC helper used to create a hyperlink is ______.",
-    "answer": "Html.ActionLink()"
+    "answer": "@Html.ActionLink()"
   },
   {
     "type": "fib",
     "question": "The ASP.NET MVC helper used to create an HTML form is ______.",
-    "answer": "Html.BeginForm()"
+    "answer": "@Html.BeginForm()"
   },
   {
     "type": "fib",
     "question": "The ASP.NET MVC helper used to create a text input based on a model property is ______.",
-    "answer": "Html.TextBoxFor()"
+    "answer": "@Html.TextBoxFor()"
   },
   {
     "type": "fib",
     "question": "The ASP.NET MVC helper used to display validation errors is ______.",
-    "answer": "Html.ValidationSummary()"
+    "answer": "@Html.ValidationSummary()"
+  },
+  {
+    "type": "fib",
+    "question": "Html.ActionLink() does not link directly to a view, Html.ActionLink() is used to create a link to a  ______.",
+    "answer": "controller action"
+  },
+  {
+    "type": "fib",
+    "question": "The ActionLink() method is an ______ method because it has several signatures with different parameters.",
+    "answer": "overloaded"
+  },
+  {
+    "type": "fib",
+    "question": "In Html.ActionLink(), the first parameter specifies the ______ to display in the link.",
+    "answer": "text"
+  },
+  {
+    "type": "fib",
+    "question": "In Html.ActionLink(), the second parameter specifies the controller ______ to perform when the user clicks the link.",
+    "answer": "action"
+  },
+  {
+    "type": "fib",
+    "question": "In Html.ActionLink(), the third parameter specifies the  ______ to perform when the user clicks the link.",
+    "answer": "controller"
   }
 
 
