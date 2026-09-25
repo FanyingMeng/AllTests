@@ -15,6 +15,14 @@ function clearAutoAdvance() {
   }
 }
 
+// 根据参考答案长度估算需要的阅读时间（毫秒）
+function calcAutoAdvanceDelay(isCorrect, answerText) {
+  if (isCorrect) return 2000; // 答对反馈简短，固定 2 秒
+  const length = String(answerText).length;
+  const estimated = 1500 + length * 150; // 基础缓冲 + 按字数估算阅读时间
+  return Math.min(Math.max(estimated, 3000), 8000); // 限制在 3～8 秒之间
+}
+
 document.getElementById("subjectTitle").innerText =
   "科目：" + currentSubject.toUpperCase();
 
@@ -164,10 +172,10 @@ function checkAnswer() {
     }
   }
 
-  // 4. 自动跳转下一题（答对 2 秒 / 答错 3 秒），最后一题则不自动跳转
+  // 4. 自动跳转下一题（时长根据参考答案长度动态估算），最后一题则不自动跳转
   clearAutoAdvance();
   if (currentIndex < questions.length - 1) {
-    const delay = isCorrect ? 2000 : 3000;
+    const delay = calcAutoAdvanceDelay(isCorrect, displayAnswer);
     autoAdvanceTimer = setTimeout(() => {
       autoAdvanceTimer = null;
       nextQuestion();
