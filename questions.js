@@ -1198,6 +1198,593 @@ Java_Q2:[
     ],
     "answer": "1"
   }
+],
+MVC_Q2:[
+  
+  {
+    "type": "mcq",
+    "question": "Which NuGet package provides the Add-Migration and Update-Database commands in the Package Manager Console?",
+    "options": [
+      "Microsoft.EntityFrameworkCore",
+      "Microsoft.EntityFrameworkCore.SqlServer",
+      "Microsoft.EntityFrameworkCore.Tools",
+      "Microsoft.EntityFrameworkCore.Proxies"
+    ],
+    "answer": "Microsoft.EntityFrameworkCore.Tools"
+  },
+  {
+    "type": "mcq",
+    "question": "Which NuGet package is the SQL Server database provider for EF Core?",
+    "options": [
+      "Microsoft.EntityFrameworkCore.SqlServer",
+      "Microsoft.EntityFrameworkCore.Tools",
+      "Microsoft.EntityFrameworkCore",
+      "Microsoft.EntityFrameworkCore.Design"
+    ],
+    "answer": "Microsoft.EntityFrameworkCore.SqlServer"
+  },
+  {
+    "type": "mcq",
+    "question": "When installing EF Core NuGet packages, which version should you choose?",
+    "options": [
+      "Always the oldest stable version",
+      "Any version, since they are backward compatible",
+      "A version with the same MAJOR version as your .NET version",
+      "Always version 3.1.10"
+    ],
+    "answer": "A version with the same MAJOR version as your .NET version"
+  },
+  {
+    "type": "mcq",
+    "question": "Which version of the Entity Framework should be used with ASP.NET Core projects?",
+    "options": [
+      "Entity Framework 6",
+      "Entity Framework Core",
+      "Either one, they are interchangeable",
+      "Neither, ASP.NET Core uses only ADO.NET"
+    ],
+    "answer": "Entity Framework Core"
+  },
+  {
+    "type": "mcq",
+    "question": "Which approach has you write C# model classes first and then have EF generate or map the database?",
+    "options": [
+      "Database-First",
+      "Schema-First",
+      "Code-First",
+      "Table-First"
+    ],
+    "answer": "Code-First"
+  },
+  {
+    "type": "mcq",
+    "question": "Which approach generates model classes from an existing physical database and its schema?",
+    "options": [
+      "Code-First",
+      "Database-First",
+      "Migration-First",
+      "Convention-First"
+    ],
+    "answer": "Database-First"
+  },
+  {
+    "type": "mcq",
+    "question": "What does LINQ stand for?",
+    "options": [
+      "Linked Index Query",
+      "Language INtegrated Query",
+      "Logical Integrated Query",
+      "Language Indexed Queue"
+    ],
+    "answer": "Language INtegrated Query"
+  },
+  {
+    "type": "mcq",
+    "question": "What does the DbContext class represent in EF Core?",
+    "options": [
+      "A single table in the database",
+      "A session with the database that allows querying and saving data",
+      "A migration file",
+      "A connection string"
+    ],
+    "answer": "A session with the database that allows querying and saving data"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the purpose of a DbSet<T> property in a derived context class?",
+    "options": [
+      "To store the connection string",
+      "To represent an entity set used for create, read, update and delete operations",
+      "To define the routing of the application",
+      "To apply migrations automatically"
+    ],
+    "answer": "To represent an entity set used for create, read, update and delete operations"
+  },
+  {
+    "type": "mcq",
+    "question": "Where is the database connection string stored in an ASP.NET Core project?",
+    "options": [
+      "In Program.cs only",
+      "In the ConnectionStrings section of appsettings.json",
+      "In the Migrations folder",
+      "In the model class"
+    ],
+    "answer": "In the ConnectionStrings section of appsettings.json"
+  },
+  {
+    "type": "mcq",
+    "question": "What format is appsettings.json written in, and what must separate configuration items?",
+    "options": [
+      "XML, with closing tags",
+      "JSON, with commas",
+      "YAML, with indentation",
+      "INI, with semicolons"
+    ],
+    "answer": "JSON, with commas"
+  },
+  {
+    "type": "mcq",
+    "question": "What is Program.cs responsible for in the project?",
+    "options": [
+      "Defining database tables",
+      "Storing migration history",
+      "Configuring project-wide settings and services such as MVC and the DbContext",
+      "Validating uploaded images"
+    ],
+    "answer": "Configuring project-wide settings and services such as MVC and the DbContext"
+  },
+  {
+    "type": "mcq",
+    "question": "Which scaffolding option generates a controller and views directly from a model class using EF?",
+    "options": [
+      "Empty MVC Controller",
+      "API Controller with actions",
+      "MVC Controller with views, using Entity Framework",
+      "Razor Page Empty"
+    ],
+    "answer": "MVC Controller with views, using Entity Framework"
+  },
+  {
+    "type": "mcq",
+    "question": "When should a controller action's return type be left as IActionResult?",
+    "options": [
+      "Only when it returns a ViewResult",
+      "When multiple ActionResult subtypes may be returned or you are not sure yet which one",
+      "Only when it returns JSON",
+      "Never, a concrete type must always be used"
+    ],
+    "answer": "When multiple ActionResult subtypes may be returned or you are not sure yet which one"
+  },
+  {
+    "type": "mcq",
+    "question": "Which ActionResult subtype serializes an object to JSON format?",
+    "options": [
+      "ContentResult",
+      "JsonResult",
+      "ViewResult",
+      "EmptyResult"
+    ],
+    "answer": "JsonResult"
+  },
+  {
+    "type": "mcq",
+    "question": "Which ActionResult subtype writes content to the response stream without requiring a view?",
+    "options": [
+      "ViewResult",
+      "PartialViewResult",
+      "ContentResult",
+      "RedirectResult"
+    ],
+    "answer": "ContentResult"
+  },
+  {
+    "type": "mcq",
+    "question": "Which ActionResult subtype performs an HTTP redirection to a URL determined by the routing engine from route data?",
+    "options": [
+      "RedirectResult",
+      "RedirectToRouteResult",
+      "LocalRedirectResult",
+      "EmptyResult"
+    ],
+    "answer": "RedirectToRouteResult"
+  },
+  {
+    "type": "mcq",
+    "question": "What is a ViewModel?",
+    "options": [
+      "A model that maps directly to a database table",
+      "A model used with a strongly typed view for passing and validating data, not working directly with the database",
+      "A migration class",
+      "A DbContext subclass"
+    ],
+    "answer": "A model used with a strongly typed view for passing and validating data, not working directly with the database"
+  },
+  {
+    "type": "mcq",
+    "question": "By convention, which integer property will EF Core use as the primary key of a Book model?",
+    "options": [
+      "Key or BookKey",
+      "PrimaryId",
+      "Id or BookId",
+      "Number"
+    ],
+    "answer": "Id or BookId"
+  },
+  {
+    "type": "mcq",
+    "question": "By convention, how is an integer primary key property generated?",
+    "options": [
+      "As a user-provided value",
+      "As an auto-incrementing integer",
+      "As a random GUID",
+      "As a string"
+    ],
+    "answer": "As an auto-incrementing integer"
+  },
+  {
+    "type": "mcq",
+    "question": "Which annotation marks a property with a non-conventional name (such as UserName) as the primary key?",
+    "options": [
+      "[Required]",
+      "[PrimaryKey]",
+      "[Key]",
+      "[Column]"
+    ],
+    "answer": "[Key]"
+  },
+  {
+    "type": "mcq",
+    "question": "Which attribute lets you supply the primary key value yourself instead of having the database generate it?",
+    "options": [
+      "[Key(Manual)]",
+      "[DatabaseGenerated(DatabaseGeneratedOption.None)]",
+      "[DatabaseGenerated(DatabaseGeneratedOption.Identity)]",
+      "[NotMapped]"
+    ],
+    "answer": "[DatabaseGenerated(DatabaseGeneratedOption.None)]"
+  },
+  {
+    "type": "mcq",
+    "question": "Which using statement is needed for the DatabaseGenerated attribute?",
+    "options": [
+      "using System.ComponentModel.DataAnnotations.Schema;",
+      "using Microsoft.AspNetCore.Authorization;",
+      "using System.IO;",
+      "using Microsoft.EntityFrameworkCore.Migrations;"
+    ],
+    "answer": "using System.ComponentModel.DataAnnotations.Schema;"
+  },
+  {
+    "type": "mcq",
+    "question": "By default, what determines the name of the database table generated for an entity?",
+    "options": [
+      "The name of the model file",
+      "The name of the DbSet property in the context class",
+      "The name of the migration",
+      "The name of the connection string"
+    ],
+    "answer": "The name of the DbSet property in the context class"
+  },
+  {
+    "type": "mcq",
+    "question": "What can you use when Data Annotations cannot achieve the configuration you need?",
+    "options": [
+      "Lazy loading",
+      "The Fluent API",
+      "Explicit loading",
+      "A ViewModel"
+    ],
+    "answer": "The Fluent API"
+  },
+  {
+    "type": "mcq",
+    "question": "After changing a model class (for example adding a [Key] annotation), what must you do for the change to reach the database?",
+    "options": [
+      "Nothing, it updates automatically",
+      "Restart the web server",
+      "Create a new migration and apply it with Update-Database",
+      "Delete the Migrations folder"
+    ],
+    "answer": "Create a new migration and apply it with Update-Database"
+  },
+  {
+    "type": "mcq",
+    "question": "Where does Add-Migration generate its new migration file?",
+    "options": [
+      "In the /Migrations/ folder",
+      "In the /Models/ folder",
+      "In the wwwroot folder",
+      "In the /Views/ folder"
+    ],
+    "answer": "In the /Migrations/ folder"
+  },
+  {
+    "type": "mcq",
+    "question": "Why does EF Core add a timestamp to the name of each migration?",
+    "options": [
+      "To encrypt the migration",
+      "To track the order in which multiple migrations are applied",
+      "To make the name unique so duplicate names are allowed",
+      "To record who created it"
+    ],
+    "answer": "To track the order in which multiple migrations are applied"
+  },
+  {
+    "type": "mcq",
+    "question": "In a migration class, what does the Up() method do?",
+    "options": [
+      "Reverts the database to the previous model version",
+      "Applies the new changes to the database",
+      "Deletes the migration",
+      "Drops the database"
+    ],
+    "answer": "Applies the new changes to the database"
+  },
+  {
+    "type": "mcq",
+    "question": "In a migration class, what does the Down() method do?",
+    "options": [
+      "Applies the new changes",
+      "Creates the connection string",
+      "Undoes the change and reverts to the previous version of the model",
+      "Generates a new migration"
+    ],
+    "answer": "Undoes the change and reverts to the previous version of the model"
+  },
+  {
+    "type": "mcq",
+    "question": "Which system table records which migrations have been applied to a database?",
+    "options": [
+      "__MigrationLog",
+      "__EFMigrationsHistory",
+      "sysmigrations",
+      "__EFContext"
+    ],
+    "answer": "__EFMigrationsHistory"
+  },
+  {
+    "type": "mcq",
+    "question": "What does Update-Database do when several earlier migrations have not yet been deployed?",
+    "options": [
+      "Applies only the newest migration",
+      "Throws an error",
+      "Applies all pending migrations in the order they were generated",
+      "Deletes the older migrations"
+    ],
+    "answer": "Applies all pending migrations in the order they were generated"
+  },
+  {
+    "type": "mcq",
+    "question": "What is required of each migration name passed to Add-Migration?",
+    "options": [
+      "It must be unique, regardless of the prepended timestamp",
+      "It must be identical to the previous migration",
+      "It must contain the date",
+      "It must match the model name"
+    ],
+    "answer": "It must be unique, regardless of the prepended timestamp"
+  },
+  {
+    "type": "mcq",
+    "question": "Which command deletes a migration that has NOT yet been applied to the database?",
+    "options": [
+      "Drop-Migration",
+      "Delete-Migration",
+      "Remove-Migration",
+      "Undo-Migration"
+    ],
+    "answer": "Remove-Migration"
+  },
+  {
+    "type": "mcq",
+    "question": "You generated a migration with mistakes and it has already been deployed to the database. Which statement is TRUE?",
+    "options": [
+      "Remove-Migration will still delete it safely",
+      "You cannot remove it with Remove-Migration; you must revert it, create a new migration to undo it, or drop the database",
+      "You must reinstall the NuGet packages",
+      "Nothing can be done"
+    ],
+    "answer": "You cannot remove it with Remove-Migration; you must revert it, create a new migration to undo it, or drop the database"
+  },
+  {
+    "type": "mcq",
+    "question": "What does Update-Database -Migration <MigrationName> do?",
+    "options": [
+      "Applies only that single migration and ignores the rest",
+      "Updates the database to that migration, running Down() for migrations that come after it",
+      "Deletes that migration",
+      "Renames the migration"
+    ],
+    "answer": "Updates the database to that migration, running Down() for migrations that come after it"
+  },
+  {
+    "type": "mcq",
+    "question": "Which command rolls the database all the way back to an empty database (no migrations applied)?",
+    "options": [
+      "Update-Database -Migration 0",
+      "Remove-Migration -All",
+      "Drop-Migration 0",
+      "Update-Database -Reset"
+    ],
+    "answer": "Update-Database -Migration 0"
+  },
+  {
+    "type": "mcq",
+    "question": "After generating a migration, what should you do before running Update-Database?",
+    "options": [
+      "Review its contents to make sure it captures the expected changes and nothing else",
+      "Delete the previous migrations",
+      "Restart Visual Studio",
+      "Change the connection string"
+    ],
+    "answer": "Review its contents to make sure it captures the expected changes and nothing else"
+  },
+  {
+    "type": "mcq",
+    "question": "Which loading pattern loads related data automatically the first time a navigation property is accessed?",
+    "options": [
+      "Eager loading",
+      "Lazy loading",
+      "Explicit loading",
+      "Immediate loading"
+    ],
+    "answer": "Lazy loading"
+  },
+  {
+    "type": "mcq",
+    "question": "Which loading pattern loads related data as part of the initial query using Include(...)?",
+    "options": [
+      "Lazy loading",
+      "Explicit loading",
+      "Eager loading",
+      "Deferred loading"
+    ],
+    "answer": "Eager loading"
+  },
+  {
+    "type": "mcq",
+    "question": "Which loading pattern loads related data at a later time by explicitly calling Load(...)?",
+    "options": [
+      "Explicit loading",
+      "Eager loading",
+      "Lazy loading",
+      "Proxy loading"
+    ],
+    "answer": "Explicit loading"
+  },
+  {
+    "type": "mcq",
+    "question": "Which method is used with Entry(...) to explicitly load a single navigation property?",
+    "options": [
+      "Collection(...)",
+      "Include(...)",
+      "Reference(...)",
+      "Single(...)"
+    ],
+    "answer": "Reference(...)"
+  },
+  {
+    "type": "mcq",
+    "question": "Which method is used with Entry(...) to explicitly load a collection navigation property?",
+    "options": [
+      "Reference(...)",
+      "Collection(...)",
+      "ThenInclude(...)",
+      "Attach(...)"
+    ],
+    "answer": "Collection(...)"
+  },
+  {
+    "type": "mcq",
+    "question": "What is required to enable lazy loading in EF Core, beyond marking navigation properties virtual?",
+    "options": [
+      "Nothing more, it works the same as EF 6",
+      "Installing the lazy loading NuGet package and configuring the DbContext to use Lazy Loading Proxies",
+      "Calling Include() on every query",
+      "Disabling the ChangeTracker"
+    ],
+    "answer": "Installing the lazy loading NuGet package and configuring the DbContext to use Lazy Loading Proxies"
+  },
+  {
+    "type": "mcq",
+    "question": "Why is simply removing the virtual keyword from navigation properties NOT a valid way to turn off lazy loading?",
+    "options": [
+      "It has no effect at all",
+      "It causes an error when lazy loading proxies are enabled",
+      "It deletes the related data",
+      "It switches to eager loading automatically"
+    ],
+    "answer": "It causes an error when lazy loading proxies are enabled"
+  },
+  {
+    "type": "mcq",
+    "question": "Why do lazy loading and serialization (such as JSON) not mix well?",
+    "options": [
+      "Serialization cannot read navigation properties",
+      "Serializing may trigger lazy loading of related data and end up querying the entire database",
+      "JSON does not support collections",
+      "Lazy loading deletes entities during serialization"
+    ],
+    "answer": "Serializing may trigger lazy loading of related data and end up querying the entire database"
+  },
+  {
+    "type": "mcq",
+    "question": "In which situation is explicit loading specifically needed?",
+    "options": [
+      "When creating a new migration",
+      "When re-attaching entities and navigation properties in an [HttpPost] action",
+      "When installing NuGet packages",
+      "When defining a primary key"
+    ],
+    "answer": "When re-attaching entities and navigation properties in an [HttpPost] action"
+  },
+  {
+    "type": "mcq",
+    "question": "What HTML form encoding is required when posting file content along with form content?",
+    "options": [
+      "application/json",
+      "text/plain",
+      "multipart/form-data",
+      "application/x-www-form-urlencoded"
+    ],
+    "answer": "multipart/form-data"
+  },
+  {
+    "type": "mcq",
+    "question": "Which IFormFile property is used to validate the SIZE of an uploaded image?",
+    "options": [
+      "ContentType",
+      "FileName",
+      "Length",
+      "Headers"
+    ],
+    "answer": "Length"
+  },
+  {
+    "type": "mcq",
+    "question": "Which authentication option stores accounts locally and can integrate with external logins such as Google or Facebook?",
+    "options": [
+      "None",
+      "Windows",
+      "Individual Accounts",
+      "Anonymous"
+    ],
+    "answer": "Individual Accounts"
+  },
+  {
+    "type": "mcq",
+    "question": "What does the [Authorize] attribute do on a controller?",
+    "options": [
+      "Disables anonymous access to all actions in that controller",
+      "Allows everyone to access every action",
+      "Encrypts the controller's responses",
+      "Logs users out automatically"
+    ],
+    "answer": "Disables anonymous access to all actions in that controller"
+  },
+  {
+    "type": "mcq",
+    "question": "How do you allow anonymous access to one specific action when [Authorize] is applied to the entire controller?",
+    "options": [
+      "[Authorize(Roles=\"None\")]",
+      "[AllowAnonymous]",
+      "[Public]",
+      "[NoAuth]"
+    ],
+    "answer": "[AllowAnonymous]"
+  },
+  {
+    "type": "mcq",
+    "question": "Which code checks inside an action whether the current user belongs to the Admin role?",
+    "options": [
+      "User.IsInRole(\"Admin\")",
+      "User.Identity.IsAuthenticated",
+      "User.HasClaim(\"Admin\")",
+      "Context.IsAdmin()"
+    ],
+    "answer": "User.IsInRole(\"Admin\")"
+  }
+
 ]
 
 
