@@ -1783,7 +1783,80 @@ MVC_Q2:[
       "Context.IsAdmin()"
     ],
     "answer": "User.IsInRole(\"Admin\")"
+  },
+  
+  {
+    "type": "fib",
+    "question": "什么是 migration？",
+    "answer": "A migration is version control for your database that keeps its schema in sync with your code. It has two methods, one is up to apply changes. one is down to reverse changes"
+  },
+  {
+    "type": "fib",
+    "question": "撤销所有已应用的 Migration的指令",
+    "answer": "update-database migration 0 "
+  },
+  {
+    "type": "fib",
+    "question": "修改数据库表名字的三种方法",
+    "answer": "1.rename DbSet<> table name in ApplicationDbContext, \n2.override OnModelCreating \n3.[Table] Data Annotations in model"
+  },
+  {
+    "type": "fib",
+    "question": "EF core 围绕的三个核心",
+    "answer": "Entity to map table,\n DbContext to manage database, \nchange tracking to translate state mutation into SQL"
+  },
+  {
+    "type": "fib",
+    "question": "EF core 怎么使用",
+    "answer": "1. dependency injection in program.cs to register DbContext \v2.inject into controller to query and persist"
+  },
+  {
+    "type": "fib",
+    "question": "EF core 两大开发模式",
+    "answer": "Code-First  Database-First"
+  },
+  {
+    "type": "fib",
+    "question": "EF core需要安装三个nuget package",
+    "answer": "Microsoft.EntityFrameworkCore，\nMicrosoft.EntityFrameworkCore.SqlServer\nMicrosoft.EntityFrameworkCore.Tools"
+  },
+  {
+    "type": "fib",
+    "question": "DbContext干什么的",
+    "answer": "manages the overall database session and transaction"
+  },
+  {
+    "type": "fib",
+    "question": "DbSet干什么的",
+    "answer": "represents and queries a specific table"
+  },
+  {
+    "type": "fib",
+    "question": "New Scaffolded Item，MVC Controller with views, using Entity Framework是干什么的",
+    "answer": "Automatically generates an MVC controller with full EF Core CRUD actions alongside its five Razor view templates (Index, Create, Edit, Details, and Delete)."
+  },
+  {
+    "type": "fib",
+    "question": "IActionResult是什么",
+    "answer": "An interface that defines the contract for action results, encapsulating HTTP responses"
+  },
+  {
+    "type": "fib",
+    "question": "[HttpGet]和[HttpPost]",
+    "answer": "[HttpGet]retrieves data via URL parameters,[HttpPost] submits data to create or process resources"
+  },
+  {
+    "type": "fib",
+    "question": "Data Annotations 是什么",
+    "answer": "C# attribute tags above model properties to define database schema rules and enforce form validation"
+  },
+  {
+    "type": "fib",
+    "question": "[Key]是干嘛的",
+    "answer": "EF Core defaults Id properties as auto-increment primary keys; use [Key] for non-standard property names，apply [DatabaseGenerated(DatabaseGeneratedOption.None)] to disable database value generation"
   }
+
+
 
 ]
 
