@@ -1197,7 +1197,577 @@ Java_Q2:[
       "3"
     ],
     "answer": "1"
+  },
+  
+  // ===== Servlets =====
+  {
+    "type": "mcq",
+    "question": "A servlet is a Java class that extends which class?",
+    "options": [
+      "HttpServlet",
+      "HttpServletRequest",
+      "PrintWriter",
+      "ServletContext"
+    ],
+    "answer": "HttpServlet"
+  },
+  {
+    "type": "mcq",
+    "question": "Where does a servlet run?",
+    "options": [
+      "In the user's browser",
+      "On the server within a server container",
+      "Inside the database",
+      "On the client's JVM"
+    ],
+    "answer": "On the server within a server container"
+  },
+  {
+    "type": "mcq",
+    "question": "Which statement about servlet initialization is correct?",
+    "options": [
+      "A servlet has an init() method and no constructors",
+      "A servlet must define a public constructor with parameters",
+      "A servlet is initialized by calling main()",
+      "A servlet has neither a constructor nor an init() method"
+    ],
+    "answer": "A servlet has an init() method and no constructors"
+  },
+  {
+    "type": "mcq",
+    "question": "When is a servlet compiled compared to a JSP?",
+    "options": [
+      "Both are compiled at the first request",
+      "A servlet is compiled before deployment; a JSP is compiled into a servlet at its first call",
+      "A servlet is compiled at the first request; a JSP is compiled before deployment",
+      "Neither is ever compiled"
+    ],
+    "answer": "A servlet is compiled before deployment; a JSP is compiled into a servlet at its first call"
+  },
+  {
+    "type": "mcq",
+    "question": "Where is most of the business logic typically placed?",
+    "options": [
+      "In JSP scriptlets",
+      "In servlets",
+      "In web.xml",
+      "In CSS files"
+    ],
+    "answer": "In servlets"
+  },
+  {
+    "type": "mcq",
+    "question": "Which servlet method processes HTTP requests that use the GET method?",
+    "options": [
+      "doPost()",
+      "doGet()",
+      "service()",
+      "init()"
+    ],
+    "answer": "doGet()"
+  },
+  {
+    "type": "mcq",
+    "question": "Which servlet method processes form submissions sent with method=\"post\"?",
+    "options": [
+      "doGet()",
+      "doPost()",
+      "doForm()",
+      "destroy()"
+    ],
+    "answer": "doPost()"
+  },
+  {
+    "type": "mcq",
+    "question": "Which two objects does the web server pass into doGet() and doPost()?",
+    "options": [
+      "HttpServletRequest and HttpServletResponse",
+      "HttpSession and ServletContext",
+      "PrintWriter and OutputStream",
+      "Request and Connection"
+    ],
+    "answer": "HttpServletRequest and HttpServletResponse"
+  },
+  {
+    "type": "mcq",
+    "question": "Which packages must a servlet import in the Jakarta version used in class?",
+    "options": [
+      "javax.swing and java.sql",
+      "java.net and java.nio",
+      "java.io, jakarta.servlet and jakarta.servlet.http",
+      "org.hibernate and jakarta.persistence"
+    ],
+    "answer": "java.io, jakarta.servlet and jakarta.servlet.http"
+  },
+  {
+    "type": "mcq",
+    "question": "What must be done BEFORE calling response.getWriter()?",
+    "options": [
+      "Call request.getParameter()",
+      "Call setContentType() on the response",
+      "Close the PrintWriter",
+      "Forward the request to a JSP"
+    ],
+    "answer": "Call setContentType() on the response"
+  },
+  {
+    "type": "mcq",
+    "question": "Which object is used to send HTML text back to the browser from a servlet?",
+    "options": [
+      "HttpServletRequest",
+      "PrintWriter returned by response.getWriter()",
+      "EntityManager",
+      "Scanner"
+    ],
+    "answer": "PrintWriter returned by response.getWriter()"
+  },
+  {
+    "type": "mcq",
+    "question": "Which content type should a servlet set to return JSON?",
+    "options": [
+      "text/html",
+      "text/json-data",
+      "application/json",
+      "application/xml"
+    ],
+    "answer": "application/json"
+  },
+  {
+    "type": "mcq",
+    "question": "In the sample servlet, what does doGet() do?",
+    "options": [
+      "Calls doPost(request, response) so both request types share the same logic",
+      "Throws an exception",
+      "Redirects to web.xml",
+      "Closes the response"
+    ],
+    "answer": "Calls doPost(request, response) so both request types share the same logic"
+  },
+  {
+    "type": "mcq",
+    "question": "What does request.getParameter(\"mypostparameter\") return if the parameter was not sent?",
+    "options": [
+      "An empty string",
+      "null",
+      "0",
+      "It throws an exception"
+    ],
+    "answer": "null"
+  },
+  {
+    "type": "mcq",
+    "question": "Which file is used to map a servlet to a URL in the course examples?",
+    "options": [
+      "pom.xml",
+      "persistence.xml",
+      "web.xml",
+      "index.jsp"
+    ],
+    "answer": "web.xml"
+  },
+  {
+    "type": "mcq",
+    "question": "In web.xml, the servlet mapping statements are written inside which element?",
+    "options": [
+      "web-app",
+      "persistence-unit",
+      "dependencies",
+      "taglib"
+    ],
+    "answer": "web-app"
+  },
+  {
+    "type": "mcq",
+    "question": "Which of the following is NOT part of a servlet mapping in web.xml?",
+    "options": [
+      "Servlet name",
+      "Servlet class",
+      "Servlet URL",
+      "Database password"
+    ],
+    "answer": "Database password"
+  },
+  {
+    "type": "mcq",
+    "question": "Besides servlet mappings, what else can be configured in web.xml?",
+    "options": [
+      "Session timeouts and welcome file lists",
+      "JPA entity relationships",
+      "Maven dependency versions",
+      "SQL queries"
+    ],
+    "answer": "Session timeouts and welcome file lists"
+  },
+  {
+    "type": "mcq",
+    "question": "An HTML form has action=\"MyServlet\" method=\"post\". Which servlet method handles the submission?",
+    "options": [
+      "doGet()",
+      "doPost()",
+      "init()",
+      "doDelete()"
+    ],
+    "answer": "doPost()"
+  },
+
+  // ===== Passing data: Servlet -> JSP =====
+  {
+    "type": "mcq",
+    "question": "How does a servlet make data available to a JSP it forwards to?",
+    "options": [
+      "request.setAttribute(\"name\", value) before forwarding",
+      "By writing the data into web.xml",
+      "By calling response.getWriter().print() only",
+      "By declaring a static variable in the JSP"
+    ],
+    "answer": "request.setAttribute(\"name\", value) before forwarding"
+  },
+  {
+    "type": "mcq",
+    "question": "Which call forwards the request to a JSP?",
+    "options": [
+      "request.getRequestDispatcher(\"/person.jsp\").forward(request, response)",
+      "response.getWriter().forward(\"/person.jsp\")",
+      "request.forward(\"person.jsp\")",
+      "new Servlet(\"/person.jsp\")"
+    ],
+    "answer": "request.getRequestDispatcher(\"/person.jsp\").forward(request, response)"
+  },
+  {
+    "type": "mcq",
+    "question": "Why can a JSP read data that a servlet stored with request.setAttribute()?",
+    "options": [
+      "Because the JSP also has access to the same request object",
+      "Because attributes are saved in the database",
+      "Because attributes are saved in the browser cookie",
+      "Because the JSP is compiled together with the servlet's constructor"
+    ],
+    "answer": "Because the JSP also has access to the same request object"
+  },
+
+  // ===== JSTL =====
+  {
+    "type": "mcq",
+    "question": "What does JSTL stand for?",
+    "options": [
+      "Java Servlet Template Language",
+      "JavaServer Pages Standard Tag Library",
+      "Java Standard Text Loader",
+      "JSON Server Tag Library"
+    ],
+    "answer": "JavaServer Pages Standard Tag Library"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the main reason to use JSTL + EL in JSPs?",
+    "options": [
+      "To replace scriptlets and make JSPs cleaner",
+      "To replace servlets entirely",
+      "To connect to the database",
+      "To compile JSPs faster"
+    ],
+    "answer": "To replace scriptlets and make JSPs cleaner"
+  },
+  {
+    "type": "mcq",
+    "question": "Which directive must appear in a JSP to use the core JSTL tags with the prefix \"c\"?",
+    "options": [
+      "<%@ page import=\"c\" %>",
+      "<%@ taglib prefix=\"c\" uri=\"http://java.sun.com/jsp/jstl/core\" %>",
+      "<%@ include file=\"c\" %>",
+      "<jsp:useBean id=\"c\" />"
+    ],
+    "answer": "<%@ taglib prefix=\"c\" uri=\"http://java.sun.com/jsp/jstl/core\" %>"
+  },
+  {
+    "type": "mcq",
+    "question": "Besides the taglib directive in the JSP, what else is needed to use JSTL in a Maven project?",
+    "options": [
+      "The JSTL dependencies added to pom.xml",
+      "A new entry in persistence.xml",
+      "A separate servlet named JSTLServlet",
+      "Nothing else is needed"
+    ],
+    "answer": "The JSTL dependencies added to pom.xml"
+  },
+  {
+    "type": "mcq",
+    "question": "Why can the JSTL dependency version differ between projects?",
+    "options": [
+      "The version depends on the version of Jakarta being used",
+      "The version depends on the database vendor",
+      "The version depends on the browser",
+      "It never differs"
+    ],
+    "answer": "The version depends on the version of Jakarta being used"
+  },
+  {
+    "type": "mcq",
+    "question": "Which JSTL tag outputs a value and escapes HTML to help prevent XSS?",
+    "options": [
+      "c:out",
+      "c:if",
+      "c:forEach",
+      "c:url"
+    ],
+    "answer": "c:out"
+  },
+  {
+    "type": "mcq",
+    "question": "What does XSS stand for?",
+    "options": [
+      "Extended Server Syntax",
+      "XML Style Sheet",
+      "Cross Site Scripting",
+      "Cross Server Session"
+    ],
+    "answer": "Cross Site Scripting"
+  },
+  {
+    "type": "mcq",
+    "question": "How do you give c:out a fallback value when the expression is null?",
+    "options": [
+      "Use the default attribute",
+      "Use the else attribute",
+      "Use the fallback tag",
+      "Use the null attribute"
+    ],
+    "answer": "Use the default attribute"
+  },
+  {
+    "type": "mcq",
+    "question": "Which tag renders its body only when a condition is true?",
+    "options": [
+      "c:if",
+      "c:out",
+      "c:param",
+      "c:url"
+    ],
+    "answer": "c:if"
+  },
+  {
+    "type": "mcq",
+    "question": "Which attribute of c:if holds the condition?",
+    "options": [
+      "test",
+      "value",
+      "items",
+      "var"
+    ],
+    "answer": "test"
+  },
+  {
+    "type": "mcq",
+    "question": "Which set of tags provides multi-branch logic similar to if / else if / else?",
+    "options": [
+      "c:forEach / c:out / c:url",
+      "c:choose / c:when / c:otherwise",
+      "c:if / c:then / c:else",
+      "c:param / c:set / c:remove"
+    ],
+    "answer": "c:choose / c:when / c:otherwise"
+  },
+  {
+    "type": "mcq",
+    "question": "Which tag in c:choose is the default branch when no c:when matches?",
+    "options": [
+      "c:default",
+      "c:else",
+      "c:otherwise",
+      "c:fallback"
+    ],
+    "answer": "c:otherwise"
+  },
+  {
+    "type": "mcq",
+    "question": "Which tag is used to loop over a collection in a JSP?",
+    "options": [
+      "c:loop",
+      "c:forEach",
+      "c:while",
+      "c:iterate"
+    ],
+    "answer": "c:forEach"
+  },
+  {
+    "type": "mcq",
+    "question": "In <c:forEach items=\"${people}\" var=\"p\">, what does var=\"p\" represent?",
+    "options": [
+      "The current item in the loop",
+      "The whole list",
+      "The loop counter",
+      "The page variable"
+    ],
+    "answer": "The current item in the loop"
+  },
+  {
+    "type": "mcq",
+    "question": "In c:forEach, what does varStatus=\"status\" with ${status.index} give you?",
+    "options": [
+      "The current position (index) in the loop",
+      "The HTTP status code",
+      "The size of the list",
+      "The loop's error message"
+    ],
+    "answer": "The current position (index) in the loop"
+  },
+  {
+    "type": "mcq",
+    "question": "Which tags are used together to build a URL with query parameters?",
+    "options": [
+      "c:url and c:param",
+      "c:out and c:if",
+      "c:forEach and c:when",
+      "c:choose and c:otherwise"
+    ],
+    "answer": "c:url and c:param"
+  },
+  {
+    "type": "mcq",
+    "question": "Why use c:url instead of writing a URL by hand?",
+    "options": [
+      "It produces cleaner query strings and handles the URL building for you",
+      "It sends the request automatically",
+      "It encrypts the URL",
+      "It compiles the JSP"
+    ],
+    "answer": "It produces cleaner query strings and handles the URL building for you"
+  },
+
+  // ===== EL =====
+  {
+    "type": "mcq",
+    "question": "What does EL stand for?",
+    "options": [
+      "Enterprise Library",
+      "Expression Language",
+      "Entity Loader",
+      "Event Listener"
+    ],
+    "answer": "Expression Language"
+  },
+  {
+    "type": "mcq",
+    "question": "Which is the correct EL syntax to display a request attribute named answer?",
+    "options": [
+      "<%= answer %>",
+      "${answer}",
+      "#{answer.print}",
+      "{{answer}}"
+    ],
+    "answer": "${answer}"
+  },
+  {
+    "type": "mcq",
+    "question": "EL is used instead of which older syntax to display data in a JSP?",
+    "options": [
+      "The <%= %> expression scriptlet",
+      "The @Entity annotation",
+      "The doGet() method",
+      "The taglib directive"
+    ],
+    "answer": "The <%= %> expression scriptlet"
+  },
+  {
+    "type": "mcq",
+    "question": "What happens with ${person.firstName} when person is null?",
+    "options": [
+      "A NullPointerException is thrown and the page fails",
+      "Nothing is output; EL handles null safely",
+      "The text \"null\" is printed",
+      "The server restarts"
+    ],
+    "answer": "Nothing is output; EL handles null safely"
+  },
+  {
+    "type": "mcq",
+    "question": "Which EL expression accesses the first element of a list named list?",
+    "options": [
+      "${list.first}",
+      "${list(1)}",
+      "${list[0]}",
+      "${list->0}"
+    ],
+    "answer": "${list[0]}"
+  },
+  {
+    "type": "mcq",
+    "question": "Which EL expression reads the value stored under the key \"key\" in a map named map?",
+    "options": [
+      "${map['key']}",
+      "${map(key)}",
+      "${map.get[key]}",
+      "${map->key}"
+    ],
+    "answer": "${map['key']}"
+  },
+  {
+    "type": "mcq",
+    "question": "Which EL expression explicitly reads the attribute \"user\" from the session scope?",
+    "options": [
+      "${sessionScope.user}",
+      "${session->user}",
+      "${user.session}",
+      "${getSession.user}"
+    ],
+    "answer": "${sessionScope.user}"
+  },
+  {
+    "type": "mcq",
+    "question": "Which EL expression tests that a variable named message is NOT null or empty?",
+    "options": [
+      "${message != empty}",
+      "${not empty message}",
+      "${isNull(message)}",
+      "${message.empty()}"
+    ],
+    "answer": "${not empty message}"
+  },
+  {
+    "type": "mcq",
+    "question": "What does ${person.age > 0 ? person.age : \"\"} do?",
+    "options": [
+      "Shows the age if it is greater than 0, otherwise shows an empty string",
+      "Always shows the age",
+      "Throws an error because EL has no ternary operator",
+      "Sets the age to 0"
+    ],
+    "answer": "Shows the age if it is greater than 0, otherwise shows an empty string"
+  },
+  {
+    "type": "mcq",
+    "question": "Why is writing ${person.firstName} directly (without c:out) 'not recommended' for user-supplied data?",
+    "options": [
+      "It is not escaped, which can allow XSS",
+      "It is much slower",
+      "It does not work in Jakarta",
+      "It only works inside a servlet"
+    ],
+    "answer": "It is not escaped, which can allow XSS"
+  },
+  {
+    "type": "mcq",
+    "question": "Which is the best way to pre-fill a text input from a bean property safely?",
+    "options": [
+      "value=\"<%= person.getFirstName() %>\"",
+      "value=\"<c:out value='${person.firstName}' />\"",
+      "value=\"person.firstName\"",
+      "value=\"${person.firstName}\" with scriptlets"
+    ],
+    "answer": "value=\"<c:out value='${person.firstName}' />\""
+  },
+  {
+    "type": "mcq",
+    "question": "Which tag would you use to mark a radio button as checked when person.metric == true?",
+    "options": [
+      "<c:if test=\"${person.metric == true}\">checked</c:if>",
+      "<c:forEach items=\"${person.metric}\">checked</c:forEach>",
+      "<c:url value=\"checked\" />",
+      "<c:param name=\"checked\" />"
+    ],
+    "answer": "<c:if test=\"${person.metric == true}\">checked</c:if>"
   }
+
 ],
 MVC_Q2:[
   
