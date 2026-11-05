@@ -2428,6 +2428,866 @@ MVC_Q2:[
 
 
 
+],
+AdvJavascript:[
+  {
+    "type": "mcq",
+    "question": "What is the main purpose of a template engine in client-side JavaScript?",
+    "options": [
+      "To validate HTTP headers sent to the server",
+      "To create dynamic HTML from a pre-defined HTML structure by injecting data, with minimal code",
+      "To store user data permanently in the browser",
+      "To compile JavaScript into machine code before it runs in the browser"
+    ],
+    "answer": "To create dynamic HTML from a pre-defined HTML structure by injecting data, with minimal code"
+  },
+  {
+    "type": "mcq",
+    "question": "Which is a benefit of using a template engine instead of manual DOM manipulation?",
+    "options": [
+      "It makes the page load without any HTTP requests",
+      "It automatically encrypts all page content",
+      "It removes the need for HTML entirely",
+      "It saves DOM manipulation code and speeds up and simplifies development"
+    ],
+    "answer": "It saves DOM manipulation code and speeds up and simplifies development"
+  },
+  {
+    "type": "mcq",
+    "question": "How does a template engine help UI/UX developers who only know HTML?",
+    "options": [
+      "They no longer need to coordinate with any other developer",
+      "They can create HTML templates without knowing JavaScript, working in parallel with JavaScript developers",
+      "They can write server-side Express routes using only HTML",
+      "They can replace the database layer with HTML files"
+    ],
+    "answer": "They can create HTML templates without knowing JavaScript, working in parallel with JavaScript developers"
+  },
+  {
+    "type": "mcq",
+    "question": "Which of the following is NOT a template engine for Node.js / Express?",
+    "options": [
+      "Mongoose",
+      "Handlebars",
+      "EJS (Embedded JavaScript template engine)",
+      "Pug"
+    ],
+    "answer": "Mongoose"
+  },
+  {
+    "type": "mcq",
+    "question": "Which command installs the hbs template engine?",
+    "options": [
+      "express add hbs",
+      "node install hbs",
+      "npm install hbs",
+      "npm start hbs"
+    ],
+    "answer": "npm install hbs"
+  },
+  {
+    "type": "mcq",
+    "question": "What file extension do hbs template files use?",
+    "options": [
+      ".hbs",
+      ".tpl.js",
+      ".hb",
+      ".html5"
+    ],
+    "answer": ".hbs"
+  },
+  {
+    "type": "mcq",
+    "question": "In an ES Module Express app, how is __dirname typically obtained?",
+    "options": [
+      "By calling express.dirname()",
+      "By reading process.env.DIRNAME",
+      "It is a built-in global in every ES Module",
+      "By using fileURLToPath(import.meta.url) and path.dirname()"
+    ],
+    "answer": "By using fileURLToPath(import.meta.url) and path.dirname()"
+  },
+  {
+    "type": "mcq",
+    "question": "Which line sets hbs as the template engine in Express?",
+    "options": [
+      "app.use('hbs');",
+      "app.set('view engine', 'hbs');",
+      "app.engine = 'views';",
+      "app.render('hbs');"
+    ],
+    "answer": "app.set('view engine', 'hbs');"
+  },
+  {
+    "type": "mcq",
+    "question": "What does app.set('views', viewsPath) do?",
+    "options": [
+      "Registers a new route called views",
+      "Sets the directory for static CSS and images",
+      "Sets the directory where the template (view) files are located",
+      "Sets the port the server listens on"
+    ],
+    "answer": "Sets the directory where the template (view) files are located"
+  },
+  {
+    "type": "mcq",
+    "question": "How do you serve static resources (html, css, client-side JavaScript, images) in Express?",
+    "options": [
+      "app.render(<path to public directory>)",
+      "app.get('/public', express.render)",
+      "app.set('static', <path>)",
+      "app.use(express.static(<path to public directory>))"
+    ],
+    "answer": "app.use(express.static(<path to public directory>))"
+  },
+  {
+    "type": "mcq",
+    "question": "Which of these is part of the Express + hbs set-up checklist?",
+    "options": [
+      "Rename every HTML file to .js",
+      "Install a database driver before creating the app",
+      "Set the path to the template files with app.set('views', <path to views>)",
+      "Disable the static public folder"
+    ],
+    "answer": "Set the path to the template files with app.set('views', <path to views>)"
+  },
+  {
+    "type": "mcq",
+    "question": "In app.get('/about', (req, res) => {...}), what does '/about' represent?",
+    "options": [
+      "The HTTP status code returned",
+      "The name of the response object",
+      "The name of the template engine",
+      "The route (URL path) the handler responds to"
+    ],
+    "answer": "The route (URL path) the handler responds to"
+  },
+  {
+    "type": "mcq",
+    "question": "What two arguments does the callback of Express's get function require?",
+    "options": [
+      "The request (req) and the response (res)",
+      "The route and the port",
+      "The view and the model",
+      "The template and the middleware"
+    ],
+    "answer": "The request (req) and the response (res)"
+  },
+  {
+    "type": "mcq",
+    "question": "Which statement about res.render('about', { title: 'About', author: 'Chris' }) is correct?",
+    "options": [
+      "It sends the object as raw JSON without using a template",
+      "It saves the object to a file named about",
+      "It renders the 'about' view and fills placeholders using the properties of the object literal",
+      "It redirects the browser to a new site called 'about'"
+    ],
+    "answer": "It renders the 'about' view and fills placeholders using the properties of the object literal"
+  },
+  {
+    "type": "mcq",
+    "question": "In an hbs template, what does {{title}} do?",
+    "options": [
+      "It loads a CSS class named title",
+      "It comments out the title line",
+      "It is a placeholder replaced by the matching property value passed to res.render",
+      "It declares a new JavaScript variable named title"
+    ],
+    "answer": "It is a placeholder replaced by the matching property value passed to res.render"
+  },
+  {
+    "type": "mcq",
+    "question": "Which Handlebars syntax performs conditional logic?",
+    "options": [
+      "<% if (expression) %> ... <% end %>",
+      "{{#if <expression>}} ... {{/if}}",
+      "{{#when <expression>}} ... {{/when}}",
+      "{{if <expression>}} ... {{endif}}"
+    ],
+    "answer": "{{#if <expression>}} ... {{/if}}"
+  },
+  {
+    "type": "mcq",
+    "question": "Which Handlebars syntax loops over a collection?",
+    "options": [
+      "{{#each <collection>}} ... {{/each}}",
+      "{{#loop <collection>}} ... {{/loop}}",
+      "{{#for <collection>}} ... {{/for}}",
+      "{{foreach <collection>}} ... {{end}}"
+    ],
+    "answer": "{{#each <collection>}} ... {{/each}}"
+  },
+  {
+    "type": "mcq",
+    "question": "Inside a {{#each links}} block, how do you access the 'link' property of the current item?",
+    "options": [
+      "{{it.link}}",
+      "{{links.link}}",
+      "{{#link}}",
+      "{{this.link}}"
+    ],
+    "answer": "{{this.link}}"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the role of {{else}} in the Handlebars example with {{#if links}}?",
+    "options": [
+      "It provides the alternative content shown when the condition is false (e.g. 'No social links yet')",
+      "It ends the {{#each}} loop",
+      "It throws an error when links is empty",
+      "It re-renders the template from the start"
+    ],
+    "answer": "It provides the alternative content shown when the condition is false (e.g. 'No social links yet')"
+  },
+  {
+    "type": "mcq",
+    "question": "In the Express MVC diagram, what is the Controller?",
+    "options": [
+      "The HTTP request handler, e.g. app.get('/mypage', (req, res) => {...})",
+      "The HTML template file",
+      "The browser used by the user",
+      "The data model object"
+    ],
+    "answer": "The HTTP request handler, e.g. app.get('/mypage', (req, res) => {...})"
+  },
+  {
+    "type": "mcq",
+    "question": "In Express MVC, what plays the role of the View?",
+    "options": [
+      "The data object { title: 'My App' }",
+      "The HTML template file (e.g. <h1>{{ title }}</h1>)",
+      "The route handler function",
+      "The express.static middleware"
+    ],
+    "answer": "The HTML template file (e.g. <h1>{{ title }}</h1>)"
+  },
+  {
+    "type": "mcq",
+    "question": "In Express MVC, what plays the role of the Model?",
+    "options": [
+      "The browser's address bar",
+      "The app.listen() call",
+      "The data object supplied to the template (e.g. { title: 'My App' })",
+      "The .hbs file"
+    ],
+    "answer": "The data object supplied to the template (e.g. { title: 'My App' })"
+  },
+  {
+    "type": "mcq",
+    "question": "What does HTTP(S) stand for?",
+    "options": [
+      "Hyperlink Transfer Process (Safe)",
+      "High Transmission Text Protocol (Standard)",
+      "Hypertext Transport Protocol (Secure)",
+      "Hypertext Translation Procedure (Server)"
+    ],
+    "answer": "Hypertext Transport Protocol (Secure)"
+  },
+  {
+    "type": "mcq",
+    "question": "In the lecture's breakdown, what does 'Protocol' mean?",
+    "options": [
+      "Text displayed on a computer display",
+      "Holding something to avoid damage",
+      "A set of rules or official procedure",
+      "Movement from point A to point B"
+    ],
+    "answer": "A set of rules or official procedure"
+  },
+  {
+    "type": "mcq",
+    "question": "What is an HTTP method (verb)?",
+    "options": [
+      "The encryption algorithm used by the server",
+      "How we are requesting data",
+      "The size of the data being returned",
+      "The name of the web server software"
+    ],
+    "answer": "How we are requesting data"
+  },
+  {
+    "type": "mcq",
+    "question": "How many HTTP verbs are listed in the lecture?",
+    "options": [
+      "6",
+      "9",
+      "4",
+      "12"
+    ],
+    "answer": "9"
+  },
+  {
+    "type": "mcq",
+    "question": "Which list contains only valid HTTP verbs from the lecture?",
+    "options": [
+      "READ, WRITE, PUT, DELETE, COPY, MOVE",
+      "GET, POST, SEND, REMOVE, UPDATE, FETCH",
+      "GET, SET, PUT, DROP, PATCH, OPEN",
+      "GET, POST, PUT, DELETE, PATCH, HEAD, TRACE, OPTIONS, CONNECT"
+    ],
+    "answer": "GET, POST, PUT, DELETE, PATCH, HEAD, TRACE, OPTIONS, CONNECT"
+  },
+  {
+    "type": "mcq",
+    "question": "Which HTTP verb is used for requesting data, such as visiting a URL?",
+    "options": [
+      "PUT",
+      "POST",
+      "DELETE",
+      "GET"
+    ],
+    "answer": "GET"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the key difference between POST and PUT described in the lecture?",
+    "options": [
+      "PUT is used to delete data and POST to update it",
+      "POST never sends any data to the server",
+      "PUT can only be used from a browser address bar",
+      "Repeated POST requests duplicate a resource, whereas PUT does not"
+    ],
+    "answer": "Repeated POST requests duplicate a resource, whereas PUT does not"
+  },
+  {
+    "type": "mcq",
+    "question": "Which is a characteristic of HTTP GET requests?",
+    "options": [
+      "They can be bookmarked, remain in browser history and can be cached",
+      "They are never stored in the browser history",
+      "They have no restrictions on length",
+      "They are the best choice for sending passwords"
+    ],
+    "answer": "They can be bookmarked, remain in browser history and can be cached"
+  },
+  {
+    "type": "mcq",
+    "question": "Why should GET not be used for sensitive data?",
+    "options": [
+      "GET requests are always rejected over HTTPS",
+      "GET bodies are always compressed",
+      "GET cannot carry any parameters",
+      "Parameters appear in the URL, which can be bookmarked, cached and stored in history"
+    ],
+    "answer": "Parameters appear in the URL, which can be bookmarked, cached and stored in history"
+  },
+  {
+    "type": "mcq",
+    "question": "In https://nbcc.ca/programs-courses/program-details?baseCurriculumId=a3dc..., what is baseCurriculumId=a3dc... ?",
+    "options": [
+      "A cookie value",
+      "A query string parameter (key-value pair), separated from the resource by ?",
+      "A path parameter separated by /",
+      "A request header"
+    ],
+    "answer": "A query string parameter (key-value pair), separated from the resource by ?"
+  },
+  {
+    "type": "mcq",
+    "question": "Which separator divides the requested resource from the query string parameters?",
+    "options": [
+      "#",
+      "&",
+      "/",
+      "?"
+    ],
+    "answer": "?"
+  },
+  {
+    "type": "mcq",
+    "question": "In https://github.com/microsoft/vscode, 'microsoft' and 'vscode' are examples of what?",
+    "options": [
+      "Session variables",
+      "Query string parameters",
+      "Path parameters separated by /",
+      "POST body fields"
+    ],
+    "answer": "Path parameters separated by /"
+  },
+  {
+    "type": "mcq",
+    "question": "In app.get('/course/:id', ...), what is :id?",
+    "options": [
+      "A named route (path) parameter",
+      "A query string key",
+      "A required HTTP header",
+      "A middleware function"
+    ],
+    "answer": "A named route (path) parameter"
+  },
+  {
+    "type": "mcq",
+    "question": "How do you read the :id route parameter inside an Express handler?",
+    "options": [
+      "req.params.id",
+      "req.body.id",
+      "req.query.id",
+      "res.params.id"
+    ],
+    "answer": "req.params.id"
+  },
+  {
+    "type": "mcq",
+    "question": "Which route correctly defines two path parameters named id and instructor?",
+    "options": [
+      "app.get('/course/:id/:instructor', ...)",
+      "app.get('/course/{id,instructor}', ...)",
+      "app.get('/course?id&instructor', ...)",
+      "app.get('/course/id/instructor', ...)"
+    ],
+    "answer": "app.get('/course/:id/:instructor', ...)"
+  },
+  {
+    "type": "mcq",
+    "question": "What does app.listen(3000, ...) do?",
+    "options": [
+      "Starts the Express server listening for requests on port 3000",
+      "Sets the maximum body size to 3000 bytes",
+      "Defines a route called 3000",
+      "Creates 3000 sessions"
+    ],
+    "answer": "Starts the Express server listening for requests on port 3000"
+  },
+  {
+    "type": "mcq",
+    "question": "Which statement about HTTP POST requests is correct?",
+    "options": [
+      "They can be bookmarked like GET",
+      "They are limited to a short URL length",
+      "Their data is always visible in the URL",
+      "They are never cached, not stored in browser history, and have no length restriction"
+    ],
+    "answer": "They are never cached, not stored in browser history, and have no length restriction"
+  },
+  {
+    "type": "mcq",
+    "question": "Where is the data of a POST request sent?",
+    "options": [
+      "In the POST body, not visible in the URL, and encrypted over HTTPS",
+      "In the path parameters",
+      "Only in a cookie",
+      "In the query string after ?"
+    ],
+    "answer": "In the POST body, not visible in the URL, and encrypted over HTTPS"
+  },
+  {
+    "type": "mcq",
+    "question": "What kinds of data can be shipped in a POST request?",
+    "options": [
+      "Both textual and binary data (images, files)",
+      "Only plain text",
+      "Only numbers",
+      "Only JSON strings under 255 characters"
+    ],
+    "answer": "Both textual and binary data (images, files)"
+  },
+  {
+    "type": "mcq",
+    "question": "In an HTML form that posts to Express, what must be set to make it a POST request?",
+    "options": [
+      "method=\"GET\" with an action of post",
+      "type=\"POST\" on the submit button",
+      "method=\"POST\" on the <form> element, with action set to the target route",
+      "Only a name attribute on the form"
+    ],
+    "answer": "method=\"POST\" on the <form> element, with action set to the target route"
+  },
+  {
+    "type": "mcq",
+    "question": "Why must a form <input> have a name attribute?",
+    "options": [
+      "The name is the key used to access the value in the POST parameters (req.body)",
+      "It is required for CSS styling to work",
+      "It makes the input visible to Handlebars only",
+      "It controls how many characters can be typed"
+    ],
+    "answer": "The name is the key used to access the value in the POST parameters (req.body)"
+  },
+  {
+    "type": "mcq",
+    "question": "Which middleware lets Express read form data submitted by POST?",
+    "options": [
+      "app.use(express.static())",
+      "app.use(express.urlencoded({ extended: true }))",
+      "app.use(hbs.render())",
+      "app.use(session())"
+    ],
+    "answer": "app.use(express.urlencoded({ extended: true }))"
+  },
+  {
+    "type": "mcq",
+    "question": "From which Express version are express.json and express.urlencoded built in?",
+    "options": [
+      "Express 3.5 and above",
+      "Only Express 5 and above",
+      "Express 2.0 and above",
+      "Express 4.16.0 and above"
+    ],
+    "answer": "Express 4.16.0 and above"
+  },
+  {
+    "type": "mcq",
+    "question": "After the urlencoded middleware is set up, how do you read a posted field named courseNameToPost?",
+    "options": [
+      "req.params.courseNameToPost",
+      "req.body.courseNameToPost",
+      "req.session.courseNameToPost",
+      "req.query.courseNameToPost"
+    ],
+    "answer": "req.body.courseNameToPost"
+  },
+  {
+    "type": "mcq",
+    "question": "Which Express function handles an HTTP POST request on a route?",
+    "options": [
+      "app.submit('/course', ...)",
+      "app.send('/course', ...)",
+      "app.listen('/course', ...)",
+      "app.post('/course', (req, res) => {...})"
+    ],
+    "answer": "app.post('/course', (req, res) => {...})"
+  },
+  {
+    "type": "mcq",
+    "question": "What does res.send(...) do in an Express handler?",
+    "options": [
+      "Registers a new route",
+      "Starts a new session",
+      "Sends a response back to the client",
+      "Reads data from the request body"
+    ],
+    "answer": "Sends a response back to the client"
+  },
+  {
+    "type": "mcq",
+    "question": "What does it mean that HTTP is a stateless protocol?",
+    "options": [
+      "HTTP can only transmit text, not binary data",
+      "HTTP requests can only be made once per site",
+      "The server keeps a permanent connection to each browser",
+      "After a response the connection is dropped and the server cannot associate later requests with earlier ones"
+    ],
+    "answer": "After a response the connection is dropped and the server cannot associate later requests with earlier ones"
+  },
+  {
+    "type": "mcq",
+    "question": "Why do web applications need session tracking?",
+    "options": [
+      "To speed up DNS lookups",
+      "To compress HTML responses",
+      "To maintain state across multiple HTTP requests from the same browser",
+      "To replace the need for HTTPS"
+    ],
+    "answer": "To maintain state across multiple HTTP requests from the same browser"
+  },
+  {
+    "type": "mcq",
+    "question": "How does Express Session identify a returning browser?",
+    "options": [
+      "A cookie storing the session ID is sent by the browser with each request",
+      "The session ID is placed in the POST body by the user",
+      "The server stores the user's IP address in the URL",
+      "The browser sends its full history each time"
+    ],
+    "answer": "A cookie storing the session ID is sent by the browser with each request"
+  },
+  {
+    "type": "mcq",
+    "question": "Where does the server keep the data for each session in the Express code?",
+    "options": [
+      "In the req.session property of the request object",
+      "In app.locals.session",
+      "In req.body",
+      "In res.cookie only"
+    ],
+    "answer": "In the req.session property of the request object"
+  },
+  {
+    "type": "mcq",
+    "question": "What happens when a browser makes its first request in Express Session?",
+    "options": [
+      "The middleware creates a session object and sends a cookie containing the session ID in the response",
+      "The server deletes all previous cookies",
+      "The server rejects the request until the user logs in",
+      "The browser creates the session without contacting the server"
+    ],
+    "answer": "The middleware creates a session object and sends a cookie containing the session ID in the response"
+  },
+  {
+    "type": "mcq",
+    "question": "When does a session end?",
+    "options": [
+      "Only when the server restarts",
+      "Immediately after every response",
+      "When a specified time elapses without another request, or when the user exits the browser",
+      "Only when the user clicks a Logout link"
+    ],
+    "answer": "When a specified time elapses without another request, or when the user exits the browser"
+  },
+  {
+    "type": "mcq",
+    "question": "What is required in the browser for sessions to work?",
+    "options": [
+      "Cookies must be enabled",
+      "HTTP/3 must be used",
+      "A browser extension must be installed",
+      "JavaScript must be disabled"
+    ],
+    "answer": "Cookies must be enabled"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the default name of the session cookie in express-session?",
+    "options": [
+      "express.sid",
+      "sessionId",
+      "connect.sid",
+      "session.cookie"
+    ],
+    "answer": "connect.sid"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the purpose of the `secret` option?",
+    "options": [
+      "It sets the name of the session store",
+      "It encrypts the entire session data stored on the server",
+      "It is the password users type to log in",
+      "It is used to sign the session ID cookie; it should be kept private, e.g. in an environment variable"
+    ],
+    "answer": "It is used to sign the session ID cookie; it should be kept private, e.g. in an environment variable"
+  },
+  {
+    "type": "mcq",
+    "question": "What does `resave: false` mean?",
+    "options": [
+      "Sessions are saved on every request regardless of changes",
+      "The session is not saved back to the store if it wasn't modified",
+      "The cookie is deleted after each response",
+      "Sessions are never saved at all"
+    ],
+    "answer": "The session is not saved back to the store if it wasn't modified"
+  },
+  {
+    "type": "mcq",
+    "question": "What does `saveUninitialized: false` mean?",
+    "options": [
+      "New sessions that haven't been modified are not saved",
+      "Existing sessions are reset",
+      "All new sessions are saved immediately",
+      "Sessions can only be created over HTTPS"
+    ],
+    "answer": "New sessions that haven't been modified are not saved"
+  },
+  {
+    "type": "mcq",
+    "question": "What does `rolling: true` do?",
+    "options": [
+      "Resets the cookie expiration on every response",
+      "Stores sessions in a rolling log file",
+      "Rotates the secret every hour",
+      "Deletes the oldest session first"
+    ],
+    "answer": "Resets the cookie expiration on every response"
+  },
+  {
+    "type": "mcq",
+    "question": "Where does express-session store session data by default?",
+    "options": [
+      "In the browser's localStorage",
+      "In a MongoDB collection",
+      "In memory (in-memory storage)",
+      "In a file on the public folder"
+    ],
+    "answer": "In memory (in-memory storage)"
+  },
+  {
+    "type": "mcq",
+    "question": "In `cookie: { maxAge: 1000 * 60 * 30 }`, how long does the cookie remain valid?",
+    "options": [
+      "30 days",
+      "30 minutes",
+      "30 seconds",
+      "30 hours"
+    ],
+    "answer": "30 minutes"
+  },
+  {
+    "type": "mcq",
+    "question": "In what unit is cookie.maxAge specified?",
+    "options": [
+      "Seconds",
+      "Days",
+      "Milliseconds",
+      "Minutes"
+    ],
+    "answer": "Milliseconds"
+  },
+  {
+    "type": "mcq",
+    "question": "What does `cookie.httpOnly: true` do?",
+    "options": [
+      "Allows cross-site requests",
+      "Limits the cookie to one URL path",
+      "Prevents client-side JavaScript from accessing the cookie",
+      "Forces the cookie to be sent only over HTTPS"
+    ],
+    "answer": "Prevents client-side JavaScript from accessing the cookie"
+  },
+  {
+    "type": "mcq",
+    "question": "What does `cookie.secure: true` do?",
+    "options": [
+      "Only sends the cookie over HTTPS",
+      "Blocks the cookie for cross-site requests",
+      "Encrypts the cookie with the secret",
+      "Hides the cookie from the browser developer tools only"
+    ],
+    "answer": "Only sends the cookie over HTTPS"
+  },
+  {
+    "type": "mcq",
+    "question": "Why is `secure: process.env.NODE_ENV === 'production'` commonly used?",
+    "options": [
+      "To make the secret change in production",
+      "To disable sessions in development",
+      "To increase cookie maxAge in production",
+      "To require HTTPS cookies in production while still allowing plain HTTP in local development"
+    ],
+    "answer": "To require HTTPS cookies in production while still allowing plain HTTP in local development"
+  },
+  {
+    "type": "mcq",
+    "question": "What does the `cookie.sameSite` option control, and what attack does it help protect against?",
+    "options": [
+      "Which domain stores the cookie; it protects against XSS only",
+      "How long a cookie lasts; it protects against SQL injection",
+      "Whether sessions are stored in memory; it protects against DDoS",
+      "Whether cookies are sent with cross-site requests; it helps protect against many CSRF attacks"
+    ],
+    "answer": "Whether cookies are sent with cross-site requests; it helps protect against many CSRF attacks"
+  },
+  {
+    "type": "mcq",
+    "question": "With `sameSite: 'strict'`, what happens?",
+    "options": [
+      "Cookies are not sent with cross-site requests",
+      "Cookies are sent only over HTTP",
+      "Cookies are sent only to subdomains",
+      "Cookies are always sent with cross-site requests"
+    ],
+    "answer": "Cookies are not sent with cross-site requests"
+  },
+  {
+    "type": "mcq",
+    "question": "With `sameSite: 'lax'`, what happens?",
+    "options": [
+      "Cookies are never sent anywhere",
+      "Cookies are sent only to the same path",
+      "Cookies are sent with every cross-site request, including embedded ones",
+      "Cookies are sent with certain top-level cross-site navigations"
+    ],
+    "answer": "Cookies are sent with certain top-level cross-site navigations"
+  },
+  {
+    "type": "mcq",
+    "question": "With `sameSite: 'none'`, what happens?",
+    "options": [
+      "Cookies are deleted when the tab closes",
+      "Cookies are only sent on page refresh",
+      "Cookies can be sent with cross-site requests",
+      "Cookies are disabled completely"
+    ],
+    "answer": "Cookies can be sent with cross-site requests"
+  },
+  {
+    "type": "mcq",
+    "question": "What does `cookie.path` determine?",
+    "options": [
+      "Which domain can receive the cookie",
+      "Which file stores the session",
+      "When the cookie expires",
+      "Which URL paths receive the cookie"
+    ],
+    "answer": "Which URL paths receive the cookie"
+  },
+  {
+    "type": "mcq",
+    "question": "What does `cookie.domain` specify?",
+    "options": [
+      "Which HTTP verb is allowed",
+      "The session store location",
+      "Which URL path receives the cookie",
+      "Which domain can receive the cookie"
+    ],
+    "answer": "Which domain can receive the cookie"
+  },
+  {
+    "type": "mcq",
+    "question": "What does `cookie.expires` set?",
+    "options": [
+      "The number of requests before expiry",
+      "A duration in milliseconds for the cookie",
+      "A specific expiration date for the cookie",
+      "The name of the cookie"
+    ],
+    "answer": "A specific expiration date for the cookie"
+  },
+  {
+    "type": "mcq",
+    "question": "How do you read a session variable named counter?",
+    "options": [
+      "let counter = res.session('counter');",
+      "let counter = req.session.counter;",
+      "let counter = req.cookies.session.counter();",
+      "let counter = session.get(req.counter);"
+    ],
+    "answer": "let counter = req.session.counter;"
+  },
+  {
+    "type": "mcq",
+    "question": "How do you set a session variable counter to 5?",
+    "options": [
+      "req.setSession(counter, 5);",
+      "req.session.counter = 5;",
+      "app.session.counter == 5;",
+      "res.session.set('counter', 5);"
+    ],
+    "answer": "req.session.counter = 5;"
+  },
+  {
+    "type": "mcq",
+    "question": "In the counter example, what does `req.session.counter ?? 0` do?",
+    "options": [
+      "Uses 0 as the default when req.session.counter is null or undefined",
+      "Always returns 0",
+      "Throws an error if counter is missing",
+      "Converts counter to a boolean"
+    ],
+    "answer": "Uses 0 as the default when req.session.counter is null or undefined"
+  },
+  {
+    "type": "mcq",
+    "question": "In the counter example (maxAge: 30 * 24 * 60 * 60 * 1000), how long is the session cookie valid?",
+    "options": [
+      "30 seconds",
+      "30 days",
+      "30 minutes",
+      "30 hours"
+    ],
+    "answer": "30 days"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the sequence of events for session tracking in Express Session?",
+    "options": [
+      "Browser creates the session ID → server rejects it → browser retries with HTTPS",
+      "Browser requests a resource → middleware creates session and sends session ID cookie → later requests send the ID so the server finds the right session",
+      "Server sends all session data to the browser → browser stores it → server forgets the user",
+      "Server logs the IP → closes the connection → recreates the session on every request"
+    ],
+    "answer": "Browser requests a resource → middleware creates session and sends session ID cookie → later requests send the ID so the server finds the right session"
+  }
 ]
 
 
