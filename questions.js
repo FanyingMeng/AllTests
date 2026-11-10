@@ -3288,6 +3288,1556 @@ AdvJavascript:[
     ],
     "answer": "Browser requests a resource → middleware creates session and sends session ID cookie → later requests send the ID so the server finds the right session"
   }
+],
+PHP_Q1:[
+  {
+    "type": "mcq",
+    "question": "What does PHP stand for in its current official name?",
+    "options": [
+      "Personal Home Page",
+      "Hypertext Preprocessor",
+      "Programmed Hypertext Pages",
+      "Public Hosting Platform"
+    ],
+    "answer": "Hypertext Preprocessor",
+    "explanation": "PHP 现名 Hypertext Preprocessor；Personal Home Page 是 1995 年最初的名字。"
+  },
+  {
+    "type": "mcq",
+    "question": "Who originally conceived PHP, and in which year?",
+    "options": [
+      "Guido van Rossum, 1991",
+      "Brendan Eich, 1995",
+      "James Gosling, 1996",
+      "Rasmus Lerdorf, 1995"
+    ],
+    "answer": "Rasmus Lerdorf, 1995",
+    "explanation": "PHP 由 Rasmus Lerdorf 于 1995 年构思，用来方便地处理 Web 页面数据。"
+  },
+  {
+    "type": "mcq",
+    "question": "What did PHP originally stand for, and when was it renamed?",
+    "options": [
+      "\"Programmed Hypertext Processor\"; renamed in 2000",
+      "\"Personal Hypertext Page\"; renamed in 1995",
+      "\"Personal Home Page\"; renamed in 1997",
+      "\"Public Home Page\"; renamed in 2004"
+    ],
+    "answer": "\"Personal Home Page\"; renamed in 1997",
+    "explanation": "最初是 Personal Home Page，1997 年改名为 PHP: Hypertext Processor。"
+  },
+  {
+    "type": "mcq",
+    "question": "PHP is primarily used as which kind of language?",
+    "options": [
+      "A server-side scripting language for dynamic web sites",
+      "A client-side markup language for styling pages",
+      "A compiled language for desktop applications",
+      "A database query language"
+    ],
+    "answer": "A server-side scripting language for dynamic web sites",
+    "explanation": "PHP 主要是 server-side scripting language，用于创建 dynamic web sites。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which of the following well-known sites is listed in the slides as powered by PHP?",
+    "options": [
+      "Netflix",
+      "Twitter (X)",
+      "WordPress",
+      "Amazon Web Services"
+    ],
+    "answer": "WordPress",
+    "explanation": "课件列出 Facebook、WordPress、Wikipedia。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which of these is NOT given as a reason to learn PHP?",
+    "options": [
+      "It is a compiled language that runs only inside the browser",
+      "Huge community and support",
+      "Beginner-friendly syntax",
+      "Runs on most web servers and platforms"
+    ],
+    "answer": "It is a compiled language that runs only inside the browser",
+    "explanation": "PHP 在 server 上运行，不是在浏览器中运行的编译语言。"
+  },
+  {
+    "type": "mcq",
+    "question": "When a PHP page is requested, where does the code run and what is sent to the browser?",
+    "options": [
+      "It runs in the browser and the PHP source is shown to the visitor",
+      "It runs in the browser and sends HTML to the server",
+      "It runs on the server and the resulting HTML output is sent to the browser",
+      "It runs on the server and the raw PHP source is sent to the browser"
+    ],
+    "answer": "It runs on the server and the resulting HTML output is sent to the browser",
+    "explanation": "Code is run on the server；Output: HTML sent to the browser。"
+  },
+  {
+    "type": "mcq",
+    "question": "Why can't you simply double-click a .php file and view it correctly in a browser?",
+    "options": [
+      "Browsers do not support the .php extension in any way",
+      "PHP can only run inside Docker",
+      "PHP files are encrypted until uploaded",
+      "PHP files must be preprocessed by a web server first"
+    ],
+    "answer": "PHP files must be preprocessed by a web server first",
+    "explanation": "PHP 文件需要 web server 先处理后再把结果发送给浏览器。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which file extension must a file containing embedded PHP use?",
+    "options": [
+      ".phtm",
+      ".php",
+      ".html",
+      ".script"
+    ],
+    "answer": ".php",
+    "explanation": "课件强调文件必须有 .php 扩展名，如 index.php。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which tags enclose embedded PHP code in an HTML page?",
+    "options": [
+      "<% ... %>",
+      "<!-- php ... -->",
+      "<?php ... ?>",
+      "<script php> ... </script>"
+    ],
+    "answer": "<?php ... ?>",
+    "explanation": "PHP 代码写在 <?php 与 ?> 之间。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which database systems is PHP often used with, according to the overview?",
+    "options": [
+      "Only SQLite",
+      "MySQL or MariaDB",
+      "Only MongoDB",
+      "Only Oracle"
+    ],
+    "answer": "MySQL or MariaDB",
+    "explanation": "PHP 常与 MySQL / MariaDB 搭配使用。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which statement connects PHP to MySQL in the overview example?",
+    "options": [
+      "$conn = mysql::new(\"user\", \"pass\");",
+      "$conn = new mysqli(\"localhost\", \"user\", \"pass\", \"db\");",
+      "$conn = connect.mysql(\"localhost\");",
+      "$conn = php_mysql_open(\"db\");"
+    ],
+    "answer": "$conn = new mysqli(\"localhost\", \"user\", \"pass\", \"db\");",
+    "explanation": "示例使用 new mysqli(host, user, password, database)。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which of the following are examples of PHP-based applications listed in the slides?",
+    "options": [
+      "Django (blogs), Shopify (e-commerce), Discourse (forums)",
+      "Ghost (blogs), React (e-commerce), Slack (forums)",
+      "WordPress (blogs), Magento/WooCommerce (e-commerce), phpBB (forums)",
+      "Jekyll (blogs), Magento (forums), phpBB (e-commerce)"
+    ],
+    "answer": "WordPress (blogs), Magento/WooCommerce (e-commerce), phpBB (forums)",
+    "explanation": "WordPress=博客，Magento/WooCommerce=电商，phpBB=论坛。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which tools does the course list as 'Tools you will need'?",
+    "options": [
+      "Only Notepad",
+      "Docker and a code editor such as VS Code",
+      "Photoshop and Figma",
+      "Visual Basic and Excel"
+    ],
+    "answer": "Docker and a code editor such as VS Code",
+    "explanation": "课程需要 Docker 和 VS Code 之类的代码编辑器。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which practice prevents SQL injection according to the Best Practices slide?",
+    "options": [
+      "Keep all queries in a single line",
+      "Use single quotes for all strings",
+      "Use echo instead of print",
+      "Use prepared statements"
+    ],
+    "answer": "Use prepared statements",
+    "explanation": "Best practice：使用 prepared statements 防止 SQL injection。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which best practice is recommended in addition to keeping PHP up to date?",
+    "options": [
+      "Avoid using functions",
+      "Disable all error reporting",
+      "Mix PHP and HTML in one large file",
+      "Separate logic from presentation"
+    ],
+    "answer": "Separate logic from presentation",
+    "explanation": "Separate logic from presentation。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which frameworks are mentioned as something to use as you advance, but are not covered in the course?",
+    "options": [
+      "Laravel and Symfony",
+      "Django and Flask",
+      "Express and Angular",
+      "Spring and Hibernate"
+    ],
+    "answer": "Laravel and Symfony",
+    "explanation": "Laravel、Symfony 是 PHP frameworks，本课程不涉及。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which of the following is the official PHP documentation site?",
+    "options": [
+      "php.net",
+      "phpdocs.org",
+      "w3.php.com",
+      "php.gov"
+    ],
+    "answer": "php.net",
+    "explanation": "官方文档：php.net/manual/en/。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which of the following is a typical PHP use case listed in the overview?",
+    "options": [
+      "Form handling (GET/POST), session management and file uploads",
+      "Rendering 3D graphics on the GPU",
+      "Compiling kernel modules",
+      "Training neural networks in the browser"
+    ],
+    "answer": "Form handling (GET/POST), session management and file uploads",
+    "explanation": "Common Use Cases：表单处理、数据库连接、session 管理、文件上传、CMS 开发。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which of the following is a valid PHP variable name?",
+    "options": [
+      "$123",
+      "firstName",
+      "$7days",
+      "$firstName"
+    ],
+    "answer": "$firstName",
+    "explanation": "变量必须以 $ 开头，随后必须是字母或下划线；$123、$7days 非法。"
+  },
+  {
+    "type": "mcq",
+    "question": "How are the variables $name, $Name and $NAME related in PHP?",
+    "options": [
+      "Only $name is valid; the others cause a syntax error",
+      "They all refer to the same variable",
+      "$Name and $NAME are constants",
+      "They are three different variables because names are case sensitive"
+    ],
+    "answer": "They are three different variables because names are case sensitive",
+    "explanation": "PHP 变量名 case sensitive。"
+  },
+  {
+    "type": "mcq",
+    "question": "What does it mean that PHP is 'dynamically typed'?",
+    "options": [
+      "Types are checked only at compile time",
+      "The variable type is determined automatically by the context in which it is used",
+      "Variables can never change their value",
+      "Every variable must be declared with a type first"
+    ],
+    "answer": "The variable type is determined automatically by the context in which it is used",
+    "explanation": "Dynamically typed：根据使用上下文自动确定变量类型。"
+  },
+  {
+    "type": "mcq",
+    "question": "Do PHP variables need to be declared before use?",
+    "options": [
+      "No, variables do not have to be declared before use",
+      "Yes, with the let keyword",
+      "Yes, with a type name such as int",
+      "Yes, with the var keyword"
+    ],
+    "answer": "No, variables do not have to be declared before use",
+    "explanation": "PHP 变量无需事先声明。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which operator is used for string concatenation in PHP?",
+    "options": [
+      ". (dot)",
+      "+ (plus)",
+      "& (ampersand)",
+      ", (comma) in assignments"
+    ],
+    "answer": ". (dot)",
+    "explanation": "PHP 的 concatenation operator 是点号 .。"
+  },
+  {
+    "type": "mcq",
+    "question": "Given $name = 'Jimmy Jones'; what does echo 'The name is $name'; output?",
+    "options": [
+      "A parse error",
+      "The name is ''",
+      "The name is Jimmy Jones",
+      "The name is $name"
+    ],
+    "answer": "The name is $name",
+    "explanation": "Single-quote 字符串不处理变量，原样输出 $name。"
+  },
+  {
+    "type": "mcq",
+    "question": "Given $name = 'Jimmy Jones'; what does echo \"The name is $name\"; output?",
+    "options": [
+      "A parse error",
+      "The name is name",
+      "The name is Jimmy Jones",
+      "The name is $name"
+    ],
+    "answer": "The name is Jimmy Jones",
+    "explanation": "Double-quote 字符串会处理变量插值。"
+  },
+  {
+    "type": "mcq",
+    "question": "How do you print a literal dollar sign before a variable name inside a double-quoted string?",
+    "options": [
+      "Use the percent sign: %$",
+      "Wrap it in single brackets: [$]",
+      "Double it: $$",
+      "Escape it with a backslash: \\$"
+    ],
+    "answer": "Escape it with a backslash: \\$",
+    "explanation": "\\$ 是 dollar sign 的 escape character。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which escape sequence represents a newline in a double-quoted PHP string?",
+    "options": [
+      "\\t",
+      "\\f",
+      "\\e",
+      "\\n"
+    ],
+    "answer": "\\n",
+    "explanation": "\\n newline；\\t tab；\\f form feed；\\e escape。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which escape sequence represents a horizontal tab in a double-quoted PHP string?",
+    "options": [
+      "\\t",
+      "\\n",
+      "\\v",
+      "\\r"
+    ],
+    "answer": "\\t",
+    "explanation": "\\t 是 horizontal tab；\\v 是 vertical tab。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which of the following is NOT a valid PHP comment style?",
+    "options": [
+      "// comment",
+      "<!-- comment -->",
+      "/* comment */",
+      "# comment"
+    ],
+    "answer": "<!-- comment -->",
+    "explanation": "PHP 注释：//、#、/* */；<!-- --> 是 HTML 注释。"
+  },
+  {
+    "type": "mcq",
+    "question": "In a file that contains only PHP code, what is true about the closing ?> tag?",
+    "options": [
+      "It must be followed by a blank line",
+      "It must be replaced by </php>",
+      "It is mandatory or a fatal error occurs",
+      "It is optional, and omitting it can avoid unexplained white space"
+    ],
+    "answer": "It is optional, and omitting it can avoid unexplained white space",
+    "explanation": "纯 PHP 文件结束标签可选；去掉可避免多余空白。"
+  },
+  {
+    "type": "mcq",
+    "question": "How must every PHP statement be terminated?",
+    "options": [
+      "With a colon :",
+      "With a period .",
+      "With a newline only",
+      "With a semicolon ;"
+    ],
+    "answer": "With a semicolon ;",
+    "explanation": "每条语句以分号结尾。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which statement about echo is TRUE?",
+    "options": [
+      "It is a language construct, needs no parentheses and has no return value",
+      "It is a function that returns 1",
+      "It can only output a single string",
+      "It requires parentheses"
+    ],
+    "answer": "It is a language construct, needs no parentheses and has no return value",
+    "explanation": "echo 是 language construct，无返回值，可用逗号输出多个参数。"
+  },
+  {
+    "type": "mcq",
+    "question": "How can echo output several strings in one statement?",
+    "options": [
+      "Separate the arguments with commas",
+      "It cannot output several strings",
+      "Pass them as an array only",
+      "Separate them with semicolons"
+    ],
+    "answer": "Separate the arguments with commas",
+    "explanation": "echo \"a\", \"b\"; 用逗号分隔参数。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which statement about print is TRUE?",
+    "options": [
+      "It returns nothing and accepts many arguments",
+      "It can only be used with parentheses",
+      "It returns the length of the string printed",
+      "It always returns the integer 1 and accepts only one argument"
+    ],
+    "answer": "It always returns the integer 1 and accepts only one argument",
+    "explanation": "print 总是返回 1，一次只能一个参数。"
+  },
+  {
+    "type": "mcq",
+    "question": "What happens with print(\"hello\", \"world\");?",
+    "options": [
+      "It prints hello world with a space",
+      "It prints helloworld",
+      "A parse error occurs because print allows only one argument",
+      "It prints only world"
+    ],
+    "answer": "A parse error occurs because print allows only one argument",
+    "explanation": "print 不允许多个参数，会出现 Parse error。"
+  },
+  {
+    "type": "mcq",
+    "question": "Why is print considered slightly slower than echo?",
+    "options": [
+      "Because print needs parentheses",
+      "Because print returns a value (1)",
+      "Because print compiles the string first",
+      "Because print writes to disk"
+    ],
+    "answer": "Because print returns a value (1)",
+    "explanation": "print 需要返回一个整数 1，因此稍慢。"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the main purpose of printf()?",
+    "options": [
+      "Converting strings to integers",
+      "Printing to a file only",
+      "Reading formatted input from the user",
+      "Fine-grained control over the format of the output"
+    ],
+    "answer": "Fine-grained control over the format of the output",
+    "explanation": "printf = printed format，可定义输出格式，对数字尤其有用。"
+  },
+  {
+    "type": "mcq",
+    "question": "In printf, which specifier outputs the argument as a signed decimal integer?",
+    "options": [
+      "%f",
+      "%s",
+      "%x",
+      "%d"
+    ],
+    "answer": "%d",
+    "explanation": "%s 字符串；%d 整数；%f 浮点数。"
+  },
+  {
+    "type": "mcq",
+    "question": "What does printf(\"The total cost is %.2f\", 6.10); output?",
+    "options": [
+      "The total cost is .2f",
+      "The total cost is 6",
+      "The total cost is 6.10",
+      "The total cost is 6.1"
+    ],
+    "answer": "The total cost is 6.10",
+    "explanation": "%.2f 固定输出 2 位小数。"
+  },
+  {
+    "type": "mcq",
+    "question": "What does printf(\"The total cost is %.2f\", \"a string\"); output?",
+    "options": [
+      "The total cost is a string",
+      "The total cost is 1.00",
+      "The total cost is 0.00",
+      "A fatal error"
+    ],
+    "answer": "The total cost is 0.00",
+    "explanation": "非数字字符串被当作 0，输出 0.00。"
+  },
+  {
+    "type": "mcq",
+    "question": "What does printf(\"PHP is %s!\", \"Awesome\"); output?",
+    "options": [
+      "PHP is Awesome",
+      "PHP is %s!",
+      "PHP is Awesome!",
+      "PHP is s!"
+    ],
+    "answer": "PHP is Awesome!",
+    "explanation": "%s 被字符串参数替换。"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the difference between printf and sprintf?",
+    "options": [
+      "sprintf only works with integers",
+      "They differ only in speed",
+      "printf outputs directly to the browser, while sprintf returns the formatted string",
+      "sprintf outputs directly while printf returns a string"
+    ],
+    "answer": "printf outputs directly to the browser, while sprintf returns the formatted string",
+    "explanation": "sprintf 返回字符串而不是直接输出。"
+  },
+  {
+    "type": "mcq",
+    "question": "What does the % operator do in PHP?",
+    "options": [
+      "Returns the remainder of a division (modulus)",
+      "Raises to a power",
+      "Returns the percentage of a number",
+      "Divides and rounds up"
+    ],
+    "answer": "Returns the remainder of a division (modulus)",
+    "explanation": "% 是 modulus，4 % 3 = 1。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which operator raises the left operand to the power of the right operand, and when was it introduced?",
+    "options": [
+      "** (exponentiation), PHP 5.6",
+      "** (exponentiation), PHP 7.0",
+      "^^ (power), PHP 8.0",
+      "^ (caret), PHP 4.0"
+    ],
+    "answer": "** (exponentiation), PHP 5.6",
+    "explanation": "** 于 PHP 5.6 引入，4 ** 2 = 16。"
+  },
+  {
+    "type": "mcq",
+    "question": "After $x = 5; $x *= 5; what is the value of $x?",
+    "options": [
+      "3125",
+      "10",
+      "5",
+      "25"
+    ],
+    "answer": "25",
+    "explanation": "$x *= 5 等同 $x = $x * 5 = 25。"
+  },
+  {
+    "type": "mcq",
+    "question": "After $x = 5; $x **= 5; what is the value of $x?",
+    "options": [
+      "3125",
+      "25",
+      "10",
+      "625"
+    ],
+    "answer": "3125",
+    "explanation": "5 的 5 次方 = 3125。"
+  },
+  {
+    "type": "mcq",
+    "question": "After $x = 5; $x %= 5; what is the value of $x?",
+    "options": [
+      "25",
+      "5",
+      "1",
+      "0"
+    ],
+    "answer": "0",
+    "explanation": "5 % 5 = 0。"
+  },
+  {
+    "type": "mcq",
+    "question": "Given $x = 5; $y = $x++; what are $x and $y?",
+    "options": [
+      "$x = 5, $y = 5",
+      "$x = 6, $y = 5",
+      "$x = 6, $y = 6",
+      "$x = 5, $y = 6"
+    ],
+    "answer": "$x = 6, $y = 5",
+    "explanation": "Post-increment 先返回原值再自增。"
+  },
+  {
+    "type": "mcq",
+    "question": "Given $x = 5; $y = ++$x; what are $x and $y?",
+    "options": [
+      "$x = 6, $y = 5",
+      "$x = 5, $y = 6",
+      "$x = 6, $y = 6",
+      "$x = 4, $y = 4"
+    ],
+    "answer": "$x = 6, $y = 6",
+    "explanation": "Pre-increment 先自增再返回新值。"
+  },
+  {
+    "type": "mcq",
+    "question": "Given $x = 5; $y = $x--; what are $x and $y?",
+    "options": [
+      "$x = 4, $y = 5",
+      "$x = 4, $y = 4",
+      "$x = 6, $y = 5",
+      "$x = 5, $y = 4"
+    ],
+    "answer": "$x = 4, $y = 5",
+    "explanation": "Post-decrement：y 得到原值 5，x 变为 4。"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the key difference between pre- and post-increment operators?",
+    "options": [
+      "Pre can only be used in loops",
+      "There is no difference in any situation",
+      "Post changes the variable by 2",
+      "Post returns the original value before changing the variable; pre changes it first and then returns the value"
+    ],
+    "answer": "Post returns the original value before changing the variable; pre changes it first and then returns the value",
+    "explanation": "单独使用结果相同，区别在于表达式返回值。"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the result of (1 == \"1\") and (1 === \"1\") respectively?",
+    "options": [
+      "false and true",
+      "true and false",
+      "false and false",
+      "true and true"
+    ],
+    "answer": "true and false",
+    "explanation": "== 会做 type conversion，=== 同时比较类型和值。"
+  },
+  {
+    "type": "mcq",
+    "question": "What does echo(1 + \"1\"); output?",
+    "options": [
+      "2",
+      "A type error",
+      "11",
+      "\"11\""
+    ],
+    "answer": "2",
+    "explanation": "字符串 \"1\" 被自动转换为整数。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which operator means 'identical' (same type and value)?",
+    "options": [
+      "==",
+      "<>",
+      "<=>",
+      "==="
+    ],
+    "answer": "===",
+    "explanation": "=== 为 identical；!== 为 not identical。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which of these is an alternative form of 'not equal to'?",
+    "options": [
+      "=!",
+      "=<",
+      "><=",
+      "<>"
+    ],
+    "answer": "<>",
+    "explanation": "!= 与 <> 都是不等于。"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the result of (2 !== 3)?",
+    "options": [
+      "null",
+      "false",
+      "0",
+      "true"
+    ],
+    "answer": "true",
+    "explanation": "2 与 3 值不同，所以 not identical 为 true。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which best practice is recommended for comparisons?",
+    "options": [
+      "Use strict comparison (=== / !==) when type conversion is not needed",
+      "Never compare strings",
+      "Always cast to float first",
+      "Always use == to be flexible"
+    ],
+    "answer": "Use strict comparison (=== / !==) when type conversion is not needed",
+    "explanation": "不需要类型转换时用 strict comparison。"
+  },
+  {
+    "type": "mcq",
+    "question": "What does the spaceship operator <=> return for 1 <=> 2, and in which PHP version was it added?",
+    "options": [
+      "1, PHP 5.6",
+      "-1, PHP 7",
+      "-1, PHP 8",
+      "0, PHP 7"
+    ],
+    "answer": "-1, PHP 7",
+    "explanation": "<=> 于 PHP 7 引入：相等 0；左大 1；右大 -1。"
+  },
+  {
+    "type": "mcq",
+    "question": "What does 3 <=> 2 return?",
+    "options": [
+      "-1",
+      "0",
+      "true",
+      "1"
+    ],
+    "answer": "1",
+    "explanation": "左边大返回 1。"
+  },
+  {
+    "type": "mcq",
+    "question": "When does isset($var) return true?",
+    "options": [
+      "When the variable equals 0",
+      "When the variable is numeric",
+      "When the variable has been set and is not NULL",
+      "When the variable is not an empty string"
+    ],
+    "answer": "When the variable has been set and is not NULL",
+    "explanation": "isset：已设置且不是 NULL。"
+  },
+  {
+    "type": "mcq",
+    "question": "When does empty($var) return true?",
+    "options": [
+      "Only when the variable is false",
+      "When the variable is not set, is NULL, or is an empty string",
+      "Only when the variable is unset",
+      "Only when the variable equals 0"
+    ],
+    "answer": "When the variable is not set, is NULL, or is an empty string",
+    "explanation": "empty：未设置、NULL 或空字符串。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which value does is_numeric() return true for?",
+    "options": [
+      "The value null",
+      "The string \"abc\"",
+      "An empty array",
+      "The string \"21\""
+    ],
+    "answer": "The string \"21\"",
+    "explanation": "is_numeric 对数字和可转换为数字的字符串返回 true。"
+  },
+  {
+    "type": "mcq",
+    "question": "What does short-circuit evaluation of && and || mean?",
+    "options": [
+      "The left side is skipped when it is true",
+      "Evaluation runs right to left",
+      "The right side is not evaluated if the left side already determines the result",
+      "Both sides are always evaluated"
+    ],
+    "answer": "The right side is not evaluated if the left side already determines the result",
+    "explanation": "&& 左假、|| 左真时，右侧不再计算。"
+  },
+  {
+    "type": "mcq",
+    "question": "What does var_dump(!true); output?",
+    "options": [
+      "int(0)",
+      "bool(false)",
+      "false",
+      "bool(true)"
+    ],
+    "answer": "bool(false)",
+    "explanation": "!true = false，var_dump 会同时显示类型：bool(false)。"
+  },
+  {
+    "type": "mcq",
+    "question": "With $ageAsString = '21' and $score = 65, what does ($ageAsString > 17 && $score < 70) evaluate to?",
+    "options": [
+      "null",
+      "A type error",
+      "false",
+      "true"
+    ],
+    "answer": "true",
+    "explanation": "'21' > 17 为 true，65 < 70 为 true，AND 为 true。"
+  },
+  {
+    "type": "mcq",
+    "question": "With $rate = 12.50, what does (!is_numeric($rate) || $rate < 0) evaluate to?",
+    "options": [
+      "false",
+      "true",
+      "null",
+      "12.50"
+    ],
+    "answer": "false",
+    "explanation": "!is_numeric 为 false，12.5 < 0 为 false，OR 为 false。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which function is used to print a variable's value together with its type?",
+    "options": [
+      "show()",
+      "type_of()",
+      "print_r_type()",
+      "var_dump()"
+    ],
+    "answer": "var_dump()",
+    "explanation": "var_dump() 输出值和类型，如 bool(false)。"
+  },
+  {
+    "type": "mcq",
+    "question": "What does number_format(12345.675, 2) return?",
+    "options": [
+      "12,345.67",
+      "12,345.68",
+      "12345.68",
+      "12,345.675"
+    ],
+    "answer": "12,345.68",
+    "explanation": "加千位逗号并四舍五入到 2 位小数。"
+  },
+  {
+    "type": "mcq",
+    "question": "What does number_format(12345) return?",
+    "options": [
+      "12345",
+      "12,345",
+      "12.345",
+      "12,345.00"
+    ],
+    "answer": "12,345",
+    "explanation": "只给一个参数时只加千位逗号，不保留小数。"
+  },
+  {
+    "type": "mcq",
+    "question": "What does date('Y-m-d') return, assuming the date is 4 January 2022?",
+    "options": [
+      "22-1-4",
+      "2022-01-04",
+      "2022-1-4",
+      "01-04-2022"
+    ],
+    "answer": "2022-01-04",
+    "explanation": "Y=4 位年；m=带前导零的月；d=带前导零的日。"
+  },
+  {
+    "type": "mcq",
+    "question": "In date() format strings, what is the difference between Y and y?",
+    "options": [
+      "Y is the year; y is the day",
+      "Y is uppercase text; y is lowercase text",
+      "Y is the month; y is the year",
+      "Y is a 4-digit year; y is a 2-digit year"
+    ],
+    "answer": "Y is a 4-digit year; y is a 2-digit year",
+    "explanation": "Y=2022；y=22。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which expression formats a stored timestamp string for display?",
+    "options": [
+      "strtotime(\"F j, Y\", date($theDate))",
+      "date(\"F j, Y - g:i a\", strtotime($theDate))",
+      "format_date($theDate)",
+      "date_format_string($theDate, \"F\")"
+    ],
+    "answer": "date(\"F j, Y - g:i a\", strtotime($theDate))",
+    "explanation": "先用 strtotime 转成 timestamp，再用 date 格式化。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which construct chain is correct for multiple conditions in PHP?",
+    "options": [
+      "if / elif / else",
+      "if / else if / else",
+      "switch only; if cannot be chained",
+      "if / elsif / end"
+    ],
+    "answer": "if / else if / else",
+    "explanation": "课件使用 if ... else if ... else；if 可嵌套。"
+  },
+  {
+    "type": "mcq",
+    "question": "What does this code echo? $m='|'; for($c=1;$c<=5;$c++){ $m = $m.$c.'|'; } echo $m;",
+    "options": [
+      "|0|1|2|3|4|5|",
+      "|1|2|3|4|5|",
+      "|1|2|3|4|",
+      "1|2|3|4|5"
+    ],
+    "answer": "|1|2|3|4|5|",
+    "explanation": "循环 1 到 5，每次拼接。"
+  },
+  {
+    "type": "mcq",
+    "question": "What does this do? $count = 20; do { ... $count++; } while ($count <= 5);",
+    "options": [
+      "The body never runs",
+      "The body runs an infinite number of times",
+      "The body runs exactly once (output |20|)",
+      "A parse error occurs"
+    ],
+    "answer": "The body runs exactly once (output |20|)",
+    "explanation": "do-while 先执行再判断，至少执行一次。"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the main difference between a while loop and a do-while loop?",
+    "options": [
+      "A while loop is guaranteed to run at least once",
+      "do-while checks the condition before each run",
+      "A do-while loop is guaranteed to run at least once",
+      "do-while cannot use a counter"
+    ],
+    "answer": "A do-while loop is guaranteed to run at least once",
+    "explanation": "do-while 先执行后检查条件。"
+  },
+  {
+    "type": "mcq",
+    "question": "What must every try block be accompanied by?",
+    "options": [
+      "A throw statement inside the same block",
+      "Exactly one catch and one finally block",
+      "A return statement",
+      "At least one corresponding catch or finally block"
+    ],
+    "answer": "At least one corresponding catch or finally block",
+    "explanation": "每个 try 至少要有一个 catch 或 finally。"
+  },
+  {
+    "type": "mcq",
+    "question": "What happens to an exception thrown in a function that has no matching catch block?",
+    "options": [
+      "It is converted into a warning",
+      "It is silently ignored",
+      "The script restarts from the beginning",
+      "It bubbles up the call stack to the calling function until a matching catch is found"
+    ],
+    "answer": "It bubbles up the call stack to the calling function until a matching catch is found",
+    "explanation": "异常沿 call stack 向上冒泡，途中的 finally 块都会被执行。"
+  },
+  {
+    "type": "mcq",
+    "question": "If the call stack unwinds to the global scope with no matching catch and no global exception handler, what happens?",
+    "options": [
+      "Only a notice is shown and execution continues",
+      "The exception is retried",
+      "The program terminates with a fatal error",
+      "The script jumps to the finally block of the first function"
+    ],
+    "answer": "The program terminates with a fatal error",
+    "explanation": "未被捕获的异常会导致 fatal error（除非设置了 global exception handler）。"
+  },
+  {
+    "type": "mcq",
+    "question": "What must a thrown object be an instance of?",
+    "options": [
+      "The Exception class or a subclass of Exception",
+      "Any string",
+      "Any object",
+      "The Error class only"
+    ],
+    "answer": "The Exception class or a subclass of Exception",
+    "explanation": "抛出其他类型会导致 PHP Fatal Error。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which method returns the error message of a caught exception $ex?",
+    "options": [
+      "$ex.getError()",
+      "$ex->getMessage()",
+      "$ex->message()",
+      "getMessage($ex)"
+    ],
+    "answer": "$ex->getMessage()",
+    "explanation": "示例使用 $ex->getMessage()。"
+  },
+  {
+    "type": "mcq",
+    "question": "In the inverse() example, what is printed for inverse(0) inside try/catch and what happens afterwards?",
+    "options": [
+      "Nothing is printed and the script stops",
+      "\"Caught exception: Division by zero\" and the code continues to run",
+      "0 and the code continues to run",
+      "A fatal error and the script stops"
+    ],
+    "answer": "\"Caught exception: Division by zero\" and the code continues to run",
+    "explanation": "inverse(0) 抛出异常被 catch 捕获，之后代码继续运行。"
+  },
+  {
+    "type": "mcq",
+    "question": "When does a finally block execute?",
+    "options": [
+      "Whether or not an exception was thrown",
+      "Only when no exception is thrown",
+      "Only when the exception is uncaught",
+      "Only when an exception is thrown"
+    ],
+    "answer": "Whether or not an exception was thrown",
+    "explanation": "finally 总会执行。"
+  },
+  {
+    "type": "mcq",
+    "question": "What changed about the throw keyword as of PHP 8.0.0?",
+    "options": [
+      "throw can only be used inside class methods",
+      "throw was removed from the language",
+      "throw became a function that returns a value",
+      "throw became an expression and can be used in any expression context"
+    ],
+    "answer": "throw became an expression and can be used in any expression context",
+    "explanation": "PHP 8.0 起 throw 是 expression，此前是必须独占一行的 statement。"
+  },
+  {
+    "type": "mcq",
+    "question": "Since PHP 8, how can you catch an exception without storing it in a variable?",
+    "options": [
+      "catch (SpecificException as null) { ... }",
+      "catch (SpecificException) { ... }",
+      "catch SpecificException; { ... }",
+      "catch () { ... }"
+    ],
+    "answer": "catch (SpecificException) { ... }",
+    "explanation": "PHP 8 允许 catch 不写变量。"
+  },
+  {
+    "type": "mcq",
+    "question": "What happens when include($path) fails?",
+    "options": [
+      "A warning is produced and the script continues",
+      "The script restarts",
+      "A fatal error stops execution",
+      "Nothing; the failure is silent"
+    ],
+    "answer": "A warning is produced and the script continues",
+    "explanation": "include 失败仅 warning；require 失败是 fatal error。"
+  },
+  {
+    "type": "mcq",
+    "question": "What happens when require($path) fails?",
+    "options": [
+      "The script continues silently",
+      "The file is created automatically",
+      "A fatal error is raised and execution stops",
+      "Only a warning is shown"
+    ],
+    "answer": "A fatal error is raised and execution stops",
+    "explanation": "require 失败导致 fatal error。"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the purpose of include_once and require_once?",
+    "options": [
+      "To make sure the file is included/required only once",
+      "To include a file asynchronously",
+      "To include a file only on the first line",
+      "To include a file without executing it"
+    ],
+    "answer": "To make sure the file is included/required only once",
+    "explanation": "_once 版本保证文件只被引入一次。"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the difference between exit() and die([$status])?",
+    "options": [
+      "They are the same, except die sends $status to the browser before exiting if supplied",
+      "die() restarts the script",
+      "die() continues running after the message",
+      "exit() is only for loops"
+    ],
+    "answer": "They are the same, except die sends $status to the browser before exiting if supplied",
+    "explanation": "die 等同 exit，但可先输出 $status。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which statement redirects the browser to another page in PHP?",
+    "options": [
+      "goto('index.php');",
+      "redirect('index.php');",
+      "header('Location:index.php');",
+      "include_header('index.php');"
+    ],
+    "answer": "header('Location:index.php');",
+    "explanation": "使用 header('Location:...') 重定向。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which function checks whether a value is a string, integer, float or Boolean?",
+    "options": [
+      "is_resource()",
+      "is_countable()",
+      "is_scalar()",
+      "is_iterable()"
+    ],
+    "answer": "is_scalar()",
+    "explanation": "is_scalar 判断是否为 scalar 类型。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which function checks whether a floating-point value is 'not a number'?",
+    "options": [
+      "is_finite()",
+      "is_nan()",
+      "is_null()",
+      "is_infinite()"
+    ],
+    "answer": "is_nan()",
+    "explanation": "is_nan() 检查 NaN。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which function checks whether a value can be called as a function?",
+    "options": [
+      "is_callable()",
+      "is_object()",
+      "is_array()",
+      "is_iterable()"
+    ],
+    "answer": "is_callable()",
+    "explanation": "is_callable() 检查值是否可作为函数调用。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which function checks whether a value can be iterated over?",
+    "options": [
+      "is_iterable()",
+      "is_countable()",
+      "is_scalar()",
+      "is_callable()"
+    ],
+    "answer": "is_iterable()",
+    "explanation": "is_iterable() 检查是否可迭代。"
+  },
+  {
+    "type": "mcq",
+    "question": "How many scope types does PHP define in the slides, and which are they?",
+    "options": [
+      "5: local, global, static, class, block",
+      "2: local and global",
+      "4: local, function parameters, global, static",
+      "3: local, global, class"
+    ],
+    "answer": "4: local, function parameters, global, static",
+    "explanation": "课件列出 Local、Function parameters、Global、Static。"
+  },
+  {
+    "type": "mcq",
+    "question": "What happens if you echo a variable defined inside a function from outside that function?",
+    "options": [
+      "It prints NULL silently with no notice",
+      "It prints the value normally",
+      "A notice: Undefined variable",
+      "The script is terminated"
+    ],
+    "answer": "A notice: Undefined variable",
+    "explanation": "Local 变量在函数外不可访问，出现 Notice: Undefined variable。"
+  },
+  {
+    "type": "mcq",
+    "question": "When is a local variable and its value destroyed?",
+    "options": [
+      "When the browser closes",
+      "When the script starts",
+      "Never; it stays until the server restarts",
+      "When the function exits"
+    ],
+    "answer": "When the function exits",
+    "explanation": "函数执行完毕后 local 变量被销毁。"
+  },
+  {
+    "type": "mcq",
+    "question": "Where must function parameters be declared?",
+    "options": [
+      "In the function header",
+      "Inside the function body with the global keyword",
+      "In a separate config file",
+      "At the top of the file"
+    ],
+    "answer": "In the function header",
+    "explanation": "参数在函数头声明，函数结束后不可访问（除非按引用传递）。"
+  },
+  {
+    "type": "mcq",
+    "question": "How do you pass a variable by reference in PHP?",
+    "options": [
+      "Add an asterisk (*) before the parameter name",
+      "Use the ref keyword",
+      "Add an ampersand (&) before the parameter name",
+      "Wrap the argument in brackets"
+    ],
+    "answer": "Add an ampersand (&) before the parameter name",
+    "explanation": "function demo(&$arg){...}"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the effect of passing by reference?",
+    "options": [
+      "The function receives an independent copy",
+      "The variable is deleted after the call",
+      "The variable becomes a constant",
+      "Changing the variable inside the function also changes the original variable, and vice versa"
+    ],
+    "answer": "Changing the variable inside the function also changes the original variable, and vice versa",
+    "explanation": "两个变量引用同一个值，互相同步。"
+  },
+  {
+    "type": "mcq",
+    "question": "What happens if you call printString(\"this is my string\") where printString(&$string) takes a reference?",
+    "options": [
+      "Fatal error: only variables can be passed by reference",
+      "A notice is shown and the call is skipped",
+      "It works and prints the string",
+      "It prints NULL"
+    ],
+    "answer": "Fatal error: only variables can be passed by reference",
+    "explanation": "不能把字面量传给按引用参数。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which are the two ways to access a global variable inside a function?",
+    "options": [
+      "The & operator and the const keyword",
+      "The static keyword and the define() function",
+      "The global keyword and the $GLOBALS array",
+      "The $_SESSION and $_COOKIE arrays"
+    ],
+    "answer": "The global keyword and the $GLOBALS array",
+    "explanation": "global $x; 或 $GLOBALS['x']。"
+  },
+  {
+    "type": "mcq",
+    "question": "What does $GLOBALS['z'] = $GLOBALS['x'] + $GLOBALS['y']; do inside a function?",
+    "options": [
+      "Directly operates on the global variables, creating/updating global $z",
+      "Creates a local variable $z only",
+      "Throws a fatal error",
+      "Declares constants"
+    ],
+    "answer": "Directly operates on the global variables, creating/updating global $z",
+    "explanation": "$GLOBALS 可直接操作全局变量。"
+  },
+  {
+    "type": "mcq",
+    "question": "What does the static keyword do for a variable declared inside a function?",
+    "options": [
+      "The variable keeps its value after the function exits",
+      "The variable is destroyed immediately",
+      "The variable becomes a constant",
+      "The variable becomes global automatically"
+    ],
+    "answer": "The variable keeps its value after the function exits",
+    "explanation": "static 变量在多次调用间保留其值。"
+  },
+  {
+    "type": "mcq",
+    "question": "Given keepTrack() with 'static $num1 = 10; $num2 = 20;' then $num1++; $num2++; what are the values on the SECOND call?",
+    "options": [
+      "num1 = 12, num2 = 22",
+      "num1 = 11, num2 = 21",
+      "num1 = 11, num2 = 22",
+      "num1 = 12, num2 = 21"
+    ],
+    "answer": "num1 = 12, num2 = 21",
+    "explanation": "$num1 为 static 会累加；$num2 每次重置为 20 再 ++ 得 21。"
+  },
+  {
+    "type": "mcq",
+    "question": "How many primitive types does PHP support, according to the slides?",
+    "options": [
+      "10",
+      "8",
+      "4",
+      "12"
+    ],
+    "answer": "10",
+    "explanation": "4 scalar + 4 compound + 2 special = 10。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which of the following is a complete list of PHP's scalar types?",
+    "options": [
+      "boolean, integer, float, string",
+      "resource, NULL",
+      "integer, string, array, object",
+      "array, object, callable, iterable"
+    ],
+    "answer": "boolean, integer, float, string",
+    "explanation": "Scalar 一次只存一个值。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which are the compound types in PHP?",
+    "options": [
+      "array, object, callable, iterable",
+      "string, array, float, object",
+      "resource, NULL",
+      "boolean, integer, float, string"
+    ],
+    "answer": "array, object, callable, iterable",
+    "explanation": "Compound：array、object、callable、iterable。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which are the two special types in PHP?",
+    "options": [
+      "boolean and NULL",
+      "callable and iterable",
+      "resource and NULL",
+      "object and resource"
+    ],
+    "answer": "resource and NULL",
+    "explanation": "Special：resource 与 NULL。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which function is used to define a constant?",
+    "options": [
+      "const_set()",
+      "constant_define()",
+      "define()",
+      "var_const()"
+    ],
+    "answer": "define()",
+    "explanation": "define(\"PI\", 3.141592);"
+  },
+  {
+    "type": "mcq",
+    "question": "What happens if you try to define a constant a second time (e.g. define(\"PI\", 123.45) after defining PI)?",
+    "options": [
+      "PI becomes NULL",
+      "The script restarts",
+      "A notice/warning that the constant is already defined; the value is unchanged",
+      "PI silently takes the new value"
+    ],
+    "answer": "A notice/warning that the constant is already defined; the value is unchanged",
+    "explanation": "常量不能被修改，重复定义会出现警告/Notice。"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the naming convention for constants?",
+    "options": [
+      "Leading underscore only",
+      "camelCase",
+      "All capital letters",
+      "All lowercase with a $ prefix"
+    ],
+    "answer": "All capital letters",
+    "explanation": "如 PI。"
+  },
+  {
+    "type": "mcq",
+    "question": "What is special about superglobal variables?",
+    "options": [
+      "They are available only inside functions",
+      "They must be declared with global first",
+      "They only exist in HTML files",
+      "They are predefined and available in all scopes throughout a script"
+    ],
+    "answer": "They are predefined and available in all scopes throughout a script",
+    "explanation": "Superglobals 无需 global 关键字，在所有 scope 都可用。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which of the following is NOT a PHP superglobal?",
+    "options": [
+      "$_LOCAL",
+      "$_REQUEST",
+      "$_SERVER",
+      "$_COOKIE"
+    ],
+    "answer": "$_LOCAL",
+    "explanation": "九个 superglobals：$GLOBALS、$_SERVER、$_GET、$_POST、$_FILES、$_COOKIE、$_SESSION、$_REQUEST、$_ENV。"
+  },
+  {
+    "type": "mcq",
+    "question": "What does $GLOBALS contain?",
+    "options": [
+      "Only environment variables",
+      "An associative array of references to all variables in the global scope, keyed by variable name",
+      "Only constants defined with define()",
+      "Only variables sent from forms"
+    ],
+    "answer": "An associative array of references to all variables in the global scope, keyed by variable name",
+    "explanation": "变量名就是数组的 key。"
+  },
+  {
+    "type": "mcq",
+    "question": "In globalsExample(), with global $myString = 'Global content' and local $myString = 'Local variable', what does $GLOBALS['myString'] return inside the function?",
+    "options": [
+      "NULL",
+      "Global content",
+      "Local variable",
+      "An undefined variable notice"
+    ],
+    "answer": "Global content",
+    "explanation": "$GLOBALS['myString'] 指向全局变量。"
+  },
+  {
+    "type": "mcq",
+    "question": "What does $_SERVER provide?",
+    "options": [
+      "Only the data posted by a form",
+      "Server and execution environment information such as headers, path and script location",
+      "Only the cookies stored in the browser",
+      "Only uploaded files"
+    ],
+    "answer": "Server and execution environment information such as headers, path and script location",
+    "explanation": "$_SERVER 由 web server 创建，不同 server 的变量不同。"
+  },
+  {
+    "type": "mcq",
+    "question": "Who creates the entries in $_SERVER, and are they the same on all servers?",
+    "options": [
+      "The database creates them",
+      "The web server creates them, and not all servers provide the same variables",
+      "PHP creates them, and they are always the same",
+      "The browser creates them, and they are always the same"
+    ],
+    "answer": "The web server creates them, and not all servers provide the same variables",
+    "explanation": "Created by the webserver；Not all servers the same variables。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which superglobal retrieves values from URL parameters (query strings)?",
+    "options": [
+      "$_POST",
+      "$_ENV",
+      "$_FILES",
+      "$_GET"
+    ],
+    "answer": "$_GET",
+    "explanation": "$_GET 用于 URL 参数。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which function should be used to sanitize $_GET input to help prevent XSS attacks?",
+    "options": [
+      "number_format()",
+      "strtotime()",
+      "strtolower()",
+      "htmlspecialchars()"
+    ],
+    "answer": "htmlspecialchars()",
+    "explanation": "htmlspecialchars() 转义 HTML 特殊字符。"
+  },
+  {
+    "type": "mcq",
+    "question": "For the URL ...superglobals.php?firstName=Jimmy&lastName=Jones, what is $_GET['firstName']?",
+    "options": [
+      "NULL",
+      "Jimmy",
+      "Jimmy&lastName=Jones",
+      "firstName"
+    ],
+    "answer": "Jimmy",
+    "explanation": "querystring 中的键值对被放进 $_GET。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which HTTP Content-Types make data available in $_POST?",
+    "options": [
+      "text/plain or text/css",
+      "application/x-www-form-urlencoded or multipart/form-data",
+      "image/png or image/jpeg",
+      "application/pdf only"
+    ],
+    "answer": "application/x-www-form-urlencoded or multipart/form-data",
+    "explanation": "$_POST 用于通过 HTTP POST 提交的数据。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which superglobal holds items uploaded to the script via HTTP POST?",
+    "options": [
+      "$_SERVER",
+      "$_FILES",
+      "$_UPLOAD",
+      "$_POST only"
+    ],
+    "answer": "$_FILES",
+    "explanation": "$_FILES 为 HTTP File Upload variables。"
+  },
+  {
+    "type": "mcq",
+    "question": "Which function stores a cookie, and how do you read it back later?",
+    "options": [
+      "cookie_set(); read with getcookie()",
+      "setcookie(); read with $_GET['cookiename']",
+      "makecookie(); read with $_SESSION['cookiename']",
+      "setcookie(); read with $_COOKIE['cookiename']"
+    ],
+    "answer": "setcookie(); read with $_COOKIE['cookiename']",
+    "explanation": "setcookie() 保存，$_COOKIE['name'] 读取。"
+  },
+  {
+    "type": "mcq",
+    "question": "What does setcookie(\"TestCookie\", $value, time()+3600); do?",
+    "options": [
+      "Stores the cookie and makes it expire in 1 hour",
+      "Deletes the cookie after 3600 days",
+      "Stores the cookie and makes it expire in 1 minute",
+      "Stores the cookie permanently"
+    ],
+    "answer": "Stores the cookie and makes it expire in 1 hour",
+    "explanation": "time()+3600 秒 = 1 小时。"
+  },
+  {
+    "type": "mcq",
+    "question": "How do $_SESSION variables compare to cookies according to the slides?",
+    "options": [
+      "They are stored forever in the browser",
+      "They are the same as $_GET",
+      "They work in the same way as cookies but don't last as long",
+      "They can only store integers"
+    ],
+    "answer": "They work in the same way as cookies but don't last as long",
+    "explanation": "Work in the same way as cookies but don't last as long。"
+  },
+  {
+    "type": "mcq",
+    "question": "By default, which superglobals' contents does $_REQUEST include?",
+    "options": [
+      "$_SESSION and $_GLOBALS",
+      "$_SERVER, $_ENV and $_FILES",
+      "$_GET, $_POST and $_COOKIE",
+      "Only $_GET"
+    ],
+    "answer": "$_GET, $_POST and $_COOKIE",
+    "explanation": "$_REQUEST 默认包含 $_GET、$_POST、$_COOKIE。"
+  },
+  {
+    "type": "mcq",
+    "question": "What does $_ENV contain?",
+    "options": [
+      "HTTP cookies",
+      "Variables defined in the global scope",
+      "Uploaded files",
+      "Environment variables passed to the current script"
+    ],
+    "answer": "Environment variables passed to the current script",
+    "explanation": "$_ENV 为 Environment variables。"
+  }
 ]
 
 
