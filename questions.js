@@ -4838,6 +4838,820 @@ PHP_Q1:[
     "answer": "Environment variables passed to the current script",
     "explanation": "$_ENV 为 Environment variables。"
   }
+],
+Java_Q3:[
+  // ===== REST API 基础 =====
+  {
+    "type": "mcq",
+    "question": "Who is the main consumer of Rest Api endpoints?",
+    "options": [
+      "Other applications such as mobile apps, JavaScript apps and microservices",
+      "End users typing URLs directly in a browser",
+      "Only the database server",
+      "Only the same application's Thymeleaf templates"
+    ],
+    "answer": "Other applications such as mobile apps, JavaScript apps and microservices"
+  },
+  {
+    "type": "mcq",
+    "question": "Which of the following is an advantage of a Rest Api?",
+    "options": [
+      "It makes the application simpler to develop",
+      "It allows a distributed architecture for better scaling across multiple servers",
+      "It reduces the number of services to manage",
+      "It lets mobile apps access the database directly"
+    ],
+    "answer": "It allows a distributed architecture for better scaling across multiple servers"
+  },
+  {
+    "type": "mcq",
+    "question": "Which of the following is a disadvantage of a Rest Api?",
+    "options": [
+      "It can only be used by Java clients",
+      "It cannot be scaled",
+      "Added complexity and more services to manage",
+      "It provides worse separation of concerns"
+    ],
+    "answer": "Added complexity and more services to manage"
+  },
+  {
+    "type": "mcq",
+    "question": "Why does a Rest Api give better security for mobile apps and JavaScript apps?",
+    "options": [
+      "It encrypts every database column",
+      "It does not allow direct database access from those clients",
+      "It removes the need for passwords",
+      "It runs only on localhost"
+    ],
+    "answer": "It does not allow direct database access from those clients"
+  },
+  {
+    "type": "mcq",
+    "question": "A Rest Service written in Java can be used by other languages such as C#, Kotlin and JavaScript. This is an example of which benefit?",
+    "options": [
+      "Flexibility",
+      "Lower development time",
+      "Direct database access",
+      "Lazy initialization"
+    ],
+    "answer": "Flexibility"
+  },
+  {
+    "type": "mcq",
+    "question": "Which annotation makes a class a REST controller in Spring Boot?",
+    "options": [
+      "@Controller",
+      "@Service",
+      "@RestController",
+      "@RequestBody"
+    ],
+    "answer": "@RestController"
+  },
+  {
+    "type": "mcq",
+    "question": "@RestController is used instead of which annotation that is used for a web controller?",
+    "options": [
+      "@Component",
+      "@Controller",
+      "@Repository",
+      "@Configuration"
+    ],
+    "answer": "@Controller"
+  },
+  {
+    "type": "mcq",
+    "question": "What does a Rest Api controller do instead of returning a view?",
+    "options": [
+      "It returns a JSP page",
+      "It returns a Thymeleaf template name",
+      "It automatically tries to convert returned objects to JSON",
+      "It always redirects to the home page"
+    ],
+    "answer": "It automatically tries to convert returned objects to JSON"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the purpose of ResponseEntity<T> in a Rest controller?",
+    "options": [
+      "To return the object (body) together with an HTTP status code",
+      "To validate the request body",
+      "To define a database relationship",
+      "To create a Spring Bean"
+    ],
+    "answer": "To return the object (body) together with an HTTP status code"
+  },
+  {
+    "type": "mcq",
+    "question": "In ResponseEntity<List<Product>>, what does T represent?",
+    "options": [
+      "The HTTP status code",
+      "The type of the data being returned, here a List<Product>",
+      "The name of the template",
+      "The name of the controller"
+    ],
+    "answer": "The type of the data being returned, here a List<Product>"
+  },
+  {
+    "type": "mcq",
+    "question": "In the CategoryApiController example, what is returned when the category is not found?",
+    "options": [
+      "new ResponseEntity<>(category, HttpStatus.OK)",
+      "new ResponseEntity<>(HttpStatus.NOT_FOUND)",
+      "new ResponseEntity<>(HttpStatus.CREATED)",
+      "An empty HTML page"
+    ],
+    "answer": "new ResponseEntity<>(HttpStatus.NOT_FOUND)"
+  },
+  {
+    "type": "mcq",
+    "question": "What does @PathVariable(\"id\") do in @GetMapping(\"/{id}\")?",
+    "options": [
+      "Reads the value of {id} from the URL path into the method parameter",
+      "Reads the id from the JSON response",
+      "Generates a new primary key",
+      "Validates that the id is not null"
+    ],
+    "answer": "Reads the value of {id} from the URL path into the method parameter"
+  },
+  {
+    "type": "mcq",
+    "question": "What does @RequestMapping(\"/api/category\") do when placed on a controller class?",
+    "options": [
+      "It makes the class a Spring Bean only",
+      "It sets a base URL path for the methods in the controller",
+      "It defines the database table name",
+      "It turns the class into a JPA entity"
+    ],
+    "answer": "It sets a base URL path for the methods in the controller"
+  },
+  {
+    "type": "mcq",
+    "question": "Which of the following is NOT a tool mentioned for testing Rest Api endpoints?",
+    "options": [
+      "Postman",
+      "Bruno",
+      "Swagger",
+      "Hibernate"
+    ],
+    "answer": "Hibernate"
+  },
+  {
+    "type": "mcq",
+    "question": "What is Swagger in the context of testing Rest Api endpoints?",
+    "options": [
+      "A web portal in our application where endpoints can be tested",
+      "A database engine",
+      "A build tool like Maven",
+      "A template engine like Thymeleaf"
+    ],
+    "answer": "A web portal in our application where endpoints can be tested"
+  },
+
+  // ===== HTTP Request Methods =====
+  {
+    "type": "mcq",
+    "question": "Which HTTP methods do web controllers (HTML forms) normally use?",
+    "options": [
+      "Only GET and POST",
+      "GET, PUT and DELETE",
+      "PATCH and DELETE only",
+      "All five methods equally"
+    ],
+    "answer": "Only GET and POST"
+  },
+  {
+    "type": "mcq",
+    "question": "Which annotation and HTTP method retrieve data without modifying state?",
+    "options": [
+      "@PostMapping / POST",
+      "@GetMapping / GET",
+      "@PutMapping / PUT",
+      "@DeleteMapping / DELETE"
+    ],
+    "answer": "@GetMapping / GET"
+  },
+  {
+    "type": "mcq",
+    "question": "Which annotation is used to create a new resource, such as POST /api/users?",
+    "options": [
+      "@GetMapping",
+      "@PatchMapping",
+      "@PostMapping",
+      "@DeleteMapping"
+    ],
+    "answer": "@PostMapping"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the common HTTP status code returned after successfully creating a resource with POST?",
+    "options": [
+      "200 OK",
+      "201 CREATED",
+      "204 NO CONTENT",
+      "404 NOT FOUND"
+    ],
+    "answer": "201 CREATED"
+  },
+  {
+    "type": "mcq",
+    "question": "Which HTTP method is used for a complete update (full replacement) of an existing resource?",
+    "options": [
+      "PUT",
+      "PATCH",
+      "POST",
+      "GET"
+    ],
+    "answer": "PUT"
+  },
+  {
+    "type": "mcq",
+    "question": "Which HTTP method is used to partially update a resource (only specific fields)?",
+    "options": [
+      "PUT",
+      "POST",
+      "DELETE",
+      "PATCH"
+    ],
+    "answer": "PATCH"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the main difference between PUT and PATCH?",
+    "options": [
+      "PUT replaces the entire resource; PATCH updates only specific fields",
+      "PUT deletes the resource; PATCH creates it",
+      "PUT is for reading data; PATCH is for deleting data",
+      "There is no difference"
+    ],
+    "answer": "PUT replaces the entire resource; PATCH updates only specific fields"
+  },
+  {
+    "type": "mcq",
+    "question": "Which annotation handles HTTP DELETE requests?",
+    "options": [
+      "@RemoveMapping",
+      "@DeleteMapping",
+      "@PatchMapping",
+      "@PostMapping"
+    ],
+    "answer": "@DeleteMapping"
+  },
+  {
+    "type": "mcq",
+    "question": "Which status code is commonly returned after a successful DELETE?",
+    "options": [
+      "201 CREATED",
+      "404 NOT FOUND",
+      "204 NO CONTENT (or 200 OK)",
+      "405 METHOD NOT ALLOWED"
+    ],
+    "answer": "204 NO CONTENT (or 200 OK)"
+  },
+  {
+    "type": "mcq",
+    "question": "Which status code is the common response for a successful GET request?",
+    "options": [
+      "200 OK",
+      "201 CREATED",
+      "204 NO CONTENT",
+      "500 INTERNAL SERVER ERROR"
+    ],
+    "answer": "200 OK"
+  },
+  {
+    "type": "mcq",
+    "question": "A client wants to replace the entire user with id 5. Which request is the best match?",
+    "options": [
+      "GET /api/users/5",
+      "POST /api/users",
+      "PUT /api/users/5",
+      "DELETE /api/users/5"
+    ],
+    "answer": "PUT /api/users/5"
+  },
+  {
+    "type": "mcq",
+    "question": "A client wants to change only the email of user 5 and leave all other fields as they are. Which request is the best match?",
+    "options": [
+      "PATCH /api/users/5",
+      "PUT /api/users/5",
+      "POST /api/users/5",
+      "GET /api/users/5"
+    ],
+    "answer": "PATCH /api/users/5"
+  },
+  {
+    "type": "mcq",
+    "question": "A client wants a list of all users. Which request is the best match?",
+    "options": [
+      "DELETE /api/users",
+      "GET /api/users",
+      "PATCH /api/users",
+      "PUT /api/users"
+    ],
+    "answer": "GET /api/users"
+  },
+  {
+    "type": "mcq",
+    "question": "What does the HTTP status 405 mean?",
+    "options": [
+      "The URL was found, but not with that HTTP method",
+      "The resource was created",
+      "The server crashed",
+      "The request was successful with no content"
+    ],
+    "answer": "The URL was found, but not with that HTTP method"
+  },
+  {
+    "type": "mcq",
+    "question": "A controller has only a @GetMapping(\"/delete/{id}\") and the browser sends a POST to /delete/7. What happens?",
+    "options": [
+      "The GET method runs anyway",
+      "A 405 Method Not Allowed is returned",
+      "The record is deleted",
+      "A 201 CREATED is returned"
+    ],
+    "answer": "A 405 Method Not Allowed is returned"
+  },
+  {
+    "type": "mcq",
+    "question": "Can a controller have a @GetMapping and a @PostMapping with the same URL?",
+    "options": [
+      "No, a URL can only be mapped once",
+      "Yes, because the combination of HTTP method and URL must be unique, not the URL alone",
+      "Only if both methods have the same name",
+      "Only in a Rest controller"
+    ],
+    "answer": "Yes, because the combination of HTTP method and URL must be unique, not the URL alone"
+  },
+  {
+    "type": "mcq",
+    "question": "What happens if two @GetMapping methods map to exactly the same URL?",
+    "options": [
+      "Spring picks the first one alphabetically and everything works",
+      "Spring cannot tell which method to call, so there is a problem (ambiguous mapping)",
+      "Both methods run one after the other",
+      "The second one is converted to POST"
+    ],
+    "answer": "Spring cannot tell which method to call, so there is a problem (ambiguous mapping)"
+  },
+
+  // ===== Spring / IoC / DI =====
+  {
+    "type": "mcq",
+    "question": "What is Spring?",
+    "options": [
+      "A database engine",
+      "An open source framework that sits on top of Java",
+      "A replacement for the Java language",
+      "A JavaScript front-end library"
+    ],
+    "answer": "An open source framework that sits on top of Java"
+  },
+  {
+    "type": "mcq",
+    "question": "Which responsibility belongs to the Spring Core Container?",
+    "options": [
+      "Creating and configuring objects and managing their lifecycle from creation to destruction",
+      "Compiling Java into bytecode",
+      "Rendering HTML pages in the browser",
+      "Storing data in tables"
+    ],
+    "answer": "Creating and configuring objects and managing their lifecycle from creation to destruction"
+  },
+  {
+    "type": "mcq",
+    "question": "What are the objects managed by the Spring container called?",
+    "options": [
+      "Spring Beans",
+      "Spring Entities",
+      "Spring Servlets",
+      "Spring Records"
+    ],
+    "answer": "Spring Beans"
+  },
+  {
+    "type": "mcq",
+    "question": "What does the Spring container use to wire objects together?",
+    "options": [
+      "Reflection-free static methods",
+      "Dependency Injection",
+      "JSP tags",
+      "SQL joins"
+    ],
+    "answer": "Dependency Injection"
+  },
+  {
+    "type": "mcq",
+    "question": "In which ways can the Spring container be configured?",
+    "options": [
+      "Java classes, XML files or properties files",
+      "Only with XML files",
+      "Only with annotations",
+      "Only with JSON files"
+    ],
+    "answer": "Java classes, XML files or properties files"
+  },
+  {
+    "type": "mcq",
+    "question": "Dependency Injection is a form of which principle?",
+    "options": [
+      "Object Relational Mapping",
+      "Inversion of Control",
+      "Polymorphism",
+      "Lazy Initialization"
+    ],
+    "answer": "Inversion of Control"
+  },
+  {
+    "type": "mcq",
+    "question": "What best describes Inversion of Control (IoC)?",
+    "options": [
+      "Our code always controls the flow and calls libraries",
+      "We give control to a framework, which calls our code when required",
+      "The database controls the flow of the application",
+      "The browser controls the flow of the application"
+    ],
+    "answer": "We give control to a framework, which calls our code when required"
+  },
+  {
+    "type": "mcq",
+    "question": "In traditional programming (without IoC), who controls the flow of the application?",
+    "options": [
+      "The framework",
+      "The container",
+      "Our own code, which calls a library and gets control back",
+      "The operating system only"
+    ],
+    "answer": "Our own code, which calls a library and gets control back"
+  },
+  {
+    "type": "mcq",
+    "question": "What does Dependency Injection reduce in application code?",
+    "options": [
+      "The need for instantiation and factories",
+      "The number of classes in the database",
+      "The need for annotations",
+      "The size of the pom.xml"
+    ],
+    "answer": "The need for instantiation and factories"
+  },
+  {
+    "type": "mcq",
+    "question": "Which interface is used to interact with the Spring IoC container in code?",
+    "options": [
+      "EntityManager",
+      "ApplicationContext",
+      "HttpServletRequest",
+      "BindingResult"
+    ],
+    "answer": "ApplicationContext"
+  },
+  {
+    "type": "mcq",
+    "question": "Which dependency is the only one needed to use the Spring Injection Container?",
+    "options": [
+      "spring-context",
+      "spring-boot-starter-data-jpa",
+      "spring-boot-starter-validation",
+      "jakarta.servlet.jsp.jstl"
+    ],
+    "answer": "spring-context"
+  },
+  {
+    "type": "mcq",
+    "question": "Which annotation declares a Java class as a Spring configuration class?",
+    "options": [
+      "@Bean",
+      "@Component",
+      "@Configuration",
+      "@Entity"
+    ],
+    "answer": "@Configuration"
+  },
+  {
+    "type": "mcq",
+    "question": "Where is the @Bean annotation placed?",
+    "options": [
+      "On a method (in a configuration class) that returns the object to be managed as a bean",
+      "On a database column",
+      "On the main() method only",
+      "On an HTML form"
+    ],
+    "answer": "On a method (in a configuration class) that returns the object to be managed as a bean"
+  },
+  {
+    "type": "mcq",
+    "question": "What does @Component do when placed on a class?",
+    "options": [
+      "It tells Spring that the class is a Bean it should manage and wire where needed",
+      "It maps the class to a database table",
+      "It makes the class a Rest controller",
+      "It marks the class as abstract"
+    ],
+    "answer": "It tells Spring that the class is a Bean it should manage and wire where needed"
+  },
+  {
+    "type": "mcq",
+    "question": "What is a limitation of using @Component compared with a @Bean method?",
+    "options": [
+      "@Component requires access to the class's source code",
+      "@Component cannot be used with constructors",
+      "@Component only works with XML",
+      "@Component cannot be used in Spring Boot"
+    ],
+    "answer": "@Component requires access to the class's source code"
+  },
+  {
+    "type": "mcq",
+    "question": "What is constructor injection?",
+    "options": [
+      "Spring passes the required Beans into a class through its constructor when it creates the Bean",
+      "The programmer calls new inside every method",
+      "Dependencies are copied from the database",
+      "Values are set with setters in the JSP"
+    ],
+    "answer": "Spring passes the required Beans into a class through its constructor when it creates the Bean"
+  },
+  {
+    "type": "mcq",
+    "question": "EmailService has a constructor EmailService(EmailAddressValidator addressValidator), and both classes are annotated with @Component. What happens when Spring creates EmailService?",
+    "options": [
+      "It throws an error because there is no @Autowired",
+      "It automatically injects the EmailAddressValidator bean into the constructor",
+      "It creates a new database table",
+      "It ignores the constructor parameter and passes null"
+    ],
+    "answer": "It automatically injects the EmailAddressValidator bean into the constructor"
+  },
+  {
+    "type": "mcq",
+    "question": "In the Rest controller example, CategoryApiController receives a CategoryService in its constructor. This is an example of:",
+    "options": [
+      "Constructor injection (Dependency Injection)",
+      "A JPA relationship",
+      "A servlet mapping",
+      "A validation constraint"
+    ],
+    "answer": "Constructor injection (Dependency Injection)"
+  },
+
+  // ===== Spring Boot =====
+  {
+    "type": "mcq",
+    "question": "Which is a problem with plain Spring that Spring Boot helps solve?",
+    "options": [
+      "Writing configuration is time consuming and dependency versions are very sensitive",
+      "Spring cannot connect to databases",
+      "Spring cannot run on Java",
+      "Spring has no dependency injection"
+    ],
+    "answer": "Writing configuration is time consuming and dependency versions are very sensitive"
+  },
+  {
+    "type": "mcq",
+    "question": "Which of the following does Spring Boot provide?",
+    "options": [
+      "Automatic configuration and starter dependencies",
+      "A replacement for the JVM",
+      "A new SQL language",
+      "A browser plug-in"
+    ],
+    "answer": "Automatic configuration and starter dependencies"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the Spring Actuator?",
+    "options": [
+      "An additional feature to help monitor and manage a Spring Boot application",
+      "A tool for validating forms",
+      "A database driver",
+      "A template engine"
+    ],
+    "answer": "An additional feature to help monitor and manage a Spring Boot application"
+  },
+  {
+    "type": "mcq",
+    "question": "What is Spring Initializr?",
+    "options": [
+      "A tool that can generate Spring Boot project structures",
+      "A database migration tool",
+      "A testing library like JUnit",
+      "A browser for REST endpoints"
+    ],
+    "answer": "A tool that can generate Spring Boot project structures"
+  },
+  {
+    "type": "mcq",
+    "question": "Which starter dependency is used to build web and Rest applications in Spring Boot?",
+    "options": [
+      "spring-boot-starter-web",
+      "spring-boot-starter-data-jpa",
+      "spring-boot-starter-validation",
+      "spring-boot-devtools"
+    ],
+    "answer": "spring-boot-starter-web"
+  },
+  {
+    "type": "mcq",
+    "question": "Which starter dependency provides JPA data access?",
+    "options": [
+      "spring-boot-starter-web",
+      "spring-boot-starter-thymeleaf",
+      "spring-boot-starter-data-jpa",
+      "spring-boot-starter-validation"
+    ],
+    "answer": "spring-boot-starter-data-jpa"
+  },
+  {
+    "type": "mcq",
+    "question": "Which annotation is on the generated Spring Boot application's bootstrap class that contains main()?",
+    "options": [
+      "@SpringBootApplication",
+      "@RestController",
+      "@Entity",
+      "@WebServlet"
+    ],
+    "answer": "@SpringBootApplication"
+  },
+  {
+    "type": "mcq",
+    "question": "Which method call starts a Spring Boot application inside main()?",
+    "options": [
+      "SpringApplication.run(SpringBootDemoApplication.class, args)",
+      "Persistence.createEntityManagerFactory(args)",
+      "new SpringBoot().start()",
+      "ApplicationContext.close()"
+    ],
+    "answer": "SpringApplication.run(SpringBootDemoApplication.class, args)"
+  },
+  {
+    "type": "mcq",
+    "question": "What is application.properties used for in a Spring Boot project?",
+    "options": [
+      "Configuring the application and overriding default Spring Boot properties (database URL, username, password, etc.)",
+      "Storing HTML templates",
+      "Defining Java classes",
+      "Listing Maven plugins only"
+    ],
+    "answer": "Configuring the application and overriding default Spring Boot properties (database URL, username, password, etc.)"
+  },
+  {
+    "type": "mcq",
+    "question": "Where is application.properties located in the project?",
+    "options": [
+      "src/main/resources",
+      "src/test/java",
+      "META-INF/web.xml",
+      "The project root next to pom.xml"
+    ],
+    "answer": "src/main/resources"
+  },
+  {
+    "type": "mcq",
+    "question": "When does Spring Boot auto-configuration run and what does it check?",
+    "options": [
+      "At application startup, checking what is in the classpath and configuring accordingly",
+      "At compile time, checking the database schema",
+      "Only when a request arrives, checking the URL",
+      "At shutdown, checking memory"
+    ],
+    "answer": "At application startup, checking what is in the classpath and configuring accordingly"
+  },
+  {
+    "type": "mcq",
+    "question": "What does spring-boot-devtools provide during development?",
+    "options": [
+      "Fast restarts when files on the classpath change",
+      "Automatic database backups",
+      "Production monitoring",
+      "A replacement for Maven"
+    ],
+    "answer": "Fast restarts when files on the classpath change"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the main drawback of spring.main.lazy-initialization=true?",
+    "options": [
+      "The application does not fail fast at startup; a misconfigured bean fails only when it is requested",
+      "The application cannot use Dependency Injection",
+      "It makes the application start more slowly",
+      "It disables all auto-configuration"
+    ],
+    "answer": "The application does not fail fast at startup; a misconfigured bean fails only when it is requested"
+  },
+  {
+    "type": "mcq",
+    "question": "Why should lazy initialization be turned off in production?",
+    "options": [
+      "Configuration errors could appear only later when the bean is requested, which is dangerous in a live application",
+      "It uses too much disk space",
+      "It is not supported by Tomcat",
+      "It deletes unused beans"
+    ],
+    "answer": "Configuration errors could appear only later when the bean is requested, which is dangerous in a live application"
+  },
+
+  // ===== Validation =====
+  {
+    "type": "mcq",
+    "question": "Which Maven artifact adds validation support in Spring Boot?",
+    "options": [
+      "spring-boot-starter-validation",
+      "spring-boot-starter-web",
+      "spring-context",
+      "jakarta.servlet.jsp.jstl"
+    ],
+    "answer": "spring-boot-starter-validation"
+  },
+  {
+    "type": "mcq",
+    "question": "Which annotation makes the framework run validation on a controller parameter?",
+    "options": [
+      "@Valid",
+      "@Validated only on the entity",
+      "@PathVariable",
+      "@Bean"
+    ],
+    "answer": "@Valid"
+  },
+  {
+    "type": "mcq",
+    "question": "Where must the BindingResult parameter be placed in the controller method?",
+    "options": [
+      "Directly after the object being validated",
+      "Anywhere; order never matters",
+      "Always as the first parameter",
+      "Before the @Valid object"
+    ],
+    "answer": "Directly after the object being validated"
+  },
+  {
+    "type": "mcq",
+    "question": "Which BindingResult method is used to check whether validation failed?",
+    "options": [
+      "hasErrors()",
+      "isValid()",
+      "getResultList()",
+      "checkFailed()"
+    ],
+    "answer": "hasErrors()"
+  },
+  {
+    "type": "mcq",
+    "question": "In the create method, what is usually done when bindingResult.hasErrors() is true?",
+    "options": [
+      "Re-display the form view so the errors can be shown",
+      "Insert the record anyway",
+      "Delete the record",
+      "Return 404"
+    ],
+    "answer": "Re-display the form view so the errors can be shown"
+  },
+  {
+    "type": "mcq",
+    "question": "What is the most common reason validation 'does not work' according to the teacher?",
+    "options": [
+      "The @Valid annotation was forgotten",
+      "The database is offline",
+      "The wrong JDK version",
+      "Too many beans"
+    ],
+    "answer": "The @Valid annotation was forgotten"
+  },
+  {
+    "type": "mcq",
+    "question": "Which annotation checks that a String is not empty and not only whitespace?",
+    "options": [
+      "@NotNull",
+      "@NotBlank",
+      "@Size",
+      "@Past"
+    ],
+    "answer": "@NotBlank"
+  },
+  {
+    "type": "mcq",
+    "question": "Which annotation validates a value against a regular expression?",
+    "options": [
+      "@Email",
+      "@Digits",
+      "@Pattern",
+      "@Min"
+    ],
+    "answer": "@Pattern"
+  },
+  {
+    "type": "mcq",
+    "question": "Which annotation ensures a price is 0 or greater?",
+    "options": [
+      "@Positive",
+      "@PositiveOrZero",
+      "@Negative",
+      "@Future"
+    ],
+    "answer": "@PositiveOrZero"
+  }
 ]
 
 
